@@ -1,0 +1,339 @@
+﻿<!doctype html>
+<html lang="{{HTML_LANG}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="darkreader-lock">
+  <meta name="color-scheme" content="light dark">
+  <script>try{const t=localStorage.getItem("sb_theme");if(t==="dark"||t==="light"){document.documentElement.setAttribute("data-theme",t);}}catch(_err){}</script>
+  <title>{{SITE_TITLE}}</title>
+  <meta name="description" content="{{SITE_DESCRIPTION}}">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta property="og:site_name" content="Sushi Ben">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="{{OG_LOCALE}}">
+  {{OG_LOCALE_ALTERNATES}}
+  <meta property="og:title" content="{{SITE_TITLE}}">
+  <meta property="og:description" content="{{SITE_DESCRIPTION}}">
+  <meta property="og:url" content="{{CANONICAL_URL}}">
+  <meta property="og:image" content="{{SHARE_IMAGE_URL}}">
+  <meta property="og:image:secure_url" content="{{SHARE_IMAGE_URL}}">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{{SHARE_IMAGE_ALT}}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{SITE_TITLE}}">
+  <meta name="twitter:description" content="{{SITE_DESCRIPTION}}">
+  <meta name="twitter:image" content="{{SHARE_IMAGE_URL}}">
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+  <link rel="canonical" href="{{CANONICAL_URL}}">
+  {{HREFLANG_LINKS}}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onTurnstileLoad" async defer></script>
+  <script type="application/ld+json">{{ORG_JSON_LD}}</script>
+  <script type="application/ld+json">{{WEBSITE_JSON_LD}}</script>
+  <script type="application/ld+json">{{WEBPAGE_JSON_LD}}</script>
+  <script type="application/ld+json">{{VIDEOGAME_JSON_LD}}</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav-row">
+      <a class="brand" href="#top" aria-label="Sushi Ben Home">
+        <img class="brand-logo" src="../assets/images/SushiBen_Logo_H.png" alt="{{IMAGE_LOGO_HORIZONTAL_ALT}}">
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#buy">{{NAV_BUY}}</a>
+        <a href="#media">{{NAV_MEDIA}}</a>
+        <a href="#about">{{NAV_ABOUT}}</a>
+        <a href="./cast/">{{NAV_CAST}}</a>
+        <a href="./shop/">{{NAV_MERCH}}</a>
+        <a href="./press-kit/">{{NAV_PRESS_KIT}}</a>
+        <a href="#contact">{{NAV_CONTACT}}</a>
+      </nav>
+      <div class="header-controls">
+        <details class="nav-menu">
+          <summary>{{NAV_MENU}}</summary>
+          <ul>
+            <li><a href="#buy">{{NAV_BUY}}</a></li>
+            <li><a href="#media">{{NAV_MEDIA}}</a></li>
+            <li><a href="#about">{{NAV_ABOUT}}</a></li>
+            <li><a href="./cast/">{{NAV_CAST}}</a></li>
+            <li><a href="./shop/">{{NAV_MERCH}}</a></li>
+            <li><a href="./press-kit/">{{NAV_PRESS_KIT}}</a></li>
+            <li><a href="#contact">{{NAV_CONTACT}}</a></li>
+          </ul>
+        </details>
+        <details class="lang-switcher">
+          <summary aria-label="{{LANG_ARIA_LABEL}}">{{LANG_CURRENT_NAME}}</summary>
+          <ul>
+            {{LANG_ITEMS_HOME}}
+          </ul>
+        </details>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme" aria-pressed="false" title="Switch to dark theme">&#9790;</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="kicker">{{HOME_KICKER}}</p>
+          <h1>{{HOME_HERO_TITLE}}</h1>
+          <p class="lede">{{HOME_HERO_LEDE}}</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#buy">{{HOME_CTA_BUY}}</a>
+            <a class="btn btn-secondary" href="#media">{{HOME_CTA_WATCH}}</a>
+          </div>
+        </div>
+        <div class="hero-art">
+          <img src="../assets/images/Minami_Hero.png" alt="{{IMAGE_HERO_MINAMI_ALT}}">
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap narrow soft-panel">
+        <h2 id="buy">{{HOME_BUY_TITLE}}</h2>
+        <div class="store-grid" role="list">
+          <a role="listitem" class="store-link" href="https://store.steampowered.com/app/2419240/Sushi_Ben/" target="_blank" rel="noopener noreferrer">
+            <img src="../assets/images/Linktree_Logo_Steam.png" alt="{{IMAGE_STORE_STEAM_ALT}}">
+            <span>Steam</span>
+          </a>
+          <a role="listitem" class="store-link" href="https://store.playstation.com/en-us/concept/10007924/" target="_blank" rel="noopener noreferrer">
+            <img src="../assets/images/Linktree_Logo_PS.png" alt="{{IMAGE_STORE_PLAYSTATION_ALT}}">
+            <span>PlayStation 5</span>
+          </a>
+          <a role="listitem" class="store-link" href="https://www.meta.com/experiences/5459391390744272/" target="_blank" rel="noopener noreferrer">
+            <img src="../assets/images/Linktree_Logo_Meta.png" alt="{{IMAGE_STORE_META_ALT}}">
+            <span>Meta Quest</span>
+          </a>
+          <a role="listitem" class="store-link" href="https://www.viveport.com/apps/1e1eb547-c759-4266-89bb-64bcc6f6294e?hl=en-US" target="_blank" rel="noopener noreferrer">
+            <img src="../assets/images/Linktree_Logo_Viveport.png" alt="{{IMAGE_STORE_VIVEPORT_ALT}}">
+            <span>HTC VIVEPORT</span>
+          </a>
+          <a role="listitem" class="store-link" href="https://store-global.picoxr.com/global/detail/1/7345233212618080262" target="_blank" rel="noopener noreferrer">
+            <img src="../assets/images/Linktree_Logo_Pico.png" alt="{{IMAGE_STORE_PICO_ALT}}">
+            <span>PICO</span>
+          </a>
+          <a role="listitem" class="store-link" href="https://store.onstove.com/en/games/103625" target="_blank" rel="noopener noreferrer">
+            <img src="../assets/images/Linktree_Logo_Stove.png" alt="{{IMAGE_STORE_STOVE_ALT}}">
+            <span>STOVE</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap soft-panel">
+        <h2 id="media">{{HOME_MEDIA_TITLE}}</h2>
+        <div class="media-grid">
+          <div class="video-wrap">
+            <iframe
+              src="https://www.youtube.com/embed/1lA0ssiHHxM"
+              title="Sushi Ben Trailer"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+          <div class="shots-grid">
+            <button class="shot" type="button" data-shot="../assets/images/SushiBen_ScreenShot_1.png" aria-label="{{IMAGE_SCREENSHOT_OPEN_1}}">
+              <img src="../assets/images/SushiBen_ScreenShot_1.png" alt="{{IMAGE_SCREENSHOT_ALT_1}}">
+            </button>
+            <button class="shot" type="button" data-shot="../assets/images/SushiBen_ScreenShot_2.png" aria-label="{{IMAGE_SCREENSHOT_OPEN_2}}">
+              <img src="../assets/images/SushiBen_ScreenShot_2.png" alt="{{IMAGE_SCREENSHOT_ALT_2}}">
+            </button>
+            <button class="shot" type="button" data-shot="../assets/images/SushiBen_ScreenShot_4.png" aria-label="{{IMAGE_SCREENSHOT_OPEN_4}}">
+              <img src="../assets/images/SushiBen_ScreenShot_4.png" alt="{{IMAGE_SCREENSHOT_ALT_4}}">
+            </button>
+            <button class="shot" type="button" data-shot="../assets/images/SushiBen_ScreenShot_5.png" aria-label="{{IMAGE_SCREENSHOT_OPEN_5}}">
+              <img src="../assets/images/SushiBen_ScreenShot_5.png" alt="{{IMAGE_SCREENSHOT_ALT_5}}">
+            </button>
+          </div>
+        </div>
+        <div class="cta-row media-cta-row">
+          <a class="btn btn-primary" href="#buy">{{HOME_CTA_BUY}}</a>
+          <a class="btn btn-secondary" href="./press-kit/">{{NAV_PRESS_KIT}}</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap soft-panel soundtrack-panel">
+        <h2>{{HOME_SOUNDTRACK_TITLE}}</h2>
+        <div class="spotify-embed-wrap">
+          <iframe
+            data-spotify-widget
+            data-spotify-src="https://open.spotify.com/embed/album/0d3HqxaVExA5LMOFDsAotM?utm_source=generator"
+            src="https://open.spotify.com/embed/album/0d3HqxaVExA5LMOFDsAotM?utm_source=generator"
+            title="Sushi Ben soundtrack on Spotify"
+            loading="lazy"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://open.spotify.com/album/0d3HqxaVExA5LMOFDsAotM" target="_blank" rel="noopener noreferrer">{{HOME_SOUNDTRACK_CTA}}</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap narrow soft-panel">
+        <h2 id="about">{{HOME_ABOUT_TITLE}}</h2>
+        <p>{{HOME_ABOUT_BODY}}</p>
+        <ul class="about-bullets">
+          <li>{{HIGHLIGHT_1}}</li>
+          <li>{{HIGHLIGHT_2}}</li>
+          <li>{{HIGHLIGHT_3}}</li>
+          <li>{{HIGHLIGHT_4}}</li>
+          <li>{{HIGHLIGHT_5}}</li>
+          <li>{{HIGHLIGHT_6}}</li>
+          <li>{{HIGHLIGHT_7}}</li>
+          <li>{{HIGHLIGHT_8}}</li>
+          <li>{{HIGHLIGHT_9}}</li>
+        </ul>
+        <div class="cta-row about-cta-row">
+          <a class="btn btn-primary" href="./cast/">{{NAV_CAST}}</a>
+          <a class="btn btn-secondary" href="./team/">{{NAV_TEAM}}</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap narrow soft-panel">
+        <h2>{{HOME_REVIEWS_TITLE}}</h2>
+        <div class="review-grid">
+          <blockquote class="review-card">
+            <p>"{{HOME_REVIEW_QUOTE_1}}"</p>
+            <p class="review-card-summary">{{HOME_REVIEW_SUMMARY_1}}</p>
+            <cite><a href="{{HOME_REVIEW_URL_1}}" target="_blank" rel="noopener noreferrer">{{HOME_REVIEW_SOURCE_1}}</a></cite>
+          </blockquote>
+          <blockquote class="review-card">
+            <p>"{{HOME_REVIEW_QUOTE_2}}"</p>
+            <p class="review-card-summary">{{HOME_REVIEW_SUMMARY_2}}</p>
+            <cite><a href="{{HOME_REVIEW_URL_2}}" target="_blank" rel="noopener noreferrer">{{HOME_REVIEW_SOURCE_2}}</a></cite>
+          </blockquote>
+          <blockquote class="review-card">
+            <p>"{{HOME_REVIEW_QUOTE_3}}"</p>
+            <p class="review-card-summary">{{HOME_REVIEW_SUMMARY_3}}</p>
+            <cite><a href="{{HOME_REVIEW_URL_3}}" target="_blank" rel="noopener noreferrer">{{HOME_REVIEW_SOURCE_3}}</a></cite>
+          </blockquote>
+          <blockquote class="review-card">
+            <p>"{{HOME_REVIEW_QUOTE_4}}"</p>
+            <p class="review-card-summary">{{HOME_REVIEW_SUMMARY_4}}</p>
+            <cite><a href="{{HOME_REVIEW_URL_4}}" target="_blank" rel="noopener noreferrer">{{HOME_REVIEW_SOURCE_4}}</a></cite>
+          </blockquote>
+        </div>
+        <div class="cta-row reviews-cta-row">
+          <a class="btn btn-primary" href="./press-kit/">{{NAV_PRESS_KIT}}</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap soft-panel">
+        <h2 id="contact">{{HOME_CONTACT_TITLE}}</h2>
+        <div class="support-grid">
+          <aside class="support-card" aria-label="{{SUPPORT_DISCORD_TITLE}}">
+            <h3>{{SUPPORT_DISCORD_TITLE}}</h3>
+            <p>{{SUPPORT_DISCORD_BODY}}</p>
+            <a class="btn btn-primary support-discord-btn" href="https://discord.gg/sushiben" target="_blank" rel="noopener noreferrer">{{SUPPORT_DISCORD_CTA}}</a>
+            <div class="discord-widget-wrap">
+              <iframe
+                data-discord-widget
+                class="darkreader-ignore"
+                src="https://discord.com/widget?id=1102657848393093152&theme=light"
+                title="Sushi Ben Discord Server"
+                loading="lazy"
+                sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+            </div>
+          </aside>
+
+          <div class="support-card">
+            <h3>{{SUPPORT_EMAIL_TITLE}}</h3>
+            <p>{{SUPPORT_EMAIL_BODY}}</p>
+            <form id="support-form" class="contact-form" action="https://sushiben-resend.bigbranestudios.workers.dev/" method="POST" novalidate>
+              <label for="name">{{FORM_NAME}}</label>
+              <input id="name" name="name" type="text" autocomplete="name" required>
+
+              <label for="email">{{FORM_EMAIL}}</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+
+              <label for="category">{{FORM_CATEGORY}}</label>
+              <select id="category" name="category" required>
+                <option value="">{{FORM_CATEGORY_PLACEHOLDER}}</option>
+                <option value="general">{{FORM_CATEGORY_GENERAL}}</option>
+                <option value="press">{{FORM_CATEGORY_PRESS}}</option>
+                <option value="technical">{{FORM_CATEGORY_TECH}}</option>
+              </select>
+
+              <label for="message">{{FORM_MESSAGE}}</label>
+              <textarea id="message" name="message" rows="6" required></textarea>
+
+              <div class="hp-wrap" aria-hidden="true">
+                <label for="website">{{FORM_WEBSITE}}</label>
+                <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+              </div>
+
+              <input type="hidden" name="page" value="support">
+              <input type="hidden" name="locale" value="{{LANG}}">
+
+              <div class="turnstile-wrap">
+                <div class="cf-turnstile" data-sitekey="{{TURNSTILE_SITE_KEY}}"></div>
+              </div>
+
+              <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+              <button class="btn btn-primary" type="submit">{{FORM_SUBMIT}}</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-final-cta">
+      <div class="wrap narrow soft-panel">
+        <h2>{{HOME_FINAL_CTA_TITLE}}</h2>
+        <img class="final-cta-logo" src="../assets/images/SushiBen_Logo.png" alt="{{IMAGE_LOGO_PRIMARY_ALT}}">
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#buy">{{HOME_FINAL_CTA_BUY}}</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="shot-lightbox" class="shot-lightbox" aria-label="Screenshot viewer">
+    <button class="shot-lightbox-close" type="button" aria-label="Close screenshot">×</button>
+    <img id="shot-lightbox-image" src="" alt="Expanded screenshot">
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <div class="footer-main">
+        <div class="social-row" aria-label="Social links">
+          <a href="https://x.com/SushiBenGame" target="_blank" rel="noopener noreferrer">{{SOCIAL_X}}</a>
+          <a href="https://www.youtube.com/watch?v=1lA0ssiHHxM" target="_blank" rel="noopener noreferrer">{{SOCIAL_YOUTUBE}}</a>
+          <a href="https://discord.gg/sushiben" target="_blank" rel="noopener noreferrer">{{SOCIAL_DISCORD}}</a>
+        </div>
+        <div class="legal-row" aria-label="Legal links">
+          <a href="./eula/">{{LEGAL_EULA_LABEL}}</a>
+          <a href="./fan-content/">{{LEGAL_FAN_CONTENT_LABEL}}</a>
+          <a href="./privacy/">{{LEGAL_PRIVACY_LABEL}}</a>
+        </div>
+        <div class="meta-row" aria-label="More links">
+          <a href="./team/">{{NAV_TEAM}}</a>
+          <a href="./shop/">{{NAV_MERCH}}</a>
+          <a href="./press-kit/">{{NAV_PRESS_KIT}}</a>
+          <a href="https://open.spotify.com/album/0d3HqxaVExA5LMOFDsAotM" target="_blank" rel="noopener noreferrer">{{FOOTER_SOUNDTRACK}}</a>
+        </div>
+      </div>
+      <p class="footer-copy">© <span id="year"></span> Big Brane Studios, Inc. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js?v=20260331-theme3"></script>
+</body>
+</html>

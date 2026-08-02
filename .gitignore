@@ -1,0 +1,8 @@
+i18n/Backups/
+Workers/*.local.js
+.idea/
+
+# Add other local-only files here as needed.
+# Examples:
+# Workers/*.local.js
+# docs/local/
