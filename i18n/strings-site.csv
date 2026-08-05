@@ -1,0 +1,111 @@
+key,context,en
+site.name,Global site name,Incogent
+site.tagline,Global company tagline,Products and engineering for ambitious interactive experiences
+nav.blackbird,Primary navigation label,Blackbird
+nav.services,Primary navigation label,Services
+nav.about,Primary navigation label,About
+nav.shop,Primary navigation label,Shop
+nav.contact,Primary navigation label,Contact
+nav.menu,Mobile navigation label,Menu
+nav.products,Footer and breadcrumb label,Products
+nav.privacy,Footer legal link,Privacy Policy
+nav.eula,Footer legal link,EULA
+nav.language,Language selector accessible label,Language
+footer.rights,Footer copyright suffix,Incogent. All rights reserved.
+footer.status,Footer development status,The new Incogent site is under development.
+common.learn_more,Generic action,Learn more
+common.view_blackbird,Product action,Explore Blackbird
+common.view_services,Services action,Explore our services
+common.visit_shop,Shop action,Visit the shop
+common.contact,Contact action,Contact Incogent
+page.home.title,Homepage browser title,Incogent | Blackbird and Interactive Development
+page.home.description,Homepage meta description,Incogent creates Blackbird and provides Unreal Engine XR console development porting and consulting services.
+home.hero.kicker,Homepage hero eyebrow,Incogent presents
+home.hero.title,Homepage hero heading,Blackbird
+home.hero.body,Homepage hero summary,A product-focused workspace built to support demanding interactive development workflows.
+home.hero.primary,Homepage primary action,Discover Blackbird
+home.hero.secondary,Homepage secondary action,Purchase options
+home.product.title,Homepage product heading,Blackbird is our primary focus
+home.product.body,Homepage product placeholder,This section will introduce Blackbird's purpose capabilities workflows and supported integrations.
+home.services.title,Homepage services heading,Experienced development support
+home.services.body,Homepage services placeholder,Incogent also provides Unreal Engine XR console porting consulting and contract development services.
+home.about.title,Homepage about heading,About Incogent
+home.about.body,Homepage about placeholder,This section will establish the company experience approach and reasons clients and customers can trust Incogent.
+home.contact.title,Homepage contact heading,Start a conversation
+home.contact.body,Homepage contact placeholder,Product sales support and project inquiries will be routed from here.
+page.products.title,Products browser title,Products | Incogent
+page.products.description,Products meta description,Explore products created by Incogent.
+products.kicker,Products eyebrow,Incogent products
+products.heading,Products heading,Tools for interactive development
+products.intro,Products introduction,This catalog is designed to grow with Incogent. Blackbird is the first featured product.
+products.blackbird.body,Blackbird catalog card,Explore the product capabilities workflows licensing and purchase options for Blackbird.
+page.blackbird.title,Blackbird browser title,Blackbird | Incogent
+page.blackbird.description,Blackbird meta description,Learn about Blackbird from Incogent.
+blackbird.kicker,Blackbird eyebrow,Incogent product
+blackbird.heading,Blackbird heading,Blackbird
+blackbird.intro,Blackbird introduction,The complete product story will begin here.
+blackbird.capabilities.title,Blackbird section heading,Capabilities
+blackbird.capabilities.body,Blackbird placeholder,This section will organize Blackbird's principal features and benefits.
+blackbird.workflows.title,Blackbird section heading,Workflows
+blackbird.workflows.body,Blackbird placeholder,This section will show how Blackbird fits into real production workflows.
+blackbird.integrations.title,Blackbird section heading,Platforms and integrations
+blackbird.integrations.body,Blackbird placeholder,This section will document supported tools engines platforms and requirements.
+blackbird.purchase.title,Blackbird purchase heading,Ready to explore purchase options?
+blackbird.purchase.body,Blackbird purchase placeholder,Licensing editions and pricing will be presented in the Blackbird shop.
+page.shop.title,Shop browser title,Shop | Incogent
+page.shop.description,Shop meta description,Purchase products and licenses from Incogent.
+shop.kicker,Shop eyebrow,Incogent shop
+shop.heading,Shop heading,Products and licenses
+shop.intro,Shop introduction,The shop will provide a scalable home for Blackbird and future Incogent products.
+shop.blackbird.body,Shop card,Review Blackbird editions license types and purchasing options.
+page.blackbird_shop.title,Blackbird shop browser title,Buy Blackbird | Incogent
+page.blackbird_shop.description,Blackbird shop meta description,Review purchase and licensing options for Blackbird.
+blackbird_shop.kicker,Blackbird shop eyebrow,Blackbird licensing
+blackbird_shop.heading,Blackbird shop heading,Choose the right Blackbird license
+blackbird_shop.intro,Blackbird shop introduction,Editions pricing eligibility and license terms will be defined before checkout is enabled.
+blackbird_shop.editions.title,Blackbird shop heading,Editions and licenses
+blackbird_shop.editions.body,Blackbird shop placeholder,Product configuration will appear here after the licensing model is finalized.
+blackbird_shop.checkout.title,Checkout heading,Secure checkout
+blackbird_shop.checkout.body,Checkout placeholder,Payment and fulfillment will use a secure commerce service. Checkout is not configured yet.
+blackbird_shop.checkout.disabled,Disabled checkout action,Checkout coming soon
+page.services.title,Services browser title,Development Services | Incogent
+page.services.description,Services meta description,Unreal Engine XR console porting consulting and contract development services from Incogent.
+services.kicker,Services eyebrow,Development services
+services.heading,Services heading,Technical experience where it matters
+services.intro,Services introduction,Incogent supports teams building and shipping demanding interactive products.
+services.unreal.title,Service category,Unreal Engine development
+services.unreal.body,Service placeholder,Architecture systems tools performance and production support.
+services.xr.title,Service category,XR development
+services.xr.body,Service placeholder,Interaction performance platform integration and immersive product development.
+services.console.title,Service category,Console development
+services.console.body,Service placeholder,Platform integration certification readiness optimization and release support.
+services.porting.title,Service category,Porting and optimization
+services.porting.body,Service placeholder,Bring existing products to new platforms while protecting performance and experience quality.
+services.consulting.title,Service category,Consulting
+services.consulting.body,Service placeholder,Focused technical direction planning reviews and problem solving.
+services.contract.title,Service category,Contract development
+services.contract.body,Service placeholder,Embedded engineering and production support sized to the needs of the project.
+services.contact.title,Services contact heading,Talk with Incogent about your project
+page.about.title,About browser title,About | Incogent
+page.about.description,About meta description,Learn about Incogent its experience and its approach to products and development.
+about.kicker,About eyebrow,About Incogent
+about.heading,About heading,Products expertise and practical engineering
+about.intro,About introduction,Incogent builds its own products and helps other teams solve difficult interactive development problems.
+about.story.title,About section heading,Company
+about.story.body,About placeholder,The company story mission and focus will be developed here.
+about.experience.title,About section heading,Experience
+about.experience.body,About placeholder,Relevant product platform engine and shipping experience will be summarized here.
+about.approach.title,About section heading,Approach
+about.approach.body,About placeholder,This section will explain how Incogent works with customers partners and clients.
+page.privacy.title,Privacy browser title,Privacy Policy | Incogent
+page.privacy.description,Privacy meta description,Privacy Policy for Incogent.
+privacy.kicker,Privacy eyebrow,Legal
+privacy.heading,Privacy heading,Privacy Policy
+privacy.draft.title,Privacy warning heading,Policy drafting required
+privacy.draft.body,Privacy warning,The Incogent Privacy Policy has not been finalized. Do not publish this placeholder as the production policy.
+page.eula.title,EULA browser title,EULA | Incogent
+page.eula.description,EULA meta description,End User License Agreement for Blackbird.
+eula.kicker,EULA eyebrow,Legal
+eula.heading,EULA heading,End User License Agreement
+eula.draft.title,EULA warning heading,Agreement drafting required
+eula.draft.body,EULA warning,The Blackbird EULA has not been finalized. Do not publish this placeholder as the production agreement.
