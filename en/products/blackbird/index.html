@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
+  <script>try{const theme=localStorage.getItem("incogent_theme");if(theme==="dark"||theme==="light")document.documentElement.setAttribute("data-theme",theme);}catch(_error){}</script>
   <title>Blackbird | Build less tooling. Ship more games.</title>
   <meta name="description" content="Blackbird turns scripts, commands, and development workflows into a fast, organized desktop tool for game teams.">
   <meta name="robots" content="index,follow,max-image-preview:large">
@@ -16,8 +17,9 @@
   <link rel="canonical" href="https://incogent.io/en/products/blackbird/">
   <link rel="alternate" hreflang="en" href="https://incogent.io/en/products/blackbird/">
   <link rel="alternate" hreflang="x-default" href="https://incogent.io/en/products/blackbird/">
-  <link rel="stylesheet" href="/site.css?v=20260805-foundation">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Incogent","url":"https://incogent.io"}</script>
+  <link rel="stylesheet" href="/site.css?v=20260806-contact">
+
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Incogent","url":"https://incogent.io","sameAs":["https://discord.gg/AxxpQ8h"]}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Blackbird | Build less tooling. Ship more games.","description":"Blackbird turns scripts, commands, and development workflows into a fast, organized desktop tool for game teams.","url":"https://incogent.io/en/products/blackbird/","inLanguage":"en"}</script>
 </head>
 <body class="blackbird-page">
@@ -25,16 +27,19 @@
   <header class="site-header">
     <div class="wrap header-row">
       <a class="brand" href="/en/" aria-label="Incogent home">Incogent</a>
-      <nav class="primary-nav" aria-label="Primary navigation">
-        <a href="/en/products/blackbird/">Blackbird</a>
-        <a href="/en/services/">Services</a>
-        <a href="/en/about/">About</a>
-        <a href="/en/shop/">Shop</a>
-        <a class="nav-cta" href="/en/#contact">Contact</a>
-      </nav>
-      <details class="mobile-nav"><summary>Menu</summary><nav aria-label="Mobile navigation">
-        <a href="/en/products/blackbird/">Blackbird</a><a href="/en/services/">Services</a><a href="/en/about/">About</a><a href="/en/shop/">Shop</a><a href="/en/#contact">Contact</a>
-      </nav></details>
+      <div class="header-controls">
+        <nav class="primary-nav" aria-label="Primary navigation">
+          <a href="/en/products/blackbird/">Blackbird</a>
+          <a href="/en/services/">Services</a>
+          <a href="/en/about/">About</a>
+          <a href="/en/shop/">Shop</a>
+          <a class="nav-cta" href="/en/index.html#contact">Contact</a>
+        </nav>
+        <button class="theme-toggle" type="button" data-theme-toggle data-light-label="Switch to light theme" data-dark-label="Switch to dark theme" aria-label="Switch to dark theme" aria-pressed="false" title="Switch to dark theme">&#9790;</button>
+        <details class="mobile-nav"><summary>Menu</summary><nav aria-label="Mobile navigation">
+          <a href="/en/products/blackbird/">Blackbird</a><a href="/en/services/">Services</a><a href="/en/about/">About</a><a href="/en/shop/">Shop</a><a href="/en/index.html#contact">Contact</a>
+        </nav></details>
+      </div>
     </div>
   </header>
   <main id="main-content"><section class="page-hero section blackbird-hero">
@@ -43,14 +48,19 @@
     <h1>Build less tooling. Ship more games.</h1>
     <p class="lede">Blackbird turns your scripts, commands, and development workflows into a fast, organized desktop tool—without requiring you to build and maintain a custom internal application.</p>
     <p class="hero-supporting-copy">Run builds. Deploy to devices. Collect logs. Manage projects. Automate repetitive work. Keep everything your team needs in one place.</p>
-    <div class="actions">
-      <a class="button primary" href="/en/shop/blackbird/">Visit the shop</a>
-      <a class="button secondary" href="/en/#contact">Contact Incogent</a>
+    <div class="download-controls">
+      <a class="button primary" data-blackbird-download="exe" href="https://github.com/Incogent/Blackbird-Releases/releases/download/v0.8.0-alpha.15/BlackbirdSetup.exe">Download Blackbird for Windows</a>
+      <a class="installer-alternative" data-blackbird-download="msi" href="https://github.com/Incogent/Blackbird-Releases/releases/download/v0.8.0-alpha.15/Incogent.Blackbird-win.msi">MSI installer for administrators</a>
+      <p class="download-note">Use either the recommended EXE or the MSI installer. You do not need both.</p>
+    </div>
+    <div class="actions supporting-actions">
+      <a class="button secondary" href="/en/shop/blackbird/">Visit the shop</a>
+      <a class="text-link" href="/en/index.html#contact">Contact Incogent</a>
     </div>
   </div>
 </section>
 
-<section class="section">
+<section class="section section-editorial">
   <div class="wrap narrow product-copy">
     <h2>Your development workflows, organized</h2>
     <p>Command-line tools are powerful, but they can be difficult to remember, share, and use consistently. Blackbird gives them a clean, approachable interface with configurable actions, inputs, presets, queues, and status tracking.</p>
@@ -58,7 +68,7 @@
   </div>
 </section>
 
-<section class="section section-muted">
+<section class="section highlight-band">
   <div class="wrap narrow product-copy">
     <h2>Stop rebuilding the same internal tools</h2>
     <p>Small studios rarely have the time or resources to create polished internal development software. Blackbird provides the reusable interface, so you can focus on the scripts and workflows that are unique to your project.</p>
@@ -70,7 +80,7 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section section-card-field">
   <div class="wrap product-copy">
     <div class="narrow">
       <h2>Built for game development</h2>
@@ -88,7 +98,7 @@
   </div>
 </section>
 
-<section class="section section-muted">
+<section class="section highlight-band">
   <div class="wrap narrow product-copy">
     <h2>Powerful enough for developers. Simple enough for the whole team.</h2>
     <p>Create actions with clearly labeled options, sensible defaults, and reusable presets.</p>
@@ -96,7 +106,7 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section section-editorial">
   <div class="wrap narrow product-copy">
     <h2>Your tools. Your infrastructure.</h2>
     <p>Blackbird runs your existing local scripts and commands. It does not require you to move your projects, builds, or workflows into a hosted service.</p>
@@ -104,15 +114,20 @@
   </div>
 </section>
 
-<section class="section blackbird-final-cta">
+<section class="section blackbird-final-cta product-panel-band">
   <div class="wrap narrow product-copy">
     <p class="eyebrow">Blackbird</p>
     <h2>Make repetitive work disappear.</h2>
     <p>Spend less time typing commands, maintaining one-off utilities, and explaining internal processes.</p>
     <p class="lede">Put your workflows in Blackbird and get back to making games.</p>
-    <div class="actions">
-      <a class="button primary" href="/en/shop/blackbird/">Visit the shop</a>
-      <a class="button secondary" href="/en/#contact">Contact Incogent</a>
+    <div class="download-controls">
+      <a class="button primary" data-blackbird-download="exe" href="https://github.com/Incogent/Blackbird-Releases/releases/download/v0.8.0-alpha.15/BlackbirdSetup.exe">Download Blackbird for Windows</a>
+      <a class="installer-alternative" data-blackbird-download="msi" href="https://github.com/Incogent/Blackbird-Releases/releases/download/v0.8.0-alpha.15/Incogent.Blackbird-win.msi">MSI installer for administrators</a>
+      <p class="download-note">Use either the recommended EXE or the MSI installer. You do not need both.</p>
+    </div>
+    <div class="actions supporting-actions">
+      <a class="button secondary" href="/en/shop/blackbird/">Visit the shop</a>
+      <a class="text-link" href="/en/index.html#contact">Contact Incogent</a>
     </div>
   </div>
 </section>
@@ -120,11 +135,11 @@
   <footer class="site-footer">
     <div class="wrap footer-grid">
       <div><a class="brand footer-brand" href="/en/">Incogent</a><p>Products and engineering for ambitious interactive experiences</p><p class="development-note">The new Incogent site is under development.</p></div>
-      <nav aria-label="Footer navigation"><a href="/en/products/">Products</a><a href="/en/privacy/">Privacy Policy</a><a href="/en/eula/">EULA</a><a href="/en/#contact">Contact</a></nav>
-      <div class="locale-switcher"><span>Language</span><ul><li><a href="/en/products/blackbird/" hreflang="en" aria-current="page">English</a></li></ul></div>
+      <nav aria-label="Footer navigation"><a href="/en/products/">Products</a><a href="/en/privacy/">Privacy Policy</a><a href="/en/eula/">EULA</a><a href="/en/index.html#contact">Contact</a></nav>
+      <div class="locale-switcher" hidden><span>Language</span><ul><li><a href="/en/products/blackbird/" hreflang="en" aria-current="page">English</a></li></ul></div>
     </div>
     <div class="wrap copyright">&copy; <span data-current-year></span> Incogent. All rights reserved.</div>
   </footer>
-  <script src="/site.js?v=20260805-foundation"></script>
+  <script src="/site.js?v=20260806-contact"></script>
 </body>
 </html>

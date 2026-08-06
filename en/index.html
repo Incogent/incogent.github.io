@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
+  <script>try{const theme=localStorage.getItem("incogent_theme");if(theme==="dark"||theme==="light")document.documentElement.setAttribute("data-theme",theme);}catch(_error){}</script>
   <title>Incogent | Blackbird and Interactive Development</title>
   <meta name="description" content="Incogent creates Blackbird and provides Unreal Engine XR console development porting and consulting services.">
   <meta name="robots" content="index,follow,max-image-preview:large">
@@ -16,8 +17,9 @@
   <link rel="canonical" href="https://incogent.io/en/">
   <link rel="alternate" hreflang="en" href="https://incogent.io/en/">
   <link rel="alternate" hreflang="x-default" href="https://incogent.io/en/">
-  <link rel="stylesheet" href="/site.css?v=20260805-foundation">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Incogent","url":"https://incogent.io"}</script>
+  <link rel="stylesheet" href="/site.css?v=20260806-contact">
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onTurnstileLoad" async defer></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Incogent","url":"https://incogent.io","sameAs":["https://discord.gg/AxxpQ8h"]}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Incogent | Blackbird and Interactive Development","description":"Incogent creates Blackbird and provides Unreal Engine XR console development porting and consulting services.","url":"https://incogent.io/en/","inLanguage":"en"}</script>
 </head>
 <body class="home-page">
@@ -25,32 +27,82 @@
   <header class="site-header">
     <div class="wrap header-row">
       <a class="brand" href="/en/" aria-label="Incogent home">Incogent</a>
-      <nav class="primary-nav" aria-label="Primary navigation">
-        <a href="/en/products/blackbird/">Blackbird</a>
-        <a href="/en/services/">Services</a>
-        <a href="/en/about/">About</a>
-        <a href="/en/shop/">Shop</a>
-        <a class="nav-cta" href="/en/#contact">Contact</a>
-      </nav>
-      <details class="mobile-nav"><summary>Menu</summary><nav aria-label="Mobile navigation">
-        <a href="/en/products/blackbird/">Blackbird</a><a href="/en/services/">Services</a><a href="/en/about/">About</a><a href="/en/shop/">Shop</a><a href="/en/#contact">Contact</a>
-      </nav></details>
+      <div class="header-controls">
+        <nav class="primary-nav" aria-label="Primary navigation">
+          <a href="/en/products/blackbird/">Blackbird</a>
+          <a href="/en/services/">Services</a>
+          <a href="/en/about/">About</a>
+          <a href="/en/shop/">Shop</a>
+          <a class="nav-cta" href="/en/index.html#contact">Contact</a>
+        </nav>
+        <button class="theme-toggle" type="button" data-theme-toggle data-light-label="Switch to light theme" data-dark-label="Switch to dark theme" aria-label="Switch to dark theme" aria-pressed="false" title="Switch to dark theme">&#9790;</button>
+        <details class="mobile-nav"><summary>Menu</summary><nav aria-label="Mobile navigation">
+          <a href="/en/products/blackbird/">Blackbird</a><a href="/en/services/">Services</a><a href="/en/about/">About</a><a href="/en/shop/">Shop</a><a href="/en/index.html#contact">Contact</a>
+        </nav></details>
+      </div>
     </div>
   </header>
   <main id="main-content"><section class="hero section"><div class="wrap narrow"><p class="eyebrow">Incogent presents</p><h1>Blackbird</h1><p class="lede">A product-focused workspace built to support demanding interactive development workflows.</p><div class="actions"><a class="button primary" href="/en/products/blackbird/">Discover Blackbird</a><a class="button secondary" href="/en/shop/blackbird/">Purchase options</a></div></div></section>
-<section class="section"><div class="wrap split"><div><p class="eyebrow">Blackbird</p><h2>Blackbird is our primary focus</h2><p>This section will introduce Blackbird&#39;s purpose capabilities workflows and supported integrations.</p></div><a class="text-link" href="/en/products/blackbird/">Explore Blackbird</a></div></section>
-<section class="section section-muted"><div class="wrap split"><div><p class="eyebrow">Services</p><h2>Experienced development support</h2><p>Incogent also provides Unreal Engine XR console porting consulting and contract development services.</p></div><a class="text-link" href="/en/services/">Explore our services</a></div></section>
-<section class="section"><div class="wrap split"><div><p class="eyebrow">About</p><h2>About Incogent</h2><p>This section will establish the company experience approach and reasons clients and customers can trust Incogent.</p></div><a class="text-link" href="/en/about/">Learn more</a></div></section>
-<section id="contact" class="section contact-section"><div class="wrap narrow"><p class="eyebrow">Contact</p><h2>Start a conversation</h2><p>Product sales support and project inquiries will be routed from here.</p></div></section>
+<section class="section section-editorial"><div class="wrap split"><div><p class="eyebrow">Blackbird</p><h2>Blackbird is our primary focus</h2><p>This section will introduce Blackbird&#39;s purpose capabilities workflows and supported integrations.</p></div><a class="text-link" href="/en/products/blackbird/">Explore Blackbird</a></div></section>
+<section class="section highlight-band"><div class="wrap split"><div><p class="eyebrow">Services</p><h2>Experienced development support</h2><p>Incogent also provides Unreal Engine XR console porting consulting and contract development services.</p></div><a class="text-link" href="/en/services/">Explore our services</a></div></section>
+<section class="section section-editorial"><div class="wrap split"><div><p class="eyebrow">About</p><h2>About Incogent</h2><p>This section will establish the company experience approach and reasons clients and customers can trust Incogent.</p></div><a class="text-link" href="/en/about/">Learn more</a></div></section>
+<section id="contact" class="section contact-section">
+  <div class="wrap">
+    <div class="contact-heading">
+      <p class="eyebrow">Contact</p>
+      <h2>Start a conversation</h2>
+      <p>Product sales support and project inquiries will be routed from here.</p>
+    </div>
+    <div class="contact-grid">
+      <aside class="contact-card discord-card" aria-labelledby="discord-heading">
+        <h3 id="discord-heading">Join Incogent on Discord</h3>
+        <p>Meet other developers, follow Blackbird development, and talk with the Incogent community.</p>
+        <a class="button primary discord-join" href="https://discord.gg/AxxpQ8h" target="_blank" rel="noopener noreferrer">Join Discord</a>
+        <div class="discord-widget-wrap">
+          <iframe data-discord-widget data-discord-guild="367221582009204737" class="darkreader-ignore" src="https://discord.com/widget?id=367221582009204737&amp;theme=light" title="Incogent Discord server" loading="lazy" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+        </div>
+      </aside>
+      <div class="contact-card">
+        <h3>Send us a message</h3>
+        <p>Use the form and we will route your message to the right person.</p>
+        <form id="support-form" class="contact-form" action="https://REPLACE_WITH_YOUR_WORKER.workers.dev/" method="post" data-status-verification="Please complete the verification challenge." data-status-sending="Sending your message..." data-status-error="Something went wrong sending your message. Please try again." data-status-success="Thanks, your message was sent successfully." data-status-unconfigured="The contact service is not configured yet.">
+          <label for="contact-name">Name</label>
+          <input id="contact-name" name="name" type="text" autocomplete="name" required>
+          <label for="contact-email">Email</label>
+          <input id="contact-email" name="email" type="email" autocomplete="email" required>
+          <label for="contact-category">Topic</label>
+          <select id="contact-category" name="category" required>
+            <option value="">Choose a topic</option>
+            <option value="general">General inquiry</option>
+            <option value="blackbird">Blackbird</option>
+            <option value="services">Development services</option>
+            <option value="business">Business or press</option>
+          </select>
+          <label for="contact-message">Message</label>
+          <textarea id="contact-message" name="message" rows="6" required></textarea>
+          <div class="hp-wrap" aria-hidden="true">
+            <label for="contact-website">Website</label>
+            <input id="contact-website" name="website" type="text" tabindex="-1" autocomplete="off">
+          </div>
+          <input type="hidden" name="page" value="contact">
+          <input type="hidden" name="locale" value="en">
+          <div class="turnstile-wrap"><div class="cf-turnstile" data-sitekey="0x4AAAAAACysjnCgiwuIZ0kL"></div></div>
+          <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+          <button class="button primary" type="submit">Send message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
 </main>
   <footer class="site-footer">
     <div class="wrap footer-grid">
       <div><a class="brand footer-brand" href="/en/">Incogent</a><p>Products and engineering for ambitious interactive experiences</p><p class="development-note">The new Incogent site is under development.</p></div>
-      <nav aria-label="Footer navigation"><a href="/en/products/">Products</a><a href="/en/privacy/">Privacy Policy</a><a href="/en/eula/">EULA</a><a href="/en/#contact">Contact</a></nav>
-      <div class="locale-switcher"><span>Language</span><ul><li><a href="/en/" hreflang="en" aria-current="page">English</a></li></ul></div>
+      <nav aria-label="Footer navigation"><a href="/en/products/">Products</a><a href="/en/privacy/">Privacy Policy</a><a href="/en/eula/">EULA</a><a href="/en/index.html#contact">Contact</a></nav>
+      <div class="locale-switcher" hidden><span>Language</span><ul><li><a href="/en/" hreflang="en" aria-current="page">English</a></li></ul></div>
     </div>
     <div class="wrap copyright">&copy; <span data-current-year></span> Incogent. All rights reserved.</div>
   </footer>
-  <script src="/site.js?v=20260805-foundation"></script>
+  <script src="/site.js?v=20260806-contact"></script>
 </body>
 </html>

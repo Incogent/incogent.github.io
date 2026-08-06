@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
+  <script>try{const theme=localStorage.getItem("incogent_theme");if(theme==="dark"||theme==="light")document.documentElement.setAttribute("data-theme",theme);}catch(_error){}</script>
   <title>Development Services | Incogent</title>
   <meta name="description" content="Unreal Engine XR console porting consulting and contract development services from Incogent.">
   <meta name="robots" content="index,follow,max-image-preview:large">
@@ -16,8 +17,9 @@
   <link rel="canonical" href="https://incogent.io/en/services/">
   <link rel="alternate" hreflang="en" href="https://incogent.io/en/services/">
   <link rel="alternate" hreflang="x-default" href="https://incogent.io/en/services/">
-  <link rel="stylesheet" href="/site.css?v=20260805-foundation">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Incogent","url":"https://incogent.io"}</script>
+  <link rel="stylesheet" href="/site.css?v=20260806-contact">
+
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Incogent","url":"https://incogent.io","sameAs":["https://discord.gg/AxxpQ8h"]}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Development Services | Incogent","description":"Unreal Engine XR console porting consulting and contract development services from Incogent.","url":"https://incogent.io/en/services/","inLanguage":"en"}</script>
 </head>
 <body class="services-page">
@@ -25,28 +27,31 @@
   <header class="site-header">
     <div class="wrap header-row">
       <a class="brand" href="/en/" aria-label="Incogent home">Incogent</a>
-      <nav class="primary-nav" aria-label="Primary navigation">
-        <a href="/en/products/blackbird/">Blackbird</a>
-        <a href="/en/services/">Services</a>
-        <a href="/en/about/">About</a>
-        <a href="/en/shop/">Shop</a>
-        <a class="nav-cta" href="/en/#contact">Contact</a>
-      </nav>
-      <details class="mobile-nav"><summary>Menu</summary><nav aria-label="Mobile navigation">
-        <a href="/en/products/blackbird/">Blackbird</a><a href="/en/services/">Services</a><a href="/en/about/">About</a><a href="/en/shop/">Shop</a><a href="/en/#contact">Contact</a>
-      </nav></details>
+      <div class="header-controls">
+        <nav class="primary-nav" aria-label="Primary navigation">
+          <a href="/en/products/blackbird/">Blackbird</a>
+          <a href="/en/services/">Services</a>
+          <a href="/en/about/">About</a>
+          <a href="/en/shop/">Shop</a>
+          <a class="nav-cta" href="/en/index.html#contact">Contact</a>
+        </nav>
+        <button class="theme-toggle" type="button" data-theme-toggle data-light-label="Switch to light theme" data-dark-label="Switch to dark theme" aria-label="Switch to dark theme" aria-pressed="false" title="Switch to dark theme">&#9790;</button>
+        <details class="mobile-nav"><summary>Menu</summary><nav aria-label="Mobile navigation">
+          <a href="/en/products/blackbird/">Blackbird</a><a href="/en/services/">Services</a><a href="/en/about/">About</a><a href="/en/shop/">Shop</a><a href="/en/index.html#contact">Contact</a>
+        </nav></details>
+      </div>
     </div>
   </header>
-  <main id="main-content"><section class="page-hero section"><div class="wrap narrow"><p class="eyebrow">Development services</p><h1>Technical experience where it matters</h1><p class="lede">Incogent supports teams building and shipping demanding interactive products.</p></div></section><section class="section"><div class="wrap card-grid three-columns"><article class="card"><h2>Unreal Engine development</h2><p>Architecture systems tools performance and production support.</p></article><article class="card"><h2>XR development</h2><p>Interaction performance platform integration and immersive product development.</p></article><article class="card"><h2>Console development</h2><p>Platform integration certification readiness optimization and release support.</p></article><article class="card"><h2>Porting and optimization</h2><p>Bring existing products to new platforms while protecting performance and experience quality.</p></article><article class="card"><h2>Consulting</h2><p>Focused technical direction planning reviews and problem solving.</p></article><article class="card"><h2>Contract development</h2><p>Embedded engineering and production support sized to the needs of the project.</p></article></div></section><section class="section section-muted"><div class="wrap narrow"><h2>Talk with Incogent about your project</h2><a class="button primary" href="/en/#contact">Contact Incogent</a></div></section>
+  <main id="main-content"><section class="page-hero section"><div class="wrap narrow"><p class="eyebrow">Development services</p><h1>Technical experience where it matters</h1><p class="lede">Incogent supports teams building and shipping demanding interactive products.</p></div></section><section class="section section-card-field"><div class="wrap card-grid three-columns capability-grid"><article class="card"><h2>Unreal Engine development</h2><p>Architecture systems tools performance and production support.</p></article><article class="card"><h2>XR development</h2><p>Interaction performance platform integration and immersive product development.</p></article><article class="card"><h2>Console development</h2><p>Platform integration certification readiness optimization and release support.</p></article><article class="card"><h2>Porting and optimization</h2><p>Bring existing products to new platforms while protecting performance and experience quality.</p></article><article class="card"><h2>Consulting</h2><p>Focused technical direction planning reviews and problem solving.</p></article><article class="card"><h2>Contract development</h2><p>Embedded engineering and production support sized to the needs of the project.</p></article></div></section><section class="section highlight-band"><div class="wrap narrow action-panel"><h2>Talk with Incogent about your project</h2><a class="button primary" href="/en/index.html#contact">Contact Incogent</a></div></section>
 </main>
   <footer class="site-footer">
     <div class="wrap footer-grid">
       <div><a class="brand footer-brand" href="/en/">Incogent</a><p>Products and engineering for ambitious interactive experiences</p><p class="development-note">The new Incogent site is under development.</p></div>
-      <nav aria-label="Footer navigation"><a href="/en/products/">Products</a><a href="/en/privacy/">Privacy Policy</a><a href="/en/eula/">EULA</a><a href="/en/#contact">Contact</a></nav>
-      <div class="locale-switcher"><span>Language</span><ul><li><a href="/en/services/" hreflang="en" aria-current="page">English</a></li></ul></div>
+      <nav aria-label="Footer navigation"><a href="/en/products/">Products</a><a href="/en/privacy/">Privacy Policy</a><a href="/en/eula/">EULA</a><a href="/en/index.html#contact">Contact</a></nav>
+      <div class="locale-switcher" hidden><span>Language</span><ul><li><a href="/en/services/" hreflang="en" aria-current="page">English</a></li></ul></div>
     </div>
     <div class="wrap copyright">&copy; <span data-current-year></span> Incogent. All rights reserved.</div>
   </footer>
-  <script src="/site.js?v=20260805-foundation"></script>
+  <script src="/site.js?v=20260806-contact"></script>
 </body>
 </html>

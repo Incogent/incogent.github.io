@@ -11,6 +11,8 @@ nav.products,Footer and breadcrumb label,Products
 nav.privacy,Footer legal link,Privacy Policy
 nav.eula,Footer legal link,EULA
 nav.language,Language selector accessible label,Language
+theme.to_light,Theme toggle accessible label when dark mode is active,Switch to light theme
+theme.to_dark,Theme toggle accessible label when light mode is active,Switch to dark theme
 footer.rights,Footer copyright suffix,Incogent. All rights reserved.
 footer.status,Footer development status,The new Incogent site is under development.
 common.learn_more,Generic action,Learn more
@@ -18,6 +20,9 @@ common.view_blackbird,Product action,Explore Blackbird
 common.view_services,Services action,Explore our services
 common.visit_shop,Shop action,Visit the shop
 common.contact,Contact action,Contact Incogent
+download.blackbird.windows,Primary Blackbird Windows installer action,Download Blackbird for Windows
+download.blackbird.msi,Alternative Blackbird Windows installer action,MSI installer for administrators
+download.blackbird.choice,Installer clarification,Use either the recommended EXE or the MSI installer. You do not need both.
 page.home.title,Homepage browser title,Incogent | Blackbird and Interactive Development
 page.home.description,Homepage meta description,Incogent creates Blackbird and provides Unreal Engine XR console development porting and consulting services.
 home.hero.kicker,Homepage hero eyebrow,Incogent presents
@@ -33,6 +38,28 @@ home.about.title,Homepage about heading,About Incogent
 home.about.body,Homepage about placeholder,This section will establish the company experience approach and reasons clients and customers can trust Incogent.
 home.contact.title,Homepage contact heading,Start a conversation
 home.contact.body,Homepage contact placeholder,Product sales support and project inquiries will be routed from here.
+contact.discord.title,Discord contact card heading,Join Incogent on Discord
+contact.discord.body,Discord contact card body,"Meet other developers, follow Blackbird development, and talk with the Incogent community."
+contact.discord.cta,Discord invitation action,Join Discord
+contact.discord.widget_title,Discord iframe title,Incogent Discord server
+contact.form.title,Contact form heading,Send us a message
+contact.form.body,Contact form introduction,Use the form and we will route your message to the right person.
+contact.form.name,Contact form field label,Name
+contact.form.email,Contact form field label,Email
+contact.form.category,Contact form field label,Topic
+contact.form.category.placeholder,Contact form category placeholder,Choose a topic
+contact.form.category.general,Contact form category,General inquiry
+contact.form.category.blackbird,Contact form category,Blackbird
+contact.form.category.services,Contact form category,Development services
+contact.form.category.business,Contact form category,Business or press
+contact.form.message,Contact form field label,Message
+contact.form.website,Contact form honeypot label,Website
+contact.form.submit,Contact form submit action,Send message
+contact.form.status.verification,Contact form validation message,Please complete the verification challenge.
+contact.form.status.sending,Contact form progress message,Sending your message...
+contact.form.status.error,Contact form error message,Something went wrong sending your message. Please try again.
+contact.form.status.success,Contact form success message,"Thanks, your message was sent successfully."
+contact.form.status.unconfigured,Contact form configuration message,The contact service is not configured yet.
 page.products.title,Products browser title,Products | Incogent
 page.products.description,Products meta description,Explore products created by Incogent.
 products.kicker,Products eyebrow,Incogent products

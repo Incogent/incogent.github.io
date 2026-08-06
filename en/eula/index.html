@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
+  <script>try{const theme=localStorage.getItem("incogent_theme");if(theme==="dark"||theme==="light")document.documentElement.setAttribute("data-theme",theme);}catch(_error){}</script>
   <title>EULA | Incogent</title>
   <meta name="description" content="End User License Agreement for Blackbird.">
   <meta name="robots" content="noindex,nofollow">
@@ -16,8 +17,9 @@
   <link rel="canonical" href="https://incogent.io/en/eula/">
   <link rel="alternate" hreflang="en" href="https://incogent.io/en/eula/">
   <link rel="alternate" hreflang="x-default" href="https://incogent.io/en/eula/">
-  <link rel="stylesheet" href="/site.css?v=20260805-foundation">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Incogent","url":"https://incogent.io"}</script>
+  <link rel="stylesheet" href="/site.css?v=20260806-contact">
+
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Incogent","url":"https://incogent.io","sameAs":["https://discord.gg/AxxpQ8h"]}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"EULA | Incogent","description":"End User License Agreement for Blackbird.","url":"https://incogent.io/en/eula/","inLanguage":"en"}</script>
 </head>
 <body class="legal-page eula-page">
@@ -25,28 +27,31 @@
   <header class="site-header">
     <div class="wrap header-row">
       <a class="brand" href="/en/" aria-label="Incogent home">Incogent</a>
-      <nav class="primary-nav" aria-label="Primary navigation">
-        <a href="/en/products/blackbird/">Blackbird</a>
-        <a href="/en/services/">Services</a>
-        <a href="/en/about/">About</a>
-        <a href="/en/shop/">Shop</a>
-        <a class="nav-cta" href="/en/#contact">Contact</a>
-      </nav>
-      <details class="mobile-nav"><summary>Menu</summary><nav aria-label="Mobile navigation">
-        <a href="/en/products/blackbird/">Blackbird</a><a href="/en/services/">Services</a><a href="/en/about/">About</a><a href="/en/shop/">Shop</a><a href="/en/#contact">Contact</a>
-      </nav></details>
+      <div class="header-controls">
+        <nav class="primary-nav" aria-label="Primary navigation">
+          <a href="/en/products/blackbird/">Blackbird</a>
+          <a href="/en/services/">Services</a>
+          <a href="/en/about/">About</a>
+          <a href="/en/shop/">Shop</a>
+          <a class="nav-cta" href="/en/index.html#contact">Contact</a>
+        </nav>
+        <button class="theme-toggle" type="button" data-theme-toggle data-light-label="Switch to light theme" data-dark-label="Switch to dark theme" aria-label="Switch to dark theme" aria-pressed="false" title="Switch to dark theme">&#9790;</button>
+        <details class="mobile-nav"><summary>Menu</summary><nav aria-label="Mobile navigation">
+          <a href="/en/products/blackbird/">Blackbird</a><a href="/en/services/">Services</a><a href="/en/about/">About</a><a href="/en/shop/">Shop</a><a href="/en/index.html#contact">Contact</a>
+        </nav></details>
+      </div>
     </div>
   </header>
-  <main id="main-content"><section class="page-hero section"><div class="wrap narrow"><p class="eyebrow">Legal</p><h1>End User License Agreement</h1></div></section><section class="section"><div class="wrap narrow draft-notice"><h2>Agreement drafting required</h2><p>The Blackbird EULA has not been finalized. Do not publish this placeholder as the production agreement.</p></div></section>
+  <main id="main-content"><section class="page-hero section"><div class="wrap narrow"><p class="eyebrow">Legal</p><h1>End User License Agreement</h1></div></section><section class="section legal-content"><div class="wrap narrow draft-notice legal-panel"><h2>Agreement drafting required</h2><p>The Blackbird EULA has not been finalized. Do not publish this placeholder as the production agreement.</p></div></section>
 </main>
   <footer class="site-footer">
     <div class="wrap footer-grid">
       <div><a class="brand footer-brand" href="/en/">Incogent</a><p>Products and engineering for ambitious interactive experiences</p><p class="development-note">The new Incogent site is under development.</p></div>
-      <nav aria-label="Footer navigation"><a href="/en/products/">Products</a><a href="/en/privacy/">Privacy Policy</a><a href="/en/eula/">EULA</a><a href="/en/#contact">Contact</a></nav>
-      <div class="locale-switcher"><span>Language</span><ul><li><a href="/en/eula/" hreflang="en" aria-current="page">English</a></li></ul></div>
+      <nav aria-label="Footer navigation"><a href="/en/products/">Products</a><a href="/en/privacy/">Privacy Policy</a><a href="/en/eula/">EULA</a><a href="/en/index.html#contact">Contact</a></nav>
+      <div class="locale-switcher" hidden><span>Language</span><ul><li><a href="/en/eula/" hreflang="en" aria-current="page">English</a></li></ul></div>
     </div>
     <div class="wrap copyright">&copy; <span data-current-year></span> Incogent. All rights reserved.</div>
   </footer>
-  <script src="/site.js?v=20260805-foundation"></script>
+  <script src="/site.js?v=20260806-contact"></script>
 </body>
 </html>

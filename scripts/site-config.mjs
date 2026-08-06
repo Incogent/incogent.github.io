@@ -2,6 +2,18 @@ export const SITE_URL = "https://incogent.io";
 export const SITE_NAME = "Incogent";
 export const DEFAULT_LOCALE = "en";
 
+export const DISCORD_INVITE_URL = "https://discord.gg/AxxpQ8h";
+export const DISCORD_GUILD_ID = "367221582009204737";
+
+// Replace these when the Incogent Cloudflare Worker and Turnstile widget are ready.
+export const CONTACT_FORM_ENDPOINT = "https://REPLACE_WITH_YOUR_WORKER.workers.dev/";
+export const TURNSTILE_SITE_KEY = "0x4AAAAAACysjnCgiwuIZ0kL";
+
+export const DOWNLOAD_URLS = {
+  blackbird_windows_exe: "https://github.com/Incogent/Blackbird-Releases/releases/download/v0.8.0-alpha.15/BlackbirdSetup.exe",
+  blackbird_windows_msi: "https://github.com/Incogent/Blackbird-Releases/releases/download/v0.8.0-alpha.15/Incogent.Blackbird-win.msi",
+};
+
 export const LOCALES = {
   en: { htmlLang: "en", hreflang: "en", ogLocale: "en_US", nativeName: "English" },
 };
