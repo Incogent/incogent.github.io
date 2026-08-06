@@ -39,19 +39,38 @@ products.kicker,Products eyebrow,Incogent products
 products.heading,Products heading,Tools for interactive development
 products.intro,Products introduction,This catalog is designed to grow with Incogent. Blackbird is the first featured product.
 products.blackbird.body,Blackbird catalog card,Explore the product capabilities workflows licensing and purchase options for Blackbird.
-page.blackbird.title,Blackbird browser title,Blackbird | Incogent
-page.blackbird.description,Blackbird meta description,Learn about Blackbird from Incogent.
-blackbird.kicker,Blackbird eyebrow,Incogent product
-blackbird.heading,Blackbird heading,Blackbird
-blackbird.intro,Blackbird introduction,The complete product story will begin here.
-blackbird.capabilities.title,Blackbird section heading,Capabilities
-blackbird.capabilities.body,Blackbird placeholder,This section will organize Blackbird's principal features and benefits.
-blackbird.workflows.title,Blackbird section heading,Workflows
-blackbird.workflows.body,Blackbird placeholder,This section will show how Blackbird fits into real production workflows.
-blackbird.integrations.title,Blackbird section heading,Platforms and integrations
-blackbird.integrations.body,Blackbird placeholder,This section will document supported tools engines platforms and requirements.
-blackbird.purchase.title,Blackbird purchase heading,Ready to explore purchase options?
-blackbird.purchase.body,Blackbird purchase placeholder,Licensing editions and pricing will be presented in the Blackbird shop.
+page.blackbird.title,Blackbird browser title,Blackbird | Build less tooling. Ship more games.
+page.blackbird.description,Blackbird meta description,"Blackbird turns scripts, commands, and development workflows into a fast, organized desktop tool for game teams."
+blackbird.kicker,Blackbird eyebrow,Blackbird
+blackbird.heading,Blackbird hero heading,Build less tooling. Ship more games.
+blackbird.hero.body1,Blackbird hero paragraph,"Blackbird turns your scripts, commands, and development workflows into a fast, organized desktop tool—without requiring you to build and maintain a custom internal application."
+blackbird.hero.body2,Blackbird hero paragraph,Run builds. Deploy to devices. Collect logs. Manage projects. Automate repetitive work. Keep everything your team needs in one place.
+blackbird.organized.title,Blackbird section heading,"Your development workflows, organized"
+blackbird.organized.body1,Blackbird section paragraph,"Command-line tools are powerful, but they can be difficult to remember, share, and use consistently. Blackbird gives them a clean, approachable interface with configurable actions, inputs, presets, queues, and status tracking."
+blackbird.organized.body2,Blackbird section paragraph,Your existing scripts remain yours. Blackbird simply makes them easier to run.
+blackbird.rebuilding.title,Blackbird section heading,Stop rebuilding the same internal tools
+blackbird.rebuilding.body,Blackbird section paragraph,"Small studios rarely have the time or resources to create polished internal development software. Blackbird provides the reusable interface, so you can focus on the scripts and workflows that are unique to your project."
+blackbird.rebuilding.item1,Blackbird statement,No bespoke GUI for every utility.
+blackbird.rebuilding.item2,Blackbird statement,No collection of forgotten batch files.
+blackbird.rebuilding.item3,Blackbird statement,No searching through old documentation for the right command.
+blackbird.game_dev.title,Blackbird section heading,Built for game development
+blackbird.game_dev.intro,Blackbird capability introduction,Blackbird is designed around the practical needs of game developers:
+blackbird.game_dev.item1,Blackbird capability,Build and package projects
+blackbird.game_dev.item2,Blackbird capability,Deploy builds to local or connected devices
+blackbird.game_dev.item3,Blackbird capability,"Launch, stop, and uninstall applications"
+blackbird.game_dev.item4,Blackbird capability,Capture and retrieve logs
+blackbird.game_dev.item5,Blackbird capability,Run maintenance and cleanup tasks
+blackbird.game_dev.item6,Blackbird capability,Chain repeatable workflows together
+blackbird.game_dev.item7,Blackbird capability,"Expose complex tools through simple, configurable actions"
+blackbird.team.title,Blackbird section heading,Powerful enough for developers. Simple enough for the whole team.
+blackbird.team.body1,Blackbird section paragraph,"Create actions with clearly labeled options, sensible defaults, and reusable presets."
+blackbird.team.body2,Blackbird section paragraph,"Technical team members can build the underlying workflows, while artists, designers, producers, and testers can run them safely without memorizing command-line syntax."
+blackbird.infrastructure.title,Blackbird section heading,Your tools. Your infrastructure.
+blackbird.infrastructure.body1,Blackbird section paragraph,"Blackbird runs your existing local scripts and commands. It does not require you to move your projects, builds, or workflows into a hosted service."
+blackbird.infrastructure.body2,Blackbird section paragraph,Keep control of your development environment while making it significantly easier to use.
+blackbird.final.title,Blackbird closing heading,Make repetitive work disappear.
+blackbird.final.body1,Blackbird closing paragraph,"Spend less time typing commands, maintaining one-off utilities, and explaining internal processes."
+blackbird.final.body2,Blackbird closing paragraph,Put your workflows in Blackbird and get back to making games.
 page.shop.title,Shop browser title,Shop | Incogent
 page.shop.description,Shop meta description,Purchase products and licenses from Incogent.
 shop.kicker,Shop eyebrow,Incogent shop
