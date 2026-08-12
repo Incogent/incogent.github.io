@@ -16,7 +16,7 @@
   <meta property="og:url" content="{{CANONICAL_URL}}">
   <link rel="canonical" href="{{CANONICAL_URL}}">
   {{HREFLANG_LINKS}}
-  <link rel="stylesheet" href="/site.css?v=20260806-contact">
+  <link rel="stylesheet" href="/site.css?v=20260806-coral-cta">
 {{HEAD_EXTRAS}}
   <script type="application/ld+json">{{ORG_JSON_LD}}</script>
   <script type="application/ld+json">{{WEBPAGE_JSON_LD}}</script>
@@ -25,7 +25,7 @@
   <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="site-header">
     <div class="wrap header-row">
-      <a class="brand" href="{{HOME_URL}}" aria-label="{{SITE_NAME}} home">{{SITE_NAME}}</a>
+      <a class="brand header-brand" href="{{HOME_URL}}" aria-label="{{SITE_NAME}} home"><img class="header-logo" src="/assets/images/Incogent_Logo_C.png" alt="{{SITE_NAME}}"></a>
       <div class="header-controls">
         <nav class="primary-nav" aria-label="Primary navigation">
           <a href="{{BLACKBIRD_URL}}">{{NAV_BLACKBIRD}}</a>
