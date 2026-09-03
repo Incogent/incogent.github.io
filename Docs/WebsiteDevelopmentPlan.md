@@ -1,27 +1,26 @@
 # Incogent Website Development Plan
 
-Last updated: 2026-08-05
+Last updated: 2026-09-03
+
+> Current functional status, download architecture, and prioritized next work are recorded in [SiteAuditAndCompletionPlan.md](SiteAuditAndCompletionPlan.md). That audit is authoritative where it adds newer implementation findings to this original development plan.
 
 ## Purpose
 
-Adapt the duplicated Sushi Ben website into `incogent.io` while preserving the original site's proven layout, responsive behavior, formatting, templates, localization workflow, and implementation patterns.
+Build `www.incogent.io` as the static marketing, product, services, and commerce front end for Incogent while retaining a locale-aware generation workflow.
 
 The site will eventually introduce Incogent, make Blackbird its primary focus, present Incogent's development services, and sell Blackbird. Content, branding, and visual changes will happen deliberately in later phases rather than during structural planning.
 
 This document is the durable source of truth for decisions, remaining work, and implementation progress.
 
-## Reference Foundation and Current Preview
+## Current Foundation
 
-The committed Sushi Ben-derived site remains the recoverable reference implementation. The current working version is a provisional Incogent scaffold intended for remote review before its visual direction is finalized.
+The active Incogent implementation is intentionally self-contained. Sushi Ben-specific pages, templates, copy, scripts, styles, and assets were removed after dependency review; the original remains recoverable from its own repository and history.
 
-- Preserve `templates/home.tpl`, `templates/secondary.tpl`, and `templates/legal.tpl` as the layout foundations.
-- Preserve `styles.css`, `secondary.css`, and `script.js` as the formatting and responsive-behavior foundations.
-- Preserve the existing header, navigation, section composition, cards, panels, calls to action, footer, forms, lightbox, theme behavior, and mobile behavior until each is intentionally adapted.
+- Use `templates/site.tpl` and `templates/pages/` as the active layout foundation.
+- Use `site.css` and `site.js` as the active presentation and behavior foundation.
 - Preserve the CSV-driven localization system and generated `/{locale}/` page structure.
-- Retain the inherited content and art assets in the repository as references while the provisional English scaffold is evaluated.
-- Create new page types by duplicating and adapting the closest existing template or secondary-page pattern.
 - Keep the static generation and localization design pattern while allowing the route and template implementation to evolve for Incogent.
-- Do not remove inherited routes, source content, or assets until their replacement is implemented and explicitly verified.
+- Keep English as the only active locale until Incogent translations are ready; add future locale columns and metadata without copying generated pages by hand.
 
 ## Agreed Decisions
 
@@ -83,22 +82,19 @@ This navigation will be implemented by adapting the existing desktop and mobile 
 
 This will retain the existing footer structure and styling while its links and labels are adapted later.
 
-## Existing Pattern Mapping
+## Active Template Mapping
 
-The new site should reuse these established structures:
+The active site uses these sources:
 
 | Incogent destination | Existing foundation |
 | --- | --- |
-| Homepage | `templates/home.tpl` and its existing section/component patterns |
-| Products index | `templates/secondary.tpl` plus a secondary body partial modeled on the current Shop page |
-| Blackbird product page | Homepage feature, media, review, buy, and final-CTA section patterns |
-| Shop index | Existing localized Shop page and shop-card styling |
-| Blackbird purchase page | Existing Shop page structure, extended for license/edition selection |
-| Services | `templates/secondary.tpl` with existing panel/card patterns |
-| About | `templates/secondary.tpl`, based on the current Team/About presentation patterns |
-| Privacy Policy | `templates/legal.tpl` and `i18n/strings-privacy.csv` |
-| EULA | `templates/legal.tpl` and `i18n/strings-eula.csv` |
-| 404 and redirects | Existing generated redirect and localized 404 patterns |
+| All page shells | `templates/site.tpl` |
+| Homepage | `templates/pages/home.html` |
+| Products and Blackbird | `templates/pages/products.html` and `templates/pages/blackbird.html` |
+| Shop and Blackbird purchase | `templates/pages/shop.html` and `templates/pages/blackbird-shop.html` |
+| Services and About | `templates/pages/services.html` and `templates/pages/about.html` |
+| Privacy Policy and EULA | `templates/pages/privacy.html` and `templates/pages/eula.html` |
+| 404 and redirects | Generated directly by `scripts/build-i18n.mjs` |
 
 ## Page Responsibilities
 

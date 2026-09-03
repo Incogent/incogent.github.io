@@ -3,12 +3,7 @@ import path from "node:path";
 
 const ROOT = process.cwd();
 const CSV_PATHS = [
-  path.join(ROOT, "i18n/strings-main.csv"),
-  path.join(ROOT, "i18n/strings-team-cast.csv"),
-  path.join(ROOT, "i18n/strings-presskit.csv"),
-  path.join(ROOT, "i18n/strings-eula.csv"),
-  path.join(ROOT, "i18n/strings-fan-content.csv"),
-  path.join(ROOT, "i18n/strings-privacy.csv"),
+  path.join(ROOT, "i18n/strings-site.csv"),
 ];
 
 function read(filePath) {
@@ -121,9 +116,28 @@ function main() {
       process.exit(1);
     }
 
+    if (!parsed.headers.includes("context") || !parsed.headers.includes("en")) {
+      console.error(`Invalid CSV format in ${path.basename(csvPath)}: context and en columns are required.`);
+      process.exit(1);
+    }
+
     const localeColumns = parsed.headers.filter((h) => h !== "key" && h !== "context");
+    const seenKeys = new Set();
     for (const row of parsed.rows) {
       const key = row.key || "(missing key)";
+      if (!row.key) {
+        console.error(`Invalid CSV format in ${path.basename(csvPath)}: every row requires a key.`);
+        process.exit(1);
+      }
+      if (seenKeys.has(row.key)) {
+        console.error(`Duplicate key in ${path.basename(csvPath)}: ${row.key}`);
+        process.exit(1);
+      }
+      seenKeys.add(row.key);
+      if (!row.en) {
+        console.error(`Missing English fallback in ${path.basename(csvPath)}: ${row.key}`);
+        process.exit(1);
+      }
       for (const locale of localeColumns) {
         const value = row[locale] ?? "";
         if (!value) continue;

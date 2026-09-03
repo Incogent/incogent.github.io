@@ -93,10 +93,6 @@ if(supportForm){
     if(honey?.value.trim())return;
 
     const action=supportForm.action;
-    if(action.toLowerCase().includes("replace_with_your_worker")){
-      setFormStatus(supportForm.dataset.statusUnconfigured,"error");
-      return;
-    }
 
     const turnstileResponse=supportForm.querySelector('[name="cf-turnstile-response"]');
     if(!turnstileResponse?.value.trim()){
@@ -136,57 +132,3 @@ if(supportForm){
     }
   });
 }
-
-const BLACKBIRD_RELEASES_API="https://api.github.com/repos/Incogent/Blackbird-Releases/releases?per_page=100";
-const BLACKBIRD_DOWNLOAD_CACHE_KEY="incogent_blackbird_downloads";
-const BLACKBIRD_DOWNLOAD_CACHE_TTL=5*60*1000;
-
-function applyBlackbirdDownloads(downloads){
-  document.querySelectorAll('[data-blackbird-download="exe"]').forEach((link)=>link.href=downloads.exe);
-  document.querySelectorAll('[data-blackbird-download="msi"]').forEach((link)=>link.href=downloads.msi);
-}
-
-function validBlackbirdAssetUrl(url){
-  return typeof url==="string"&&(
-    url.startsWith("https://github.com/Incogent/Blackbird-Releases/releases/download/")||
-    url.startsWith("https://github.com/Incogent/Blackbird-Releases/releases/latest/download/")
-  );
-}
-
-async function resolveBlackbirdDownloads(){
-  if(!document.querySelector("[data-blackbird-download]"))return;
-
-  try{
-    const cached=JSON.parse(localStorage.getItem(BLACKBIRD_DOWNLOAD_CACHE_KEY));
-    if(Date.now()-cached.savedAt<BLACKBIRD_DOWNLOAD_CACHE_TTL&&validBlackbirdAssetUrl(cached.exe)&&validBlackbirdAssetUrl(cached.msi)){
-      applyBlackbirdDownloads(cached);
-      return;
-    }
-  }catch(_error){}
-
-  try{
-    const response=await fetch(BLACKBIRD_RELEASES_API,{headers:{Accept:"application/vnd.github+json"}});
-    if(!response.ok)return;
-    const releases=(await response.json())
-      .filter((release)=>!release.draft&&release.published_at)
-      .sort((left,right)=>Date.parse(right.published_at)-Date.parse(left.published_at));
-    const stableRelease=releases.find((release)=>!release.prerelease);
-    const release=stableRelease??releases[0];
-    if(!release)return;
-
-    const exeAsset=release.assets?.find((asset)=>asset.name==="BlackbirdSetup.exe");
-    const msiAsset=release.assets?.find((asset)=>asset.name==="Incogent.Blackbird-win.msi");
-    if(!exeAsset||!msiAsset)return;
-
-    const downloads=stableRelease?{
-      exe:"https://github.com/Incogent/Blackbird-Releases/releases/latest/download/BlackbirdSetup.exe",
-      msi:"https://github.com/Incogent/Blackbird-Releases/releases/latest/download/Incogent.Blackbird-win.msi",
-    }:{exe:exeAsset.browser_download_url,msi:msiAsset.browser_download_url};
-    if(!validBlackbirdAssetUrl(downloads.exe)||!validBlackbirdAssetUrl(downloads.msi))return;
-
-    applyBlackbirdDownloads(downloads);
-    try{localStorage.setItem(BLACKBIRD_DOWNLOAD_CACHE_KEY,JSON.stringify({...downloads,savedAt:Date.now()}));}catch(_error){}
-  }catch(_error){}
-}
-
-resolveBlackbirdDownloads();

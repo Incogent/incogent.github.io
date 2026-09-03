@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://incogent.io/sitemap.xml
+Sitemap: https://www.incogent.io/sitemap.xml

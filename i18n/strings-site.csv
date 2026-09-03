@@ -20,9 +20,9 @@ common.view_blackbird,Product action,Explore Blackbird
 common.view_services,Services action,Explore our services
 common.visit_shop,Shop action,Visit the shop
 common.contact,Contact action,Contact Incogent
-download.blackbird.windows,Primary Blackbird Windows installer action,Download Blackbird for Windows
+download.blackbird.windows,Primary Blackbird Windows installer action,Download Blackbird Alpha for Windows
 download.blackbird.msi,Alternative Blackbird Windows installer action,MSI installer for administrators
-download.blackbird.choice,Installer clarification,Use either the recommended EXE or the MSI installer. You do not need both.
+download.blackbird.choice,Installer clarification,Blackbird is currently prerelease software. Use either the recommended EXE or the MSI installer; you do not need both.
 page.home.title,Homepage browser title,Incogent | Blackbird and Interactive Development
 page.home.description,Homepage meta description,Incogent creates Blackbird and provides Unreal Engine XR console development porting and consulting services.
 home.hero.kicker,Homepage hero eyebrow,Incogent presents

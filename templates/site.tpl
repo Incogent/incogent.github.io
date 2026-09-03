@@ -50,6 +50,6 @@
     </div>
     <div class="wrap copyright">&copy; <span data-current-year></span> {{FOOTER_RIGHTS}}</div>
   </footer>
-  <script src="/site.js?v=20260806-contact"></script>
+  <script src="/site.js?v=20260903-worker-routes"></script>
 </body>
 </html>
