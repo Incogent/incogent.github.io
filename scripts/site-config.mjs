@@ -8,7 +8,7 @@ export const DISCORD_GUILD_ID = "367221582009204737";
 // The matching Worker route and Turnstile hostname configuration live in the
 // separate Incogent Cloudflare repository.
 export const CONTACT_FORM_ENDPOINT = "https://www.incogent.io/api/contact";
-export const TURNSTILE_SITE_KEY = "0x4AAAAAACysjnCgiwuIZ0kL";
+export const TURNSTILE_SITE_KEY = "0x4AAAAAAEmlWrBWN07WWTPM";
 
 export const DOWNLOAD_URLS = {
   blackbird_windows_exe: "https://www.incogent.io/download/blackbird/windows",
