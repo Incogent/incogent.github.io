@@ -87,7 +87,7 @@ The service processes each summary in memory and merges its counts into daily ag
 
 The database provider's recovery history may temporarily retain earlier database states after deletion. Our current Workers Free database recovery window is seven days. Restored data must undergo the same expiry cleanup before analytics service resumes.
 
-Dashboard views and exports with fewer than five contributing summaries for a metric are withheld. This threshold does not prevent the backend from temporarily storing lower-volume aggregate cells, and is not a guarantee of anonymity.
+The private administrator dashboard and its exports can display aggregate counts from the first contributing summary. Access requires administrator authentication. We do not rely on a minimum contributor count as a guarantee of anonymity.
 
 Because we do not keep an individual account or device link to merged totals, we generally cannot locate or subtract your contribution from those totals after receipt. Turning reporting off prevents future reporting but does not undo prior aggregation. Contact us with privacy questions; do not send additional identifying information solely to identify an analytics contribution.
 
