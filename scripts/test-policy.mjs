@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import { renderPolicy } from './render-policy.mjs';
+const source = readFileSync('privacy/Incogent_Privacy_Policy.md', 'utf8');
+const rendered = renderPolicy(source);
+const page = readFileSync('en/privacy/index.html', 'utf8');
+assert.ok(page.includes(rendered));
+assert.equal((rendered.match(/<h2 /g) || []).length, 18);
+assert.ok(rendered.includes('mailto:legal@incogent.io'));
+assert.ok(rendered.includes('directly to Discord'));
+assert.ok(rendered.includes('within 90 days'));
+assert.ok(rendered.includes('review unresolved reports quarterly'));
+assert.ok(!/REVIEW DRAFT|Publication review item|Policy drafting required|{{/.test(page));
+assert.throws(() => renderPolicy('# Incogent Privacy Policy\n\nREVIEW DRAFT'));
+assert.ok(renderPolicy('# Incogent Privacy Policy\n\n<script>alert(1)</script>').includes('&lt;script&gt;'));
+console.log('Policy source/rendering and publication guards passed.');
