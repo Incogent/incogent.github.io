@@ -6,6 +6,15 @@ Last updated: 2026-09-03
 
 ## Purpose
 
+Website/backend usage analytics is now tracked in the companion Cloudflare repository:
+[`UsageAnalyticsImplementationPlan.md`](../../incogent-cloudflare/Docs/UsageAnalyticsImplementationPlan.md).
+The [client integration handoff](../../incogent-cloudflare/Docs/UsageAnalyticsHandoff.md) contains the
+candidate contract and local endpoint instructions. The first local ingestion slice is implemented;
+final privacy text, hosted staging, distribution collection and private dashboard remain pending.
+As of 2026-09-05 the user's priority is basic, inexpensive tracking: candidate draft 2 reduces
+collection to five daily counters and stores them together in one aggregate row. Detailed feature,
+onboarding and performance tracking is deferred.
+
 Build `www.incogent.io` as the static marketing, product, services, and commerce front end for Incogent while retaining a locale-aware generation workflow.
 
 The site will eventually introduce Incogent, make Blackbird its primary focus, present Incogent's development services, and sell Blackbird. Content, branding, and visual changes will happen deliberately in later phases rather than during structural planning.

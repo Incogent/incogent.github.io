@@ -25,6 +25,8 @@ node scripts/validate-site.mjs
 
 ## Deployment Notes
 
+- GitHub Pages publishes from `main` using `_config.yml` to exclude developer documentation, templates, and build tooling. Keep these files tracked; add new developer-only paths to `exclude`. Do not restore `.nojekyll`, which bypasses these exclusions. Public Markdown downloads under `privacy/` and `eula/` are intentionally included and are not processed as Jekyll pages.
+- Before a website release, synchronize `eula/Blackbird_EULA.md` from the authoritative Blackbird repository file `Installer/EULA.md`. Preserve the source verbatim; never edit the agreement independently here. See `AGENTS.md` for synchronization and verification instructions.
 - When changing `site.css` or `site.js`, bump the corresponding `?v=` query string in `templates/site.tpl` before running the build. GitHub Pages/Cloudflare can serve cached assets for a while, and a version bump prevents generated pages from loading stale files.
 
 ## Localization

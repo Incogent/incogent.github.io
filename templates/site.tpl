@@ -16,7 +16,7 @@
   <meta property="og:url" content="{{CANONICAL_URL}}">
   <link rel="canonical" href="{{CANONICAL_URL}}">
   {{HREFLANG_LINKS}}
-  <link rel="stylesheet" href="/site.css?v=20260806-coral-cta">
+  <link rel="stylesheet" href="/site.css?v=20260907-legal-navigation">
 {{HEAD_EXTRAS}}
   <script type="application/ld+json">{{ORG_JSON_LD}}</script>
   <script type="application/ld+json">{{WEBPAGE_JSON_LD}}</script>
@@ -50,6 +50,6 @@
     </div>
     <div class="wrap copyright">&copy; <span data-current-year></span> {{FOOTER_RIGHTS}}</div>
   </footer>
-  <script src="/site.js?v=20260903-worker-routes"></script>
+  <script src="/site.js?v=20260907-native-video-controls"></script>
 </body>
 </html>

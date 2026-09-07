@@ -1,12 +1,12 @@
 // Small, escaped renderer for our controlled policy Markdown (not general Markdown).
 const escape = text => text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 function inline(text) {
-  return escape(text).replace(/\[([^\]]+)\]\((https:\/\/[^\s)]+|mailto:[^\s)]+)\)/g, '<a href="$2">$1</a>')
+  return escape(text).replace(/\[([^\x5d]+)]\((https:\/\/[^\s)]+|mailto:[^\s)]+)\)/g, (_match, label, url) => `<a href="${url}">${label}</a>`)
     .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
 }
-export function renderPolicy(markdown) {
+export function renderPolicy(markdown, expectedTitle = '# Incogent Privacy Policy') {
   const lines = markdown.replace(/\r\n/g, '\n').trim().split('\n');
-  if (lines.shift() !== '# Incogent Privacy Policy') throw new Error('Unexpected policy title');
+  if (lines.shift() !== expectedTitle) throw new Error('Unexpected policy title');
   if (/REVIEW DRAFT|Publication review item|Proposed effective date/.test(markdown)) throw new Error('Policy is not final');
   const html = [];
   for (let i = 0; i < lines.length;) {
@@ -17,6 +17,11 @@ export function renderPolicy(markdown) {
       const level = heading[1].length;
       const id = heading[2].toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-$/, '');
       html.push(`<h${level} id="${id}">${inline(heading[2])}</h${level}>`); i++; continue;
+    }
+    if (/^\d+\. /.test(line)) {
+      const items = [];
+      while (i < lines.length && /^\d+\. /.test(lines[i])) items.push('<li>' + inline(lines[i++].replace(/^\d+\. /, '')) + '</li>');
+      html.push('<ol>' + items.join('\n') + '</ol>'); continue;
     }
     if (line.startsWith('- ')) {
       const items = [];

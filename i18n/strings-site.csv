@@ -27,7 +27,7 @@ page.home.title,Homepage browser title,Incogent | Blackbird and Interactive Deve
 page.home.description,Homepage meta description,Incogent creates Blackbird and provides Unreal Engine XR console development porting and consulting services.
 home.hero.kicker,Homepage hero eyebrow,Incogent presents
 home.hero.title,Homepage hero heading,Blackbird
-home.hero.body,Homepage hero summary,A product-focused workspace built to support demanding interactive development workflows.
+home.hero.body,Homepage hero summary,"Build, test, and publish games faster with reusable workflows in one simple desktop app."
 home.hero.primary,Homepage primary action,Discover Blackbird
 home.hero.secondary,Homepage secondary action,Purchase options
 home.product.title,Homepage product heading,Blackbird is our primary focus
@@ -104,16 +104,16 @@ shop.kicker,Shop eyebrow,Incogent shop
 shop.heading,Shop heading,Products and licenses
 shop.intro,Shop introduction,The shop will provide a scalable home for Blackbird and future Incogent products.
 shop.blackbird.body,Shop card,Review Blackbird editions license types and purchasing options.
-page.blackbird_shop.title,Blackbird shop browser title,Buy Blackbird | Incogent
-page.blackbird_shop.description,Blackbird shop meta description,Review purchase and licensing options for Blackbird.
-blackbird_shop.kicker,Blackbird shop eyebrow,Blackbird licensing
-blackbird_shop.heading,Blackbird shop heading,Choose the right Blackbird license
-blackbird_shop.intro,Blackbird shop introduction,Editions pricing eligibility and license terms will be defined before checkout is enabled.
-blackbird_shop.editions.title,Blackbird shop heading,Editions and licenses
-blackbird_shop.editions.body,Blackbird shop placeholder,Product configuration will appear here after the licensing model is finalized.
-blackbird_shop.checkout.title,Checkout heading,Secure checkout
-blackbird_shop.checkout.body,Checkout placeholder,Payment and fulfillment will use a secure commerce service. Checkout is not configured yet.
-blackbird_shop.checkout.disabled,Disabled checkout action,Checkout coming soon
+page.blackbird_shop.title,Blackbird shop browser title,Blackbird — Coming Soon | Incogent
+page.blackbird_shop.description,Blackbird shop meta description,Blackbird will be available for purchase soon. Check back for pricing and license options.
+blackbird_shop.kicker,Blackbird shop eyebrow,Blackbird shop
+blackbird_shop.heading,Blackbird shop heading,Available for purchase soon
+blackbird_shop.intro,Blackbird shop introduction,Blackbird will soon be available to buy. Check back here for pricing and license options.
+blackbird_shop.editions.title,Blackbird shop heading,Pricing and licenses
+blackbird_shop.editions.body,Blackbird shop placeholder,Pricing and license details will be available here when sales open.
+blackbird_shop.checkout.title,Checkout heading,Purchase Blackbird
+blackbird_shop.checkout.body,Checkout placeholder,Purchases are not open yet. You’ll be able to buy Blackbird here soon.
+blackbird_shop.checkout.disabled,Disabled checkout action,Coming soon
 page.services.title,Services browser title,Development Services | Incogent
 page.services.description,Services meta description,Unreal Engine XR console porting consulting and contract development services from Incogent.
 services.kicker,Services eyebrow,Development services
@@ -153,5 +153,7 @@ page.eula.title,EULA browser title,EULA | Incogent
 page.eula.description,EULA meta description,End User License Agreement for Blackbird.
 eula.kicker,EULA eyebrow,Legal
 eula.heading,EULA heading,End User License Agreement
-eula.draft.title,EULA warning heading,Agreement drafting required
-eula.draft.body,EULA warning,The Blackbird EULA has not been finalized. Do not publish this placeholder as the production agreement.
+
+blackbird.video.title,Accessible title for the embedded YouTube player,Blackbird video
+
+legal.switch.label,Accessible label for legal navigation,Legal page switcher
