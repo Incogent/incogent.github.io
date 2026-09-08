@@ -1,8 +1,27 @@
 // Small, escaped renderer for our controlled policy Markdown (not general Markdown).
 const escape = text => text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 function inline(text) {
-  return escape(text).replace(/\[([^\x5d]+)]\((https:\/\/[^\s)]+|mailto:[^\s)]+)\)/g, (_match, label, url) => `<a href="${url}">${label}</a>`)
-    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+  // Tokenize source text before escaping, so generated anchors are never relinked.
+  const tokens = /\[([^\x5d]+)]\((https?:\/\/[^\s)]+|mailto:[^\s)]+)\)|<(https?:\/\/[^\s<>]+|[^\s<>@]+@[^\s<>@]+)>|\*\*([^*]+)\*\*|https?:\/\/[^\s<>*]+|[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/gi;
+  let html = '', position = 0;
+  for (const match of text.matchAll(tokens)) {
+    html += escape(text.slice(position, match.index));
+    const [token, label, destination, autolink, strong] = match;
+    if (strong !== undefined) {
+      html += '<strong>' + inline(strong) + '</strong>';
+    } else {
+      const value = destination || autolink || token.replace(/[.,;:!?]+$/, '').replace(/\)+$/, closing => {
+        const opens = (token.match(/\(/g) || []).length;
+        const closes = (token.match(/\)/g) || []).length;
+        return closing.slice(0, Math.max(0, closing.length - Math.max(0, closes - opens)));
+      });
+      const href = /^(https?:\/\/|mailto:)/i.test(value) ? value : 'mailto:' + value;
+      html += '<a href="' + escape(href) + '">' + escape(label || value) + '</a>';
+      if (!destination && !autolink) html += escape(token.slice(value.length));
+    }
+    position = match.index + token.length;
+  }
+  return html + escape(text.slice(position));
 }
 export function renderPolicy(markdown, expectedTitle = '# Incogent Privacy Policy') {
   const lines = markdown.replace(/\r\n/g, '\n').trim().split('\n');

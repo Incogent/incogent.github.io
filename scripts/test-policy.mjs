@@ -14,3 +14,15 @@ assert.ok(!/REVIEW DRAFT|Publication review item|Policy drafting required|{{/.te
 assert.throws(() => renderPolicy('# Incogent Privacy Policy\n\nREVIEW DRAFT'));
 assert.ok(renderPolicy('# Incogent Privacy Policy\n\n<script>alert(1)</script>').includes('&lt;script&gt;'));
 console.log('Policy source/rendering and publication guards passed.');
+
+const links = renderPolicy('# Incogent Privacy Policy\n\n<https://www.incogent.io/privacy> **legal@incogent.io** https://example.com/path. [Existing](https://example.com/?a=1&b=2)');
+assert.ok(links.includes('<a href="https://www.incogent.io/privacy">https://www.incogent.io/privacy</a>'));
+assert.ok(links.includes('<strong><a href="mailto:legal@incogent.io">legal@incogent.io</a></strong>'));
+assert.ok(links.includes('<a href="https://example.com/path">https://example.com/path</a>.'));
+assert.ok(links.includes('<a href="https://example.com/?a=1&amp;b=2">Existing</a>'));
+assert.equal((links.match(/<a /g) || []).length, 4);
+const eulaSource = readFileSync('eula/Blackbird_EULA.md', 'utf8');
+const eulaRendered = renderPolicy(eulaSource, '# Blackbird End User License Agreement');
+assert.ok(readFileSync('en/eula/index.html', 'utf8').includes(eulaRendered));
+assert.ok(eulaRendered.includes('href="https://www.incogent.io/eula"'));
+assert.ok(eulaRendered.includes('href="mailto:legal@incogent.io"'));

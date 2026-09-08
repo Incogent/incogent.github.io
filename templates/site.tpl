@@ -45,7 +45,7 @@
   <footer class="site-footer">
     <div class="wrap footer-grid">
       <div><a class="brand footer-brand" href="{{HOME_URL}}">{{SITE_NAME}}</a><p>{{SITE_TAGLINE}}</p><p class="development-note">{{FOOTER_STATUS}}</p></div>
-      <nav aria-label="Footer navigation"><a href="{{PRODUCTS_URL}}">{{NAV_PRODUCTS}}</a><a href="{{PRIVACY_URL}}">{{NAV_PRIVACY}}</a><a href="{{EULA_URL}}">{{NAV_EULA}}</a><a href="{{CONTACT_URL}}">{{NAV_CONTACT}}</a></nav>
+      <nav aria-label="Footer navigation"><a href="{{BLACKBIRD_URL}}">{{NAV_BLACKBIRD}}</a><a href="{{PRIVACY_URL}}">{{NAV_PRIVACY}}</a><a href="{{EULA_URL}}">{{NAV_EULA}}</a><a href="{{CONTACT_URL}}">{{NAV_CONTACT}}</a></nav>
       <div class="locale-switcher" hidden><span>{{NAV_LANGUAGE}}</span><ul>{{LANGUAGE_LINKS}}</ul></div>
     </div>
     <div class="wrap copyright">&copy; <span data-current-year></span> {{FOOTER_RIGHTS}}</div>
