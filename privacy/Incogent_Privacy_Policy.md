@@ -1,6 +1,6 @@
 # Incogent Privacy Policy
 
-**Effective Date: September 5, 2026**
+**Effective Date: September 9, 2026**
 
 This Privacy Policy explains how Incogent LLC ("Incogent," "we," "us," or "our") collects, uses, discloses, and protects personal information in connection with websites, software, products, and services that link to this Privacy Policy, including Blackbird (collectively, the "Services").
 
@@ -53,7 +53,9 @@ Blackbird runs commands and scripts on your own system. Optional basic usage rep
 
 ### 3.1 Information We Do Not Automatically Collect
 
-Basic usage reporting does not send command or execution history, script or Action names, script contents, arguments, paths, project files, file changes, output, error messages, stack traces, or crash reports. It does not collect feature-by-feature activity, Action categories, installed packages, hardware details, operating-system details, exact app versions, or a persistent user, device, or installation identifier.
+Basic usage reporting does not send command or execution history, script or Action names, script contents, arguments, paths, project files, file changes, output, error messages, stack traces, or crash reports. It does not collect feature-by-feature activity, Action categories, installed packages, hardware details, operating-system details, or a persistent user, device, or installation identifier.
+
+With the version-aware reporting notice, reports also include the public Blackbird version running when the batch is sealed, to understand release adoption. This excludes custom build metadata and commit identifiers. Earlier reporting formats omit this field. Existing consent to the earlier notice does not authorize adding app-version information: the app must present the revised notice and obtain agreement before sending version-aware reports. Version counts represent reporting app-days, not unique users or confirmed successful upgrades, and are not used to attribute older queued Action activity to the version running when a report is sealed.
 
 This does not prevent local processing needed to carry out your instructions or processing of material you deliberately send for support or feedback.
 

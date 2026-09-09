@@ -6,6 +6,11 @@ Last updated: 2026-09-03
 
 ## Purpose
 
+2026-09-09 analytics architecture update: rolling 2.0.0 remains compatible with the
+new version-aware 2.1.0 contract. Daily v1 is retired. Version reporting uses revised
+consent and aggregate app-days with no persistent installation identity; see the
+companion UsageAnalyticsAppVersionHandoff.md for client integration requirements.
+
 Website/backend usage analytics is now tracked in the companion Cloudflare repository:
 [`UsageAnalyticsImplementationPlan.md`](../../incogent-cloudflare/Docs/UsageAnalyticsImplementationPlan.md).
 The [client integration handoff](../../incogent-cloudflare/Docs/UsageAnalyticsHandoff.md) contains the
