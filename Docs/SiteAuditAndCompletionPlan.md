@@ -99,5 +99,9 @@ License dashboard improvements are deployed to production in incogent-cloudflare
   at 1440px and 390px passed for the product page, documentation overview and installation guide
   without horizontal overflow; screenshots reviewed, both product links present, and live local
   search returned 13 guides for "shared settings". Documentation checks now run in CI and guard
-  discoverability and retention of media placeholders. GitHub Pages deployment pending.
+  discoverability and retention of media placeholders.
+- Published in commit `62ab1f3`; GitHub validation run `35792263362` and Pages deployment
+  `35792262732` both succeeded. Production HTTP 200 checks passed for the documentation overview,
+  installation guide, product page, search index, documentation script, example ZIP and sitemap.
+  Live product links and the installation guide's media placeholder were confirmed.
 - Maintain the content using [BlackbirdDocumentationMaintenance.md](BlackbirdDocumentationMaintenance.md).
