@@ -20,4 +20,5 @@ jobs:
       - run: node scripts/build-i18n.mjs
       - run: git diff --exit-code
       - run: node scripts/validate-site.mjs
+      - run: node scripts/validate-documentation.mjs
       - run: node scripts/test-policy.mjs

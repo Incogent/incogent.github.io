@@ -1,3 +1,4 @@
+import { DOCUMENTATION_PAGES } from "./documentation.mjs";
 export const SITE_URL = "https://www.incogent.io";
 export const SITE_NAME = "Incogent";
 export const DEFAULT_LOCALE = "en";
@@ -20,6 +21,7 @@ export const LOCALES = {
 };
 
 export const PAGES = [
+  ...DOCUMENTATION_PAGES,
   { route: "", source: "home", titleKey: "page.home.title", descriptionKey: "page.home.description", bodyClass: "home-page" },
   { route: "products", source: "products", titleKey: "page.products.title", descriptionKey: "page.products.description", bodyClass: "products-page" },
   { route: "products/blackbird", source: "blackbird", titleKey: "page.blackbird.title", descriptionKey: "page.blackbird.description", bodyClass: "blackbird-page" },

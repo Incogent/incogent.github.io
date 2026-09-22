@@ -1,4 +1,5 @@
 key,context,en
+blackbird.documentation,Blackbird product page documentation link,Documentation
 site.name,Global site name,Incogent
 site.tagline,Global company tagline,Products and engineering for ambitious interactive experiences
 nav.blackbird,Primary navigation label,Blackbird
@@ -157,3 +158,119 @@ eula.heading,EULA heading,End User License Agreement
 blackbird.video.title,Accessible title for the embedded YouTube player,Blackbird video
 
 legal.switch.label,Accessible label for legal navigation,Legal page switcher
+page.docs.index.title,Blackbird documentation title,Blackbird documentation | Incogent
+page.docs.index.description,Blackbird documentation summary,Guides for using Blackbird and creating your own Actions.
+page.docs.getting-started.install.title,Blackbird documentation title,Install and activate Blackbird | Incogent
+page.docs.getting-started.install.description,Blackbird documentation summary,"Install Blackbird, choose packages, and finish activation."
+page.docs.getting-started.first-action.title,Blackbird documentation title,Run your first Action | Incogent
+page.docs.getting-started.first-action.description,Blackbird documentation summary,Check Blackbird with System Information before configuring tools.
+page.docs.getting-started.project.title,Blackbird documentation title,Add your first project | Incogent
+page.docs.getting-started.project.description,Blackbird documentation summary,Give project-specific Actions a place to store their settings.
+page.docs.getting-started.interface.title,Blackbird documentation title,Find your way around | Incogent
+page.docs.getting-started.interface.description,Blackbird documentation summary,Understand the main window without learning every setting first.
+page.docs.actions.title,Blackbird documentation title,Find and run Actions | Incogent
+page.docs.actions.description,Blackbird documentation summary,"Search, filter, arrange, and run the tasks installed in Blackbird."
+page.docs.usage.settings.title,Blackbird documentation title,"Projects, settings, and shared values | Incogent"
+page.docs.usage.settings.description,Blackbird documentation summary,Understand where settings come from and why Actions can share them.
+page.docs.usage.devices.title,Blackbird documentation title,Select and refresh devices | Incogent
+page.docs.usage.devices.description,Blackbird documentation summary,Choose the target for device-aware Actions.
+page.docs.usage.queue.title,Blackbird documentation title,Prepare and run a queue | Incogent
+page.docs.usage.queue.description,Blackbird documentation summary,Arrange several Actions and review their saved settings before execution.
+page.docs.usage.workflows.title,Blackbird documentation title,Save and reuse Workflows | Incogent
+page.docs.usage.workflows.description,Blackbird documentation summary,Turn a configured queue into a reusable sequence.
+page.docs.usage.schedules.title,Blackbird documentation title,Schedule Actions and Workflows | Incogent
+page.docs.usage.schedules.description,Blackbird documentation summary,Set a time for saved work and inspect the result.
+page.docs.usage.results.title,Blackbird documentation title,"Results, Output, and History | Incogent"
+page.docs.usage.results.description,Blackbird documentation summary,Understand what happened and collect the right diagnostics.
+page.docs.setup.android.title,Blackbird documentation title,Set up Android tools and devices | Incogent
+page.docs.setup.android.description,Blackbird documentation summary,Prepare ADB and verify a connected Android target.
+page.docs.setup.steamos.title,Blackbird documentation title,Set up a SteamOS device | Incogent
+page.docs.setup.steamos.description,Blackbird documentation summary,Pair a development host and verify SteamOS discovery.
+page.docs.setup.unreal.title,Blackbird documentation title,Configure Unreal Engine | Incogent
+page.docs.setup.unreal.description,Blackbird documentation summary,Point Blackbird at the engine installation and existing Unreal project.
+page.docs.setup.unity.title,Blackbird documentation title,Configure Unity | Incogent
+page.docs.setup.unity.description,Blackbird documentation summary,Select the project and matching Unity Editor.
+page.docs.setup.godot.title,Blackbird documentation title,Configure Godot | Incogent
+page.docs.setup.godot.description,Blackbird documentation summary,"Choose the editor, project, and export prerequisites."
+page.docs.tasks.unreal-build.title,Blackbird documentation title,Package an Unreal project | Incogent
+page.docs.tasks.unreal-build.description,Blackbird documentation summary,Configure and run Package UE Build and check its output.
+page.docs.tasks.unity-build.title,Blackbird documentation title,Build a Unity project | Incogent
+page.docs.tasks.unity-build.description,Blackbird documentation summary,Configure and run Build Unity Project and check its output.
+page.docs.tasks.godot-export.title,Blackbird documentation title,Export a Godot build | Incogent
+page.docs.tasks.godot-export.description,Blackbird documentation summary,Configure and run Export Godot Build and check its output.
+page.docs.tasks.android.title,Blackbird documentation title,Deploy and launch on Android | Incogent
+page.docs.tasks.android.description,Blackbird documentation summary,Configure and run Deploy Android Build and check its output.
+page.docs.tasks.steamos.title,Blackbird documentation title,Install and launch on SteamOS | Incogent
+page.docs.tasks.steamos.description,Blackbird documentation summary,Configure and run Install Steam Build and check its output.
+page.docs.tasks.logs.title,Blackbird documentation title,Collect project and device logs | Incogent
+page.docs.tasks.logs.description,Blackbird documentation summary,Save the log relevant to the failed operation.
+page.docs.tasks.project-version.title,Blackbird documentation title,Update a project version | Incogent
+page.docs.tasks.project-version.description,Blackbird documentation summary,Choose each version component and optionally include a VCS revision.
+page.docs.tasks.upload.title,Blackbird documentation title,Upload a build | Incogent
+page.docs.tasks.upload.description,Blackbird documentation summary,"Configure a publishing profile, validate it, and upload deliberately."
+page.docs.providers.steam.title,Blackbird documentation title,Upload to Steam | Incogent
+page.docs.providers.steam.description,Blackbird documentation summary,Set up Steam for the Upload Build Action.
+page.docs.providers.meta.title,Blackbird documentation title,Upload to Meta Quest and Rift | Incogent
+page.docs.providers.meta.description,Blackbird documentation summary,Set up Meta Quest and Rift for the Upload Build Action.
+page.docs.providers.pico.title,Blackbird documentation title,Upload to PICO | Incogent
+page.docs.providers.pico.description,Blackbird documentation summary,Set up PICO for the Upload Build Action.
+page.docs.providers.stove.title,Blackbird documentation title,Upload to STOVE | Incogent
+page.docs.providers.stove.description,Blackbird documentation summary,Set up STOVE for the Upload Build Action.
+page.docs.providers.viveport.title,Blackbird documentation title,Upload to Viveport PC | Incogent
+page.docs.providers.viveport.description,Blackbird documentation summary,Set up Viveport PC for the Upload Build Action.
+page.docs.providers.custom.title,Blackbird documentation title,Use a Custom CLI uploader | Incogent
+page.docs.providers.custom.description,Blackbird documentation summary,Connect a command-line uploader with explicit arguments and result rules.
+page.docs.packages.manage.title,Blackbird documentation title,"Install, update, and remove packages | Incogent"
+page.docs.packages.manage.description,Blackbird documentation summary,Choose the Actions and support packages available in your library.
+page.docs.packages.library.title,Blackbird documentation title,Choose or move the package library | Incogent
+page.docs.packages.library.description,Blackbird documentation summary,Keep installed packages and local content in the intended folder.
+page.docs.packages.sharing.title,Blackbird documentation title,Export and import a setup | Incogent
+page.docs.packages.sharing.description,Blackbird documentation summary,"Share projects, Workflows, and custom Actions with a reviewed profile."
+page.docs.authoring.first-action.title,Blackbird documentation title,Create your first custom Action | Incogent
+page.docs.authoring.first-action.description,Blackbird documentation summary,"Build a complete, read-only Action and understand each file."
+page.docs.authoring.settings-model.title,Blackbird documentation title,Understand settings and variables | Incogent
+page.docs.authoring.settings-model.description,Blackbird documentation summary,"Separate declarations, stored values, execution context, and script variables."
+page.docs.authoring.define-settings.title,Blackbird documentation title,Define settings for an Action | Incogent
+page.docs.authoring.define-settings.description,Blackbird documentation summary,"Choose identities, types, scopes, and validation deliberately."
+page.docs.authoring.shared-settings.title,Blackbird documentation title,Share settings across Actions | Incogent
+page.docs.authoring.shared-settings.description,Blackbird documentation summary,Configure one project fact and reuse it from multiple Actions.
+page.docs.authoring.read-values.title,Blackbird documentation title,Read inputs and execution context | Incogent
+page.docs.authoring.read-values.description,Blackbird documentation summary,Use the runtime instead of reading configuration files yourself.
+page.docs.authoring.options-profiles.title,Blackbird documentation title,"Options, profiles, conditions, and arrays | Incogent"
+page.docs.authoring.options-profiles.description,Blackbird documentation summary,Offer reusable configuration without duplicating Actions.
+page.docs.authoring.scripts.title,Blackbird documentation title,Develop and debug Action scripts | Incogent
+page.docs.authoring.scripts.description,Blackbird documentation summary,"Build scripts that handle tools, results, and failures clearly."
+page.docs.authoring.libraries.title,Blackbird documentation title,Create and consume a shared library | Incogent
+page.docs.authoring.libraries.description,Blackbird documentation summary,Share script functions without confusing code reuse with shared settings.
+page.docs.authoring.discovery.title,Blackbird documentation title,Create a discovery provider | Incogent
+page.docs.authoring.discovery.description,Blackbird documentation summary,Return verified device records through the supported discovery contract.
+page.docs.troubleshooting.actions.title,Blackbird documentation title,An Action is missing or will not run | Incogent
+page.docs.troubleshooting.actions.description,Blackbird documentation summary,Work through the likely causes and preserve useful diagnostics.
+page.docs.troubleshooting.devices.title,Blackbird documentation title,A device is missing or cannot connect | Incogent
+page.docs.troubleshooting.devices.description,Blackbird documentation summary,Work through the likely causes and preserve useful diagnostics.
+page.docs.troubleshooting.builds.title,Blackbird documentation title,"A build, deployment, or upload failed | Incogent"
+page.docs.troubleshooting.builds.description,Blackbird documentation summary,Work through the likely causes and preserve useful diagnostics.
+page.docs.troubleshooting.packages.title,Blackbird documentation title,A package change failed | Incogent
+page.docs.troubleshooting.packages.description,Blackbird documentation summary,Work through the likely causes and preserve useful diagnostics.
+page.docs.troubleshooting.schedules.title,Blackbird documentation title,A scheduled run did not complete | Incogent
+page.docs.troubleshooting.schedules.description,Blackbird documentation summary,Work through the likely causes and preserve useful diagnostics.
+page.docs.troubleshooting.startup.title,Blackbird documentation title,Blackbird will not start or activate | Incogent
+page.docs.troubleshooting.startup.description,Blackbird documentation summary,Work through the likely causes and preserve useful diagnostics.
+page.docs.troubleshooting.authoring.title,Blackbird documentation title,Debug a custom Action | Incogent
+page.docs.troubleshooting.authoring.description,Blackbird documentation summary,Work through the likely causes and preserve useful diagnostics.
+page.docs.troubleshooting.reporting.title,Blackbird documentation title,Report a problem | Incogent
+page.docs.troubleshooting.reporting.description,Blackbird documentation summary,Send a reproducible report without exposing private data.
+page.docs.reference.keyboard.title,Blackbird documentation title,Keyboard and mouse controls | Incogent
+page.docs.reference.keyboard.description,Blackbird documentation summary,Navigate Blackbird and understand selection versus editing.
+page.docs.reference.preferences.title,Blackbird documentation title,App preferences | Incogent
+page.docs.reference.preferences.description,Blackbird documentation summary,"Control presentation, startup panels, updates, and privacy."
+page.docs.reference.command-line.title,Blackbird documentation title,Run Actions from the command line | Incogent
+page.docs.reference.command-line.description,Blackbird documentation summary,Launch existing Actions and Workflows using the installed app.
+page.docs.reference.updates.title,Blackbird documentation title,App updates and package updates | Incogent
+page.docs.reference.updates.description,Blackbird documentation summary,Update the application separately from its installed Actions.
+page.docs.reference.settings.title,Blackbird documentation title,Setting definition reference | Incogent
+page.docs.reference.settings.description,Blackbird documentation summary,Look up the fields that describe an Action input.
+page.docs.reference.manifest.title,Blackbird documentation title,Package manifest reference | Incogent
+page.docs.reference.manifest.description,Blackbird documentation summary,Understand the file connecting a package to its scripts and dependencies.
+page.docs.reference.runtime.title,Blackbird documentation title,PowerShell runtime reference | Incogent
+page.docs.reference.runtime.description,Blackbird documentation summary,"Use the host-provided helpers for context, progress, and results."

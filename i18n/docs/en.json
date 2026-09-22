@@ -1,0 +1,740 @@
+{
+  "reviewed": "2026-09-22",
+  "version": "0.8.3-alpha.4 development documentation",
+  "pages": [
+    {
+      "slug": "getting-started/install",
+      "group": "Getting started",
+      "title": "Install and activate Blackbird",
+      "description": "Install Blackbird, choose packages, and finish activation.",
+      "body": "## Before you start\nUse the Windows installer offered on the [Blackbird product page](/en/products/blackbird/). This guide describes the upcoming package-enabled version; an older installed version may have different package controls. Blackbird does not install your game engine, Android tools, or storefront upload utilities for you. Add those only when a task needs them.\n\n## Install\n1. Download the EXE installer for ordinary interactive setup, or use the MSI if your deployment process requires it.\n2. Run the installer and follow its location and package-selection screens. Choose the bundles for the tools you use. System Information is required and remains available for the first-run tutorial.\n3. Open Blackbird. Let initial package setup finish before running work.\n4. Follow the activation or trial options shown by your build. Use your own issued license or redemption information; do not share it in screenshots or support posts.\n5. Run [System Information](../first-action/) to confirm the basic Action workflow works.\n\nPackages can be changed later under **Settings > Packages**. You do not need an engine project or a connected device for the first Action.\n\n## If setup does not finish\nRead the reported error before rerunning setup. A folder-access failure can mean the destination is not writable or another program is using it. Close the identified program or choose a writable location. Do not delete your library or configuration to retry an update.\n\nIf activation fails, confirm you are using the intended license information and the instructions in the activation screen. Include the error text when contacting support, but omit the license itself. Installation and license state are not a substitute for the external tools required by individual Actions.",
+      "media": "Screenshot: the installer bundle-selection screen with Utilities and one engine selected; visibly retain required System Information. Second screenshot: the activation choices with all license values blank. Caption what users can change later; do not depict private licensing tools.",
+      "related": [
+        "getting-started/first-action",
+        "packages/manage",
+        "troubleshooting/startup"
+      ]
+    },
+    {
+      "slug": "getting-started/first-action",
+      "group": "Getting started",
+      "title": "Run your first Action",
+      "description": "Check Blackbird with System Information before configuring tools.",
+      "body": "## Run System Information\n1. Open **Actions** in the sidebar.\n2. Select **Clear filters** if a filter is active.\n3. Search for **System Information**.\n4. Select **Run** on its card or row.\n5. Read the completion window, then close it.\n\nThis Action requires neither an active project nor an external device. It reports your operating system, architecture, PowerShell, Blackbird runtime, and ADB availability. **ADB: Not found** does not mean this test failed. You only need ADB for Android work.\n\n## What you just used\nAn **Action** is a single task. **Run** starts that task after any required configuration or confirmation. **Queue** saves it into the working queue for later. Results appear in a completion window; detailed messages remain in **Output** and past runs in **History**.\n\nFor this Action, the expected result is a System Information window reporting that Blackbird is ready. If it is missing from search, clear filters and check **Settings > Packages**. If the run fails, use the error and log to investigate rather than installing unrelated engines or device software.\n\n## Next steps\nAdd a project if your next task needs one. Otherwise, continue browsing Actions. You can revisit the in-app tutorials from **Settings > General > Getting Started**; closing a tutorial does not prevent ordinary use.",
+      "media": "MP4, approximately 12 seconds: begin on Actions with no filters, type System Information, select Run, hold the readable completion window for four seconds. Use a static poster of the result. No narration or music is needed; keep all written steps available below the video.",
+      "related": [
+        "actions",
+        "getting-started/project",
+        "usage/results"
+      ]
+    },
+    {
+      "slug": "getting-started/project",
+      "group": "Getting started",
+      "title": "Add your first project",
+      "description": "Give project-specific Actions a place to store their settings.",
+      "body": "## Add a project\n1. Open **Projects**.\n2. Choose **Add Project** and enter a recognizable name, such as ExampleProject.\n3. Select that project in the **Project** selector at the top of the window.\n4. Check that the heading reads **Project Settings (for ExampleProject)**.\n5. Configure the engine or platform settings needed by your next Action, or let **Configure Action** show its relevant settings when you run it.\n\nCreating a Blackbird project does not create a game-engine project. The Blackbird project records which project you mean and the settings your installed Actions use. Select an existing engine project file or directory when asked.\n\n## Why the fields vary\nInstalled Actions define many of the settings shown here. Installing another bundle can add categories or fields. Several Actions can share one setting, so entering a project file once can serve both an Open Project Action and a Build Action.\n\nUse **Settings** for application preferences and application-scoped Action settings. Use **Projects** for the selected project's values. A setting required only for one execution can be requested immediately before that run instead.\n\n## Bring an existing setup\nUse **More > Import...** to review a Blackbird profile from another machine or teammate. Check imported paths and supply any omitted secrets before running work. Import can replace matching project entries; review the selection before accepting it.",
+      "media": "Two screenshots: Add Project with the synthetic name ExampleProject, then Project Settings showing that name in both the top selector and heading. Highlight those two locations together; avoid real project paths.",
+      "related": [
+        "usage/settings",
+        "setup/unreal",
+        "packages/sharing"
+      ]
+    },
+    {
+      "slug": "getting-started/interface",
+      "group": "Getting started",
+      "title": "Find your way around",
+      "description": "Understand the main window without learning every setting first.",
+      "body": "## The main areas\n- **Project** and **Device** at the top select the context used by applicable Actions.\n- **Actions** contains individual executable tasks.\n- **Workflows** contains saved sequences of queued Actions.\n- **Schedules** controls when saved work runs.\n- **Projects** edits the selected project's settings; **Settings** controls the app and application-scoped values.\n- **History** lets you inspect earlier runs.\n- **Queue** holds work prepared for later; **Output** shows messages from current activity.\n\nYou can collapse Navigation, Queue, and Output to give the main page more room. Startup visibility is configured separately in Settings. Collapsing Output does not stop an Action, and the shared progress area remains available below it. Concurrent progress bars start as one collapsed group that can be expanded.\n\n## Navigation and views\nFavorites, Recent, and pinned views narrow the Actions or Workflows you see. Their filters are separate from layout and grouping. If a list appears unexpectedly empty, clear its filters before assuming its content was removed.\n\nMouse Back and Forward restore previous navigation/filter views. The layout menu changes Cards/List, sorting, and grouping without changing an Action's behavior.\n\n## Completion and support\nRead the result window after a task finishes. Use Output and History for additional detail. **Send Feedback** opens the feedback flow; reviewing a report is separate from sending it. Avoid including credentials or private project content in a report.",
+      "media": "Annotated full-window screenshot using a public build and ExampleProject. Number the top selectors, sidebar, main page, Queue, Output, and progress area. Caption each number in text below the image; do not rely on color alone.",
+      "related": [
+        "actions",
+        "usage/queue",
+        "reference/keyboard"
+      ]
+    },
+    {
+      "slug": "actions",
+      "group": "Everyday use",
+      "title": "Find and run Actions",
+      "description": "Search, filter, arrange, and run the tasks installed in Blackbird.",
+      "body": "Actions perform individual tasks, such as opening a project, building an application, or collecting logs. Use the **Actions** page to find a task and run it, or add it to your queue for later.\n\n\n## Try your first Action\n\n**System Information** is a simple way to try Blackbird. It shows information about your computer without requiring a project or connected device.\n\n1. Select **Actions** in the sidebar.\n2. Select **Clear filters** if any filters are active.\n3. Search for **System Information**.\n4. Select **Run** on that Action.\n\nWhen it finishes, a result window shows your operating system, PowerShell version, and ADB availability. You can close the window when you're done.\n\nIf ADB says **Not found**, that does not mean this Action failed. ADB is used for Android tasks; you don't need it to run System Information.\n\n\n## Find the Action you need\n\nType in the search field to narrow the list. You can search by an Action's name or choose a suggested filter, such as a tag, **Bundle: Utilities**, or **Creator: Incogent**.\n\nA bundle is a collection of related packages. Bundle filters are useful when you want to see the Actions installed from one collection, such as Android or Utilities.\n\nSelected filters appear as chips below the search field:\n\n- Select a chip's **×** to remove that filter.\n- Use **Match: All** to require every selected filter.\n- Use **Match: Any** to accept any selected filter.\n- Select **Clear filters** to reset the search and filters.\n\n\n## Choose the project and device\n\nBefore running an Action that works with a project or device, check the selectors at the top of the window.\n\n**Project** selects the project the Action will use. For example, a build Action needs the correct project's configuration.\n\n**Device** selects the target device. **This PC** means the computer running Blackbird. For an Action that operates on a connected device, select that device instead.\n\nNot every Action needs both selections. Blackbird asks for required settings before starting when they haven't been configured yet. Review those settings, then continue with the run. You may also be asked for choices that apply only to this run.\n\n## Run now or queue for later\n\nSelect **Run** to start an Action. If Blackbird asks you to review settings or confirm the operation, complete that prompt to continue.\n\nSelect **Queue** to add an Action to the queue without running it immediately. This is useful when you want to prepare several tasks before starting them.\n\nWhile work is running, progress appears below **Output**. Expand Output to read the Action's messages. If several operations are running, expand the progress group to see their individual bars.\n\nWhen an Action finishes, its result window reports the outcome. If it fails, follow the correction shown there. When available, **Configure Setting** takes you to the setting that needs attention. Output provides additional detail.\n\n## Arrange the list\n\nOpen the view-options button beside the **Match** controls. Its label reflects your current layout and sorting choices.\n\n- Choose **Cards** or **List** for the layout you prefer.\n- Sort alphabetically, by recently used Actions, or by recently added Actions.\n- Choose **Group: Bundle**, **Group: First tag**, or **Group: None**. Bundle grouping is the default.\n\nGrouping changes how results are arranged. Filters determine which Actions appear.\n\n\n## Can't find an Action?\n\nTry these checks:\n\n1. Select **Clear filters** to remove a search or filter that might hide it.\n2. Open view options and check **Hide actions incompatible with selected device**. If enabled, choose a compatible device or turn the option off to see more Actions.\n3. Open **Settings > Packages** and check whether the package containing the Action is installed.\n\nIf the Action appears but won't start, read the message Blackbird displays and check that the intended project and device are selected.",
+      "media": "Three screenshots: Actions overview with Project/Device, search and Run/Queue annotated; Bundle: Utilities chip with All/Any controls; view menu showing layout, sorting and three grouping choices. Reuse the first-Action guide video instead of producing a duplicate. Crop text at readable scale.",
+      "related": [
+        "usage/settings",
+        "usage/queue",
+        "packages/manage"
+      ]
+    },
+    {
+      "slug": "usage/settings",
+      "group": "Everyday use",
+      "title": "Projects, settings, and shared values",
+      "description": "Understand where settings come from and why Actions can share them.",
+      "body": "## Actions introduce settings\nAn Action declares the information it needs. Blackbird turns those declarations into settings controls, validates the entered values, and supplies the values when that Action runs. You do not need to edit JSON to configure an Action.\n\nSome settings are deliberately shared. For example, Open Godot Project and Export Godot Build both use the same Godot project setting. Change that project's value once and subsequent runs of both Actions receive it.\n\n## Choose the right scope\n| Scope | Where you edit it | Meaning |\n| --- | --- | --- |\n| Project | Projects, or Configure Action | A separate value for each selected project |\n| Application | Settings > Action Settings, or Configure Action | A value shared across this Blackbird installation |\n| Run | The run or queue configuration prompt | A choice for that execution |\n\nRemembered run values are suggestions for a future prompt, not a replacement for persistent project settings. Secret run values are not remembered.\n\n## Configure an Action\n1. Select the intended project and device.\n2. Open the Action's menu and choose **Configure Action**, or follow the configuration prompt shown when a required setting is missing.\n3. Fill in the visible required fields. Some fields appear only after another selection makes them applicable.\n4. Save and run the Action. Review any run-specific choices before continuing.\n\nNamed options give one setting several named alternatives. Profiles select a group of related settings together, such as a build target and output directory. One available option/profile can resolve automatically; multiple alternatives require a choice.\n\n## What is shared, and what is not\nSharing is based on the setting's exact identity, not two controls having the same label. An Action-specific setting stays with that Action. A profile is owned by its Action and project; it is not a global variable store.\n\nQueued items retain captured configuration. Changing a project setting does not silently rewrite values already saved into a queue item or Workflow. Edit and review that saved item when you intend to update it. Authors can learn the underlying identities in [Sharing settings](../../authoring/shared-settings/).",
+      "media": "Diagram: two Action cards point to a single Project Settings field and each receives its value on a new run. Below it, show an already queued item retaining its earlier value. Screenshot: Configure Action with project, application and run-scope concepts annotated using synthetic fields.",
+      "related": [
+        "authoring/settings-model",
+        "authoring/shared-settings",
+        "usage/queue"
+      ]
+    },
+    {
+      "slug": "usage/devices",
+      "group": "Everyday use",
+      "title": "Select and refresh devices",
+      "description": "Choose the target for device-aware Actions.",
+      "body": "## Select a target\n**This PC** is the computer running Blackbird. It is always available and is not a SteamOS device. Use the Device selector to choose a verified connected target for Actions that require one.\n\n1. Connect and prepare your device using its platform's setup guide.\n2. Select the refresh button beside **Device**.\n3. Wait for the scan's progress to finish.\n4. Select the intended device and check its name before running a deployment or cleanup.\n\nDiscovery can also run at startup when **Discover Devices on Startup** is enabled. It does not continuously poll for changes. Scan warnings appear in Output; refresh after changing a connection or authorization.\n\n## Compatibility and separate endpoints\nAn Action may require a particular device kind. The view option **Hide actions incompatible with selected device** can hide unavailable Actions. Showing an Action does not make an incompatible target usable.\n\nA Steam Frame host and its Android/Lepton endpoint are separate targets. Select the Android endpoint for Android Actions and the SteamOS host for supported SteamOS Actions. Do not assume all Actions are enabled for every SteamOS device simply because SSH is available.\n\n## Queued targets\nAn item using **Current device** resolves the selected device when that item starts. A pinned device stays fixed even when the top selector changes. The command-line or schedule override only replaces Current device; it does not replace an explicitly pinned target.\n\nAn unavailable or unverified target causes a reported error. Blackbird does not silently deploy to another device instead.",
+      "media": "Screenshot: Device selector with This PC and synthetic verified device names. Second image: a queue item showing Current device beside a separate example pinned to a specific target. Explain that a Frame host and Android endpoint are distinct entries.",
+      "related": [
+        "setup/android",
+        "setup/steamos",
+        "usage/queue"
+      ]
+    },
+    {
+      "slug": "usage/queue",
+      "group": "Everyday use",
+      "title": "Prepare and run a queue",
+      "description": "Arrange several Actions and review their saved settings before execution.",
+      "body": "## Prepare the work\n1. Find an Action and select **Queue**.\n2. Complete any requested configuration. Repeat for the other tasks you want to run.\n3. Open the Queue panel and arrange items in their intended order.\n4. Edit an item to review its project, parameter values, profile, and device target. Remove items you no longer need.\n5. Select the queue's Run control when the sequence is ready.\n\nA useful sequence might build a project, deploy its output, and launch it. Each Action must be configured correctly; placing Actions together does not automatically pass arbitrary script variables between them. Use shared settings or explicit files when tasks need the same information.\n\n## Saved settings and device choice\nQueue items capture resolved configuration. Later changes to package defaults or a project's profile do not silently replace that saved configuration. After changing a setting, edit the item if you want it to use the new value.\n\n**Current device** is different: it is resolved when the item begins. Pin a target in the item editor when it must use one specific device. A library or parameter change that makes a saved item invalid requires review before execution.\n\n## Pause, stop, and inspect\n**Pause after current action** lets the running Action finish before the queue pauses. Stop requests cancellation of active work; it does not undo completed file changes, installs, or uploads. Review results before restarting a partially completed sequence.\n\nFollow progress below Output, and use the completion result and History to inspect what ran. If a task fails, address the reported cause and review remaining work rather than assuming the sequence completed.\n\n## Reuse the sequence\nSave the queue as a Workflow when you want to load or schedule it again. A Workflow is a saved sequence, while the visible queue is your current working copy.",
+      "media": "MP4, 15–20 seconds: queue two safe System Information examples, edit one, reorder them, then start. Hold the order and item detail long enough to read. Separate screenshot: Pause after current action control with a caption distinguishing it from Stop.",
+      "related": [
+        "usage/workflows",
+        "usage/devices",
+        "usage/results"
+      ]
+    },
+    {
+      "slug": "usage/workflows",
+      "group": "Everyday use",
+      "title": "Save and reuse Workflows",
+      "description": "Turn a configured queue into a reusable sequence.",
+      "body": "## Save a Workflow\n1. Prepare and review the Actions in your queue.\n2. Use the queue's save command and give the Workflow a meaningful name.\n3. Open **Workflows** to find the saved sequence.\n4. Use its load/edit controls to review or revise it, then save the intended changes.\n\nSaved Workflows keep their Action configurations. They are useful for repeatable tasks such as building and deploying a particular project. Search, tags, favorites, and views help you find them as the collection grows.\n\n## Load versus run\nLoading makes a Workflow available in the queue for review. Manually running a Workflow loads its sequence into the visible queue and starts it. Review or save unsaved queue work before replacing it with another Workflow.\n\nScheduled Workflows behave differently: they run a separate execution copy and do not replace the visible queue. Use the schedule monitor and History to follow that work.\n\n## Maintain a Workflow\nAfter editing an Action's settings or updating a package, review the Workflow's captured values. Blackbird validates them against the installed Action's current requirements. A removed Action or incompatible saved value must be corrected; it is not silently substituted with a different Action or a new default.\n\nIf a Workflow uses Current device, its items can follow the current selection or a schedule/CLI override. Pin individual items when the sequence intentionally uses different devices.",
+      "media": "Screenshots: saving a synthetic Verify Project Workflow, its Workflows entry, and its loaded queue. Annotate Load and Run as different outcomes. No upload or destructive Actions in the demonstration.",
+      "related": [
+        "usage/queue",
+        "usage/schedules",
+        "packages/sharing"
+      ]
+    },
+    {
+      "slug": "usage/schedules",
+      "group": "Everyday use",
+      "title": "Schedule Actions and Workflows",
+      "description": "Set a time for saved work and inspect the result.",
+      "body": "## Create a schedule\n1. Run the Action or Workflow manually first and resolve missing tools, settings, and credentials.\n2. Save the Workflow if scheduling a sequence.\n3. Open **Schedules** and choose **New Schedule**.\n4. Name it, select its target, and choose a one-time, daily, or selected-weekday time.\n5. Review the device override, enabled state, and available wake/missed-start options, then save.\n6. Use **Run Now** to check the configured target without waiting for the timer.\n\nRun Now and timer-triggered work use a separate execution copy. They do not replace your visible queue or unsaved edits. A running indicator opens the monitor; results appear in History.\n\n## Timing and overlapping work\nWindows Task Scheduler provides the launch timing. Wake behavior depends on the computer's firmware and Windows power policy. Missed-start options do not guarantee execution while the required interactive user is unavailable.\n\nScheduled work is serialized. If another run occupies the execution slot, later requests wait and report their queued state rather than running simultaneously. Consider build duration when choosing start times.\n\n## Keep scheduled work usable\nEnsure devices remain reachable and required authentication is available. A workflow that asks for interactive input is not automatically an unattended workflow. Review it before relying on an overnight run.\n\nUse the calendar and schedule editor to review, disable, reschedule, or delete a definition. Inspect a failed occurrence in History. If task synchronization reports an issue, use Blackbird's schedule synchronization controls instead of deleting configuration files.",
+      "media": "Three screenshots: New Schedule with a synthetic daily verification job; calendar with enabled/disabled entries; History showing a completed and queued scheduled run. MP4 optional: edit a schedule and use Run Now, without waiting for a clock transition.",
+      "related": [
+        "usage/workflows",
+        "troubleshooting/schedules",
+        "reference/command-line"
+      ]
+    },
+    {
+      "slug": "usage/results",
+      "group": "Everyday use",
+      "title": "Results, Output, and History",
+      "description": "Understand what happened and collect the right diagnostics.",
+      "body": "## Read the completion window\nAn Action's completion window reports success or failure and any available next step. A known configuration failure can offer **Configure Setting**, which opens and highlights the field needing attention. An **Open Folder** or copy control may be available when the Action returns files or values.\n\nOutput is supporting detail, not the only indication that something failed. Expand it to inspect messages while work runs. Background operations identify themselves there even if their progress bar was visible only briefly.\n\n## Inspect a past run\n1. Open **History**.\n2. Locate the run by its Action, time, or available filters.\n3. Open its details and inspect the result and log.\n4. If using **Run Again**, review the intended project, device, and whether repeating the operation is safe. Repeating an upload or cleanup has real effects.\n\nWhere a saved configuration is available, Run Again uses that captured run configuration. Older entries may require the normal configuration flow. A history entry records a run; it does not restore a previous filesystem state.\n\n## Share a useful report\nRecord the Action name, app/package version, time, expected outcome, and exact error. Include the relevant log rather than an unrelated full desktop screenshot. Review attachments for secrets, personal paths, and proprietary data. **Report Issue** or **Send Feedback** lets you review the report before sending it.\n\nIf a log has been removed, explain that in the report. Do not rerun a destructive or externally visible task just to recreate a screenshot unless you intend its effects.",
+      "media": "Screenshot: understood failure with Configure Setting and a second screenshot of History details. Use a synthetic missing-folder error and a short sample log with no credentials. Annotate result summary versus diagnostic detail.",
+      "related": [
+        "troubleshooting/actions",
+        "troubleshooting/reporting",
+        "reference/preferences"
+      ]
+    },
+    {
+      "slug": "setup/android",
+      "group": "Set up your tools",
+      "title": "Set up Android tools and devices",
+      "description": "Prepare ADB and verify a connected Android target.",
+      "body": "## Install the tools\nGet Android SDK Platform-Tools from the [Android developer site](https://developer.android.com/tools/releases/platform-tools). Extract the complete distribution rather than copying only adb.exe. Configure Blackbird's ADB path in Settings to use that executable when automatic discovery cannot find it.\n\nSome build/deployment Actions also require **Android AAPT2 executable** to inspect APK metadata. AAPT2 comes from Android SDK Build-Tools, not Platform-Tools. Configure its path when the Action requests it.\n\n## Connect and authorize\n1. Enable the device's developer/debugging access using its manufacturer's instructions.\n2. Connect with a data-capable USB cable, or establish its supported network ADB connection.\n3. Accept the device's debugging authorization prompt for your computer.\n4. Refresh devices in Blackbird and choose the verified Android target.\n5. Run **List Android Devices** if you need additional connection detail.\n\nIf no device appears, check cable/driver support and authorization before changing project settings. An offline or unauthorized ADB endpoint is not ready for deployment.\n\n## Configure the project\nSet **Android package ID** to your application's package identity. Set **Android build directory** to the directory containing the build you intend to deploy. These are project facts shared by compatible Android Actions, not the identity of the physical device.\n\nUse [Deploy and launch on Android](../../tasks/android/) after discovery succeeds. For a Steam Frame running Lepton, select its Android endpoint for Android Actions; native SteamOS access is a separate connection.",
+      "media": "Screenshots: ADB path setting pointing to C:\\Tools\\Android\\platform-tools\\adb.exe; device selector with a synthetic Android device. Device-side authorization screenshot should obscure the host fingerprint and personal device identity.",
+      "related": [
+        "usage/devices",
+        "tasks/android",
+        "troubleshooting/devices"
+      ]
+    },
+    {
+      "slug": "setup/steamos",
+      "group": "Set up your tools",
+      "title": "Set up a SteamOS device",
+      "description": "Pair a development host and verify SteamOS discovery.",
+      "body": "## Prepare and pair the device\nFollow Valve's [development-device setup and pairing instructions](https://partner.steamgames.com/doc/steamdeck/loadgames) for your supported device. Complete pairing with this development computer before expecting Blackbird's SSH-based operations to work. Keep the device and computer on a network that permits the connection.\n\nBlackbird uses the paired development-host key and verifies the connection. Running the Devkit Client GUI is not required for every later operation once pairing is available. A host answering on the network is not sufficient evidence that authentication succeeded.\n\n## Discover it in Blackbird\n1. Enable the relevant development service on the device.\n2. Refresh the Device selector in Blackbird.\n3. Select the verified SteamOS target.\n4. Check Output for scan warnings if it does not appear.\n\nIf local host-name discovery fails, review the configured SteamOS host list in Settings and use the correct reachable host address. Do not use an Android serial in place of a SteamOS host.\n\n## Choose the right target and build\nSteam Deck, Steam Machine, and Steam Frame retain their supported device kinds in the current app. Actions decide which kinds they support. A Frame's Lepton Android endpoint is separate from its native SteamOS target; Lepton does not need to be running to verify the native connection.\n\nConfigure the build profile and runtime for the artifact you are installing. A Windows, Linux, or Android build needs an appropriate runtime and target; successful file transfer alone does not prove it can launch.",
+      "media": "Screenshot: verified synthetic SteamOS device beside a separate Android endpoint. Caption which Actions use each. Second screenshot: discovery warning with a synthetic unreachable hostname, showing where to find the warning without exposing SSH keys.",
+      "related": [
+        "tasks/steamos",
+        "usage/devices",
+        "troubleshooting/devices"
+      ]
+    },
+    {
+      "slug": "setup/unreal",
+      "group": "Set up your tools",
+      "title": "Configure Unreal Engine",
+      "description": "Point Blackbird at the engine installation and existing Unreal project.",
+      "body": "## Prerequisites\nInstall the Unreal Engine version required by the project and the platform toolchain needed for your target. Confirm the project opens in that engine before automating it. Use [Epic's packaging documentation](https://dev.epicgames.com/documentation/en-us/unreal-engine/packaging-your-project) for engine/platform requirements.\n\n## Set the paths\n1. Install the Unreal bundle under **Settings > Packages**.\n2. Select your Blackbird project and open its Unreal settings, or configure **Open UE Project**.\n3. Set **Unreal project** to its .uproject file.\n4. Set **Unreal Engine installation** to the installation folder containing the Engine directory, not to RunUAT.bat itself.\n5. Run the open-project Action to check the association.\n\nBuild profiles can additionally select a **Build target** .Target.cs file. Blackbird derives the target name from that file. Keep engine/project paths project-specific when projects use different engine versions.\n\n## Before packaging\nConfigure the engine's own maps, plugins, signing, SDKs, and target-platform settings. Blackbird passes the selected build configuration to the engine; it does not make an incompatible project or missing SDK usable.\n\nFor Android, **Target platform** and **Android cook flavor** are separate selections. Use a flavor supported by your engine/project. If a tool path or prerequisite fails, correct that reported setting and retry the small validation/open step before a long build.",
+      "media": "Screenshot: Unreal settings with synthetic engine installation and .uproject paths. Annotate the Engine-containing directory versus project file. A packaging profile screenshot belongs in the build guide, not duplicated here.",
+      "related": [
+        "tasks/unreal-build",
+        "getting-started/project",
+        "troubleshooting/builds"
+      ]
+    },
+    {
+      "slug": "setup/unity",
+      "group": "Set up your tools",
+      "title": "Configure Unity",
+      "description": "Select the project and matching Unity Editor.",
+      "body": "## Prepare the project\nInstall the required Unity Editor and platform modules through Unity Hub or your supported installation process. Open the project in Unity first and resolve licensing or package-import issues. See [Unity Hub documentation](https://docs.unity3d.com/hub/manual/index.html) for installing editors and modules.\n\n## Configure Blackbird\n1. Install the Unity bundle.\n2. Select the Blackbird project and set **Unity project** to the root containing Assets, Packages, and ProjectSettings.\n3. Set **Unity editor installation** to the installation folder containing the Editor directory when you need to choose explicitly.\n4. Otherwise configure **Unity Hub** and allow Blackbird to locate the exact version recorded by the project.\n5. Use **Open Unity Project** to verify the paths.\n\nBlackbird does not silently replace a missing pinned editor with the newest installed editor. Install the required version or deliberately update the project in Unity.\n\n## Choose a build backend\nThe Build Unity Project Action supports **Automatic**, **Unity 6 native build**, **Blackbird managed build**, and **Custom static editor method**. Which is appropriate depends on the installed editor and project. Do not select Unity 6-specific capabilities for an older editor.\n\nA custom editor method must already exist in the project and implement its build behavior. Blackbird is not a replacement for writing or validating that method. Continue with the Unity build guide once the project opens successfully.",
+      "media": "Screenshot: Unity project root and matching editor installation settings. Show a synthetic project pinned to an installed editor without suggesting that all Unity versions use the same native build-profile options.",
+      "related": [
+        "tasks/unity-build",
+        "usage/settings",
+        "troubleshooting/builds"
+      ]
+    },
+    {
+      "slug": "setup/godot",
+      "group": "Set up your tools",
+      "title": "Configure Godot",
+      "description": "Choose the editor, project, and export prerequisites.",
+      "body": "## Prepare Godot\nInstall the editor required by the project. Open the project in Godot and check that it loads. For exporting, install matching export templates and create a preset in Godot's Export window. Follow the [Godot export guide](https://docs.godotengine.org/en/stable/tutorials/export/exporting_projects.html) for platform-specific requirements.\n\n## Configure Blackbird\n1. Install the Godot bundle.\n2. Select your Blackbird project.\n3. Set **Godot project** to project.godot.\n4. Set **Godot editor executable** to the editor you intend to use.\n5. Run **Open Godot Project** and verify the intended project opens.\n\nOpen and export Actions reuse these compatible Godot settings. You do not need a separate copy of the project path for each Action.\n\n## Prepare export\nCreate and test the export preset inside Godot. Its name must match the **Export preset** selected in Blackbird. Choose an output file appropriate for the preset and export mode.\n\nIf export reports missing templates, install templates matching the configured editor. If it cannot find the preset, check the selected project and saved preset name rather than changing the editor executable blindly. Platform signing and SDK requirements still apply when the export is launched through Blackbird.",
+      "media": "Two screenshots: Godot path settings and a synthetic export preset name shown in both Godot and Blackbird. Do not capture signing credentials or private export configuration.",
+      "related": [
+        "tasks/godot-export",
+        "authoring/shared-settings",
+        "troubleshooting/builds"
+      ]
+    },
+    {
+      "slug": "tasks/unreal-build",
+      "group": "Complete a task",
+      "title": "Package an Unreal project",
+      "description": "Configure and run Package UE Build and check its output.",
+      "body": "## Before running\nInstall the relevant package bundle and complete its tool/device setup. Confirm the task manually on a small or disposable build before adding it to an unattended sequence.\n\n## Steps\n1. Select the intended project and configure the Unreal engine/project paths.\n2. Configure a build profile with Build target, Target platform, Client configuration, and Archive directory.\n3. For Android, choose the applicable cook flavor; review build, staging, packaging, and prerequisite options.\n4. Run Package UE Build and review the selected profile before confirming.\n5. Inspect the completion result and packaged files in the configured archive directory.\n\n## If it fails\nChoose output and cleanup options deliberately. Cleaning generated staging/build output can remove earlier results. Additional arguments are an advanced escape hatch, not a substitute for a correct engine/project configuration. On failure, inspect the first meaningful UAT error and the recorded log; do not assume the final process-exit line identifies the underlying cause.\n\n## Repeat the task\nSave useful configuration as a named profile where offered, then queue the Action or save a Workflow. Review captured settings when changing target platforms or output paths.",
+      "media": "Screenshot: the Package UE Build configuration with a synthetic ExampleProject profile; annotate only the fields required for the steps above. Second screenshot: its completion result and output location with personal paths removed. Optional MP4: choose the profile, start, then cut to the result with an explicit “build/transfer time omitted” caption; never imply the operation is instantaneous.",
+      "related": [
+        "setup/unreal",
+        "usage/results",
+        "usage/workflows"
+      ]
+    },
+    {
+      "slug": "tasks/unity-build",
+      "group": "Complete a task",
+      "title": "Build a Unity project",
+      "description": "Configure and run Build Unity Project and check its output.",
+      "body": "## Before running\nInstall the relevant package bundle and complete its tool/device setup. Confirm the task manually on a small or disposable build before adding it to an unattended sequence.\n\n## Steps\n1. Select the project and verify its exact editor installation.\n2. Configure a build profile: backend, Build target, Build output, and Output file name as applicable.\n3. For a native Unity 6 build, select the Unity 6 build profile asset. For a custom backend, supply its static editor method.\n4. Review optional API updates, graphics mode, and additional arguments before running.\n5. Run Build Unity Project and inspect the result and files at the selected output.\n\n## If it fails\nThe selected backend controls which fields apply. A custom editor method must return a meaningful failure when its build fails; a method that exits successfully without producing the expected artifact needs correction in the project. Licensing, editor imports, and missing platform modules remain Unity prerequisites.\n\n## Repeat the task\nSave useful configuration as a named profile where offered, then queue the Action or save a Workflow. Review captured settings when changing target platforms or output paths.",
+      "media": "Screenshot: the Build Unity Project configuration with a synthetic ExampleProject profile; annotate only the fields required for the steps above. Second screenshot: its completion result and output location with personal paths removed. Optional MP4: choose the profile, start, then cut to the result with an explicit “build/transfer time omitted” caption; never imply the operation is instantaneous.",
+      "related": [
+        "setup/unity",
+        "usage/queue",
+        "usage/workflows"
+      ]
+    },
+    {
+      "slug": "tasks/godot-export",
+      "group": "Complete a task",
+      "title": "Export a Godot build",
+      "description": "Configure and run Export Godot Build and check its output.",
+      "body": "## Before running\nInstall the relevant package bundle and complete its tool/device setup. Confirm the task manually on a small or disposable build before adding it to an unattended sequence.\n\n## Steps\n1. Select the project and verify Godot project and Godot editor executable.\n2. Choose a saved Export preset and an Export mode: Release, Debug, PCK, or ZIP.\n3. Select Output file and review Headless export and any additional arguments.\n4. Run Export Godot Build.\n5. Inspect the completion result and the exported artifact.\n\n## If it fails\nThe export preset must exist in the selected project. PCK/ZIP exports are not necessarily standalone applications. Missing templates, invalid signing configuration, or a preset incompatible with the editor must be corrected in Godot or the platform setup.\n\n## Repeat the task\nSave useful configuration as a named profile where offered, then queue the Action or save a Workflow. Review captured settings when changing target platforms or output paths.",
+      "media": "Screenshot: the Export Godot Build configuration with a synthetic ExampleProject profile; annotate only the fields required for the steps above. Second screenshot: its completion result and output location with personal paths removed. Optional MP4: choose the profile, start, then cut to the result with an explicit “build/transfer time omitted” caption; never imply the operation is instantaneous.",
+      "related": [
+        "setup/godot",
+        "usage/results",
+        "usage/workflows"
+      ]
+    },
+    {
+      "slug": "tasks/android",
+      "group": "Complete a task",
+      "title": "Deploy and launch on Android",
+      "description": "Configure and run Deploy Android Build and check its output.",
+      "body": "## Before running\nInstall the relevant package bundle and complete its tool/device setup. Confirm the task manually on a small or disposable build before adding it to an unattended sequence.\n\n## Steps\n1. Prepare and select a verified Android device.\n2. Select the Blackbird project and configure Android package ID, Android build directory, and AAPT2 if requested.\n3. Run Deploy Android Build with the intended build selection.\n4. Check the deployment result before running Launch Android App.\n5. Confirm the application starts on the selected device; collect logs if it fails.\n\n## If it fails\nThe package ID must describe the build being installed. APK metadata and device compatibility checks can reject a mismatched build before transfer. Installing an update over an existing app can fail because of signatures or version rules; read the diagnosis before uninstalling, since uninstalling can remove app data.\n\n## Repeat the task\nSave useful configuration as a named profile where offered, then queue the Action or save a Workflow. Review captured settings when changing target platforms or output paths.",
+      "media": "Screenshot: the Deploy Android Build configuration with a synthetic ExampleProject profile; annotate only the fields required for the steps above. Second screenshot: its completion result and output location with personal paths removed. Optional MP4: choose the profile, start, then cut to the result with an explicit “build/transfer time omitted” caption; never imply the operation is instantaneous.",
+      "related": [
+        "setup/android",
+        "tasks/logs",
+        "usage/workflows"
+      ]
+    },
+    {
+      "slug": "tasks/steamos",
+      "group": "Complete a task",
+      "title": "Install and launch on SteamOS",
+      "description": "Configure and run Install Steam Build and check its output.",
+      "body": "## Before running\nInstall the relevant package bundle and complete its tool/device setup. Confirm the task manually on a small or disposable build before adding it to an unattended sequence.\n\n## Steps\n1. Select a paired, verified SteamOS device and the intended Blackbird project.\n2. Configure the installation profile with its build selection, application identity, and Start command.\n3. Choose an appropriate Runtime and review launch arguments, environment variables, transfer filters, and preserved files.\n4. Run Install Steam Build and wait for its completion result.\n5. Run Launch Steam App for the installed application and verify the result on the target.\n\n## If it fails\nThe available runtime must match the build and device. An Android/Lepton profile may require Android support in addition to SteamOS support. Transfer exclusions and Files to preserve affect installation contents; do not exclude files needed at runtime. Use the reported installation or launch error and device logs to distinguish connection, transfer, and runtime failures.\n\n## Repeat the task\nSave useful configuration as a named profile where offered, then queue the Action or save a Workflow. Review captured settings when changing target platforms or output paths.",
+      "media": "Screenshot: the Install Steam Build configuration with a synthetic ExampleProject profile; annotate only the fields required for the steps above. Second screenshot: its completion result and output location with personal paths removed. Optional MP4: choose the profile, start, then cut to the result with an explicit “build/transfer time omitted” caption; never imply the operation is instantaneous.",
+      "related": [
+        "setup/steamos",
+        "tasks/logs",
+        "usage/workflows"
+      ]
+    },
+    {
+      "slug": "tasks/logs",
+      "group": "Complete a task",
+      "title": "Collect project and device logs",
+      "description": "Save the log relevant to the failed operation.",
+      "body": "## Choose the source\nUse the installed log Action for the system that failed, such as **Pull Android App Logs**, **Record Android Device Logs**, or **Pull Steam Logs**. Existing app logs and a live device recording answer different questions: a recording captures events while you reproduce the issue.\n\n## Collect\n1. Select the correct project and verified device when the Action needs them.\n2. Configure its app identity and output location. Choose only the relevant engine/device support when requested.\n3. Run the log Action and follow its recording/stop instructions if it is a live capture.\n4. Reproduce the problem while recording, if applicable.\n5. Use the completion window to find the saved files, then inspect them before sharing.\n\nIf no files are found, confirm that the app ran on that target and that its identity matches the configured value. An empty collection is different from a failed device connection. For Blackbird's own execution log, use the original Action's History entry instead of a device-log Action.\n\n## Share only what is needed\nLogs can contain names, paths, server addresses, or application data. Keep the original privately, and supply the relevant excerpt or reviewed attachment with the time and reproduction steps. Do not include credentials or unrelated device logs.",
+      "media": "Screenshots: a log Action configuration and successful result with Open Folder. Use a synthetic short log excerpt. For live recording, a 10-second MP4 should show start, deliberate reproduction, stop, and result; do not film unrelated applications.",
+      "related": [
+        "usage/results",
+        "troubleshooting/reporting",
+        "troubleshooting/devices"
+      ]
+    },
+    {
+      "slug": "tasks/project-version",
+      "group": "Complete a task",
+      "title": "Update a project version",
+      "description": "Choose each version component and optionally include a VCS revision.",
+      "body": "## Configure the format\nIn Project Settings, configure **Version format** as an ordered list. Available sources include Major, Minor, Patch, Build counter, Calendar date, and Version control revision. A source can appear once. Components are joined with periods; these custom formats are not necessarily Semantic Versioning.\n\nExamples include Major.Minor.Patch and Major.Minor.Patch.Version control revision. Android numeric build codes remain separate. Ensure your distribution platform accepts the resulting format.\n\n## Run the update\n1. Select the project and engine for Update Project Version.\n2. Review the ordered format and Calendar date format if used.\n3. Choose the counter operation, such as incrementing a named counter or Last counter. Reset following counters affects counters to its right, not date/revision components.\n4. Use **Refresh generated components** to refresh date/revision without incrementing counters, or **Set explicitly** to seed a complete version in the configured order.\n5. Run and inspect the reported old/new value and engine files.\n\nAfter reordering components, use Set explicitly to establish the intended counter positions. Old version-scheme settings are not converted automatically; update saved Workflows and queued items that use them.\n\n## Version control\nInstall Version Control support when available and configure the project's VCS. Git uses local HEAD (an abbreviated hexadecimal commit ID), Perforce uses the highest submitted changelist represented by synced files under the folder, and Unity Version Control uses the loaded changeset of a full workspace. Configure and authenticate the installed git, p4, or cm client separately. Blackbird does not provide checkout, sync, or commit operations.\n\nGit does not require a particular hosting service or remote. Local changes and linked repositories are not fully described by one revision ID. Perforce's number does not prove a consistent workspace snapshot; partial UVCS workspaces without one loaded changeset are rejected. A failed revision lookup stops the version change.",
+      "media": "Diagram: ordered components and resulting synthetic versions, including 1.2.3.abc123def456. Screenshot: format editor and explicit seeding after a reorder. Keep this page marked for package availability review before release.",
+      "related": [
+        "usage/settings",
+        "usage/workflows",
+        "troubleshooting/builds"
+      ]
+    },
+    {
+      "slug": "tasks/upload",
+      "group": "Complete a task",
+      "title": "Upload a build",
+      "description": "Configure a publishing profile, validate it, and upload deliberately.",
+      "body": "## Prepare a publishing profile\nUpload Build supports Steam, Meta Quest/Rift, PICO, STOVE, Viveport PC, and Custom CLI. It uses separately installed vendor tools and your authorized account. Having an Action installed does not grant access to a storefront application.\n\n1. Build and inspect the artifact you intend to upload.\n2. Select the project and configure **Upload Build**.\n3. Create or select a publishing profile and choose its **Uploader**.\n4. Fill in the provider-specific tool path, application identity, artifact location, destination, and credentials. Follow the matching provider guide.\n5. Run with **Validate without uploading** enabled. Resolve every local configuration problem it reports.\n6. Review the profile and destination again, then run with validation-only disabled when you intend to upload.\n\nValidation checks configuration and preparation; it does not prove that the remote service will accept your credentials, account permissions, build, or publishing policy. Keep provider-specific preview modes distinct from Blackbird's validation-only switch.\n\n## Confirm the outcome\nRead the completion result and inspect the destination in the provider dashboard. An upload is not necessarily a public release. Conversely, a live-branch option can have immediate effects; review it before confirming.\n\nFor a failed transfer, inspect the meaningful provider error, not just its process exit code. Check authentication, the chosen app, and the build's platform/identity. Do not repeatedly rerun uploads without checking whether the previous attempt created a remote build.\n\n## Choose a provider guide\n- [Steam](../../providers/steam/)\n- [Meta Quest and Rift](../../providers/meta/)\n- [PICO](../../providers/pico/)\n- [STOVE](../../providers/stove/)\n- [Viveport](../../providers/viveport/)\n- [Custom CLI](../../providers/custom/)",
+      "media": "Three screenshots: publishing-profile provider selection, validation-only run confirmation, and successful result. Use a clearly synthetic app and non-production channel. MP4 should demonstrate validation only, not publish a real build. Include a caption that validation does not authenticate or certify a remote upload.",
+      "related": [
+        "usage/settings",
+        "troubleshooting/builds",
+        "packages/sharing"
+      ]
+    },
+    {
+      "slug": "providers/steam",
+      "group": "Upload provider setup",
+      "title": "Upload to Steam",
+      "description": "Set up Steam for the Upload Build Action.",
+      "body": "## Tool and account setup\n\nYou need Steamworks access to the intended application/depots and an account allowed to upload builds. Download the Steamworks SDK through Steamworks and keep the ContentBuilder distribution intact. **Steamworks SDK ContentBuilder folder** selects that folder, not merely steamcmd.exe.\n\nChoose **Generate VDFs** to configure **Steam App ID**, **Depot configuration**, content paths, exclusions, and an optional beta branch in Blackbird. Each depot must belong to the intended app. Alternatively, **Use existing VDF** selects your reviewed App build VDF and its referenced depot configuration.\n\nConfigure the **Steam build account** and its authentication. Steam Guard can require interactive input; test this before scheduling. Review **Set live on beta branch** carefully because it changes what that branch receives. Leave it empty if you do not intend that change.\n\nSupply a Steam build description for the run. **Preview Steam build without uploading** is a Steam-specific option, distinct from Blackbird's validation-only run. After an actual upload, verify the resulting build and branch in Steamworks. Authentication failures, inaccessible depot paths, and app/depot permission mismatches require correcting the account or configuration, not retrying with a different arbitrary App ID.\n\n\n## Validate, then upload\n1. Select this provider in an Upload Build publishing profile and save the fields described above.\n2. Run **Validate without uploading** and correct the reported local issues.\n3. Turn validation-only off only when you intend a real transfer; confirm the destination and any live/draft options.\n4. Read the result and verify the provider dashboard before retrying or distributing the build.\n\n## Tool compatibility and official help\nUse the provider’s [official documentation and tool access](https://partner.steamgames.com/doc/sdk/uploading). Source/configuration review: 2026-09-22. A minimum certified uploader version is not established for this guide. Record the actual tool version used during your test; do not assume every current or future CLI version is compatible. Vendor access may require sign-in. This page is not a claim of a completed live upload test.",
+      "media": "Screenshot: Steam publishing profile showing Steamworks SDK ContentBuilder folder and required source/destination fields with synthetic IDs and masked credentials. Second screenshot: validation-only completion. A future real-upload result must come from a test application, with account/organization details removed. Alt text should identify the selected provider and explain the destination fields.",
+      "related": [
+        "tasks/upload",
+        "troubleshooting/builds",
+        "usage/results"
+      ]
+    },
+    {
+      "slug": "providers/meta",
+      "group": "Upload provider setup",
+      "title": "Upload to Meta Quest and Rift",
+      "description": "Set up Meta Quest and Rift for the Upload Build Action.",
+      "body": "## Tool and account setup\n\nCreate or select the application in Meta Horizon Developer Dashboard and obtain authorized credentials for that app. Install Meta's Platform Utility and select its executable in **Meta platform utility**. Keep its support files with it.\n\nChoose **Build type**: Quest (Android) or Rift (PC). For Quest, set the Android build directory, release channel, age group, and draft choice. The package identity must match the application registered with Meta. For Rift, set the build directory, launch executable, optional launch arguments/2D launch settings, and the run's build version.\n\nSet **Meta app ID** and the matching **Credential type**, then enter the **Meta credential** as a secret. An app secret and a user access token are not interchangeable labels for the same credential. Obtain the value from the appropriate authorized dashboard flow.\n\nReview release notes and channel before running. After uploading, check the app's release channel/build listing. Wrong app credentials, mismatched Android identity, unsupported version values, or missing PC launch files must be corrected before retrying. An accepted upload does not itself guarantee store approval.\n\n\n## Validate, then upload\n1. Select this provider in an Upload Build publishing profile and save the fields described above.\n2. Run **Validate without uploading** and correct the reported local issues.\n3. Turn validation-only off only when you intend a real transfer; confirm the destination and any live/draft options.\n4. Read the result and verify the provider dashboard before retrying or distributing the build.\n\n## Tool compatibility and official help\nUse the provider’s [official documentation and tool access](https://developers.meta.com/horizon/resources/publish-reference-platform-command-line-utility/). Source/configuration review: 2026-09-22. A minimum certified uploader version is not established for this guide. Record the actual tool version used during your test; do not assume every current or future CLI version is compatible. Vendor access may require sign-in. This page is not a claim of a completed live upload test.",
+      "media": "Screenshot: Meta Quest and Rift publishing profile showing Meta platform utility and required source/destination fields with synthetic IDs and masked credentials. Second screenshot: validation-only completion. A future real-upload result must come from a test application, with account/organization details removed. Alt text should identify the selected provider and explain the destination fields.",
+      "related": [
+        "tasks/upload",
+        "troubleshooting/builds",
+        "usage/results"
+      ]
+    },
+    {
+      "slug": "providers/pico",
+      "group": "Upload provider setup",
+      "title": "Upload to PICO",
+      "description": "Set up PICO for the Upload Build Action.",
+      "body": "## Tool and account setup\n\nUse the PICO developer portal to create/select the intended application and obtain its App ID and App Secret. Download the **Command Line Utility** used for app distribution from the official tools area. Do not confuse it with unrelated tools that also use the name PICO CLI.\n\nSelect the executable in **PICO CLI**. Choose the **Developer region** matching the account/application, then enter **PICO App ID**, **PICO App Secret**, and **Android build directory**. Set **Asset files directory** only when the upload includes additional asset files.\n\nChoose the intended release channel, including its region/store distinction. Review **Support all known devices** or choose the supported devices deliberately. Supply English and/or Chinese release notes as appropriate to the run.\n\nUse a test channel for the first real upload. Check the build in the correct region's developer dashboard afterward. Region/credential mismatches, an APK for another application, or an invalid channel/device selection are separate failures; use the reported error to correct the relevant field.\n\n\n## Validate, then upload\n1. Select this provider in an Upload Build publishing profile and save the fields described above.\n2. Run **Validate without uploading** and correct the reported local issues.\n3. Turn validation-only off only when you intend a real transfer; confirm the destination and any live/draft options.\n4. Read the result and verify the provider dashboard before retrying or distributing the build.\n\n## Tool compatibility and official help\nUse the provider’s [official documentation and tool access](https://developer.picoxr.com/support/). Source/configuration review: 2026-09-22. A minimum certified uploader version is not established for this guide. Record the actual tool version used during your test; do not assume every current or future CLI version is compatible. Vendor access may require sign-in. This page is not a claim of a completed live upload test.",
+      "media": "Screenshot: PICO publishing profile showing PICO CLI and required source/destination fields with synthetic IDs and masked credentials. Second screenshot: validation-only completion. A future real-upload result must come from a test application, with account/organization details removed. Alt text should identify the selected provider and explain the destination fields.",
+      "related": [
+        "tasks/upload",
+        "troubleshooting/builds",
+        "usage/results"
+      ]
+    },
+    {
+      "slug": "providers/stove",
+      "group": "Upload provider setup",
+      "title": "Upload to STOVE",
+      "description": "Set up STOVE for the Upload Build Action.",
+      "body": "## Tool and account setup\n\nUse the STOVE Developer Center and your authorized STOVE Studio/partner access to obtain the distribution uploader and the application's Game ID. Select that uploader's executable in **STOVE uploader executable**. This guide does not substitute an unrelated STOVE SDK or the consumer client for the uploader.\n\nSet **Game ID**, **Source directory**, **Build description**, **STOVE account email**, and its secret password. Supply the **Caller-detail key** when required by your uploader/account setup; obtain it through the provider's authorized process rather than copying an example value.\n\nReview excluded file names, extensions, and directory names. They change the content sent to the service. Validate the configuration, then perform an upload only after checking the destination game and source directory.\n\nConfirm the resulting build in STOVE's management surface. For a failure, verify the uploader distribution and its account requirements, then inspect the provider error. If your account cannot access the uploader or a required key, resolve that through STOVE before proceeding; changing Blackbird profiles cannot grant provider permissions.\n\n\n## Validate, then upload\n1. Select this provider in an Upload Build publishing profile and save the fields described above.\n2. Run **Validate without uploading** and correct the reported local issues.\n3. Turn validation-only off only when you intend a real transfer; confirm the destination and any live/draft options.\n4. Read the result and verify the provider dashboard before retrying or distributing the build.\n\n## Tool compatibility and official help\nUse the provider’s [official documentation and tool access](https://developers.onstove.com/en). Source/configuration review: 2026-09-22. A minimum certified uploader version is not established for this guide. Record the actual tool version used during your test; do not assume every current or future CLI version is compatible. Vendor access may require sign-in. This page is not a claim of a completed live upload test.",
+      "media": "Screenshot: STOVE publishing profile showing STOVE uploader executable and required source/destination fields with synthetic IDs and masked credentials. Second screenshot: validation-only completion. A future real-upload result must come from a test application, with account/organization details removed. Alt text should identify the selected provider and explain the destination fields.",
+      "related": [
+        "tasks/upload",
+        "troubleshooting/builds",
+        "usage/results"
+      ]
+    },
+    {
+      "slug": "providers/viveport",
+      "group": "Upload provider setup",
+      "title": "Upload to Viveport PC",
+      "description": "Set up Viveport PC for the Upload Build Action.",
+      "body": "## Tool and account setup\n\nUse the Viveport Developer Console and its authorized distribution resources to obtain the uploader and identify the target application and organization. This adapter is for PC builds.\n\nSet **Viveport uploader executable**, **Viveport account email**, and secret password. Configure **PC build directory**, **Archive cache location**, **App ID**, and **Organization ID**. Use a writable cache location with room for the upload preparation; do not point it at a folder containing unrelated files you need to preserve as generated output.\n\nSupply the **Build version** for the run. Review the app/organization pairing and source build before leaving validation-only mode. The Action prepares the upload's archive/metadata as needed; a local validation result does not prove the remote service will accept the build.\n\nAfter upload, inspect the correct application's build listing in the developer console. Missing executable/support files, insufficient staging space, invalid credentials, or access to the wrong organization need distinct corrections. Store review/public availability remains a separate provider process.\n\n\n## Validate, then upload\n1. Select this provider in an Upload Build publishing profile and save the fields described above.\n2. Run **Validate without uploading** and correct the reported local issues.\n3. Turn validation-only off only when you intend a real transfer; confirm the destination and any live/draft options.\n4. Read the result and verify the provider dashboard before retrying or distributing the build.\n\n## Tool compatibility and official help\nUse the provider’s [official documentation and tool access](https://developer.vive.com/resources/viveport/). Source/configuration review: 2026-09-22. A minimum certified uploader version is not established for this guide. Record the actual tool version used during your test; do not assume every current or future CLI version is compatible. Vendor access may require sign-in. This page is not a claim of a completed live upload test.",
+      "media": "Screenshot: Viveport PC publishing profile showing Viveport uploader executable and required source/destination fields with synthetic IDs and masked credentials. Second screenshot: validation-only completion. A future real-upload result must come from a test application, with account/organization details removed. Alt text should identify the selected provider and explain the destination fields.",
+      "related": [
+        "tasks/upload",
+        "troubleshooting/builds",
+        "usage/results"
+      ]
+    },
+    {
+      "slug": "providers/custom",
+      "group": "Upload provider setup",
+      "title": "Use a Custom CLI uploader",
+      "description": "Connect a command-line uploader with explicit arguments and result rules.",
+      "body": "## Prepare the command\nUse this adapter when a supported command-line program can upload your artifact but has no dedicated Blackbird provider. Obtain it from its vendor, authenticate through its supported process, and first understand its command-line contract. Blackbird cannot infer the correct flags or upload policy for an arbitrary tool.\n\n## Configure the profile\n1. Select **Custom CLI** as the Uploader.\n2. Choose **CLI tool** and **Working directory**.\n3. Set **Build or upload descriptor**, **Application ID**, and **Channel** when your tool uses them.\n4. Add each argument using the argument editor. Keep a path with spaces as one argument; do not construct an extra shell command string to work around quoting.\n5. Configure environment variables needed by the tool and use the available secret handling for credentials.\n6. Set **Success exit codes** and, if needed, **Required success output** and **Failure output** patterns according to the tool's documented behavior.\n7. Run **Validate without uploading**, then test a real upload to a non-production destination.\n\n## Be precise about success\nA process returning zero is not always proof that the intended remote operation happened. Conversely, informational text on standard error is not necessarily a failure. Configure the contract to match the tool, then verify the remote artifact manually during setup.\n\nValidation-only checks Blackbird's local preparation; it is not a universal vendor dry-run switch. If the vendor offers a dry-run argument, deliberately configure and review it. Avoid patterns so broad that an unrelated message can be interpreted as success.\n\n## Diagnose a failure\nUse the same executable version and working directory when reproducing a command outside Blackbird. Check argument boundaries, missing environment values, expiration of authentication, and output patterns. Never paste a credential-bearing command into feedback or public chat.",
+      "media": "Screenshot: custom argument rows, environment rows with masked secret example, and success/failure criteria. Include a caption explaining one argument per row. Do not show a runnable production upload command.",
+      "related": [
+        "tasks/upload",
+        "authoring/scripts",
+        "troubleshooting/builds"
+      ]
+    },
+    {
+      "slug": "packages/manage",
+      "group": "Packages and customization",
+      "title": "Install, update, and remove packages",
+      "description": "Choose the Actions and support packages available in your library.",
+      "body": "## Understand bundles and packages\nA package is an Action, shared library, or discovery provider. A bundle groups related packages. Actions appear on the Actions page; libraries support scripts and providers find devices, so they do not appear as runnable Action cards.\n\n## Review a change\n1. Open **Settings > Packages**.\n2. Use **Check for Updates** to discover available releases.\n3. Expand a bundle to inspect its packages. Review installed/available versions and **Release Notes**.\n4. Select the bundle or individual packages you want. Clearing an installed selection proposes removal.\n5. Read the Install/Update/Remove summary and choose **Apply Changes**.\n6. Confirm the summarized change, follow progress, and read the completion window.\n\n**Discard Changes** abandons the pending selection. Dependency validation can require support libraries for Actions you retain. System Information is required for the tutorial and cannot be removed through ordinary selection.\n\n## Undo and failure\n**Undo Last Update** restores the supported previous package state. It is one rollback opportunity, not unlimited version history or a backup of every custom edit. Review its result; not every local/official ownership change can be undone automatically.\n\nIf a change fails, read its completion error and Output. Close a program specifically identified as using affected files, then retry. Do not delete the library or alter internal metadata to force removal. Installed package files may be preserved when activation fails.\n\n## Customize separately\nKeep published package content intact. Use the available duplicate/fork or new-Action authoring flow for editable local work. Updates and local customization are different operations; changing a signed file directly can prevent it from validating.",
+      "media": "Screenshots: expanded bundle with selected Action and required library; compact change confirmation; progress and completion. Use a disposable example selection and show System Information retained. Separate Undo screenshot should explain the single rollback rather than imply arbitrary historical versions.",
+      "related": [
+        "packages/library",
+        "authoring/first-action",
+        "troubleshooting/packages"
+      ]
+    },
+    {
+      "slug": "packages/library",
+      "group": "Packages and customization",
+      "title": "Choose or move the package library",
+      "description": "Keep installed packages and local content in the intended folder.",
+      "body": "## Find the active location\nOpen **Settings > Packages** and read **Package library location**. The library contains installed bundles and project configuration. Logs and temporary/cache data are stored separately; moving the library does not mean every Blackbird file moves with it.\n\n## Change Location versus Move Library\n**Change Location...** selects the library to use after restart. It does not copy your current library into that folder. Use it to switch to a different library intentionally.\n\n**Move Library** relocates the current library. Choose a writable, empty destination separate from the source, and review the confirmation. Do not select a parent/child folder or expect two existing libraries to merge. Let active work finish and close external editors or applications using files there before moving.\n\n## Local package folders\nCustom packages created through the app are stored in My Actions. The layout is `Bundles/user.actions/<package-id>/`, with the package manifest and script together. Use the Action editor for manifest changes; edit its script in your preferred editor and reload Actions afterward.\n\nOfficial and local bundles each have their own folder beneath Bundles. Internal configuration files are managed by Blackbird. A directory being visible does not mean it is safe to rename or remove while the app or an Action is using it.\n\n## Backups and old Actions\nUse reviewed profile exports for portable configuration and custom Actions. Keep a separate backup before reorganizing files. Old flat Packages content is not automatically executable in the new bundle library; import custom Actions through the supported flow instead of copying official packages into My Actions.",
+      "media": "Screenshot: location field and the two commands. A small authored folder diagram should show only Bundles, user.actions, a synthetic package, package.json and run.ps1. Do not expose a real user home directory.",
+      "related": [
+        "packages/sharing",
+        "authoring/first-action",
+        "troubleshooting/packages"
+      ]
+    },
+    {
+      "slug": "packages/sharing",
+      "group": "Packages and customization",
+      "title": "Export and import a setup",
+      "description": "Share projects, Workflows, and custom Actions with a reviewed profile.",
+      "body": "## Export\n1. Open **More > Export...**.\n2. Choose **Current Project**, **Everything**, or adjust selections to create a Custom export.\n3. Review included projects, Workflows, Actions, settings, and machine-specific paths.\n4. Leave secrets excluded unless you explicitly need a protected transfer and understand the contents.\n5. Save the .bbprofile file and keep it in an appropriate location.\n\nCurrent Project is useful for sharing one project setup; Everything is a broad configuration transfer. Neither is a copy of your game project's source files or build artifacts. License/trial state, logs, history, and transient discovered devices are not exported. Packages marked non-exportable are excluded.\n\n## Import\n1. Back up the configuration you may replace.\n2. Open **More > Import...** and select a .bbprofile or supported standalone .blackbird-action.zip.\n3. Review the proposed contents and matching items.\n4. Confirm the intended import.\n5. Review local tool/project paths and supply omitted credentials, then test a safe Action.\n\nImport is additive for unrelated content, but included matching projects/Workflows and Action IDs can replace existing entries. A section absent from the file is not an instruction to erase your setup. A profile requiring a newer Blackbird version must be opened with a compatible app.\n\n## Treat imported scripts as code\nOnly import Actions from a source you trust and inspect their scripts before execution. A friendly label or creator field is not proof of safety. Do not send a profile containing secrets or private machine paths to a public issue tracker.",
+      "media": "Screenshots: export scopes and secret exclusion; import review with one synthetic matching project clearly marked. Show a warning caption that importing a matching item can replace it. No real profile or credential data.",
+      "related": [
+        "usage/workflows",
+        "packages/library",
+        "authoring/first-action"
+      ]
+    },
+    {
+      "slug": "authoring/first-action",
+      "group": "Create your own Actions",
+      "title": "Create your first custom Action",
+      "description": "Build a complete, read-only Action and understand each file.",
+      "body": "## What you will make\nCreate **Report Output Directory**, which reads a project setting and reports its value. It does not modify that directory. You will use the same setting in a second Action later.\n\nAn Action package contains a **package.json** manifest describing its identity, requirements, settings, and entrypoint, plus a **run.ps1** script containing its behavior. Blackbird's editor writes the manifest; the runtime supplies the configured values to the script.\n\n## Create it in the app\n1. Select **New Action** and name it Report Output Directory. Use the ID `report-output-directory` and a relevant tag such as Utilities.\n2. Add a custom setting with shared namespace `example`, key `outputDirectory`, label **Output directory**, type **Folder**, scope **Project**, and Required enabled.\n3. Enable **Requires an active project**. This example needs no device and is not destructive.\n4. On **Execution**, choose the Windows PowerShell file-based starter. Keep its runtime import and unhandled-failure trap.\n5. Create the Action, open its package folder through the Action's menu, and edit run.ps1 as below.\n6. Reload Actions, select a test project, and configure Output directory to an existing disposable folder.\n7. Run the Action. Its completion window should report the same path you configured.\n\n```powershell\nImport-Module (Join-Path $env:BLACKBIRD_RUNTIME_ROOT 'Blackbird.Runtime.psm1') -Force\ntrap { Set-BlackbirdUnhandledFailureResult -ErrorRecord $_; break }\n\n$OutputDirectory = Get-BlackbirdParameter -Name 'example.outputDirectory' -Required\nif (-not (Test-Path -LiteralPath $OutputDirectory -PathType Container)) {\n    Set-BlackbirdFailureResult -Title 'Folder unavailable' -Message 'The configured output directory is unavailable.' -Guidance 'Choose an existing Output directory for this project and run again.'\n    throw 'Output directory is unavailable.'\n}\nWrite-Output 'Read the configured output directory.'\nSet-BlackbirdSuccessResult -Title 'Output directory' -Message 'The project setting was read successfully.' -Items @($OutputDirectory)\n```\n\n## Why it works\n`example.outputDirectory` is Blackbird's setting identity. `$OutputDirectory` is an ordinary variable inside this PowerShell run. The helper reads the already resolved setting; assigning to the PowerShell variable would not change Blackbird's saved value.\n\nStart it from Blackbird, not by double-clicking run.ps1. Blackbird supplies the invocation context and result channel. An error saying BLACKBIRD_CONTEXT_PATH is missing means that required launch context was not provided.\n\n## Files and examples\nThe app saves custom packages under `Bundles/user.actions/<package-id>/` in your chosen library. Use Edit Action for manifest changes and your editor for script changes. The [complete example ZIP](/assets/blackbird/docs/examples/shared-settings.zip) contains this Action and the second read-only Action. Inspect the files, then copy their individual package folders into My Actions in a test library and reload; this ZIP is a source example, not an Import-format archive.",
+      "media": "MP4, 30–45 seconds with chapter captions: name the Action, create the shared project Folder setting, enable project requirement, open run.ps1, save the example, reload, configure a disposable folder, and run. Screenshots should pair each UI namespace/key field with example.outputDirectory in the script. Hide personal editor tabs and paths.",
+      "related": [
+        "authoring/settings-model",
+        "authoring/shared-settings",
+        "authoring/scripts"
+      ]
+    },
+    {
+      "slug": "authoring/settings-model",
+      "group": "Create your own Actions",
+      "title": "Understand settings and variables",
+      "description": "Separate declarations, stored values, execution context, and script variables.",
+      "body": "## The value journey\n**An Action declares an input → Blackbird shows a control → the user supplies a value → Blackbird resolves it for the run → the script reads it.**\n\nThe declaration is a definition, not the current value. For a project-scoped setting, two projects can have different values under the same identity. The Action package does not need to be rewritten when a user changes that value.\n\n| Concept | Example | How a PowerShell script reads it |\n| --- | --- | --- |\n| Action parameter | `example.outputDirectory` | `Get-BlackbirdParameter -Name 'example.outputDirectory'` |\n| Generic Blackbird variable | `BuildFlavor` | `Get-BlackbirdVariable -Name 'BuildFlavor'` |\n| Selected project/device | Current execution context | `Get-BlackbirdProject` / `Get-BlackbirdDevice` |\n| Local script variable | `$OutputDirectory` | Ordinary PowerShell syntax |\n| Environment variable | `$env:BLACKBIRD_PACKAGE_ROOT` | Environment supplied to the process |\n\n## Prefer declared settings for new Action inputs\nParameters have labels, types, required-state validation, and project/application/run scope. Define them in **New/Edit Action > Custom Settings**. They are the normal way to give users an editable input such as a project path or tool choice.\n\nGeneric variables are a separate string dictionary in the invocation context. Project variables override same-named global variables there. They do not automatically become typed Action settings, and a parameter and variable with similar names are not interchangeable. If adapting an older script using a generic variable, identify its actual source rather than assuming a Custom Setting populates it.\n\n## Scope is separate from namespace\nThe namespace groups and identifies a setting; scope determines which value is used. `example.outputDirectory` can be a shared project setting, while `example.toolPath` could be an application setting. A namespace named after a tool does not automatically mean application scope.\n\n**This Action** uses the package ID as its namespace. A shared namespace is deliberately reusable. Profiles group multiple related project settings into presets; they do not create a new global scope.\n\n## No automatic output handoff\nActions run in separate processes. A local variable in Action A is not visible in Action B. Reading a shared setting does not write it. To exchange produced data, use an explicit artifact or supported external system and configure both Actions to refer to it. Do not modify Blackbird configuration files from scripts.",
+      "media": "Diagram with five labeled stages and a second row showing ExampleProject and AnotherProject holding different values for one ID. Beside it, contrast the canonical ID, a local PowerShell variable, and a generic Blackbird variable in three differently labeled boxes. Alt text must describe the relationships without relying on arrows or colors alone.",
+      "related": [
+        "authoring/define-settings",
+        "authoring/shared-settings",
+        "usage/settings"
+      ]
+    },
+    {
+      "slug": "authoring/define-settings",
+      "group": "Create your own Actions",
+      "title": "Define settings for an Action",
+      "description": "Choose identities, types, scopes, and validation deliberately.",
+      "body": "## Add a setting\nIn **New Action** or **Edit Action**, open **Custom Settings** and add a field. Choose **This Action** for a private input or select/create a shared namespace. Choose an existing shared key when you mean to reuse a definition; otherwise create a new key.\n\nFor the tutorial, use namespace `example`, key `outputDirectory`, label Output directory, type Folder, scope Project, and Required. The resulting identity is `example.outputDirectory`. Use that full ID in scripts and conditions.\n\n## Choose scope\n- **Project:** values belonging to the selected project, such as an app ID or output folder.\n- **Application:** a tool or preference shared across this installation.\n- **Run:** a choice confirmed for the current execution. Remembered non-secret values may prefill the next prompt; secrets are never remembered as run suggestions.\n\nDevice-scoped persistence is not supported. If an input depends on a selected device, read the device context or request an appropriate run input rather than inventing a device scope.\n\n## Choose type and constraints\nText, Integer, Number, Boolean, Choice, File, Folder, Secret, and Array represent different values. Use Choice for a defined set, and file/folder controls for paths. Set allowed extensions or existence requirements where appropriate. Give a useful label and description rather than exposing an internal ID as the only instruction.\n\nRequired fields must be supplied when applicable. A default is a fallback, not a value copied into every existing project. Secret fields must not contain a default. Avoid a secret value in a placeholder, description, or script source.\n\n## What the manifest means\n```json\n{\n  \"id\": \"example.outputDirectory\",\n  \"label\": \"Output directory\",\n  \"type\": \"folder\",\n  \"scope\": \"project\",\n  \"required\": true\n}\n```\nThis is one entry in the manifest's parameters array, not a complete package. Save through the editor and validate the Action. Test a missing value, a valid value, and an invalid path before sharing it.\n\nDo not rename an established ID casually: saved settings, conditions, Workflows, and scripts refer to it. A new label can improve wording without changing the identity.",
+      "media": "Screenshot: custom-setting editor with namespace, key, scope and type annotated; adjacent JSON excerpt showing the exact mapping. Include a separate masked Secret-field example without a real value.",
+      "related": [
+        "authoring/shared-settings",
+        "authoring/options-profiles",
+        "reference/settings"
+      ]
+    },
+    {
+      "slug": "authoring/shared-settings",
+      "group": "Create your own Actions",
+      "title": "Share settings across Actions",
+      "description": "Configure one project fact and reuse it from multiple Actions.",
+      "body": "## Reuse the same definition\nTwo Actions share a setting by declaring the same canonical ID with a compatible definition. Matching labels alone do not share values. `example.outputDirectory` and `example.outputFolder` are different settings even if both controls say Output directory.\n\nReuse the shared key through the editor so scope, type, value mode, choices, and path constraints agree. Bundled definitions take precedence when determining the editor for a shared built-in identity; a custom Action should not redefine their contract to mean something else.\n\n## Try two Actions\n1. Complete **Report Output Directory** from the first-Action authoring guide.\n2. Create **Count Output Files**, ID `count-output-files`, requiring a project and no device.\n3. Add the existing shared `example.outputDirectory` setting through the editor. Keep the same Folder/Project/Required definition.\n4. Use the following run.ps1 and reload Actions.\n5. Configure Output directory once for ExampleProject, then run both Actions.\n6. Change that project setting to another existing folder and run both again. The first reports the new path; the second counts files there.\n\n```powershell\nImport-Module (Join-Path $env:BLACKBIRD_RUNTIME_ROOT 'Blackbird.Runtime.psm1') -Force\ntrap { Set-BlackbirdUnhandledFailureResult -ErrorRecord $_; break }\n\n$OutputDirectory = Get-BlackbirdParameter -Name 'example.outputDirectory' -Required\n$Files = @(Get-ChildItem -LiteralPath $OutputDirectory -File -ErrorAction Stop)\nSet-BlackbirdSuccessResult -Title 'Output files' -Message ('Found {0} top-level files.' -f $Files.Count) -Items @($OutputDirectory)\n```\n\nThe [complete examples](/assets/blackbird/docs/examples/shared-settings.zip) include both manifests and scripts. They read folders; they do not write output or modify saved settings.\n\n## Boundaries to remember\n- Changing the selected project selects that project's value; it does not overwrite another project's configuration.\n- A run-scoped setting is resolved for that execution, even when another Action uses the same ID.\n- Queued items and Workflows keep captured configuration. Edit them to intentionally adopt changed values.\n- A local assignment such as `$OutputDirectory = 'C:\\Example'` changes only that process's variable.\n- If unrelated Actions should share a fact, keep it as a shared setting outside an Action-specific profile.\n\n## Resolve a conflict\nIf Blackbird reports incompatible definitions, compare the full ID and constraints. Match the existing definition when you intend to share. Choose a different namespace/key when the new input has a different meaning. Do not hide the warning by weakening the original Action's requirements.",
+      "media": "MP4, 25 seconds: show the same shared key in both Action editors, change one project value, run Report and Count, and compare their results. Hold each result; explicitly show that neither Action contains a hard-coded path. Diagram: one saved project value feeding two runs, with a separate captured Queue item.",
+      "related": [
+        "authoring/first-action",
+        "authoring/define-settings",
+        "usage/settings"
+      ]
+    },
+    {
+      "slug": "authoring/read-values",
+      "group": "Create your own Actions",
+      "title": "Read inputs and execution context",
+      "description": "Use the runtime instead of reading configuration files yourself.",
+      "body": "## Initialize the PowerShell runtime\nEvery PowerShell Action should begin with the runtime import and fallback trap:\n```powershell\nImport-Module (Join-Path $env:BLACKBIRD_RUNTIME_ROOT 'Blackbird.Runtime.psm1') -Force\ntrap { Set-BlackbirdUnhandledFailureResult -ErrorRecord $_; break }\n```\nBlackbird supplies this runtime. Do not add a package dependency solely to read settings or obtain the selected project/device.\n\n## Read declared parameters\n```powershell\n$Folder = Get-BlackbirdParameter -Name 'example.outputDirectory' -Required\n$OptionalLabel = Get-BlackbirdParameter -Name 'example.label'\n```\nThe parameter's declared type determines the resolved value. Arrays contain records; booleans are not strings such as \"yes\"; numbers should not be compared as text. Treat missing optional values explicitly. `-Required` identifies an absent runtime parameter; manifest validation and your domain checks still determine whether a present value is usable.\n\n## Read context when needed\n```powershell\n$Project = Get-BlackbirdProject -Required\n$Device = Get-BlackbirdDevice -Required\n$Serial = Get-BlackbirdDeviceSerial -Required\n$Context = Get-BlackbirdContext\n```\nOnly require a device/project when the Action actually needs it, and declare that requirement in the Action editor. Use the context supplied to this run; do not rediscover the top-window selection by reading settings from disk.\n\n## Paths and generic variables\nUse `$env:BLACKBIRD_PACKAGE_ROOT` or `$PSScriptRoot` for files shipped beside the script. Use declared file/folder parameters for user-selected paths. Avoid assuming the process working directory is the game project.\n\n`Get-BlackbirdVariable -Name 'BuildFlavor'` reads a generic string variable from the effective variable dictionary. It does not read `parameters`. Project generic variables override same-named global generic variables. For new user-editable inputs, prefer typed Action parameters.\n\n## Other runners\nPowerShell helpers are not Bash commands. Other runners use the normalized JSON at `BLACKBIRD_CONTEXT_PATH` and their supported runtime/template. The context and result paths are temporary per-run files, not persistent storage. Do not override reserved BLACKBIRD_ environment variables or retain context files containing resolved secrets.",
+      "media": "Annotated code image is optional because copyable code is primary. If added, show the correspondence between a Custom Settings field and Get-BlackbirdParameter, plus the project/device requirement checkboxes. Do not screenshot an actual invocation context containing private values.",
+      "related": [
+        "authoring/settings-model",
+        "authoring/scripts",
+        "reference/runtime"
+      ]
+    },
+    {
+      "slug": "authoring/options-profiles",
+      "group": "Create your own Actions",
+      "title": "Options, profiles, conditions, and arrays",
+      "description": "Offer reusable configuration without duplicating Actions.",
+      "body": "## Choose the simplest structure\nUse a single setting for one value. Use **named options** when one project value has several named alternatives, such as an output directory for Development or Shipping. Use a **profile** when several related project fields must be selected together, such as target platform and output path.\n\nNamed options belong to their shared parameter identity. Profiles are stored per project and Action. A shared namespace does not turn one Action's publishing profile into another Action's build profile. Keep broadly shared facts such as an app ID outside the profile when unrelated Actions should reuse them.\n\n## Declare a named option\n```json\n{\n  \"id\": \"example.outputDirectory\",\n  \"label\": \"Output directory\",\n  \"type\": \"folder\",\n  \"scope\": \"project\",\n  \"valueMode\": \"namedOptions\",\n  \"required\": true\n}\n```\nThis is an alternative definition, not an addition to the single-value tutorial under the same ID. Update all consumers consistently or use a new ID. One option resolves automatically; several offer a selector. The script receives the selected value rather than the whole menu of alternatives.\n\n## Profiles and conditional fields\nAssign related project settings the same profile group, such as `build`. Give profiles recognizable names and test each selection. Conditions refer to a controlling field's full parameter ID. Declare the controlling field before the dependent field. **visibleWhen** hides irrelevant fields; **enabledWhen** leaves them visible but unavailable. Required checks apply while the field is applicable.\n\n## Repeated records\nUse Array for a list of structured records, such as depot IDs and build directories. Define its item label and fields in the editor. Item field keys are local to each record; the outer array still has a canonical namespace.key ID. Use the supplied Add/Edit/Remove controls rather than encoding multiple values into a comma-separated text setting.\n\nTest empty arrays, missing required item fields, changes to the controlling choice, and saved queue items. Captured queue/Workflow values do not automatically update when a profile is edited later.",
+      "media": "Three screenshots: named output-folder options, a two-field build profile, and a structured array editor. Label each with the problem it solves. A diagram should distinguish shared named options from per-Action profiles; use different example IDs to avoid implying incompatible definitions can coexist.",
+      "related": [
+        "authoring/define-settings",
+        "authoring/shared-settings",
+        "reference/settings"
+      ]
+    },
+    {
+      "slug": "authoring/scripts",
+      "group": "Create your own Actions",
+      "title": "Develop and debug Action scripts",
+      "description": "Build scripts that handle tools, results, and failures clearly.",
+      "body": "## Use the generated starter\nChoose an execution runner deliberately. Shipped Windows PowerShell Actions target Windows PowerShell 5.1. Selecting pwsh requires PowerShell 7 to be available; Bash needs an available compatible runner. A platform entrypoint does not make unsupported app platforms supported.\n\nKeep the runtime import and unhandled-failure trap in PowerShell. Implement one small read-only operation first, run it through Blackbird, and inspect its result before adding writes or external effects. The Execution page can provide runner-specific instructions and a script preview; review generated or AI-assisted code before running it.\n\n## Call tools safely\nUse the tool's executable and separate argument values. Do not concatenate an untrusted path/value into a shell command. Resolve package files relative to the package root and user files through declared inputs. Check existence and domain requirements before writing anything.\n\nFor PowerShell native commands, use the available runtime native-command helper where appropriate, or explicitly check the native exit code. PowerShell does not turn every nonzero native exit into a terminating exception. Standard error can contain informational output; the exit contract and recognized provider diagnostics matter.\n\n## Report progress and completion\n```powershell\nWrite-BlackbirdProgress -Label 'Inspecting files' -Value 50 -Detail '5 of 10 files'\nSet-BlackbirdSuccessResult -Title 'Inspection complete' -Message 'All selected files were checked.'\n```\nUse an actual count/percentage when known. Otherwise use `-Indeterminate`. Write concise diagnostic messages without echoing secrets. Action execution already has a log entry; do not fabricate extra runs to represent progress.\n\nFor a known failure, publish a concrete correction and terminate unsuccessfully:\n```powershell\nSet-BlackbirdFailureResult -Title 'Input missing' -Message 'The selected build file does not exist.' -Guidance 'Choose an existing build file and run again.'\nthrow 'Selected build file does not exist.'\n```\nThe fallback trap preserves a specialized failure result. For a conditionally required persistent setting, use its canonical Get-BlackbirdParameter -Required path so Blackbird can offer Configure Setting.\n\n## Test before sharing\nTest the happy path, missing/invalid inputs, tool failure, cancellation, and paths containing spaces. Stop requests cancellation; it does not automatically undo external writes. Keep destructive operations explicitly confirmed and preserve unrelated files. Use recoverable deletion for user-owned data rather than silently deleting it permanently.\n\nReload after script edits and validate manifest edits through the Action editor. If a script works only in your terminal, compare runner version, working directory, environment, credentials, and the supplied Blackbird context.",
+      "media": "MP4: run a harmless Action with a deliberate missing-file error, show the actionable result, correct its input, and rerun successfully. Screenshot: Output alongside a progress bar with a real count. Never use a fake percentage or a destructive operation for the recording.",
+      "related": [
+        "authoring/read-values",
+        "reference/runtime",
+        "troubleshooting/authoring"
+      ]
+    },
+    {
+      "slug": "authoring/libraries",
+      "group": "Create your own Actions",
+      "title": "Create and consume a shared library",
+      "description": "Share script functions without confusing code reuse with shared settings.",
+      "body": "## When to use a library\nKeep a helper local to one Action until multiple packages need it. A library packages reusable functions; it does not supply project settings automatically. Consuming Actions still declare the parameters their scripts need.\n\n## Create the package\n1. Choose **More > New Shared Library...**.\n2. Enter a name, ID, description, creator, version, and an interface ID such as api-1.\n3. Choose the implementation runner, inspect its starter, and create it.\n4. Open the package folder and add the exported functions to its module.\n5. Validate the package and add it as a dependency of each consuming Action.\n\nFor a PowerShell library, its entrypoints include a powershell path to its package-local .psm1 module. A module can export a small helper:\n```powershell\nfunction Format-ExampleCount {\n    param([int]$Count)\n    return ('Found {0} files.' -f $Count)\n}\nExport-ModuleMember -Function Format-ExampleCount\n```\n\n## Declare compatibility\nThe library provides the interface it implements:\n```json\n\"libraryCompatibility\": { \"requires\": {}, \"provides\": [\"api-1\"] }\n```\nAn Action declares the library ID in dependencies and its required interface:\n```json\n\"dependencies\": [\"example-tools\"],\n\"libraryCompatibility\": { \"requires\": { \"example-tools\": \"api-1\" }, \"provides\": [] }\n```\nThese are manifest fragments. IDs and interfaces must match the real library. Package version numbers alone do not establish compatibility. Test the promised interface before declaring it supported.\n\n## Use the module\nBlackbird exposes declared compatible dependencies to the runner. Import the library's actual module name, for example `Import-Module ExampleTools -Force` when that is how its module is packaged. Do not import a module by a path into another user's machine or an unrelated checkout.\n\nMissing libraries, dependency cycles, or unsupported interfaces must be corrected before the Action runs. Test both consumers whenever changing a shared function, and version changed package content before distributing it.",
+      "media": "Diagram: two Actions import one library while their shared setting remains a separate project value. Screenshot: library creation interface ID and consuming Action dependency declaration. Use a short, real exported function with no network calls.",
+      "related": [
+        "authoring/shared-settings",
+        "reference/manifest",
+        "authoring/discovery"
+      ]
+    },
+    {
+      "slug": "authoring/discovery",
+      "group": "Create your own Actions",
+      "title": "Create a discovery provider",
+      "description": "Return verified device records through the supported discovery contract.",
+      "body": "## Start with the empty provider\nChoose **More > New Discovery Provider...**, enter its identity, select the implementation runner, and create the package. Open its generated script. A discovery provider appears under My Actions in Packages, not as a runnable Action card.\n\nProviders run without a selected project or device. They must find and verify their own supported targets and write a single JSON object to standard output. Do not print banners or diagnostic text into that JSON stream.\n\n## Minimal valid output\n```json\n{\n  \"schemaVersion\": 1,\n  \"devices\": [],\n  \"warnings\": []\n}\n```\nThe generated empty response is useful for checking that the package loads before adding network/tool logic.\n\n## Add real devices\nEach device needs a stable `id`, supported `kind`, and `displayName`. Supply connection fields used by its Actions, such as serial or SSH host/user, and accurate `isVerified` and `isOnline` values. The ID is a cross-provider de-duplication identity; do not regenerate it randomly on every scan.\n\nOnly report a target as verified after completing the relevant access check. Reachable does not necessarily mean authenticated or usable. Put recoverable scan problems in `warnings`; avoid credentials or sensitive connection data in those messages.\n\n## Test the lifecycle\nReload packages, refresh devices, and verify the selector and Output. Test zero devices, one valid device, duplicate IDs, invalid records, connection refusal, timeout, and cancellation. Providers run independently with time limits, so bound your external commands and clean up owned helpers. Do not leave a background server running merely because your script ended.\n\nUse libraries for connection logic shared with Actions. A provider must not depend on the current project or modify project settings as a side effect of scanning.",
+      "media": "Screenshot: creation dialog and the empty provider under My Actions in Packages. Follow-up screenshot: one synthetic verified target and a warning in Output. A diagram should show provider JSON feeding discovery, with no Action card or selected-project input.",
+      "related": [
+        "authoring/libraries",
+        "reference/manifest",
+        "usage/devices"
+      ]
+    },
+    {
+      "slug": "troubleshooting/actions",
+      "group": "Troubleshooting",
+      "title": "An Action is missing or will not run",
+      "description": "Work through the likely causes and preserve useful diagnostics.",
+      "body": "## Check in this order\n1. Clear the search and selected filter chips. Check Favorites, Recent, and pinned views before assuming the Action was removed.\n2. Check the selected device and Hide actions incompatible with selected device. An Action can be installed but unavailable for that target.\n3. Open Settings > Packages and confirm the Action and required support libraries are installed.\n4. Select the intended project and follow Configure Action for missing settings. When a result offers Configure Setting, use it to reach the exact field.\n5. If a package issue is reported, correct the manifest/dependency issue or reinstall the intended official package through its supported flow. Do not edit internal catalog records.\n\n## Before retrying\nWhen the Action becomes available, test it with an input whose effects you understand. Another active run or queued scheduled work can delay execution; do not repeatedly click Run to force concurrency.\n\n## If it still fails\nCapture the exact error, relevant app/package/tool versions, and the smallest steps that reproduce it. Review the log for private information before sending it. Use [Report a problem](../reporting/) for a complete report checklist.",
+      "media": "Two screenshots: an empty filtered Actions view with Clear filters highlighted, then a structured missing-setting failure with Configure Setting highlighted. Use a synthetic missing output-directory value. Caption the different remedies. No video is needed.",
+      "related": [
+        "actions",
+        "troubleshooting/reporting"
+      ]
+    },
+    {
+      "slug": "troubleshooting/devices",
+      "group": "Troubleshooting",
+      "title": "A device is missing or cannot connect",
+      "description": "Work through the likely causes and preserve useful diagnostics.",
+      "body": "## Check in this order\n1. Refresh the Device selector and read the scan warnings in Output.\n2. For Android, verify the configured ADB executable, cable/network connection, device authorization, and driver support.\n3. For SteamOS, verify the development service, network reachability, and pairing with this computer. A hostname resolving successfully does not prove SSH authentication.\n4. Confirm you are selecting the correct endpoint: native SteamOS host versus Android/Lepton.\n5. For queued work, inspect pinned targets and Current device. The unavailable target might be saved on the item rather than selected at the top.\n\n## Before retrying\nRefresh after fixing the connection. Blackbird lists usable verified devices; warnings can explain why a reachable candidate was excluded. Do not mark an unverified provider result as verified merely to make it appear.\n\n## If it still fails\nCapture the exact error, relevant app/package/tool versions, and the smallest steps that reproduce it. Review the log for private information before sending it. Use [Report a problem](../reporting/) for a complete report checklist.",
+      "media": "Screenshot: Output after a completed discovery scan showing a synthetic unreachable SSH hostname, beside the device selector. Annotate the warning and scan completion separately. Add an Android authorization prompt as a separate inset, with host fingerprint redacted. No video is needed.",
+      "related": [
+        "usage/devices",
+        "troubleshooting/reporting"
+      ]
+    },
+    {
+      "slug": "troubleshooting/builds",
+      "group": "Troubleshooting",
+      "title": "A build, deployment, or upload failed",
+      "description": "Work through the likely causes and preserve useful diagnostics.",
+      "body": "## Check in this order\n1. Open the completion result and find the first meaningful tool/provider error in its log.\n2. Check the selected project, profile, device, build artifact, and destination. A valid path to the wrong build is still wrong.\n3. Verify the external tool version, platform modules, permissions, and authentication outside the failed operation when possible.\n4. For uploads, run Validate without uploading after fixing configuration, then inspect the remote dashboard before retrying the transfer.\n5. For deployment signature/version errors, read the specific correction before uninstalling; removing an app may remove its data.\n\n## Before retrying\nRetain the original error and tool version when reporting a problem. A successful local validation is not proof of remote acceptance. Do not retry a publish or destructive cleanup until you know whether the first attempt already changed the destination.\n\n## If it still fails\nCapture the exact error, relevant app/package/tool versions, and the smallest steps that reproduce it. Review the log for private information before sending it. Use [Report a problem](../reporting/) for a complete report checklist.",
+      "media": "Screenshot: a synthetic missing-engine-tool completion dialog and its Configure Setting control, followed by a cropped History entry and Open Log control. The caption must explain which information belongs in the failure summary versus the diagnostic log. No credentials or full desktop capture.",
+      "related": [
+        "usage/results",
+        "troubleshooting/reporting"
+      ]
+    },
+    {
+      "slug": "troubleshooting/packages",
+      "group": "Troubleshooting",
+      "title": "A package change failed",
+      "description": "Work through the likely causes and preserve useful diagnostics.",
+      "body": "## Check in this order\n1. Read the package completion window and matching Output entry. Note whether the failure concerns a download, validation, dependency, or file access.\n2. Let Actions and discovery finish before retrying a package change.\n3. If a program is identified as using files, close that program and retry. Check destination permissions when the message reports access denied.\n4. For a modified official package, preserve any intentional edits separately and use the supported package repair/reinstall route. Do not treat those edits as a new official release.\n5. If Undo is unavailable or rejected, keep the error and current files for diagnosis rather than deleting recovery or configuration files.\n\n## Before retrying\nExisting files may be preserved after a failed activation. The error does not mean you should rebuild the library from scratch. Report the package versions, operation, and exact message if retrying after the stated correction still fails.\n\n## If it still fails\nCapture the exact error, relevant app/package/tool versions, and the smallest steps that reproduce it. Review the log for private information before sending it. Use [Report a problem](../reporting/) for a complete report checklist.",
+      "media": "Screenshot: a package-change failure with its understood correction and an expanded bundle row showing installed/available versions. Use a disposable test library; capture no real personal paths. Caption that closing a failure does not mean changes succeeded.",
+      "related": [
+        "packages/manage",
+        "troubleshooting/reporting"
+      ]
+    },
+    {
+      "slug": "troubleshooting/schedules",
+      "group": "Troubleshooting",
+      "title": "A scheduled run did not complete",
+      "description": "Work through the likely causes and preserve useful diagnostics.",
+      "body": "## Check in this order\n1. Open the schedule and confirm it is enabled, has the intended local time/recurrence, and points to the saved Action or Workflow you expect.\n2. Check synchronization/task status and the matching History entry. Queued means waiting for another run, not necessarily a missed trigger.\n3. Use Run Now to test configuration without waiting. It uses separate execution state and does not replace the visible queue.\n4. Check available devices, tool authentication, and interactive prompts that could prevent unattended completion.\n5. Review Windows wake/missed-start policy and whether the configured interactive user was available when the task should launch.\n\n## Before retrying\nWindows and hardware control wake behavior. Do not assume a saved wake checkbox guarantees execution from every sleep/power state. Use Blackbird to correct or synchronize its owned schedules; manually changing its task records can create mismatches.\n\n## If it still fails\nCapture the exact error, relevant app/package/tool versions, and the smallest steps that reproduce it. Review the log for private information before sending it. Use [Report a problem](../reporting/) for a complete report checklist.",
+      "media": "Two screenshots: an enabled synthetic schedule with its next occurrence visible, then the matching History entry showing a queued or failed result. Annotate name, time and state so readers can distinguish eligibility from completion. Do not simulate a successful run.",
+      "related": [
+        "usage/schedules",
+        "troubleshooting/reporting"
+      ]
+    },
+    {
+      "slug": "troubleshooting/startup",
+      "group": "Troubleshooting",
+      "title": "Blackbird will not start or activate",
+      "description": "Work through the likely causes and preserve useful diagnostics.",
+      "body": "## Check in this order\n1. Record the exact startup or activation error and the app version. Distinguish a configuration error from a license or update failure.\n2. If Blackbird is already open or minimized, activate that instance rather than expecting a second independent library session.\n3. For a reported locked file, close the process using it when identified. For an invalid configuration, preserve the file and use the reported correction or support guidance.\n4. For activation, confirm the intended issued information and any required network access. Do not include the license or redemption code in a public report.\n5. If the problem followed an update, report the old/new versions and whether it occurred before or after the main window appeared.\n\n## Before retrying\nDo not delete the package library, project configuration, or license state as a general reset procedure. An application reinstall does not necessarily fix malformed project data and can obscure the original problem.\n\n## If it still fails\nCapture the exact error, relevant app/package/tool versions, and the smallest steps that reproduce it. Review the log for private information before sending it. Use [Report a problem](../reporting/) for a complete report checklist.",
+      "media": "Screenshot: an activation failure on a test account with its correction visible and all license material absent. Pair with a text-based checklist for locating startup diagnostics; do not invent a screenshot of a startup log location that varies by installation.",
+      "related": [
+        "getting-started/install",
+        "troubleshooting/reporting"
+      ]
+    },
+    {
+      "slug": "troubleshooting/authoring",
+      "group": "Troubleshooting",
+      "title": "Debug a custom Action",
+      "description": "Work through the likely causes and preserve useful diagnostics.",
+      "body": "## Check in this order\n1. Validate the Action and read the first reported manifest or dependency issue. Check package ID/folder identity and the package-relative entrypoint.\n2. Run through Blackbird. Missing BLACKBIRD_CONTEXT_PATH usually means the script was launched outside its package runner.\n3. Compare the full parameter ID in the manifest with Get-BlackbirdParameter. A label or local PowerShell variable name is not that ID.\n4. Check the selected project and scope. Review captured Queue/Workflow values if a newly changed setting does not appear in a saved item.\n5. Compare runner version, arguments, working directory, library imports, and native exit codes with the environment where your script succeeds.\n\n## Before retrying\nReduce the script to a read-only example that reports its resolved inputs without printing secrets. Keep the runtime trap, then add behavior back incrementally. If definitions conflict, reuse the existing contract or choose a genuinely different identity rather than suppressing validation.\n\n## If it still fails\nCapture the exact error, relevant app/package/tool versions, and the smallest steps that reproduce it. Review the log for private information before sending it. Use [Report a problem](../reporting/) for a complete report checklist.",
+      "media": "Two cropped screenshots: a structured missing-parameter failure for example.outputDirectory and the Action editor showing the corrected canonical ID and project scope. Use the tutorial package and ExampleProject; highlight the exact matching IDs. Keep script text copyable in the article.",
+      "related": [
+        "authoring/scripts",
+        "troubleshooting/reporting"
+      ]
+    },
+    {
+      "slug": "troubleshooting/reporting",
+      "group": "Troubleshooting",
+      "title": "Report a problem",
+      "description": "Send a reproducible report without exposing private data.",
+      "body": "## Include the useful facts\n- What you were trying to do and what you expected.\n- The exact steps and selected Action/Workflow.\n- Blackbird version and relevant package, engine, or external-tool versions.\n- The exact error and whether it happens every time.\n- The relevant run log, after reviewing it for sensitive content.\n\n## Send the report\nUse **Report Issue** from a failure result when available, or **Send Feedback** from the main window. Review the information and attachments before submitting. If the problem concerns an Action from another author, include its creator and package identity so the ownership is clear.\n\nAvoid sending licenses, tokens, passwords, entire configuration directories, proprietary project files, or unrelated screenshots. Replace sensitive paths and names consistently so the report remains understandable. Keep an unmodified original log privately if support needs clarification.\n\n## Reproduce safely\nTry a disposable project or input only when it can reproduce the same failure. Do not repeat a public upload, deployment, or deletion simply to create a recording. Tell support what you already tried so they do not ask you to repeat it unnecessarily.\n\nFor a startup problem with no History entry, provide the startup error and the point reached before it appeared. A photo or screenshot is useful for a visual defect; a copied error message is better for searchable diagnostic text.",
+      "media": "Screenshot: feedback review form with synthetic report text and an example attachment name, stopped before Send. Caption that preparing a report does not send it. Include a redaction checklist beside the image, not a screenshot of real logs.",
+      "related": [
+        "usage/results",
+        "troubleshooting/authoring",
+        "troubleshooting/startup"
+      ]
+    },
+    {
+      "slug": "reference/keyboard",
+      "group": "Reference",
+      "title": "Keyboard and mouse controls",
+      "description": "Navigate Blackbird and understand selection versus editing.",
+      "body": "Open **Settings > Keyboard Controls**, or press F1 outside an editor/menu/dialog/tutorial, for the in-app reference.\n\n## Common shortcuts\n| Key | Action |\n| --- | --- |\n| Ctrl+1 / Ctrl+2 | Open Project / Device selector |\n| Ctrl+F | Select automation search; Enter begins editing |\n| Ctrl+T | Edit automation search and open tag suggestions |\n| Tab | Toggle Queue outside text editing |\n| Backtick | Toggle Output outside text editing |\n| Shift+Tab | Expand/collapse Navigation outside text editing |\n| Alt+Up / Alt+Down | Previous/next automation filter |\n| Mouse Back / Forward | Restore previous navigation/filter views |\n\n## Selection is not editing\nArrow navigation selects controls. Enter activates the selected control or begins editing a selected field. Clicking an editable field begins editing directly. A selected field does not necessarily accept typing or paste until editing begins.\n\nMenus, dropdowns, dialogs, tutorials, and active editors have their own key handling. Native editor keys take precedence where appropriate; do not assume every global shortcut applies while typing.\n\n## Escape\nEscape dismisses the current menu, editing state, or dismissible dialog layer. In an active editor it clears the field and leaves editing mode. On selected non-editing automation search it clears tags while preserving search text. It does not generally stop an Action or quit Blackbird. Use the explicit Stop control for cancellation.\n\nThe in-app reference is the best place to check the complete bindings for the version you are using. Keyboard selection can reveal disabled controls for inspection, but cannot activate them.",
+      "media": "Screenshot: Keyboard Controls showing the selection-versus-editing explanation. Optional two-state illustration of a selected search field and an editing search field with caret; do not use an animation that types before Enter while teaching keyboard selection.",
+      "related": [
+        "getting-started/interface",
+        "actions",
+        "usage/queue"
+      ]
+    },
+    {
+      "slug": "reference/preferences",
+      "group": "Reference",
+      "title": "App preferences",
+      "description": "Control presentation, startup panels, updates, and privacy.",
+      "body": "## General preferences\nOpen **Settings** for app-wide preferences. Navigation, Queue, and Output each have a **... at startup** choice: always show, always hide, or remember the last state. Navigation defaults to showing. These preferences apply at startup, not every time another feature opens a panel; loading a Workflow may reveal Queue for review.\n\nUse the available appearance/theme options to change presentation without changing Action behavior. The Actions layout menu separately controls Cards/List, grouping, sorting, and compatibility filtering.\n\n## Discovery and updates\n**Discover Devices on Startup** controls the initial device scan. You can always use the refresh control when you need a new scan. **Check for Updates on Startup**, **Download Updates Automatically**, and **Include Prerelease Updates** control app update behavior; see the update guide for the distinction between discovery, download, and installation.\n\n## Action settings versus preferences\n**Settings > Action Settings** contains application-scoped settings declared by installed Actions. These are not all core app preferences. Project-specific values belong under Projects, and per-run choices are requested during execution.\n\n## Privacy and reports\nUse **Privacy & Data** to review the reporting and data controls available in your build. Read the linked privacy notice before opting in to optional reporting. A report, export, log, or screenshot can contain project information even when a password field is masked on screen; review content before sharing it.\n\nDo not use a tutorial, hidden setting, or raw configuration edit to bypass a licensing or safety control. Use the normal visible preference or ask for help when no supported control exists.",
+      "media": "Screenshot: the three startup-panel selectors together, then a cropped Settings tab row showing General, Action Settings, Updates, and Privacy & Data. Do not expose live consent identifiers, licenses, or private settings.",
+      "related": [
+        "usage/settings",
+        "reference/updates",
+        "packages/library"
+      ]
+    },
+    {
+      "slug": "reference/command-line",
+      "group": "Reference",
+      "title": "Run Actions from the command line",
+      "description": "Launch existing Actions and Workflows using the installed app.",
+      "body": "## Commands\n```powershell\nBlackbird.exe --run-action \"System Information\"\nBlackbird.exe --run-workflow \"Verify Project\"\nBlackbird.exe --run-action \"List Android Devices\" --device \"Example Device\"\n```\nUse the installed executable's full path when it is not on PATH. An Action accepts its ID or label; a Workflow accepts its ID or name. IDs are preferable in scripts because labels can change. Quote names containing spaces.\n\nWhen Blackbird is closed, the command starts it and waits for normal startup/device preparation. When it is already running, the request is forwarded to that instance. This is not a separate headless package runner.\n\n## Configuration and queue effects\nActions use normal execution, including applicable configuration or confirmation prompts. Running a Workflow explicitly loads it into the visible non-running queue and starts it, replacing the working queue. Save work first if that replacement is not intended.\n\n## Device precedence\nThe optional --device value accepts an exact device name, display name, or serial. Workflow items resolve a device in this order: the item's pinned target, the command override, then Blackbird's current device. An override does not replace an explicitly pinned item.\n\nIf the target is unavailable, unverified, or incompatible, Blackbird reports the issue rather than silently choosing another device. Command-line use does not waive these requirements or supply arbitrary missing parameters.\n\nFor recurring work, create a Schedule inside Blackbird. Its internal task arguments and status handling are not a public scripting interface.",
+      "media": "No video needed. Use copyable commands as the primary content. Optional screenshot: a terminal command using System Information and its completion result, with a synthetic installation path and no unrelated command history.",
+      "related": [
+        "usage/schedules",
+        "usage/devices",
+        "usage/workflows"
+      ]
+    },
+    {
+      "slug": "reference/updates",
+      "group": "Reference",
+      "title": "App updates and package updates",
+      "description": "Update the application separately from its installed Actions.",
+      "body": "## Update Blackbird\nUse **Settings > Updates**. **Check for Updates on Startup** controls automatic checking; **Check Now** performs a manual check. **Download Updates Automatically** determines whether an available update downloads before the app asks for the next action.\n\nAfter download, **Remind Me Later** leaves the update staged without authorizing installation. **Update on Next Launch** authorizes that downloaded version for the next launch. **Restart & Update** installs and restarts immediately. Review active work before restarting.\n\n**Include Prerelease Updates** controls preview availability. A preview installation normally follows previews until you choose otherwise; stable installations do not silently opt into a newly offered preview. Read release notes for requirements or breaking changes.\n\n## Update packages\nActions, libraries, and providers can update independently through **Settings > Packages**. Review bundle release notes and the pending selection, then Apply Changes. Updating the app is not the same as selecting a newer release of every installed package.\n\nPackage **Undo Last Update** concerns package state; it is not a general app-version downgrade control. Your project source and external build artifacts are not restored by it.\n\n## Before a significant upgrade\nPreserve project data and export relevant custom configuration. Review saved Workflows when a release changes Action parameters. Use [published Blackbird releases](https://github.com/Incogent/Blackbird-Releases/releases) for release history rather than an unreleased development draft.",
+      "media": "Screenshot: app update choices after download, paired with a separate Packages pending-change summary. Clearly label “Application” and “Packages” so users do not confuse Restart & Update with Apply Changes.",
+      "related": [
+        "packages/manage",
+        "packages/sharing",
+        "troubleshooting/startup"
+      ]
+    },
+    {
+      "slug": "reference/settings",
+      "group": "Reference",
+      "title": "Setting definition reference",
+      "description": "Look up the fields that describe an Action input.",
+      "body": "## Identity and value\n| Field | Meaning |\n| --- | --- |\n| id | Canonical namespace.key used by scripts, storage, conditions, and sharing |\n| label / description | Friendly name and guidance in the UI |\n| type | text, integer, number, boolean, choice, file, folder, secret, or array |\n| scope | project, application, or run |\n| required | Value must be provided while the field is applicable |\n| default | Fallback value; prohibited for secrets |\n| rememberRunValue | Whether a non-secret run value can be suggested next time |\n\n## Options and structure\n| Field | Meaning |\n| --- | --- |\n| choices | Allowed static options for a Choice field |\n| allowCustomChoice | Allows a typed choice as well as suggestions |\n| valueMode | single, or supported project namedOptions |\n| profile | Groups related project fields into an Action-owned preset |\n| itemFields / itemLabel | Array record schema and UI item name |\n| visibleWhen / enabledWhen | Conditions referencing full parameter IDs |\n| section / advanced | Presentation grouping and advanced-field placement |\n\nFile constraints must agree when sharing a setting identity. Array field keys are local to the array record. Declare controlling fields before dependent fields, and test each applicable condition.\n\n## Dynamic choices\nA choice provider uses a package-relative script with the platform runner and returns a JSON string array on standard output. Keep diagnostics out of that output. Use it only when choices genuinely depend on the environment; static choices are easier to inspect and test.\n\n## Compatibility\nWhen reusing a canonical ID, match its scope, type, value mode, choices, and relevant path constraints. The editor offers reusable definitions to reduce accidental drift. Changing a contract can invalidate captured Queue/Workflow values; review them rather than assuming defaults repair the change.\n\nFor the creation workflow and examples, use the authoring guides. This reference describes parameter definitions, not arbitrary additional top-level project configuration properties.",
+      "media": "A compact labeled setting editor screenshot is sufficient. Show an ordinary field and its advanced/conditional controls without filling every option. Keep the tables and copyable examples as the primary reference.",
+      "related": [
+        "authoring/define-settings",
+        "authoring/options-profiles",
+        "authoring/shared-settings"
+      ]
+    },
+    {
+      "slug": "reference/manifest",
+      "group": "Reference",
+      "title": "Package manifest reference",
+      "description": "Understand the file connecting a package to its scripts and dependencies.",
+      "body": "## Package identity\nEvery package has package.json and its local script/module files. Its stable ID uses lowercase kebab-case and matches its directory. Types are action, library, and discovery. A bundle is a collection of packages; it is not another spelling of Action.\n\n| Field | Purpose |\n| --- | --- |\n| schemaVersion | Manifest schema, currently 1 |\n| id / version | Stable package identity and package version |\n| type | action, library, or discovery |\n| label / description / creator | Human-facing identification and attribution |\n| tags | A small set of descriptive categories |\n| dependencies | Required library package IDs |\n| libraryCompatibility | Required/provided interface names |\n| parameters | Action input definitions |\n| entrypoints | Package-local executable or module entrypoints |\n\n## Action behavior\nThe action object declares requiresProject, requiresDevice, supportedDeviceKinds, dangerLevel, confirmBeforeRun, and related UI/execution behavior. Declare actual requirements rather than checking an arbitrary current device inside a supposedly device-independent Action.\n\nUse a destructive danger level and confirmation for consequential writes/deletions/publication. A confirmation is not rollback. Success/failure results use completion dialogs; do not implement a separate result-toast mechanism.\n\n## Entrypoints and dependencies\nAn Action entrypoint selects a platform, runner, and file path or inline command. Supported runner names include process, powershell, pwsh, and bash. Availability of an entrypoint does not install its runtime. File paths and working directories must stay within the package; use user inputs for external data paths.\n\nLibraries expose runner-compatible module entrypoints. Required dependencies must be libraries, exist, and have no cycles. Every declared required/optional library interface must reflect tested compatibility; version ordering is not evidence of an interface.\n\n## Edit and validate\nPrefer Edit Action for manifest changes. Validate the package, run it through Blackbird, and test failure cases before sharing. Use the complete downloadable tutorial example as a starting point instead of treating a JSON fragment from a reference table as a full manifest.",
+      "media": "Folder diagram: user.actions/report-output-directory with package.json and run.ps1. Pair it with highlighted identity, parameters and entrypoint portions of the complete example. Do not show internal library catalogs as author-editable files.",
+      "related": [
+        "authoring/first-action",
+        "authoring/libraries",
+        "authoring/discovery"
+      ]
+    },
+    {
+      "slug": "reference/runtime",
+      "group": "Reference",
+      "title": "PowerShell runtime reference",
+      "description": "Use the host-provided helpers for context, progress, and results.",
+      "body": "## Load the runtime\n```powershell\nImport-Module (Join-Path $env:BLACKBIRD_RUNTIME_ROOT 'Blackbird.Runtime.psm1') -Force\ntrap { Set-BlackbirdUnhandledFailureResult -ErrorRecord $_; break }\n```\nThe environment is supplied when Blackbird launches the package. Running a script directly without it is not a valid test of the Action integration.\n\n## Read helpers\n| Helper | Purpose |\n| --- | --- |\n| Get-BlackbirdContext | Normalized invocation context |\n| Get-BlackbirdProject / Get-BlackbirdDevice | Selected execution context; -Required rejects absence |\n| Get-BlackbirdParameter -Name | Declared parameter's resolved typed value |\n| Get-BlackbirdVariable -Name | Effective generic string variable |\n| Get-BlackbirdDeviceSerial | Selected device serial when applicable |\n| Get-BlackbirdAdbPath | Configured ADB path |\n\n## Progress and results\nWrite-BlackbirdProgress accepts Label, Value (0–100), Detail, and Indeterminate. Report meaningful progress from known work rather than inventing a completion percentage.\n\nSet-BlackbirdSuccessResult accepts Title, Message, Items, CopyValues, and OpenFolderPath. The folder path makes an Open Folder action available in the result. Set-BlackbirdFailureResult additionally requires Guidance; follow it with a terminating error/nonzero exit. The result outcome and process outcome must agree.\n\nRead-BlackbirdInput can ask for an interactive value; use -Secret for credentials and never print the returned value. An interactive prompt can prevent unattended scheduled work, so prefer declared run inputs when configuration can happen before execution.\n\n## Native tools and files\nInvoke-BlackbirdNativeCommand provides the shared native-execution behavior. Check its supported arguments in your installed runtime before adapting a call; do not assume every terminal command string is a valid argument array.\n\nMove-BlackbirdItemToRecycleBin provides recoverable removal for supported local user-owned files. It refuses cases where that recovery cannot be guaranteed. Do not replace that refusal with unconditional permanent deletion.\n\n## Temporary context\nBLACKBIRD_CONTEXT_PATH and BLACKBIRD_RESULT_PATH identify per-run channels. BLACKBIRD_PACKAGE_ROOT and BLACKBIRD_RUNTIME_ROOT identify package/runtime locations. BLACKBIRD_LIBRARY_ROOTS exposes declared libraries. Do not override these reserved names or use transient context files as persistent settings storage.",
+      "media": "No required screenshot. A small context-flow diagram may show Blackbird passing inputs to the script and the script returning progress/result, with a separate diagnostic Output path. Include alt text describing the channels.",
+      "related": [
+        "authoring/read-values",
+        "authoring/scripts",
+        "reference/manifest"
+      ]
+    }
+  ]
+}

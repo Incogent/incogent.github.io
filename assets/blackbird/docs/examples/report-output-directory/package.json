@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "type": "action",
+  "version": "1.0.0",
+  "description": "Read-only shared-setting tutorial.",
+  "tags": [
+    "utilities"
+  ],
+  "dependencies": [],
+  "libraryCompatibility": {
+    "requires": {},
+    "provides": []
+  },
+  "action": {
+    "requiresProject": true,
+    "requiresDevice": false
+  },
+  "parameters": [
+    {
+      "id": "example.outputDirectory",
+      "label": "Output directory",
+      "type": "folder",
+      "scope": "project",
+      "required": true
+    }
+  ],
+  "entrypoints": {
+    "windows": {
+      "runner": "powershell",
+      "path": "run.ps1"
+    }
+  },
+  "id": "report-output-directory",
+  "label": "Report Output Directory"
+}
