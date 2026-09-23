@@ -42,10 +42,10 @@ export function renderDocumentation(slug,locale){
  const p=pages.find(p=>p.slug===slug);
  if(slug&&!p)throw Error('Unknown documentation page '+slug);
  const headings=p?[...p.body.matchAll(/^## (.+)$/gm)].map(m=>m[1]):groups();
- const toc='<details class="docs-toc" open><summary>On this page</summary>'+headings.map(h=>'<a href="#'+id(h)+'">'+escape(h)+'</a>').join('')+(p?'<a href="#media-brief">Image and video brief</a>':'')+'</details>';
+ const toc='<details class="docs-toc"><summary>On this page</summary><div class="docs-toc-links">'+headings.map(h=>'<a href="#'+id(h)+'">'+escape(h)+'</a>').join('')+(p?'<a href="#media-brief">Image and video brief</a>':'')+'</div></details>';
  const body=p?'<p class="docs-breadcrumb"><a href="'+base(locale)+'">Documentation</a> / '+escape(p.group)+'</p><h1>'+escape(p.title)+'</h1><p class="lede">'+escape(p.description)+'</p>'+review+markdown(p.body)+media(p)+'<section class="docs-related"><h2>Related guides</h2><ul>'+p.related.map(slug=>{const r=pages.find(p=>p.slug===slug);if(!r)throw Error('Unknown related page '+slug);return '<li><a href="'+base(locale)+r.slug+'/">'+escape(r.title)+'</a></li>';}).join('')+'</ul></section>':
  '<p class="docs-breadcrumb"><a href="/'+locale+'/products/blackbird/">Blackbird</a> / Documentation</p><h1>Blackbird documentation</h1><p class="lede">Using Blackbird, solving problems, and creating your own Actions.</p>'+review+groups().map(group=>'<section><h2 id="'+id(group)+'">'+escape(group)+'</h2><ul class="docs-guide-list">'+pages.filter(p=>p.group===group).map(p=>'<li><a href="'+base(locale)+p.slug+'/">'+escape(p.title)+'</a><p>'+escape(p.description)+'</p></li>').join('')+'</ul></section>').join('');
- return '<div class="wrap docs-layout">'+nav(slug,locale)+'<article class="docs-article">'+body+(p?'':mediaPlan(locale))+'</article>'+toc+'</div><script src="/assets/blackbird/docs/Documentation.js?v=20260922-full" defer></script>';
+ return '<div class="wrap docs-layout"><div class="docs-navigation"><details class="docs-browser"><summary>Browse guides</summary>'+nav(slug,locale)+'</details>'+toc+'</div><article class="docs-article">'+body+(p?'':mediaPlan(locale))+'</article></div><script src="/assets/blackbird/docs/Documentation.js?v=20260922-mobile-nav" defer></script>';
 }
 export function writeDocumentationSearch(){
  const target=new URL('../en/products/blackbird/docs/search.json',import.meta.url);

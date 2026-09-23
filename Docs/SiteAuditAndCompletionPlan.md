@@ -105,3 +105,17 @@ License dashboard improvements are deployed to production in incogent-cloudflare
   installation guide, product page, search index, documentation script, example ZIP and sitemap.
   Live product links and the installation guide's media placeholder were confirmed.
 - Maintain the content using [BlackbirdDocumentationMaintenance.md](BlackbirdDocumentationMaintenance.md).
+
+## Mobile documentation navigation (2026-09-22)
+
+- Collapsed the mobile sidebar into a sticky Browse guides control with search and section groups.
+  On this page opens beside it; only one panel stays open. Panels scroll within the viewport,
+  close on selection, outside click or Escape, and preserve keyboard focus for section links.
+  The desktop sidebar remains expanded. Native disclosure controls also work without JavaScript.
+- Kept all image/video placeholders and the media inventory. Bumped CSS and documentation script
+  cache versions. No article wording or release-version claims changed.
+- Validation: policy, localization, build, site and all 57 guide checks passed; source EULA hashes
+  match. Edge/Playwright checked 320, 390, 720, 900 and 1440px widths without horizontal overflow.
+  Mobile article titles appear near the top (198px); search, panel switching, anchor clearance,
+  Escape, desktop resize and no-JavaScript browsing passed. Light/dark screenshots reviewed.
+- Deployment pending. Release-build review and media production remain outstanding as above.

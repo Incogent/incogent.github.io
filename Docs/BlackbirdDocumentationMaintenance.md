@@ -11,6 +11,8 @@ guide slugs. Body markup supports headings, lists, tables, fenced code, emphasis
 Media briefs are deliberate review placeholders, not assets or claims of completed recordings.
 The user explicitly requested keeping them visible on the published pages for later replacement.
 The home is a contents page; the final landing-page design remains undecided.
+On mobile, the sidebar and article contents use sticky disclosure menus. Preserve native
+keyboard/no-JavaScript access, viewport-bounded panels, and header clearance for anchor links.
 
 Build with `node scripts/validate-i18n.mjs`, `node scripts/build-i18n.mjs`, and
 `node scripts/validate-site.mjs`. Run `node scripts/validate-documentation.mjs` for guide-specific
