@@ -118,4 +118,7 @@ License dashboard improvements are deployed to production in incogent-cloudflare
   match. Edge/Playwright checked 320, 390, 720, 900 and 1440px widths without horizontal overflow.
   Mobile article titles appear near the top (198px); search, panel switching, anchor clearance,
   Escape, desktop resize and no-JavaScript browsing passed. Light/dark screenshots reviewed.
-- Deployment pending. Release-build review and media production remain outstanding as above.
+- Published in `bb14201`; Pages run `35816312463` and validation run `35816313854` succeeded.
+  A production mobile browser confirmed the collapsed sidebar, working search (13 results for
+  "shared settings"), and preserved media placeholder. Release-build review and media production
+  remain outstanding as above.
