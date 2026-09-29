@@ -34,10 +34,10 @@
           <a href="{{SHOP_URL}}">{{NAV_SHOP}}</a>
           <a class="nav-cta" href="{{CONTACT_URL}}">{{NAV_CONTACT}}</a>
         </nav>
-        <button class="theme-toggle" type="button" data-theme-toggle data-light-label="{{THEME_TO_LIGHT}}" data-dark-label="{{THEME_TO_DARK}}" aria-label="{{THEME_TO_DARK}}" aria-pressed="false" title="{{THEME_TO_DARK}}">&#9790;</button>
         <details class="mobile-nav"><summary>{{NAV_MENU}}</summary><nav aria-label="Mobile navigation">
           <a href="{{BLACKBIRD_URL}}">{{NAV_BLACKBIRD}}</a><a href="{{SERVICES_URL}}">{{NAV_SERVICES}}</a><a href="{{ABOUT_URL}}">{{NAV_ABOUT}}</a><a href="{{SHOP_URL}}">{{NAV_SHOP}}</a><a href="{{CONTACT_URL}}">{{NAV_CONTACT}}</a>
         </nav></details>
+        <button class="theme-toggle" type="button" data-theme-toggle data-light-label="{{THEME_TO_LIGHT}}" data-dark-label="{{THEME_TO_DARK}}" aria-label="{{THEME_TO_DARK}}" aria-pressed="false" title="{{THEME_TO_DARK}}">&#9790;</button>
       </div>
     </div>
   </header>

@@ -4,6 +4,11 @@ Last updated: 2026-09-29
 
 This is the authoritative current website plan. WebsiteDevelopmentPlan.md preserves the original architecture and historical roadmap; this document supersedes its outdated status and open decisions.
 
+## Mobile theme control (2026-09-29)
+
+- Moved the theme toggle after Menu in the shared header, matching desktop order and keyboard navigation. Kept the compact dropdown and left-aligned labels.
+- Policy, localization, generated-site and documentation checks pass; authoritative EULA bytes match. Published with the authorized website refinements.
+
 ## Support layout refinement (2026-09-29)
 
 - Moved missing-license reassurance above the contact button so the action ends the section.
