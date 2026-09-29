@@ -103,3 +103,6 @@
 /* App wordmarks: native 314 x 80 assets rendered at half size. */
 .header-logo{width:157px;max-width:100%;height:auto}.header-logo-dark{display:none}:root[data-theme="dark"] .header-logo-light{display:none}:root[data-theme="dark"] .header-logo-dark{display:block}
 @media(prefers-color-scheme:dark){:root:not([data-theme]) .header-logo-light{display:none}:root:not([data-theme]) .header-logo-dark{display:block}}
+
+/* Align narrow-screen menu labels with the menu trigger. */
+.mobile-nav nav{text-align:right}

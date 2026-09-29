@@ -8,8 +8,8 @@ This is the authoritative current website plan. WebsiteDevelopmentPlan.md preser
 
 - Moved missing-license reassurance above the contact button so the action ends the section.
 - Removed Discord buttons from both Blackbird download action groups. Discord remains
-  prominent on the support page and homepage contact section. Mobile dropdown text remains
-  left-aligned; right-aligned text was discussed but not selected.
+  prominent on the support page and homepage contact section. Mobile dropdown text is now
+  right-aligned at the user's explicit direction; CSS cache version bumped.
 - Policy, localization, build, site and documentation validation pass (69 pages); EULA hashes
   match. Included in the ongoing authorized website publication.
 
