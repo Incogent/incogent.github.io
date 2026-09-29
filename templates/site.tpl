@@ -16,7 +16,7 @@
   <meta property="og:url" content="{{CANONICAL_URL}}">
   <link rel="canonical" href="{{CANONICAL_URL}}">
   {{HREFLANG_LINKS}}
-  <link rel="stylesheet" href="/site.css?v=20260922-mobile-docs">
+  <link rel="stylesheet" href="/site.css?v=20260929-app-wordmark">
 {{HEAD_EXTRAS}}
   <script type="application/ld+json">{{ORG_JSON_LD}}</script>
   <script type="application/ld+json">{{WEBPAGE_JSON_LD}}</script>
@@ -25,7 +25,7 @@
   <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="site-header">
     <div class="wrap header-row">
-      <a class="brand header-brand" href="{{HOME_URL}}" aria-label="{{SITE_NAME}} home"><img class="header-logo" src="/assets/images/Incogent_Logo_C.png" alt="{{SITE_NAME}}"></a>
+      <a class="brand header-brand" href="{{HOME_URL}}" aria-label="{{SITE_NAME}} home"><img class="header-logo header-logo-light" src="/assets/images/Incogent_Wordmark_Dark.png" width="157" height="40" alt="{{SITE_NAME}}"><img class="header-logo header-logo-dark" src="/assets/images/Incogent_Wordmark.png" width="157" height="40" alt="{{SITE_NAME}}"></a>
       <div class="header-controls">
         <nav class="primary-nav" aria-label="Primary navigation">
           <a href="{{BLACKBIRD_URL}}">{{NAV_BLACKBIRD}}</a>
@@ -45,7 +45,7 @@
   <footer class="site-footer">
     <div class="wrap footer-grid">
       <div><a class="brand footer-brand" href="{{HOME_URL}}">{{SITE_NAME}}</a><p>{{SITE_TAGLINE}}</p><p class="development-note">{{FOOTER_STATUS}}</p></div>
-      <nav aria-label="Footer navigation"><a href="{{BLACKBIRD_URL}}">{{NAV_BLACKBIRD}}</a><a href="{{PRIVACY_URL}}">{{NAV_PRIVACY}}</a><a href="{{EULA_URL}}">{{NAV_EULA}}</a><a href="{{CONTACT_URL}}">{{NAV_CONTACT}}</a></nav>
+      <nav aria-label="Footer navigation"><a href="{{SUPPORT_URL}}">{{NAV_SUPPORT}}</a><a href="{{BLACKBIRD_URL}}">{{NAV_BLACKBIRD}}</a><a href="{{PRIVACY_URL}}">{{NAV_PRIVACY}}</a><a href="{{EULA_URL}}">{{NAV_EULA}}</a><a href="{{CONTACT_URL}}">{{NAV_CONTACT}}</a></nav>
       <div class="locale-switcher" hidden><span>{{NAV_LANGUAGE}}</span><ul>{{LANGUAGE_LINKS}}</ul></div>
     </div>
     <div class="wrap copyright">&copy; <span data-current-year></span> {{FOOTER_RIGHTS}}</div>

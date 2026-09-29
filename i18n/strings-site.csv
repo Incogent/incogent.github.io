@@ -1,4 +1,20 @@
 key,context,en
+nav.support,Support navigation label,Support
+page.support.title,Support page browser title,Blackbird Support | Incogent
+page.support.description,Support page description,Get help with Blackbird and missing license emails.
+support.kicker,Support page eyebrow,Incogent support
+support.heading,Support page heading,How can we help?
+support.intro,Support introduction,"Get help directly on Discord, or explore the Blackbird documentation."
+support.missing.title,License recovery link and heading,Didn't receive your license?
+support.missing.check,Missing license first steps,"Check your spam or junk folder and the inbox for the email address you used at checkout. Allow a few minutes for delivery."
+support.missing.contact,Missing license support instructions,"Still missing? Contact us using your purchase email address. Include the purchase date and receipt or order reference if available so we can locate your purchase."
+support.missing.privacy,Private support reminder,Use the private contact form for order details. Please don't post your license code or receipt in public Discord channels.
+support.missing.reassurance,Missing license reassurance,"You don't need to buy again. Once we've verified your purchase, we can help you recover your existing license."
+page.confirmation.title,Confirmation browser title,Your Blackbird Purchase | Incogent
+page.confirmation.description,Confirmation page description,Next steps and license delivery help for your Blackbird purchase.
+confirmation.heading,Confirmation page heading,Thanks for choosing Blackbird!
+confirmation.body,Confirmation introduction,Once your payment is confirmed we'll email your license and activation instructions.
+confirmation.delivery,Confirmation delivery note,You can close this page. Your license email doesn't depend on keeping it open.
 blackbird.documentation,Blackbird product page documentation link,Documentation
 site.name,Global site name,Incogent
 site.tagline,Global company tagline,Products and engineering for ambitious interactive experiences
@@ -40,7 +56,8 @@ home.about.body,Homepage about placeholder,This section will establish the compa
 home.contact.title,Homepage contact heading,Start a conversation
 home.contact.body,Homepage contact placeholder,Product sales support and project inquiries will be routed from here.
 contact.discord.title,Discord contact card heading,Join Incogent on Discord
-contact.discord.body,Discord contact card body,"Meet other developers, follow Blackbird development, and talk with the Incogent community."
+contact.discord.body,Discord contact card body,"Get Blackbird support directly from us, meet other developers, and follow development with the Incogent community."
+blackbird.discord_support,Blackbird product support button,Get support on Discord
 contact.discord.cta,Discord invitation action,Join Discord
 contact.discord.widget_title,Discord iframe title,Incogent Discord server
 contact.form.title,Contact form heading,Send us a message

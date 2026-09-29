@@ -21,6 +21,8 @@ export const LOCALES = {
 };
 
 export const PAGES = [
+  { route: "support", source: "support", titleKey: "page.support.title", descriptionKey: "page.support.description", bodyClass: "support-page" },
+  { route: "shop/blackbird/confirmation", source: "blackbird-confirmation", titleKey: "page.confirmation.title", descriptionKey: "page.confirmation.description", bodyClass: "confirmation-page", robots: "noindex,nofollow", includeInSitemap: false },
   ...DOCUMENTATION_PAGES,
   { route: "", source: "home", titleKey: "page.home.title", descriptionKey: "page.home.description", bodyClass: "home-page" },
   { route: "products", source: "products", titleKey: "page.products.title", descriptionKey: "page.products.description", bodyClass: "products-page" },

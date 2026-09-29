@@ -99,3 +99,7 @@
  .docs-article h1{font-size:2.1rem}
  .docs-article h2{scroll-margin-top:calc(var(--docs-header-height,4.5rem) + 4.5rem)}
 }
+
+/* App wordmarks: native 314 x 80 assets rendered at half size. */
+.header-logo{width:157px;max-width:100%;height:auto}.header-logo-dark{display:none}:root[data-theme="dark"] .header-logo-light{display:none}:root[data-theme="dark"] .header-logo-dark{display:block}
+@media(prefers-color-scheme:dark){:root:not([data-theme]) .header-logo-light{display:none}:root:not([data-theme]) .header-logo-dark{display:block}}

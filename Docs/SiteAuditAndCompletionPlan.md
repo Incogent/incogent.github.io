@@ -1,8 +1,21 @@
 # Incogent Site Completion Plan
 
-Last updated: 2026-09-22
+Last updated: 2026-09-29
 
 This is the authoritative current website plan. WebsiteDevelopmentPlan.md preserves the original architecture and historical roadmap; this document supersedes its outdated status and open decisions.
+
+## App wordmark synchronization (2026-09-29)
+
+- Copied the current app's Incogent_Wordmark.png and Incogent_Wordmark_Dark.png verbatim
+  into website assets. Both are 314 x 80 pixels, suitable for 157 x 40 display at 2x density.
+  Header switches between dark artwork for light mode and white artwork for dark mode,
+  including automatic OS theme; CSS cache version bumped. All localized pages rebuilt.
+- Email template uses the new white wordmark at 157 x 40. Local email preview uses the
+  local asset until publication. Website publication is authorized and release validation passes. Deploy the revised
+  email Worker only after verifying the published asset URL.
+- Policy, localization, build and site validation pass (69 pages); authoritative EULA
+  hashes match. All 52 backend checks pass. No higher-resolution source is needed for
+  current placements; a 628 x 160 export would support larger 314 x 80 displays at 2x.
 
 ## Complete
 
@@ -25,10 +38,101 @@ This is the authoritative current website plan. WebsiteDevelopmentPlan.md preser
 - [ ] Link release notes from authoritative published release data; never publish ReleaseNotes/draft.md.
 - [x] Link documentation beside the download controls at the top and bottom of the Blackbird product page. The documentation agent owns full documentation and worked examples.
 
+## Blackbird purchasing setup (2026-09-29)
+
+- Email palette aligned with website CSS and deployed to sandbox: #2F665E to #7EB8AE
+  header gradient, #B9564C primary action, matching website neutral/text colors. All 52
+  backend tests pass; two-code desktop/mobile layout previews reviewed. User confirmed near-immediate inbox delivery on September 29. Multi-code contents
+  and the new-logo email remain supplemental checks.
+
+- [x] User-approved multiple-code purchases: sandbox quantity selector enabled for 1–10
+  seats with quantity-aware validation, complete atomic allocation, one email with all
+  codes, stable retries and full-order refund holds. Migration 0005 and Worker deployed;
+  52 tests pass and existing purchase preserved. Next user test is two seats.
+- [x] Refined sandbox Stripe product name and entitlement description. Managed Payments
+  rejects custom checkout text. Logo/colors require a Dashboard step because the connector
+  does not expose account branding; hosted visual confirmation remains pending.
+
+- [x] Stripe plugin installed and MCP OAuth verified for Incogent sandbox and live.
+  Stripe's implementation planner accepted Managed Payments Payment Links for the
+  initial one-time hosted checkout.
+- [x] Configured and read back the sandbox alpha offering: $149 USD per seat,
+  one-time, with 12 months of updates and perpetual use of covered versions.
+  Sandbox Payment Link confirms Managed Payments enabled and Stripe-issued invoices.
+  Applicable tax is added; one seat per purchase initially. No public purchase CTA.
+- [x] User selected continued offline signing. Blackbird's commerce/licensing plans
+  now record Stripe and purchase-date-specific license batches. The update cutoff
+  must be based on purchase, not generation/redemption time. Online signing is deferred.
+- [x] Implement and deploy isolated sandbox webhook, dated existing-license allocation,
+  retryable Resend delivery and refund/dispute holds in the Blackbird license Worker.
+  API signature smoke checks pass; automated D1 tests cover duplicates, concurrency,
+  missing stock, email failures and refund blocking. Production licensing is unchanged.
+- [x] Configure runtime credentials and signed sandbox inventory; verify a sandbox payment,
+  license assignment and inbox delivery (user confirmed September 29).
+- [x] Deploy branded HTML/plain-text email and immediate post-persistence fulfillment,
+  retaining five-minute recovery. All 48 backend tests pass; desktop and 390px mobile
+  previews reviewed. Next purchase checks the new inbox appearance and delivery timing.
+  Email refined with a shorter friendly welcome, documentation button, existing app Discord
+  support link and gradient header. No sandbox banner in the body. 48 tests and refreshed
+  desktop/mobile previews pass. Missing-email support/resend remains launch follow-up;
+  self-service recovery is proposed, not implemented.
+- [ ] Complete activation, updater revocation and generated purchase/success pages.
+  Final tax presentation, production eligibility and purchase-to-redemption validation remain outstanding.
+- [x] Sandbox Stripe runtime key configured as an encrypted Worker secret; verified
+  expected account and sandbox price access. Resend secret and sender/recipient settings
+  are now saved and their binding types/formats verified. Dated sandbox inventory for
+  September 29/30 is imported and read back; payment/email validation is complete.
+- [x] Live catalog product and $149 USD one-time price created and verified after
+  an empty live catalog check. Managed Payments onboarding remains in progress;
+  no live purchase link or website sales enabled. Stripe IDs are in the integration record.
+- [x] User approved regional pricing: US $149 USD before applicable sales tax;
+  Canada C$219 before applicable tax; euro area EUR 159, UK GBP 139 and Australia
+  AUD 239 inclusive of applicable VAT/GST. Entitlements are unchanged.
+- [x] Configured regional currency options on the existing sandbox and live prices.
+  Independent API readback confirms USD 149 / CAD 219 exclusive and EUR 159 /
+  GBP 139 / AUD 239 inclusive, active one-time prices, and no recurring interval.
+  Stripe access is working; existing product/price IDs and metadata are preserved.
+- [ ] Validate hosted currency selection and tax presentation, including European
+  buyers paying in USD. Update website prices and purchase flow once Stripe checkout
+  and fulfillment work, as requested by the user. Public shop remains coming soon.
+  Account defaults were not changed. Documentation whitespace checks passed;
+  no live purchase link or production fulfillment enabled.
+- Incogent Resend sender is configured on updates.incogent.io; inbox delivery is verified.
+- Purchasing work is authorized; the public shop remains coming soon until
+  fulfillment is verified. Sandbox Worker deployment and operations evidence are in
+  `E:/GitHub/Blackbird/LicenseServer/blackbird-license-api/COMMERCE.md`.
+  See [StripeCheckoutIntegration.md](StripeCheckoutIntegration.md) for the draft
+  design, Stripe object IDs, planner evidence and remaining sequence. Documentation
+  whitespace checks passed; no desktop runtime changes or production licenses.
+
+## Missing-license help (2026-09-29)
+
+- Added a generated support page with a Didn't receive your license? section, private
+  contact instructions and existing documentation/Discord links. Support is linked from
+  the shared footer and both Blackbird download sections.
+- Added an informational purchase confirmation page with the missing-license link.
+  It neither verifies payment nor issues licenses; webhook fulfillment remains authoritative.
+- Policy, localization, generation and site validation pass (69 pages, 66 sitemap URLs).
+  Authoritative EULA and website copy hashes match. These pages are included in the authorized website release;
+  connect the Stripe redirect only after verifying publication. Authenticated resend tooling and
+  self-service recovery are still unimplemented.
+- Cost constraint: retain existing Worker/D1/Resend services and free-plan compatibility;
+  no paid upgrade, queue service or always-running server authorized. Faster sending uses
+  the existing webhook invocation with waitUntil and the existing five-minute recovery cron.
+
+## Discord support visibility (2026-09-29)
+
+- Added Get support on Discord buttons beside documentation at both Blackbird download
+  sections, using the configured invite confirmed by the user (`AxxpQ8h`). Updated the
+  homepage Discord card to explicitly offer direct Blackbird support.
+- Generated pages included in the authorized GitHub Pages release. Policy, localization,
+  build and site checks pass (67 pages). Source and website EULA hashes match.
+- Email uses the same confirmed invite and is deployed to the sandbox Worker. Email design
+  and missing-email recovery status are recorded in the Blackbird commerce operations guide.
+
 ## Deferred by user
 
 - [ ] Final About, Services, homepage About/contact copy, and company proof. Still to come; do not invent experience or shipped work.
-- [ ] Pricing, purchasing, license option presentation, and checkout/fulfillment. Not ready; retain coming-soon messaging.
 - [ ] User records short marketing clips and supplies approved assets. Use MarketingClipBrief.md as options, not a required production checklist.
 - [ ] Replace the long YouTube video with those curated assets when supplied. Keep hosting essentially free and avoid services with automatic usage overages. GitHub Pages is the agreed direction for small self-hosted assets.
 - [ ] Additional locales after English content and product vocabulary settle.
@@ -122,3 +226,14 @@ License dashboard improvements are deployed to production in incogent-cloudflare
   A production mobile browser confirmed the collapsed sidebar, working search (13 results for
   "shared settings"), and preserved media placeholder. Release-build review and media production
   remain outstanding as above.
+
+## Website publication (2026-09-29)
+
+- User authorized publication. Policy, localization, build, site and documentation checks pass
+  (69 pages, 66 sitemap URLs); EULA hashes match. Desktop/mobile layouts checked without
+  horizontal overflow. Automated browser did not load image assets; copied logo bytes match
+  the app source. Public asset verification follows deployment.
+- Release includes app wordmarks, theme-aware header, Discord/support links, missing-license
+  help and informational confirmation page. Public purchases remain disabled. Unrelated
+  AGENTS.md and draft-document changes are excluded from the release commit.
+- User reports sandbox email arrived nearly immediately; this is confirmed inbox evidence.
