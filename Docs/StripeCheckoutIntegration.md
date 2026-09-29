@@ -251,3 +251,10 @@ The public shop remains coming soon. Existing unrelated working-tree changes wer
 - [Eligibility](https://docs.stripe.com/payments/managed-payments/eligibility)
 - [Checkout fulfillment](https://docs.stripe.com/checkout/fulfillment)
 - [Stripe MCP](https://docs.stripe.com/mcp)
+
+Website publication completed in ef14af1 (Pages run 36644462345). Support and confirmation
+pages are HTTP 200. Sandbox Payment Link after_completion now redirects to
+https://www.incogent.io/en/shop/blackbird/confirmation/ after payment. The redirect remains
+informational. App wordmark assets are published and verified; sandbox email Worker
+675bbb9b-e812-4b17-a6a5-5ca45adf3502 uses the new URL. User confirms near-immediate
+delivery; D1 verifies the two-seat purchase and assigned codes. No live sales enabled.

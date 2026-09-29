@@ -4,6 +4,15 @@ Last updated: 2026-09-29
 
 This is the authoritative current website plan. WebsiteDevelopmentPlan.md preserves the original architecture and historical roadmap; this document supersedes its outdated status and open decisions.
 
+## Support layout refinement (2026-09-29)
+
+- Moved missing-license reassurance above the contact button so the action ends the section.
+- Removed Discord buttons from both Blackbird download action groups. Discord remains
+  prominent on the support page and homepage contact section. Mobile dropdown text remains
+  left-aligned; right-aligned text was discussed but not selected.
+- Policy, localization, build, site and documentation validation pass (69 pages); EULA hashes
+  match. Included in the ongoing authorized website publication.
+
 ## App wordmark synchronization (2026-09-29)
 
 - Copied the current app's Incogent_Wordmark.png and Incogent_Wordmark_Dark.png verbatim
@@ -237,3 +246,16 @@ License dashboard improvements are deployed to production in incogent-cloudflare
   help and informational confirmation page. Public purchases remain disabled. Unrelated
   AGENTS.md and draft-document changes are excluded from the release commit.
 - User reports sandbox email arrived nearly immediately; this is confirmed inbox evidence.
+
+### Publication result
+
+Published in ef14af1. GitHub validation 36644462706 and Pages deployment 36644462345
+succeeded. Production product/support/confirmation pages return HTTP 200 with new logo
+markup; both public wordmark files match repository/app bytes. Live mobile light/dark
+checks select the correct logo and show no overflow. The automated browser blocks image
+loading even after its temporary profile setting was changed; visual image loading remains
+a browser limitation, not verified by that check. Asset HTTP/content checks passed.
+Sandbox Worker 675bbb9b-e812-4b17-a6a5-5ca45adf3502 now uses the published wordmark;
+sandbox Payment Link redirects to the verified public confirmation page. D1 confirms
+one sent single-seat order and one sent two-seat order, with three assigned codes.
+User confirms near-immediate inbox delivery. Live purchases remain disabled.
