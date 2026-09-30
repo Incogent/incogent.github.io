@@ -126,7 +126,7 @@ page.blackbird_shop.title,Blackbird shop browser title,Buy Blackbird Alpha | Inc
 page.blackbird_shop.description,Blackbird shop meta description,Buy Blackbird Alpha with a perpetual license and 12 months of preview and stable updates. One-time pricing per seat.
 blackbird_shop.kicker,Blackbird shop eyebrow,Blackbird shop
 blackbird_shop.heading,Blackbird shop heading,Make Blackbird part of your toolkit.
-blackbird_shop.intro,Blackbird shop introduction,"Get Blackbird Alpha for your team. A one-time purchase includes 12 months of preview and stable updates, with perpetual use of the versions covered by your license."
+blackbird_shop.intro,Blackbird shop introduction,"Build less tooling. Ship more games."
 blackbird_shop.editions.title,Blackbird shop heading,"One-time pricing, per seat"
 blackbird_shop.editions.body,Blackbird shop placeholder,Every seat receives its own license code. No subscription or automatic renewal.
 blackbird_shop.checkout.title,Checkout heading,Purchase Blackbird
@@ -299,3 +299,7 @@ blackbird_shop.price.eur,Blackbird production purchasing,Euro area: €159
 blackbird_shop.price.gbp,Blackbird production purchasing,United Kingdom: £139
 blackbird_shop.price.aud,Blackbird production purchasing,Australia: A$239
 blackbird_shop.price.tax,Blackbird production purchasing,"USD and CAD prices exclude applicable tax, which is added at checkout. EUR, GBP and AUD prices include applicable tax. Confirm your currency and final total at checkout."
+blackbird_shop.offer,Purchase card heading,Blackbird Alpha
+blackbird_shop.per_seat,Price unit,per seat
+blackbird_shop.summary,Brief price qualifier,One-time purchase. Plus applicable tax.
+blackbird_shop.license_terms,Purchase terms link,License terms

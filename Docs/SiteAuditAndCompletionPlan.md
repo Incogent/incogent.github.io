@@ -2,6 +2,16 @@
 
 Last updated: 2026-09-30
 
+## Purchase page simplification (2026-09-30)
+
+- User requested simpler marketing presentation. Show one prominent US$149 per-seat price,
+  one-time purchase/tax qualifier, buy button and a short license-terms link in one centered card.
+- Removed the country list, quantity limits, delivery/recovery instructions and detailed terms prose
+  from this page. Recovery remains on support/confirmation pages. Regional checkout pricing is unchanged.
+- CSS cache version bumped. Policy, i18n, build, site and documentation checks pass; EULA hashes match.
+  Browser checks at 390/1440px show no overflow, a single USD price and the correct live checkout link.
+  Publication is authorized and underway.
+
 ## Production purchasing rollout (2026-09-30 UTC)
 
 - User-confirmed activation remains complete; no repeat is required without a material activation change.
@@ -22,7 +32,7 @@ Last updated: 2026-09-30
 - Published in a6a63d7. GitHub validation 36663440477 and Pages deployment 36663440247 succeeded.
   Public shop returns HTTP 200 with the active live link and all five prices; confirmation and policy
   routes return 200. Production has no failed work or orders from deployment checks. Checkout uses
-  default Link branding; its account-branding polish remains separate from accepting real orders.
+  Incogent logo/green background are now verified live; coral accent is saved, while the Link payment button remains green.
 - Operational instructions and deployment evidence: Blackbird/LicenseServer/blackbird-license-api/COMMERCE.md.
 
 ## Mobile theme control (2026-09-29)
