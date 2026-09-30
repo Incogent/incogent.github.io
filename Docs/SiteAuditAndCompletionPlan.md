@@ -2,7 +2,26 @@
 
 Last updated: 2026-09-29
 
-This is the authoritative current website plan. WebsiteDevelopmentPlan.md preserves the original architecture and historical roadmap; this document supersedes its outdated status and open decisions.
+## Production purchasing rollout (2026-09-30 UTC)
+
+- User-confirmed activation remains complete; no repeat is required without a material activation change.
+  User verified the refunded purchase's resend enters review/payment_blocked without an email.
+- Production backend enabled as 77dfda7a-a772-47f9-a20a-8abc1552e8cb. All three runtime secrets
+  are installed. Live Stripe account authentication and Resend acceptance passed using its simulated
+  delivery address; no real payment or license issuance was performed during this check.
+- Private D1 backup and isolated restore passed integrity checks: 612 licenses, including 600 dated
+  commercial seats (20 per UTC purchase date September 30 through October 29). Migrations through
+  0008 and 12 existing token fingerprints are complete. Replenishment remains an offline operation.
+- Branded refund confirmations and daily failure/inventory alerts are deployed; 80 backend checks pass.
+  The existing activation system is unchanged. The desktop updater gate is implemented but unpublished.
+- Live Managed Payments link plink_1ULDqjL5NhSelnQXa2o77QV9 uses all five approved regional prices,
+  1–10 seats, mandatory published terms consent, and the existing confirmation-page redirect.
+- Website purchase copy/control is ready. Policy, i18n, build, site and documentation checks pass;
+  authoritative EULA bytes match. Browser checks at 390/1440px show no overflow and the correct link.
+  Hosted live checkout displays Blackbird Alpha, $149/seat, quantity selection and terms/privacy links.
+- Website publication and live verification are in progress. Checkout currently displays default Link
+  branding; account branding is separate from the verified purchase configuration.
+- Operational instructions and deployment evidence: Blackbird/LicenseServer/blackbird-license-api/COMMERCE.md.
 
 ## Mobile theme control (2026-09-29)
 
@@ -39,7 +58,7 @@ This is the authoritative current website plan. WebsiteDevelopmentPlan.md preser
 - [x] Blackbird-first navigation: Shop goes directly to the Blackbird shop and the footer links directly to Blackbird.
 - [x] YouTube embeds on the homepage and below the Blackbird downloads, with muted autoplay, looping, and native controls.
 - [x] Public Privacy Policy and authoritative Blackbird EULA rendered with working URL/email links and legal-page switch buttons. EULA synchronization instructions recorded in AGENTS.md.
-- [x] Public shop language explains that purchasing is coming soon.
+- [x] Public shop prepared with approved regional pricing, entitlement details and live Stripe purchase link.
 - [x] Developer documentation and build sources excluded from Pages deployment while retained in Git.
 - [x] Deployed EXE/MSI downloads, contact delivery, mobile navigation, legal links, and deployment exclusions verified. Completion is based on the user's confirmation on 2026-09-09; do not reopen these as unverified because older audits say otherwise.
 - [x] Practical Blackbird website copy drafted in BlackbirdPracticalInfoDraft.md.
@@ -55,6 +74,20 @@ This is the authoritative current website plan. WebsiteDevelopmentPlan.md preser
 
 ## Blackbird purchasing setup (2026-09-29)
 
+- User confirmed the resend arrived with identical codes, then completed the two-seat sandbox
+  refund. Both assigned codes are held and their deployed update-eligibility checks return false;
+  the earlier single-seat purchase remains eligible. The test exposed an incorrect livemode
+  requirement on Stripe Refund objects. Fixed the handler and test fixtures; all 76 backend
+  checks pass. Sandbox Worker 2fbe9c2c-a3ee-4bd4-9730-de3aba4aee9e deployed. The user completed the new resend check: review/payment_blocked with no email. Existing activation is user-verified; current production status is recorded above.
+
+- [x] Backend-owned immediate manual resends deployed to sandbox Worker
+  acad7ffd-fb4e-4b63-b337-e16e6f7e7370 after private backup and migration 0007. The existing
+  support tool persists the job, then uses a short-lived single-use trigger; scheduled recovery
+  remains the fallback. All 73 backend checks pass. Live authorization/replay checks passed
+  without sending email or changing the original purchases. No website UI change or new paid
+  service. Action-only handoff is in Blackbird Docs/CommerceRecoveryActionHandoff.md; the other
+  agent owns only the private Blackbird Action. Production commerce remains disabled.
+
 - [x] Private verified-purchase resends preserve assigned codes and delivery history; original
   Stripe event reconciliation preserves purchase dates. Refund/dispute restrictions now cover
   recovery, redemption and the new built-in updater download gate. Sandbox Worker
@@ -62,8 +95,7 @@ This is the authoritative current website plan. WebsiteDevelopmentPlan.md preser
   fingerprints populated. All 64 backend checks pass. Desktop Debug/Release builds and focused
   updater/licensing/trial/redemption tests pass; the app is not published. Deployed endpoint
   accepts a known assigned license and rejects malformed/unknown requests. Existing two sent
-  orders are intact. Owner alerts, sandbox activation, production rollout and final purchase
-  policy/consent remain launch work. Operational commands live in Blackbird's COMMERCE.md.
+  orders are intact. Owner alerts and live purchase setup are now completed as recorded above; historical sandbox evidence remains valid. Operational commands live in Blackbird's COMMERCE.md.
 
 - Email palette aligned with website CSS and deployed to sandbox: #2F665E to #7EB8AE
   header gradient, #B9564C primary action, matching website neutral/text colors. All 52

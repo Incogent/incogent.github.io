@@ -2,6 +2,8 @@ import { DOCUMENTATION_PAGES } from "./documentation.mjs";
 export const SITE_URL = "https://www.incogent.io";
 export const SITE_NAME = "Incogent";
 export const DEFAULT_LOCALE = "en";
+// Set only after production fulfillment and the live Managed Payments link are ready.
+export const BLACKBIRD_CHECKOUT_URL = "https://buy.stripe.com/7sY28sfrA6b76Jj4cB6Ri00";
 
 export const DISCORD_INVITE_URL = "https://discord.gg/AxxpQ8h";
 export const DISCORD_GUILD_ID = "367221582009204737";
