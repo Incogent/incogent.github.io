@@ -1,6 +1,6 @@
 # Incogent Site Completion Plan
 
-Last updated: 2026-09-29
+Last updated: 2026-09-30
 
 ## Production purchasing rollout (2026-09-30 UTC)
 
@@ -19,8 +19,10 @@ Last updated: 2026-09-29
 - Website purchase copy/control is ready. Policy, i18n, build, site and documentation checks pass;
   authoritative EULA bytes match. Browser checks at 390/1440px show no overflow and the correct link.
   Hosted live checkout displays Blackbird Alpha, $149/seat, quantity selection and terms/privacy links.
-- Website publication and live verification are in progress. Checkout currently displays default Link
-  branding; account branding is separate from the verified purchase configuration.
+- Published in a6a63d7. GitHub validation 36663440477 and Pages deployment 36663440247 succeeded.
+  Public shop returns HTTP 200 with the active live link and all five prices; confirmation and policy
+  routes return 200. Production has no failed work or orders from deployment checks. Checkout uses
+  default Link branding; its account-branding polish remains separate from accepting real orders.
 - Operational instructions and deployment evidence: Blackbird/LicenseServer/blackbird-license-api/COMMERCE.md.
 
 ## Mobile theme control (2026-09-29)
@@ -58,7 +60,7 @@ Last updated: 2026-09-29
 - [x] Blackbird-first navigation: Shop goes directly to the Blackbird shop and the footer links directly to Blackbird.
 - [x] YouTube embeds on the homepage and below the Blackbird downloads, with muted autoplay, looping, and native controls.
 - [x] Public Privacy Policy and authoritative Blackbird EULA rendered with working URL/email links and legal-page switch buttons. EULA synchronization instructions recorded in AGENTS.md.
-- [x] Public shop prepared with approved regional pricing, entitlement details and live Stripe purchase link.
+- [x] Public shop published with approved regional pricing, entitlement details and live Stripe purchase link.
 - [x] Developer documentation and build sources excluded from Pages deployment while retained in Git.
 - [x] Deployed EXE/MSI downloads, contact delivery, mobile navigation, legal links, and deployment exclusions verified. Completion is based on the user's confirmation on 2026-09-09; do not reopen these as unverified because older audits say otherwise.
 - [x] Practical Blackbird website copy drafted in BlackbirdPracticalInfoDraft.md.
