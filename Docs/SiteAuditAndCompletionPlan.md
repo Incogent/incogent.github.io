@@ -7,7 +7,7 @@ This is the authoritative current website plan. WebsiteDevelopmentPlan.md preser
 ## Mobile theme control (2026-09-29)
 
 - Moved the theme toggle after Menu in the shared header, matching desktop order and keyboard navigation. Kept the compact dropdown and left-aligned labels.
-- Policy, localization, generated-site and documentation checks pass; authoritative EULA bytes match. Published with the authorized website refinements.
+- Policy, localization, generated-site and documentation checks pass; authoritative EULA bytes match. Published as e3996da; Pages 36647202834 and validation 36647203725 succeeded. Live support page confirms Menu precedes the theme toggle.
 
 ## Support layout refinement (2026-09-29)
 
@@ -54,6 +54,16 @@ This is the authoritative current website plan. WebsiteDevelopmentPlan.md preser
 - [x] Link documentation beside the download controls at the top and bottom of the Blackbird product page. The documentation agent owns full documentation and worked examples.
 
 ## Blackbird purchasing setup (2026-09-29)
+
+- [x] Private verified-purchase resends preserve assigned codes and delivery history; original
+  Stripe event reconciliation preserves purchase dates. Refund/dispute restrictions now cover
+  recovery, redemption and the new built-in updater download gate. Sandbox Worker
+  5ec1f010-de8c-4222-8cf5-280b237980e9 deployed after backup and migration 0006; 24 token
+  fingerprints populated. All 64 backend checks pass. Desktop Debug/Release builds and focused
+  updater/licensing/trial/redemption tests pass; the app is not published. Deployed endpoint
+  accepts a known assigned license and rejects malformed/unknown requests. Existing two sent
+  orders are intact. Owner alerts, sandbox activation, production rollout and final purchase
+  policy/consent remain launch work. Operational commands live in Blackbird's COMMERCE.md.
 
 - Email palette aligned with website CSS and deployed to sandbox: #2F665E to #7EB8AE
   header gradient, #B9564C primary action, matching website neutral/text colors. All 52
