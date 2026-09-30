@@ -117,3 +117,8 @@
 .purchase-currency{display:inline-flex;align-items:center;gap:.5rem;font-size:.875rem;color:var(--muted);margin:0 0 1rem}
 .purchase-currency[hidden]{display:none}
 .purchase-currency select{width:auto;padding:.4rem .6rem;border:1px solid var(--accent);border-radius:.4rem;background:var(--surface);color:var(--text);font:inherit}
+
+.purchase-facts{margin:1.5rem 0 2rem}
+.purchase-facts>div{padding:1.25rem 0;border-bottom:1px solid var(--border)}
+.purchase-facts dt{font-size:1.15rem;font-weight:700;color:var(--text);margin-bottom:.5rem}
+.purchase-facts dd{margin:0;color:var(--muted);line-height:1.7}

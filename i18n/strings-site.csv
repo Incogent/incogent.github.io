@@ -305,3 +305,29 @@ blackbird_shop.summary,Brief price qualifier,One-time purchase. Plus applicable 
 blackbird_shop.summary_inclusive,Brief tax inclusive price qualifier,One-time purchase. Includes applicable tax.
 blackbird_shop.currency,Currency selector label,Currency
 blackbird_shop.license_terms,Purchase terms link,License terms
+blackbird.workflows.title,Blackbird product page practical information,From build to bug report
+blackbird.workflows.intro,Blackbird product page practical information,Bring the tasks you repeat every day into one place.
+blackbird.workflows.build.title,Blackbird product page practical information,Package an Unreal build
+blackbird.workflows.build.body,Blackbird product page practical information,"Choose a project and build profile, run packaging, and open the finished build. Save the configuration so the next build starts with the same settings."
+blackbird.workflows.build.link,Blackbird product page practical information,Unreal build guide
+blackbird.workflows.device.title,Blackbird product page practical information,Deploy to an Android device
+blackbird.workflows.device.body,Blackbird product page practical information,"Select a connected device, deploy your build, and launch the app. Keep deployment and launch together in a saved Workflow for the next test."
+blackbird.workflows.device.link,Blackbird product page practical information,Android deployment guide
+blackbird.workflows.logs.title,Blackbird product page practical information,Collect the logs you need
+blackbird.workflows.logs.body,Blackbird product page practical information,Pull existing app logs or record device output while reproducing a problem. Open the saved files from the result and share the relevant details with your team.
+blackbird.workflows.logs.link,Blackbird product page practical information,Log collection guide
+blackbird.buying.title,Blackbird product page practical information,Before you buy
+blackbird.buying.trial.title,Blackbird product page practical information,Try every feature free for 14 days
+blackbird.buying.trial.body,Blackbird product page practical information,Download Blackbird and choose Start Trial in the app. The 14-day free trial has no feature restrictions and requires no account or payment details. Purchase a license when you are ready to keep using it.
+blackbird.buying.license.title,Blackbird product page practical information,Keep the versions you buy
+blackbird.buying.license.body,Blackbird product page practical information,Your one-time purchase includes 12 months of preview and stable updates from your purchase date. You can keep using the versions covered by your license after that period ends. No subscription or automatic renewal.
+blackbird.buying.seat.title,Blackbird product page practical information,"One seat, one person"
+blackbird.buying.seat.body,Blackbird product page practical information,"Each person can use their seat on a reasonable number of personal machines, such as a desktop and laptop. Each additional person needs their own seat."
+blackbird.buying.alpha.title,Blackbird product page practical information,What to expect from the alpha
+blackbird.buying.alpha.body,Blackbird product page practical information,"You can run Actions, save Workflows, build projects, deploy to devices, and collect logs today. Blackbird is still in alpha: expect bugs and changes as features develop. Try your workflow on a test project before relying on it for production work."
+blackbird.buying.system.title,Blackbird product page practical information,Built for Windows
+blackbird.buying.system.body,Blackbird product page practical information,"We officially support Windows 11 (x64). Windows 10 should also work, but is not officially supported. macOS and Linux desktop versions are not currently available."
+blackbird.buying.tools.title,Blackbird product page practical information,Bring your existing tools
+blackbird.buying.tools.body,Blackbird product page practical information,"Install the engine and platform tools your workflow needs, such as Unreal Engine or Android SDK tools. Blackbird runs those tools for you; it does not replace their installations, licenses, or account requirements."
+blackbird.buying.help,Blackbird product page practical information,Have a question before purchasing?
+blackbird.buying.support,Blackbird product page practical information,Get help

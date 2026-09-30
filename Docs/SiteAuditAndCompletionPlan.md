@@ -2,6 +2,22 @@
 
 Last updated: 2026-09-30
 
+## Purchase information and workflow examples (2026-09-30)
+
+- Added three concrete workflows with guide links: Unreal packaging, Android deployment,
+  and collecting logs. Existing product demo video remains in place.
+- Added Before you buy: unrestricted 14-day free trial, no account/payment details,
+  one-person seats usable on a reasonable number of personal machines, 12 months of
+  preview/stable updates from purchase, perpetual use of covered versions, alpha expectations,
+  Windows support and required external tools. User confirmed trial and OS policy:
+  Windows 11 officially supported; Windows 10 expected to work but unsupported. Current
+  release is x64. Seat wording agrees with the authoritative EULA; no legal edits needed.
+- Real product screenshots remain outstanding: no suitable captures were available in
+  either repository. Do not substitute invented UI images. Use the existing demo meanwhile.
+- Policy/i18n/build/site/documentation checks pass and authoritative EULA bytes match.
+  Browser checks at 390/1440px verify all six purchase facts, three workflow examples,
+  responsive layout and the existing currency selector. Publication in progress.
+
 ## Product pricing, site icon and public copy (2026-09-30)
 
 - Pricing is integrated into the Blackbird product page at #pricing, retaining the
@@ -16,7 +32,10 @@ Last updated: 2026-09-30
   The footer no longer advertises unfinished website work. Actual images remain to be added.
 - Policy, localization, build, site and documentation checks passed; EULA hashes match.
   Browser checks at 390/1440px passed for regional pricing, manual currency/checkout,
-  navigation, concise captions, favicon links and retained shop pages. Publication in progress.
+  navigation, concise captions, favicon links and retained shop pages. Published in ccf5d78
+  and 9f0d7e6; final validation 36739075148 and Pages deployment 36739074965 succeeded.
+  Live checks verified product pricing, absence of shop links, icon assets, cleaned guide
+  content and both retained shop URLs (HTTP 200).
 
 ## Regional currency display (2026-09-30)
 
