@@ -2,6 +2,24 @@
 
 Last updated: 2026-09-30
 
+## Regional currency display (2026-09-30)
+
+- Completed: country-based currency hint from existing incogent-edge GET /api/currency,
+  with USD fallback and manual USD/CAD/EUR/GBP/AUD selector. Only the explicit preference
+  is saved locally. No location permission, external geolocation service or location storage.
+- One price at a time: US$149 / C$219 / EUR159 / GBP139 / A$239. USD/CAD tax-exclusive;
+  EUR/GBP/AUD tax-inclusive. Manual selection wins over a late country response.
+- Five fixed-currency Managed Payments links use the existing approved Price, license
+  metadata, quantity selection, terms consent and confirmation redirect. The old general
+  link remains valid; website uses the currency-specific links. Existing fulfillment accepts
+  these currencies and the same price ID without licensing changes.
+- Edge deployed as 1579b4ea-45a3-4d21-913f-1f3c3a4722cb; all 84 backend tests pass.
+  Website policy/i18n/build/site/documentation checks pass and authoritative EULA hashes match.
+  Browser checks passed at 390/1440px, all five currency/price/link/tax combinations,
+  stored preference, late-response race, failure/unknown fallback and JavaScript disabled.
+  All five live checkouts show the corresponding approved amounts. No payment was made.
+- Website publication in progress; no additional user setup required.
+
 ## Purchase page simplification (2026-09-30)
 
 - User requested simpler marketing presentation. Show one prominent US$149 per-seat price,
@@ -10,7 +28,8 @@ Last updated: 2026-09-30
   from this page. Recovery remains on support/confirmation pages. Regional checkout pricing is unchanged.
 - CSS cache version bumped. Policy, i18n, build, site and documentation checks pass; EULA hashes match.
   Browser checks at 390/1440px show no overflow, a single USD price and the correct live checkout link.
-  Publication is authorized and underway.
+  Published in b03bbed; GitHub validation 36664230591 and Pages deployment 36664229661 succeeded.
+  Live HTTP checks confirm the simplified card, correct checkout link and removal of the country/quantity copy.
 
 ## Production purchasing rollout (2026-09-30 UTC)
 

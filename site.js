@@ -1,4 +1,44 @@
 const THEME_KEY="incogent_theme";
+// Country is only a hint. An explicit currency choice always wins, even if the
+// location request completes later. Prices and checkout links come from the page.
+async function initPurchaseCurrency(){
+  const select=document.querySelector('[data-purchase-currency]');
+  if(!select)return;
+  const card=select.closest('.purchase-card');
+  const amount=card.querySelector('[data-purchase-amount]');
+  const caption=card.querySelector('.purchase-caption');
+  const buy=card.querySelector('a.button.primary');
+  if(!buy)return;
+  const key='incogent_currency';
+  let manuallySelected=false;
+  const apply=(currency)=>{
+    const option=Array.from(select.options).find(item=>item.value===currency);
+    if(!option)return false;
+    select.value=currency;
+    amount.textContent=option.dataset.price;
+    caption.textContent=option.dataset.inclusive?caption.dataset.inclusive:caption.dataset.exclusive;
+    buy.href=option.dataset.checkout;
+    return true;
+  };
+  select.addEventListener('change',()=>{
+    manuallySelected=true;
+    apply(select.value);
+    try{localStorage.setItem(key,select.value);}catch(_error){}
+  });
+  select.closest('label').hidden=false;
+  try{if(apply(localStorage.getItem(key)))return;}catch(_error){}
+  const controller=new AbortController();
+  const timeout=setTimeout(()=>controller.abort(),2500);
+  try{
+    const response=await fetch('/api/currency',{cache:'no-store',signal:controller.signal});
+    if(!response.ok)return;
+    const result=await response.json();
+    if(!manuallySelected)apply(result.currency);
+  }catch(_error){/* Keep the working USD price and checkout on any failure. */}
+  finally{clearTimeout(timeout);}
+}
+initPurchaseCurrency();
+
 const themeButtons=Array.from(document.querySelectorAll("[data-theme-toggle]"));
 let turnstileLoadAttempts=0;
 

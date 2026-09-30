@@ -2,8 +2,15 @@
 <section class="section section-card-field"><div class="wrap narrow">
 <article class="card product-panel purchase-card">
 <h2>{{t:blackbird_shop.offer}}</h2>
-<p class="purchase-price">US$149 <span>{{t:blackbird_shop.per_seat}}</span></p>
-<p class="purchase-caption">{{t:blackbird_shop.summary}}</p>
+<p class="purchase-price" aria-live="polite"><strong data-purchase-amount>US$149</strong> <span>{{t:blackbird_shop.per_seat}}</span></p>
+<label class="purchase-currency" hidden>{{t:blackbird_shop.currency}} <select data-purchase-currency>
+<option value="USD" data-price="US$149" data-checkout="https://buy.stripe.com/5kQ5kE0wG573c3D24t6Ri02">USD</option>
+<option value="CAD" data-price="C$219" data-checkout="https://buy.stripe.com/6oU6oIbbkeHD0kV5gF6Ri03">CAD</option>
+<option value="EUR" data-price="€159" data-checkout="https://buy.stripe.com/9B63cwgvEgPLaZz6kJ6Ri01" data-inclusive="true">EUR</option>
+<option value="GBP" data-price="£139" data-checkout="https://buy.stripe.com/aFa9AU1AK9njebLbF36Ri04" data-inclusive="true">GBP</option>
+<option value="AUD" data-price="A$239" data-checkout="https://buy.stripe.com/4gM8wQ3IS6b78Rr7oN6Ri05" data-inclusive="true">AUD</option>
+</select></label>
+<p class="purchase-caption" data-exclusive="{{t:blackbird_shop.summary}}" data-inclusive="{{t:blackbird_shop.summary_inclusive}}">{{t:blackbird_shop.summary}}</p>
 <p>{{BLACKBIRD_CHECKOUT_CONTROL}}</p>
 <p class="purchase-terms"><a href="{{url:eula}}">{{t:blackbird_shop.license_terms}}</a></p>
 </article></div></section>

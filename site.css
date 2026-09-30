@@ -112,3 +112,7 @@
 .purchase-price span{display:block;font-size:1rem;line-height:1.5;letter-spacing:0;font-weight:400;color:var(--muted)}
 .purchase-card .purchase-caption{color:var(--muted);margin-bottom:1.75rem}
 .purchase-card .purchase-terms{font-size:.875rem;margin:1rem 0 0}
+.purchase-price strong{font-weight:inherit}
+.purchase-currency{display:inline-flex;align-items:center;gap:.5rem;font-size:.875rem;color:var(--muted);margin:0 0 1rem}
+.purchase-currency[hidden]{display:none}
+.purchase-currency select{width:auto;padding:.4rem .6rem;border:1px solid var(--accent);border-radius:.4rem;background:var(--surface);color:var(--text);font:inherit}

@@ -6,6 +6,11 @@ Last updated: 2026-09-03
 
 ## Purpose
 
+2026-09-30 regional pricing: the static shop requests a currency hint from the existing
+Cloudflare edge Worker at /api/currency. It shows one approved fixed price and a manual
+currency selector, with USD fallback. Currency-specific Managed Payments links keep
+checkout aligned. No additional geolocation provider or location storage is introduced.
+
 2026-09-09 analytics architecture update: rolling 2.0.0 remains compatible with the
 new version-aware 2.1.0 contract. Daily v1 is retired. Version reporting uses revised
 consent and aggregate app-days with no persistent installation identity; see the

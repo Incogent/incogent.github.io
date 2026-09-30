@@ -302,4 +302,6 @@ blackbird_shop.price.tax,Blackbird production purchasing,"USD and CAD prices exc
 blackbird_shop.offer,Purchase card heading,Blackbird Alpha
 blackbird_shop.per_seat,Price unit,per seat
 blackbird_shop.summary,Brief price qualifier,One-time purchase. Plus applicable tax.
+blackbird_shop.summary_inclusive,Brief tax inclusive price qualifier,One-time purchase. Includes applicable tax.
+blackbird_shop.currency,Currency selector label,Currency
 blackbird_shop.license_terms,Purchase terms link,License terms
