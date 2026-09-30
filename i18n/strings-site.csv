@@ -35,7 +35,7 @@ footer.status,Footer development status,The new Incogent site is under developme
 common.learn_more,Generic action,Learn more
 common.view_blackbird,Product action,Explore Blackbird
 common.view_services,Services action,Explore our services
-common.visit_shop,Shop action,Visit the shop
+common.visit_shop,Shop action,Pricing
 common.contact,Contact action,Contact Incogent
 download.blackbird.windows,Primary Blackbird Windows installer action,Download Blackbird Alpha for Windows
 download.blackbird.msi,Alternative Blackbird Windows installer action,MSI installer for administrators
@@ -48,13 +48,13 @@ home.hero.body,Homepage hero summary,"Build, test, and publish games faster with
 home.hero.primary,Homepage primary action,Discover Blackbird
 home.hero.secondary,Homepage secondary action,Purchase options
 home.product.title,Homepage product heading,Blackbird is our primary focus
-home.product.body,Homepage product placeholder,This section will introduce Blackbird's purpose capabilities workflows and supported integrations.
+home.product.body,Homepage product placeholder,"Run builds, deploy to devices, and manage development workflows with Blackbird."
 home.services.title,Homepage services heading,Experienced development support
 home.services.body,Homepage services placeholder,Incogent also provides Unreal Engine XR console porting consulting and contract development services.
 home.about.title,Homepage about heading,About Incogent
-home.about.body,Homepage about placeholder,This section will establish the company experience approach and reasons clients and customers can trust Incogent.
+home.about.body,Homepage about placeholder,Incogent makes games and tools for game developers.
 home.contact.title,Homepage contact heading,Start a conversation
-home.contact.body,Homepage contact placeholder,Product sales support and project inquiries will be routed from here.
+home.contact.body,Homepage contact placeholder,"Get in touch about Blackbird, development services, or a project you have in mind."
 contact.discord.title,Discord contact card heading,Join Incogent on Discord
 contact.discord.body,Discord contact card body,"Get Blackbird support directly from us, meet other developers, and follow development with the Incogent community."
 blackbird.discord_support,Blackbird product support button,Get support on Discord
@@ -77,7 +77,7 @@ contact.form.status.verification,Contact form validation message,Please complete
 contact.form.status.sending,Contact form progress message,Sending your message...
 contact.form.status.error,Contact form error message,Something went wrong sending your message. Please try again.
 contact.form.status.success,Contact form success message,"Thanks, your message was sent successfully."
-contact.form.status.unconfigured,Contact form configuration message,The contact service is not configured yet.
+contact.form.status.unconfigured,Contact form configuration message,The contact form is temporarily unavailable. Please try again later.
 page.products.title,Products browser title,Products | Incogent
 page.products.description,Products meta description,Explore products created by Incogent.
 products.kicker,Products eyebrow,Incogent products
@@ -120,13 +120,13 @@ page.shop.title,Shop browser title,Shop | Incogent
 page.shop.description,Shop meta description,Purchase products and licenses from Incogent.
 shop.kicker,Shop eyebrow,Incogent shop
 shop.heading,Shop heading,Products and licenses
-shop.intro,Shop introduction,The shop will provide a scalable home for Blackbird and future Incogent products.
+shop.intro,Shop introduction,Get Blackbird for your development workflow.
 shop.blackbird.body,Shop card,"Blackbird Alpha: a one-time purchase per seat, with 12 months of updates and perpetual use of covered versions."
 page.blackbird_shop.title,Blackbird shop browser title,Buy Blackbird Alpha | Incogent
 page.blackbird_shop.description,Blackbird shop meta description,Buy Blackbird Alpha with a perpetual license and 12 months of preview and stable updates. One-time pricing per seat.
 blackbird_shop.kicker,Blackbird shop eyebrow,Blackbird shop
 blackbird_shop.heading,Blackbird shop heading,Make Blackbird part of your toolkit.
-blackbird_shop.intro,Blackbird shop introduction,"Build less tooling. Ship more games."
+blackbird_shop.intro,Blackbird shop introduction,Build less tooling. Ship more games.
 blackbird_shop.editions.title,Blackbird shop heading,"One-time pricing, per seat"
 blackbird_shop.editions.body,Blackbird shop placeholder,Every seat receives its own license code. No subscription or automatic renewal.
 blackbird_shop.checkout.title,Checkout heading,Purchase Blackbird
@@ -156,11 +156,11 @@ about.kicker,About eyebrow,About Incogent
 about.heading,About heading,Products expertise and practical engineering
 about.intro,About introduction,Incogent builds its own products and helps other teams solve difficult interactive development problems.
 about.story.title,About section heading,Company
-about.story.body,About placeholder,The company story mission and focus will be developed here.
+about.story.body,About placeholder,Incogent develops games and software tools for people who make them.
 about.experience.title,About section heading,Experience
-about.experience.body,About placeholder,Relevant product platform engine and shipping experience will be summarized here.
+about.experience.body,About placeholder,"Our development services cover Unreal Engine, XR, console development, and porting."
 about.approach.title,About section heading,Approach
-about.approach.body,About placeholder,This section will explain how Incogent works with customers partners and clients.
+about.approach.body,About placeholder,"Tell us what you are building and where you need help. We can discuss the work, priorities, and next steps together."
 page.privacy.title,Privacy browser title,Privacy Policy | Incogent
 page.privacy.description,Privacy meta description,Privacy Policy for Incogent.
 privacy.kicker,Privacy eyebrow,Legal

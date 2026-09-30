@@ -2,6 +2,22 @@
 
 Last updated: 2026-09-30
 
+## Product pricing, site icon and public copy (2026-09-30)
+
+- Pricing is integrated into the Blackbird product page at #pricing, retaining the
+  approved regional prices, country hint, currency selector and matching checkout links.
+  Existing shop pages remain accessible but are unlisted in navigation and the sitemap;
+  the site's purchase links now point directly to product pricing.
+- Added the existing app Incogent icon verbatim as favicon.ico and PNG/touch icon.
+- Replaced all 57 public media-production briefs with short image descriptions and
+  removed the public brief inventory. Removed internal review/test-status wording from
+  provider guides, simplified awkward reference copy, and replaced unfinished About/home
+  copy with factual customer-facing text. Technical Action-authoring instructions remain.
+  The footer no longer advertises unfinished website work. Actual images remain to be added.
+- Policy, localization, build, site and documentation checks passed; EULA hashes match.
+  Browser checks at 390/1440px passed for regional pricing, manual currency/checkout,
+  navigation, concise captions, favicon links and retained shop pages. Publication in progress.
+
 ## Regional currency display (2026-09-30)
 
 - Completed: country-based currency hint from existing incogent-edge GET /api/currency,
@@ -18,7 +34,10 @@ Last updated: 2026-09-30
   Browser checks passed at 390/1440px, all five currency/price/link/tax combinations,
   stored preference, late-response race, failure/unknown fallback and JavaScript disabled.
   All five live checkouts show the corresponding approved amounts. No payment was made.
-- Website publication in progress; no additional user setup required.
+- Published in eb79d95; validation 36665117189 and Pages 36665117262 succeeded.
+  Live mobile browser verified the selector, C$219 price and matching CAD checkout.
+  Live currency endpoint returned HTTP 200/private/no-store; contact remains 405 on GET
+  and Windows download remains 302. No additional user setup required.
 
 ## Purchase page simplification (2026-09-30)
 

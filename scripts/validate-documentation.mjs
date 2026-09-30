@@ -4,12 +4,13 @@ import { DOCUMENTATION_PAGES, renderDocumentation } from './documentation.mjs';
 const { pages } = JSON.parse(fs.readFileSync(new URL('../i18n/docs/en.json', import.meta.url), 'utf8'));
 assert.equal(new Set(pages.map(p => p.slug)).size, pages.length, 'Duplicate article slug');
 assert(DOCUMENTATION_PAGES.every(p => p.includeInSitemap !== false && !p.robots?.includes('noindex')), 'Public guides must be discoverable');
-assert(renderDocumentation('', 'en').includes('id="docs-media-items"'), 'Keep the public media inventory');
+assert(!renderDocumentation('', 'en').includes('docs-media-items'), 'Production briefs must not appear in public guides');
 assert(fs.readFileSync('en/products/blackbird/index.html', 'utf8').includes('href="/en/products/blackbird/docs/"'), 'Product page must link to documentation');
 for (const page of pages) {
   assert(page.title && page.description && page.group, `Missing metadata: ${page.slug}`);
   assert(page.body.split(/\s+/).length > 100, `Incomplete article: ${page.slug}`);
-  assert(page.media.length > 100, `Missing media brief: ${page.slug}`);
+  assert(page.media.length > 10, `Missing image description: ${page.slug}`);
+  assert(!/Production placeholder|Source\/configuration review|No capture has been created|not a claim of a completed/.test(page.body + page.media), `Internal authoring copy: ${page.slug}`);
   assert(page.related.length > 0, `Missing related guides: ${page.slug}`);
   assert(!/E:\\GitHub|C:\\Users\\Brian|DeveloperPackages/.test(page.body), `Private source reference: ${page.slug}`);
   for (const match of page.body.matchAll(/```json\n([\s\S]*?)\n```/g)) {
@@ -30,4 +31,4 @@ for (const [slug, id] of [['authoring/first-action', 'report-output-directory'],
   assert.equal(manifest.parameters[0].id, 'example.outputDirectory');
   assert.equal(manifest.parameters[0].scope, 'project');
 }
-console.log(`Documentation validation passed: ${pages.length} guides, media briefs, rendered anchors, JSON examples and downloadable scripts.`);
+console.log(`Documentation validation passed: ${pages.length} guides, image descriptions, rendered anchors, JSON examples and downloadable scripts.`);

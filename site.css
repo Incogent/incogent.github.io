@@ -108,6 +108,7 @@
 .mobile-nav nav{text-align:left}
 
 .purchase-card{text-align:center;padding:clamp(2rem,6vw,4rem)}
+#pricing{scroll-margin-top:5rem}
 .purchase-card .purchase-price{font-size:clamp(2.75rem,8vw,4.5rem);line-height:1.15;letter-spacing:-.04em;font-weight:750;color:var(--text);margin:1.25rem 0 .75rem}
 .purchase-price span{display:block;font-size:1rem;line-height:1.5;letter-spacing:0;font-weight:400;color:var(--muted)}
 .purchase-card .purchase-caption{color:var(--muted);margin-bottom:1.75rem}

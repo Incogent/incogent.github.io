@@ -6,6 +6,11 @@ Last updated: 2026-09-03
 
 ## Purpose
 
+2026-09-30 navigation and content: purchase controls live on the Blackbird product
+page at #pricing. Legacy shop pages remain accessible but are absent from navigation
+and the sitemap. Public documentation contains concise media descriptions; production
+briefs and internal review notes are not part of the reader-facing documentation.
+
 2026-09-30 regional pricing: the static shop requests a currency hint from the existing
 Cloudflare edge Worker at /api/currency. It shows one approved fixed price and a manual
 currency selector, with USD fallback. Currency-specific Managed Payments links keep
