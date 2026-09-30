@@ -2,6 +2,14 @@
 
 Last updated: 2026-09-30
 
+## Purchase section background (2026-09-30)
+
+- Applied the existing highlight-band treatment to product pricing so its background
+  contrasts with Before you buy, matching the page's alternating sections in both themes.
+- Policy, localization, build, site and documentation checks passed; EULA hashes match.
+  Browser checks confirm the same highlight background as existing bands in light/dark mode.
+  Publication in progress.
+
 ## Purchase information and workflow examples (2026-09-30)
 
 - Added three concrete workflows with guide links: Unreal packaging, Android deployment,
@@ -16,7 +24,8 @@ Last updated: 2026-09-30
   either repository. Do not substitute invented UI images. Use the existing demo meanwhile.
 - Policy/i18n/build/site/documentation checks pass and authoritative EULA bytes match.
   Browser checks at 390/1440px verify all six purchase facts, three workflow examples,
-  responsive layout and the existing currency selector. Publication in progress.
+  responsive layout and the existing currency selector. Published in 27bc41a; validation
+  36742883149 and Pages deployment 36742880459 succeeded. Real screenshots remain outstanding.
 
 ## Product pricing, site icon and public copy (2026-09-30)
 
