@@ -131,7 +131,7 @@ blackbird_shop.editions.title,Blackbird shop heading,"One-time pricing, per seat
 blackbird_shop.editions.body,Blackbird shop placeholder,Every seat receives its own license code. No subscription or automatic renewal.
 blackbird_shop.checkout.title,Checkout heading,Purchase Blackbird
 blackbird_shop.checkout.body,Checkout placeholder,Choose 1 to 10 seats at secure Stripe-hosted checkout. Blackbird is currently alpha software.
-blackbird_shop.checkout.disabled,Disabled checkout action,Coming soon
+blackbird_shop.checkout.disabled,Disabled checkout action,Purchasing temporarily unavailable
 page.services.title,Services browser title,Development Services | Incogent
 page.services.description,Services meta description,Unreal Engine XR console porting consulting and contract development services from Incogent.
 services.kicker,Services eyebrow,Development services

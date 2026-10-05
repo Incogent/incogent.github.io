@@ -1,6 +1,37 @@
 # Incogent Site Completion Plan
 
-Last updated: 2026-09-30
+Last updated: 2026-10-05
+
+## Temporary purchase pause (2026-10-05)
+
+- User requested pausing new purchases while license setup is revised. Website checkout
+  control is disabled on the product and retained shop pages, with a temporary-unavailable
+  message. Generated pages also omit regional checkout URLs. Existing fulfillment, refunds,
+  recovery, downloads and trial use remain operational.
+- Policy, localization, build, site and documentation checks pass. Authoritative EULA is
+  byte-identical. Website publication is in progress.
+- Stripe-side pause is NOT confirmed: no callable Stripe account tools are available in this
+  session. All active live Blackbird Payment Links, including older links, must be deactivated
+  in Stripe. Previously opened Checkout Sessions may also need expiration. Do not describe
+  purchasing as fully disabled until the provider-side pause is verified.
+
+## Purchase announcements and analytics (2026-10-01)
+
+- Completed: confirmed live purchases announce seat quantity to the supplied Discord channel.
+  Credential is a Worker secret; no customer, license, payment identifier or financial amount
+  is posted. Duplicate callbacks reuse notification state. Rate limits retry; ambiguous outcomes
+  enter review and are covered by existing daily failure alerts. Sandbox is excluded.
+- Completed: Purchases page and JSON endpoint on the existing Access-protected analytics backend.
+  Orders, seats, paid totals/tax and recorded refunds are separated by currency, with daily totals,
+  latest 50 purchases and delivery/notification state. Uses the existing private reader; no public
+  ingestion or customer data disclosure. No new paid service, signing change or app release.
+- 85 licensing and 87 analytics checks pass; mobile/desktop layout checks pass. Migration 0009
+  and both commerce deployments complete. Discord setup test confirmed; live Access redirects and
+  unsigned webhook rejection verified. Production currently contains no confirmed orders.
+- Reader 26710a3f-d075-4df6-832a-69dcebb8288a; analytics 5623060c-a0d3-4a25-a0c3-b2f025dcc0d9;
+  commerce e00c5aa1-0b15-4973-82ad-b7e82b96e7eb. Signed-in live page was not verified because the
+  agent has no owner Access session. Details: incogent-cloudflare/Docs/PurchaseReporting.md.
+  On-demand signing remains under design. Public website files were not changed in this task.
 
 ## Purchase section background (2026-09-30)
 
@@ -8,7 +39,7 @@ Last updated: 2026-09-30
   contrasts with Before you buy, matching the page's alternating sections in both themes.
 - Policy, localization, build, site and documentation checks passed; EULA hashes match.
   Browser checks confirm the same highlight background as existing bands in light/dark mode.
-  Publication in progress.
+  Published in 584412d; Pages deployment 36778544642 succeeded.
 
 ## Purchase information and workflow examples (2026-09-30)
 
