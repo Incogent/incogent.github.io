@@ -1,6 +1,21 @@
 # Incogent Site Completion Plan
 
-Last updated: 2026-10-05
+Last updated: 2026-10-08
+
+
+## Blackbird 0.8.4-alpha.1 documentation (2026-10-08)
+
+- Updated published guide content for schema-2 definitions, editable bundles, per-component
+  version operations, direct CLI commands, engine filters, Queue behavior, Discord notifications,
+  Intermediate cleanup, and itch.io upload setup. The user specified this release label without
+  an upcoming-feature notice.
+- Replaced the downloadable schema-1 tutorial with two schema-2 Actions and their shared
+  definition library; rebuilt the ZIP and updated example validation.
+- Localization, site build, all 57 guide checks, internal links/assets, and policy checks pass.
+  Both read-only scripts pass with an isolated PowerShell context; ZIP contents match all three
+  package folders, and the EULA remains byte-identical to its authoritative copy.
+  Real screenshots and vendor tool-version/live-upload certification remain outstanding.
+- Existing purchase pause, unrelated working changes, and product/backend behavior are unchanged.
 
 ## Temporary purchase pause (2026-10-05)
 

@@ -28,7 +28,20 @@ for (const [slug, id] of [['authoring/first-action', 'report-output-directory'],
   const script = /```powershell\n([\s\S]*?)\n```/.exec(body)[1] + '\n';
   assert.equal(fs.readFileSync(`assets/blackbird/docs/examples/${id}/run.ps1`, 'utf8').replaceAll('\r\n', '\n'), script, 'Download differs from tutorial');
   const manifest = JSON.parse(fs.readFileSync(`assets/blackbird/docs/examples/${id}/package.json`, 'utf8'));
-  assert.equal(manifest.parameters[0].id, 'example.outputDirectory');
-  assert.equal(manifest.parameters[0].scope, 'project');
+  assert.equal(manifest.schemaVersion, 2);
+  assert.equal(manifest.parameters, undefined, 'Actions must reference external definitions');
+  assert.deepEqual(manifest.settings.inputs[0], {
+    definition: 'example.outputDirectory', owner: 'example-settings', revision: 1, required: true
+  });
+  assert(manifest.dependencies.includes('example-settings'));
+  assert.equal(manifest.libraryCompatibility.requires['example-settings'], 'settings-1');
 }
+const owner = JSON.parse(fs.readFileSync('assets/blackbird/docs/examples/example-settings/package.json', 'utf8'));
+assert.equal(owner.schemaVersion, 2);
+assert(owner.libraryCompatibility.provides.includes('settings-1'));
+const definitions = JSON.parse(fs.readFileSync('assets/blackbird/docs/examples/example-settings/' + owner.settings.definitionFiles[0], 'utf8'));
+assert.equal(definitions.schemaVersion, 1);
+assert.equal(definitions.definitions[0].id, 'example.outputDirectory');
+assert.equal(definitions.definitions[0].scope, 'project');
+assert.equal(definitions.definitions[0].revision, 1);
 console.log(`Documentation validation passed: ${pages.length} guides, image descriptions, rendered anchors, JSON examples and downloadable scripts.`);

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "categories": [
+    {
+      "id": "example.settings",
+      "label": "Example",
+      "order": 10
+    }
+  ],
+  "definitions": [
+    {
+      "id": "example.outputDirectory",
+      "revision": 1,
+      "label": "Output directory",
+      "type": "folder",
+      "scope": "project",
+      "category": "example.settings",
+      "order": 10
+    }
+  ]
+}
