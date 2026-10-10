@@ -341,4 +341,4 @@ pricing.enterprise.name,Blackbird pricing tiers,Enterprise
 pricing.indie.threshold,Blackbird pricing tiers,Under $200K
 pricing.studio.threshold,Blackbird pricing tiers,$200K–$5M
 pricing.enterprise.threshold,Blackbird pricing tiers,Over $5M
-pricing.thresholds,Blackbird pricing tiers,Financial thresholds: annual gross revenue + cumulative funding.
+pricing.thresholds,Blackbird pricing tiers,Annual gross revenue + cumulative funding

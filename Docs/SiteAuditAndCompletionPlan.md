@@ -1,7 +1,15 @@
 # Incogent Site Completion Plan
 
-Last updated: 2026-10-09
+Last updated: 2026-10-10
 
+
+## Pricing threshold captions (2026-10-10)
+
+- Moved the financial definition directly beneath each tier's threshold, shortened to
+  "Annual gross revenue + cumulative funding". Removed the separate note under the cards.
+- Shared product/shop template updated; purchasing remains paused. CSS cache version bumped.
+- Policy, localization, build, site and documentation checks pass; authoritative EULA bytes
+  match. Browser checks at 390/1440px confirm all three captions and no page overflow.
 
 ## USD pricing tiers (2026-10-09)
 
@@ -16,6 +24,8 @@ Last updated: 2026-10-09
 - Policy, localization, build, site and all 57 documentation-guide checks pass; EULA
   bytes match the authoritative source. Layouts verified at 390/1440px in light/dark
   themes, with three cards, no checkout link and no horizontal page overflow.
+  Published in 5315de9; validation 38021931307 and Pages 38021931168 succeeded.
+  Live product page returns 200 with the new pricing and purchasing still paused.
 
 ## Blackbird 0.8.4-alpha.1 documentation (2026-10-08)
 

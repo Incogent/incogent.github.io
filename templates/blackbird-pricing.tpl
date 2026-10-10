@@ -9,6 +9,7 @@
         <div><dt>{{t:pricing.lifetime}}</dt><dd>$179</dd></div>
       </dl>
       <p class="pricing-threshold">{{t:pricing.indie.threshold}}</p>
+      <p class="pricing-note">{{t:pricing.thresholds}}</p>
     </article>
     <article class="card pricing-tier">
       <h3>{{t:pricing.studio.name}}</h3>
@@ -17,6 +18,7 @@
         <div><dt>{{t:pricing.lifetime}}</dt><dd>$449</dd></div>
       </dl>
       <p class="pricing-threshold">{{t:pricing.studio.threshold}}</p>
+      <p class="pricing-note">{{t:pricing.thresholds}}</p>
     </article>
     <article class="card pricing-tier">
       <h3>{{t:pricing.enterprise.name}}</h3>
@@ -25,9 +27,9 @@
         <div><dt>{{t:pricing.lifetime}}</dt><dd>$1,199</dd></div>
       </dl>
       <p class="pricing-threshold">{{t:pricing.enterprise.threshold}}</p>
+      <p class="pricing-note">{{t:pricing.thresholds}}</p>
     </article>
   </div>
-  <p class="pricing-note">{{t:pricing.thresholds}}</p>
   <p class="pricing-availability">{{t:blackbird_shop.checkout.disabled}}</p>
   <p class="purchase-terms"><a href="{{url:eula}}">{{t:blackbird_shop.license_terms}}</a></p>
 </div>
