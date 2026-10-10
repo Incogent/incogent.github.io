@@ -172,3 +172,24 @@ if(supportForm){
     }
   });
 }
+
+// Aggregate product funnel, without cookies, identifiers or raw campaign data.
+function initMarketing(){
+ if(!document.body.classList.contains('blackbird-page')||navigator.doNotTrack==='1'||window.doNotTrack==='1'||navigator.globalPrivacyControl===true)return;
+ const params=new URLSearchParams(location.search),medium=(params.get('utm_medium')||'').toLowerCase();
+ const group=value=>/^(cpc|ppc|paid|paid_social|display|retargeting)$/.test(value)?'paid':/^(email|newsletter)$/.test(value)?'email':/^(social|organic_social)$/.test(value)?'social':/^(organic|search)$/.test(value)?'search':null;
+ const knownSource=value=>/^(google|bing|duckduckgo|yahoo)$/.test(value)?'search':/^(facebook|instagram|twitter|x|linkedin|reddit|youtube|discord|tiktok)$/.test(value)?'social':null;
+ let source=group(medium)||knownSource((params.get('utm_source')||'').toLowerCase());
+ if(!source){let host='';try{host=new URL(document.referrer).hostname.replace(/^www\./,'');}catch(_error){}
+  source=params.has('utm_source')||params.has('utm_medium')?'other':!host||host===location.hostname.replace(/^www\./,'')?'direct':/(^|\.)(google\.[a-z.]+|bing\.com|duckduckgo\.com|yahoo\.com)$/.test(host)?'search':/(^|\.)(facebook\.com|instagram\.com|twitter\.com|x\.com|linkedin\.com|reddit\.com|youtube\.com|discord\.com|tiktok\.com)$/.test(host)?'social':'other';
+ }
+ const send=event=>{try{const body=JSON.stringify({event,source});fetch('/api/marketing',{method:'POST',body,credentials:'omit',referrerPolicy:'no-referrer',keepalive:true}).catch(()=>{});}catch(_error){}};
+ // Avoid pre-rendered pages being counted before they are visited.
+ const view=()=>send('product_view');
+ if(document.prerendering)document.addEventListener('prerenderingchange',view,{once:true});else view();
+ document.addEventListener('click',event=>{const a=event.target.closest?.('a[href]');if(!a)return;const url=new URL(a.href,location.href);
+  if(url.origin===location.origin&&url.pathname.startsWith('/download/blackbird/windows'))send('download_click');
+  else if(url.hostname==='buy.stripe.com')send('checkout_click');
+ });
+}
+initMarketing();

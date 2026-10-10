@@ -1,6 +1,6 @@
 # Incogent Privacy Policy
 
-**Effective Date: September 9, 2026**
+**Effective Date: October 10, 2026**
 
 This Privacy Policy explains how Incogent LLC ("Incogent," "we," "us," or "our") collects, uses, discloses, and protects personal information in connection with websites, software, products, and services that link to this Privacy Policy, including Blackbird (collectively, the "Services").
 
@@ -42,6 +42,8 @@ When you visit an Incogent website, we and the providers that operate or protect
 - interactions with website features or embedded content, where applicable.
 
 We use Cloudflare services for functions that may include website analytics, security, bot detection, and form protection. Incogent websites may be hosted through GitHub Pages. The operators of these services process technical information under their own terms and privacy notices.
+
+On the Blackbird product page, we count page views, download-link clicks, and checkout-link clicks to measure marketing effectiveness. We store daily totals by event and broad acquisition group (direct, search, social, email, paid, or other) for up to 90 days. The browser determines the group from campaign parameters or the referring site's category; we do not store raw campaign names, page URLs, referrers, IP addresses, cookies, or visitor identifiers in these totals. We do not link these website events to purchases, licenses, or app reports. Repeat visits and clicks count separately. This collection stops when the browser sends Do Not Track or Global Privacy Control signals. Hosting and security providers may still process technical information as described above.
 
 ### 2.3 Information From Other Sources
 

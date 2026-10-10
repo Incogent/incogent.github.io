@@ -1,10 +1,18 @@
 # Incogent Website Development Plan
 
-Last updated: 2026-09-03
+Last updated: 2026-10-10
 
 > Current functional status, download architecture, and prioritized next work are recorded in [SiteAuditAndCompletionPlan.md](SiteAuditAndCompletionPlan.md). That audit is authoritative where it adds newer implementation findings to this original development plan.
 
 ## Purpose
+
+2026-10-10 marketing architecture: the static product page sends bounded aggregate
+view/click events to the existing edge Worker at /api/marketing. Fixed source groups
+are determined in the browser; no identifiers, raw campaign names or URLs are stored.
+The analytics D1 database retains daily event totals and GitHub snapshot history for
+90 days. Access-protected reporting reads commerce through the private license reader,
+keeping independent populations explicit rather than linking visitors to licenses.
+See the current completion plan and companion Docs/MarketingFunnel.md for evidence.
 
 2026-09-30 navigation and content: purchase controls live on the Blackbird product
 page at #pricing. Legacy shop pages remain accessible but are absent from navigation
