@@ -1,7 +1,21 @@
 # Incogent Site Completion Plan
 
-Last updated: 2026-10-08
+Last updated: 2026-10-09
 
+
+## USD pricing tiers (2026-10-09)
+
+- Replaced the single regional offer with Indie ($59 / $179), Studio ($149 / $449),
+  and Enterprise ($399 / $1,199), for one year / lifetime updates respectively.
+  Thresholds are under $200K, $200K–$5M, and over $5M, based on annual gross revenue
+  plus cumulative funding. All prices USD per seat; perpetual use and identical features.
+- Product and retained shop pages share one pricing template. Related purchase copy
+  now describes both update options. The alternating section background is preserved.
+- Purchasing remains paused. Stripe offers and license issuance were not changed;
+  aligning those systems with the new tiers is required before reopening purchases.
+- Policy, localization, build, site and all 57 documentation-guide checks pass; EULA
+  bytes match the authoritative source. Layouts verified at 390/1440px in light/dark
+  themes, with three cards, no checkout link and no horizontal page overflow.
 
 ## Blackbird 0.8.4-alpha.1 documentation (2026-10-08)
 
@@ -24,9 +38,12 @@ Last updated: 2026-10-08
   message. Generated pages also omit regional checkout URLs. Existing fulfillment, refunds,
   recovery, downloads and trial use remain operational.
 - Policy, localization, build, site and documentation checks pass. Authoritative EULA is
-  byte-identical. Website publication is in progress.
+  byte-identical. Published in aaf3f27; Pages run 37350022504 and validation run
+  37350023912 succeeded. Live product and retained shop pages return HTTP 200,
+  show the unavailable message and contain no Stripe checkout URLs.
 - Stripe-side pause is NOT confirmed: no callable Stripe account tools are available in this
-  session. All active live Blackbird Payment Links, including older links, must be deactivated
+  session, even after the user signed in and the plugin was confirmed installed. All active
+  live Blackbird Payment Links, including older links, must be deactivated
   in Stripe. Previously opened Checkout Sessions may also need expiration. Do not describe
   purchasing as fully disabled until the provider-side pause is verified.
 

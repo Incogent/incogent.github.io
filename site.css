@@ -122,3 +122,19 @@
 .purchase-facts>div{padding:1.25rem 0;border-bottom:1px solid var(--border)}
 .purchase-facts dt{font-size:1.15rem;font-weight:700;color:var(--text);margin-bottom:.5rem}
 .purchase-facts dd{margin:0;color:var(--muted);line-height:1.7}
+
+.pricing-options>h2,.pricing-intro,.pricing-note,.pricing-availability,.pricing-options>.purchase-terms{text-align:center}
+.pricing-intro{color:var(--muted);max-width:42rem;margin:0 auto 2.5rem}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem}
+.pricing-tier{text-align:center;padding:2rem 1.5rem}
+.pricing-tier h3{font-size:1.5rem;margin-bottom:1.75rem}
+.pricing-terms{margin:0}
+.pricing-terms>div{display:flex;flex-direction:column-reverse;gap:.35rem;padding:1.25rem 0}
+.pricing-terms>div+div{border-top:1px solid var(--border)}
+.pricing-terms dt{color:var(--muted)}
+.pricing-terms dd{margin:0;font-size:clamp(2.5rem,4vw,3.5rem);font-weight:750;letter-spacing:-.04em;line-height:1.15}
+.pricing-threshold{border-top:1px solid var(--border);padding-top:1.5rem;margin:1rem 0 0;font-weight:650;color:var(--accent)}
+.pricing-note{font-size:.9rem;color:var(--muted);margin:1.5rem 0 2rem}
+.pricing-availability{font-weight:650;margin-bottom:.75rem}
+.pricing-options>.purchase-terms{font-size:.875rem;margin-bottom:0}
+@media(max-width:46rem){.pricing-grid{grid-template-columns:1fr}.pricing-tier{width:100%;max-width:30rem;margin-inline:auto}}
