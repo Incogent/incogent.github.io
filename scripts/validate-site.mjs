@@ -156,6 +156,10 @@ function validateDocumentLinks(file, html) {
       continue;
     }
     if (url.protocol === "http:") errors.push(`Insecure HTTP URL ${raw} in ${relative(file)}`);
+    if ((url.hostname === "buy.stripe.com" && /^\/test_/i.test(url.pathname)) ||
+        (url.hostname === "checkout.stripe.com" && /\bcs_test_/i.test(url.pathname))) {
+      errors.push(`Sandbox Stripe checkout URL ${raw} in ${relative(file)}`);
+    }
     if (url.origin !== SITE_URL) continue;
     if (url.pathname.startsWith("/api/") || url.pathname.startsWith("/download/")) continue;
 

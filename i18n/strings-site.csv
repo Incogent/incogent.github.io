@@ -121,16 +121,16 @@ page.shop.description,Shop meta description,Purchase products and licenses from 
 shop.kicker,Shop eyebrow,Incogent shop
 shop.heading,Shop heading,Products and licenses
 shop.intro,Shop introduction,Get Blackbird for your development workflow.
-shop.blackbird.body,Shop card,Blackbird Alpha: choose one year or lifetime updates. All licenses include perpetual use and identical features.
+shop.blackbird.body,Shop card,Blackbird Alpha: permanent Indie $59 / Studio $249 / Enterprise $499 licenses. All prices USD per seat. Every tier includes identical features and all future updates.
 page.blackbird_shop.title,Blackbird shop browser title,Buy Blackbird Alpha | Incogent
-page.blackbird_shop.description,Blackbird shop meta description,"Blackbird pricing for Indie, Studio and Enterprise. Choose one year or lifetime updates, with perpetual use and identical features. All prices USD per seat."
+page.blackbird_shop.description,Blackbird shop meta description,"Permanent Blackbird licenses: Indie $59, Studio $249 and Enterprise $499. All future updates and identical features included. One-time USD prices per seat."
 blackbird_shop.kicker,Blackbird shop eyebrow,Blackbird shop
 blackbird_shop.heading,Blackbird shop heading,Make Blackbird part of your toolkit.
 blackbird_shop.intro,Blackbird shop introduction,Build less tooling. Ship more games.
 blackbird_shop.editions.title,Blackbird shop heading,"One-time pricing, per seat"
 blackbird_shop.editions.body,Blackbird shop placeholder,Every seat receives its own license code. No subscription or automatic renewal.
 blackbird_shop.checkout.title,Checkout heading,Purchase Blackbird
-blackbird_shop.checkout.body,Checkout placeholder,Choose 1 to 10 seats at secure Stripe-hosted checkout. Blackbird is currently alpha software.
+blackbird_shop.checkout.body,Checkout placeholder,Choose the tier matching your annual gross revenue plus cumulative funding. Every seat includes permanent use and all future updates. Blackbird is currently alpha software.
 blackbird_shop.checkout.disabled,Disabled checkout action,Purchasing temporarily unavailable
 page.services.title,Services browser title,Development Services | Incogent
 page.services.description,Services meta description,Unreal Engine XR console porting consulting and contract development services from Incogent.
@@ -290,15 +290,9 @@ page.docs.reference.manifest.description,Blackbird documentation summary,Underst
 page.docs.reference.runtime.title,Blackbird documentation title,PowerShell runtime reference | Incogent
 page.docs.reference.runtime.description,Blackbird documentation summary,"Use the host-provided helpers for context, progress, and results."
 blackbird_shop.checkout.buy,Blackbird production purchasing,Buy Blackbird Alpha
-blackbird_shop.checkout.delivery,Blackbird production purchasing,Your license codes arrive by email after payment. Update coverage starts on your purchase date.
+blackbird_shop.checkout.delivery,Blackbird production purchasing,Your license codes arrive by email after payment. Each seat includes permanent use and all future updates.
 blackbird_shop.checkout.terms,Blackbird production purchasing,"Review the license agreement, including refund terms, and our privacy policy before purchasing."
 blackbird_shop.checkout.recovery,Blackbird production purchasing,Didn't receive your license?
-blackbird_shop.price.usd,Blackbird production purchasing,United States: US$149
-blackbird_shop.price.cad,Blackbird production purchasing,Canada: C$219
-blackbird_shop.price.eur,Blackbird production purchasing,Euro area: €159
-blackbird_shop.price.gbp,Blackbird production purchasing,United Kingdom: £139
-blackbird_shop.price.aud,Blackbird production purchasing,Australia: A$239
-blackbird_shop.price.tax,Blackbird production purchasing,"USD and CAD prices exclude applicable tax, which is added at checkout. EUR, GBP and AUD prices include applicable tax. Confirm your currency and final total at checkout."
 blackbird_shop.offer,Purchase card heading,Blackbird Alpha
 blackbird_shop.per_seat,Price unit,per seat
 blackbird_shop.summary,Brief price qualifier,One-time purchase. Plus applicable tax.
@@ -319,8 +313,8 @@ blackbird.workflows.logs.link,Blackbird product page practical information,Log c
 blackbird.buying.title,Blackbird product page practical information,Before you buy
 blackbird.buying.trial.title,Blackbird product page practical information,Try every feature free for 14 days
 blackbird.buying.trial.body,Blackbird product page practical information,Download Blackbird and choose Start Trial in the app. The 14-day free trial has no feature restrictions and requires no account or payment details. Purchase a license when you are ready to keep using it.
-blackbird.buying.license.title,Blackbird product page practical information,Keep the versions you buy
-blackbird.buying.license.body,Blackbird product page practical information,Choose one year of updates from your purchase date or lifetime updates. All licenses include perpetual use of covered versions and identical features. No subscription or automatic renewal.
+blackbird.buying.license.title,Blackbird product page practical information,Permanent use and all future updates
+blackbird.buying.license.body,Blackbird product page practical information,Every tier includes a permanent license with identical features and all future updates. Your license has no expiration or update deadline and no version cap. Pay once per seat. No annual plans or subscriptions.
 blackbird.buying.seat.title,Blackbird product page practical information,"One seat, one person"
 blackbird.buying.seat.body,Blackbird product page practical information,"Each person can use their seat on a reasonable number of personal machines, such as a desktop and laptop. Each additional person needs their own seat."
 blackbird.buying.alpha.title,Blackbird product page practical information,What to expect from the alpha
@@ -332,9 +326,8 @@ blackbird.buying.tools.body,Blackbird product page practical information,"Instal
 blackbird.buying.help,Blackbird product page practical information,Have a question before purchasing?
 blackbird.buying.support,Blackbird product page practical information,Get help
 pricing.heading,Blackbird pricing tiers,Choose your license
-pricing.common,Blackbird pricing tiers,All prices USD per seat. All licenses include perpetual use and identical features.
-pricing.year,Blackbird pricing tiers,1 year updates
-pricing.lifetime,Blackbird pricing tiers,Lifetime updates
+pricing.common,Blackbird pricing tiers,One-time USD prices per seat. Every tier includes permanent use with identical features and all future updates. No annual plans or subscriptions. Plus applicable tax.
+pricing.permanent,Blackbird pricing tiers,Permanent license
 pricing.indie.name,Blackbird pricing tiers,Indie
 pricing.studio.name,Blackbird pricing tiers,Studio
 pricing.enterprise.name,Blackbird pricing tiers,Enterprise

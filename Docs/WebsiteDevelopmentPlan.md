@@ -1,8 +1,21 @@
 # Incogent Website Development Plan
 
-Last updated: 2026-10-10
+Last updated: 2026-10-23
 
 > Current functional status, download architecture, and prioritized next work are recorded in [SiteAuditAndCompletionPlan.md](SiteAuditAndCompletionPlan.md). That audit is authoritative where it adds newer implementation findings to this original development plan.
+
+2026-10-23 pricing decision (publication authorized; checkout deferred): Blackbird's
+`Docs/LicenseOperations.md` is the catalog authority. One-time USD per-seat
+permanent licenses are Indie $59 (under $200K), Studio $249 ($200K–$5M inclusive)
+and Enterprise $499 (over $5M), based on annual gross revenue plus cumulative
+funding. Every tier includes identical features, permanent use and all future
+updates, without an expiration, update deadline or version cap. No annual offer
+or subscription. This supersedes the historical regional and limited-update
+offers below. Product/shop pages share the same pricing template and English
+localization. Checkout remains paused; final live Stripe links and production
+fulfillment readiness must be verified before publishing purchase buttons. Sandbox
+links must never appear publicly. Current validation and remaining work are in
+the completion plan.
 
 ## Purpose
 

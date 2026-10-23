@@ -5,8 +5,7 @@
     <article class="card pricing-tier">
       <h3>{{t:pricing.indie.name}}</h3>
       <dl class="pricing-terms">
-        <div><dt>{{t:pricing.year}}</dt><dd>$59</dd></div>
-        <div><dt>{{t:pricing.lifetime}}</dt><dd>$179</dd></div>
+        <div><dt>{{t:pricing.permanent}}</dt><dd>$59</dd></div>
       </dl>
       <p class="pricing-threshold">{{t:pricing.indie.threshold}}</p>
       <p class="pricing-note">{{t:pricing.thresholds}}</p>
@@ -14,8 +13,7 @@
     <article class="card pricing-tier">
       <h3>{{t:pricing.studio.name}}</h3>
       <dl class="pricing-terms">
-        <div><dt>{{t:pricing.year}}</dt><dd>$149</dd></div>
-        <div><dt>{{t:pricing.lifetime}}</dt><dd>$449</dd></div>
+        <div><dt>{{t:pricing.permanent}}</dt><dd>$249</dd></div>
       </dl>
       <p class="pricing-threshold">{{t:pricing.studio.threshold}}</p>
       <p class="pricing-note">{{t:pricing.thresholds}}</p>
@@ -23,8 +21,7 @@
     <article class="card pricing-tier">
       <h3>{{t:pricing.enterprise.name}}</h3>
       <dl class="pricing-terms">
-        <div><dt>{{t:pricing.year}}</dt><dd>$399</dd></div>
-        <div><dt>{{t:pricing.lifetime}}</dt><dd>$1,199</dd></div>
+        <div><dt>{{t:pricing.permanent}}</dt><dd>$499</dd></div>
       </dl>
       <p class="pricing-threshold">{{t:pricing.enterprise.threshold}}</p>
       <p class="pricing-note">{{t:pricing.thresholds}}</p>

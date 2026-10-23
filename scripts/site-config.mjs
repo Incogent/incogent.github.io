@@ -2,8 +2,9 @@ import { DOCUMENTATION_PAGES } from "./documentation.mjs";
 export const SITE_URL = "https://www.incogent.io";
 export const SITE_NAME = "Incogent";
 export const DEFAULT_LOCALE = "en";
-// Set only after production fulfillment and the live Managed Payments link are ready.
-export const BLACKBIRD_CHECKOUT_URL = ""; // Purchasing paused while licensing is updated (2026-10-05).
+// Purchasing stays paused until final live Stripe links for Indie / Studio / Enterprise
+// and production fulfillment are verified. Never use sandbox links on public pages.
+export const BLACKBIRD_CHECKOUT_URL = "";
 
 export const DISCORD_INVITE_URL = "https://discord.gg/AxxpQ8h";
 export const DISCORD_GUILD_ID = "367221582009204737";

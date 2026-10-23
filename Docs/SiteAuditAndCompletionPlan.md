@@ -1,7 +1,37 @@
 # Incogent Site Completion Plan
 
-Last updated: 2026-10-10
+Last updated: 2026-10-23
 
+
+## Permanent pricing publication (2026-10-23)
+
+- [x] Prepared the approved one-time USD per-seat catalog from Blackbird's
+  `Docs/LicenseOperations.md`: Indie $59 (under $200K), Studio $249 ($200K–$5M,
+  inclusive), Enterprise $499 (over $5M). Eligibility remains annual gross revenue
+  plus cumulative funding. All tiers include permanent use, identical features and
+  all future updates, with no expiration, update deadline or version cap.
+- [x] Removed the one-year option and previous lifetime prices from the shared
+  product/shop template. Updated the active English localization, shop metadata,
+  purchase overview and license-delivery wording; removed unused regional price
+  translations. Additional locales remain user-deferred. These decisions supersede
+  the October 9 two-option pricing and earlier regional offers below; completed
+  historical purchase/activation evidence remains completed.
+- [x] Preserved the purchase-unavailable message and empty checkout configuration.
+  Added site validation rejecting sandbox Stripe Payment Link and Checkout URLs.
+- Validation: policy, localization, generation, site and documentation checks pass
+  (69 pages, 64 sitemap URLs, 57 guides). Website EULA bytes match the authoritative
+  Blackbird source; no legal changes. Edge/Playwright verifies both pricing pages
+  at 390/1440px in light/dark themes: exact prices and eligibility thresholds,
+  one permanent offer per tier, future-update wording, purchase-unavailable message,
+  no checkout links/data attributes and no horizontal overflow. Desktop/mobile
+  pricing screenshots reviewed. Injected sandbox Payment Link and Checkout URLs
+  both fail site validation; generated files were restored after each probe.
+- User authorized publishing the prepared pricing on 2026-10-23. Release checks
+  and publication are in progress; purchase buttons remain deferred until final
+  live Stripe links are supplied and verified against each tier. Never publish
+  sandbox links or reuse older live offers. Production commerce rollout/readiness
+  is tracked in Blackbird's operations documents; this website publication does
+  not deploy or modify Stripe, fulfillment, issuer keys or customer licenses.
 
 ## Daily downloads and marketing funnel (2026-10-10)
 
