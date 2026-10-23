@@ -4,7 +4,7 @@ Last updated: 2026-10-23
 
 > Current functional status, download architecture, and prioritized next work are recorded in [SiteAuditAndCompletionPlan.md](SiteAuditAndCompletionPlan.md). That audit is authoritative where it adds newer implementation findings to this original development plan.
 
-2026-10-23 pricing decision (publication authorized; checkout deferred): Blackbird's
+2026-10-23 pricing decision (published; checkout deferred): Blackbird's
 `Docs/LicenseOperations.md` is the catalog authority. One-time USD per-seat
 permanent licenses are Indie $59 (under $200K), Studio $249 ($200K–$5M inclusive)
 and Enterprise $499 (over $5M), based on annual gross revenue plus cumulative

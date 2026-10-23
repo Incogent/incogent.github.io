@@ -26,8 +26,13 @@ Last updated: 2026-10-23
   no checkout links/data attributes and no horizontal overflow. Desktop/mobile
   pricing screenshots reviewed. Injected sandbox Payment Link and Checkout URLs
   both fail site validation; generated files were restored after each probe.
-- User authorized publishing the prepared pricing on 2026-10-23. Release checks
-  and publication are in progress; purchase buttons remain deferred until final
+- [x] Published the user-authorized pricing release in `fee5c81` on 2026-10-23.
+  GitHub validation `40013292926` and Pages deployment `40013292879` succeeded.
+  Production product, retained Blackbird shop and shop overview all return HTTP 200
+  and match the prepared content after normalizing line endings. Live pricing pages
+  show $59 / $249 / $499, permanent licenses, all future updates and the purchase
+  pause, with no Stripe checkout URLs or previous update options.
+- [ ] Purchase buttons remain deferred until final
   live Stripe links are supplied and verified against each tier. Never publish
   sandbox links or reuse older live offers. Production commerce rollout/readiness
   is tracked in Blackbird's operations documents; this website publication does
