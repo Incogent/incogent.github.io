@@ -38,9 +38,16 @@ Last updated: 2026-10-24
   choices (no DEFAULT option), 320/390/900/1440px light/dark layouts, dropdown bounds,
   keyboard/Escape/outside dismissal, mobile-nav exclusion, manual/no-request priority,
   automatic reset, late-response races, invalid/blocked storage, legacy/malformed/
-  HTTP/timeout failures and no JavaScript. Screenshots reviewed. Publication is in
-  progress. This supersedes the earlier manual-only/no-region-hint decision below
+  HTTP/timeout failures and no JavaScript. Screenshots reviewed.
+  This supersedes the earlier manual-only/no-region-hint decision below
   without reopening completed evidence. Final licensing review remains outstanding.
+- [x] Published in `c88db0f`; GitHub validation `40110631919` and Pages deployment
+  `40110632280` succeeded. Live product/shop/support/home and CSS/JS return HTTP 200
+  and match the release content. Production Edge verifies auto-detected US/USD from
+  the test location, all five manual options, automatic reset, no DEFAULT option,
+  header-only controls, inclusive USD HTTP-error/no-JavaScript fallback and no
+  overflow at 320/390/1440px in light/dark themes. Browser writes and external/Stripe
+  requests were blocked. Purchasing stays paused; Stripe remains untouched.
 - [ ] Launch blocker from the user's tax review: removing DEFAULT from the menu
   is a UX restriction, not billing-country enforcement. Tax-inclusive prices still
   contain tax and can yield a lower total than an exclusive offer. Stripe uses
