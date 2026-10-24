@@ -14,13 +14,21 @@ const approved = {
   DEFAULT: ['USD', [59,249,499], 'included', ['fZu6oI6V4fLH9VveRf6Ri0b','00w00k93cgPLaZzfVj6Ri0h','dRm5kE0wGdDzebLaAZ6Ri0n']],
 };
 const template = fs.readFileSync(new URL('../templates/blackbird-pricing.tpl', import.meta.url), 'utf8');
+const displayed = {
+  US: ['$59', '$249', '$499'],
+  CA: ['$79', '$349', '$699'],
+  EUROZONE: ['€59', '€249', '€499'],
+  GB: ['£49', '£199', '£399'],
+  AU: ['$99', '$399', '$799'],
+  DEFAULT: ['$59', '$249', '$499'],
+};
 
 test('all 18 catalog mappings match the approved regional amounts, currency, tax behavior and exact live URL', () => {
   validatePricingCatalog();
   assert.deepEqual(Object.keys(BLACKBIRD_REGIONS), Object.keys(approved));
   for (const [region, [currency, amounts, tax, ids]] of Object.entries(approved)) {
     assert.deepEqual(BLACKBIRD_REGIONS[region], {currency, amounts, tax, urls: ids.map(id => `https://buy.stripe.com/${id}`)});
-    for (const [index, tier] of BLACKBIRD_TIERS.entries()) assert.equal(formatPrice(region,tier), `${currency} ${amounts[index]}`);
+    for (const [index, tier] of BLACKBIRD_TIERS.entries()) assert.equal(formatPrice(region,tier), displayed[region][index]);
   }
 });
 
@@ -48,9 +56,10 @@ test('paused output exposes all regional prices with inclusive DEFAULT and no ch
   assert.match(html, /value="DEFAULT"[^>]* selected/);
   assert.match(html, /data-pricing-tax[^>]*>pricing.tax.included</);
   assert.ok(html.includes('blackbird_shop.checkout.disabled'));
-  for (const [region, [currency, amounts]] of Object.entries(approved)) {
+  for (const [region, [currency]] of Object.entries(approved)) {
     const option = html.match(new RegExp(`<option value="${region}"[^>]*>`))[0];
-    BLACKBIRD_TIERS.forEach((tier,index)=>assert.ok(option.includes(`data-price-${tier}="${currency} ${amounts[index]}"`)));
+    BLACKBIRD_TIERS.forEach((tier,index)=>assert.ok(option.includes(`data-price-${tier}="${displayed[region][index]}"`)));
+    assert.ok(html.includes(`(${currency})</option>`), 'Currency stays explicit in the region selector');
   }
 });
 

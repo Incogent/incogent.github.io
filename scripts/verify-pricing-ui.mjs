@@ -18,7 +18,7 @@ const template = fs.readFileSync('templates/blackbird-pricing.tpl','utf8');
 // the committed false sales gate, generated pages, Stripe state or production.
 const enabled = renderPricing(template, key=>key.split('.').at(-1), {purchasingEnabled:true})
   .replace(/{{t:([a-z._]+)}}/gi, (_match,key)=>key.split('.').at(-1));
-const preview = `<!doctype html><html lang="en"><head><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="/site.css"></head><body>${enabled}<script src="/site.js"></script></body></html>`;
+const preview = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="/site.css"></head><body>${enabled}<script src="/site.js"></script></body></html>`;
 const types = {'.html':'text/html','.css':'text/css','.js':'text/javascript','.png':'image/png','.svg':'image/svg+xml'};
 const server = http.createServer((req,res)=>{
   const url = new URL(req.url,'http://localhost');
@@ -104,14 +104,14 @@ try {
   await blockedPage.goto(`${origin}/en/products/blackbird/`);
   assert.equal(await blockedPage.locator('[data-purchase-region]').inputValue(),'DEFAULT');
   await blockedPage.selectOption('[data-purchase-region]','CA');
-  assert.deepEqual(await blockedPage.locator('[data-tier-price]').allTextContents(),['CAD 79','CAD 349','CAD 699']);
+  assert.deepEqual(await blockedPage.locator('[data-tier-price]').allTextContents(),['$79','$349','$699']);
   await blocked.close();
   const nojs=await browser.newContext({javaScriptEnabled:false,viewport:{width:390,height:900}});
   await nojs.route('**/*',route=>route.request().url().startsWith(origin)?route.continue():route.abort());
   const fallback=await nojs.newPage();
   for(const route of ['products/blackbird','shop/blackbird']) {
     await fallback.goto(`${origin}/en/${route}/`);
-    assert.deepEqual(await fallback.locator('[data-tier-price]').allTextContents(),['USD 59','USD 249','USD 499']);
+    assert.deepEqual(await fallback.locator('[data-tier-price]').allTextContents(),['$59','$249','$499']);
     assert.equal(await fallback.locator('[data-pricing-tax]').innerText(),expectedTax.DEFAULT);
     assert.ok(await fallback.locator('[data-region-control]').isHidden());
     assert.ok(await fallback.locator('noscript').isVisible());

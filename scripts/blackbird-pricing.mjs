@@ -47,5 +47,11 @@ export function validatePricingCatalog(regions = BLACKBIRD_REGIONS) {
 
 export function formatPrice(region, tier) {
   const offer = BLACKBIRD_REGIONS[region];
-  return `${offer.currency} ${offer.amounts[BLACKBIRD_TIERS.indexOf(tier)]}`;
+  // The English site uses each currency's familiar local symbol/placement.
+  // ISO currency codes remain explicit in the country/region selector.
+  const locales = {USD:'en-US', CAD:'en-CA', EUR:'en-IE', GBP:'en-GB', AUD:'en-AU'};
+  return new Intl.NumberFormat(locales[offer.currency], {
+    style: 'currency', currency: offer.currency,
+    minimumFractionDigits: 0, maximumFractionDigits: 0,
+  }).format(offer.amounts[BLACKBIRD_TIERS.indexOf(tier)]);
 }

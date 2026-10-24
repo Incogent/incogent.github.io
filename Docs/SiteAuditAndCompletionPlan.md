@@ -2,6 +2,27 @@
 
 Last updated: 2026-10-24
 
+## Natural currency formatting (2026-10-24)
+
+- [x] Replaced code-prefixed price labels such as `USD 59` with regional currency
+  formatting through `Intl.NumberFormat`: US/DEFAULT `$59 / $249 / $499`, Canada
+  `$79 / $349 / $699`, euro area `€59 / €249 / €499`, UK `£49 / £199 / £399`, and
+  Australia `$99 / $399 / $799`. Whole-dollar amounts do not add redundant decimals.
+  USD/CAD/EUR/GBP/AUD remain explicit beside the selected country/region, so the
+  dollar-symbol currencies stay identifiable. The English site uses regional
+  English formatting; both pricing pages and the no-JavaScript fallback share it.
+- Approved numeric amounts, 18 live URL mappings, tax behavior, eligibility and
+  permanent license entitlements are preserved. Purchasing remains paused; no
+  Stripe products/links are changed or activated. Existing final licensing review
+  and hosted-total blockers below remain outstanding.
+- Validation: all seven pricing tests and policy/localization/build/site/documentation
+  checks pass (69 pages, 64 sitemap URLs, 57 guides). Source EULA bytes match Blackbird.
+  Edge checks all six regions on both pages at 320/390/900/1440px in light/dark themes,
+  including saved/invalid/blocked storage, no JavaScript and the local enabled-link
+  preview. Exact symbols, approved amounts and tax wording pass; no horizontal
+  overflow or exposed checkout URLs. Screenshots reviewed. The preview now declares
+  UTF-8 explicitly to verify euro/pound characters correctly. Publication in progress.
+
 ## Regional checkout integration — published, purchasing paused (2026-10-24)
 
 - [x] Implemented all six regional presentations and all 18 exact prepared LIVE

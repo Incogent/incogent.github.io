@@ -20,6 +20,12 @@ remain inactive and sales activation still needs separate authorization.
 Final hosted-total checks are blocked by inactive live
 links and are tracked with validation evidence in the current completion plan.
 
+2026-10-24 currency presentation: format prices with each currency's familiar local
+symbol using `Intl.NumberFormat` and regional English locales. Show whole amounts
+without redundant decimals. Retain ISO currency codes in the country/region selector
+to identify USD/CAD/AUD when their local price symbol is `$`. This display correction
+does not change approved numeric amounts, tax behavior, region selection or checkout.
+
 2026-10-23 pricing decision (published; checkout deferred): Blackbird's
 `Docs/LicenseOperations.md` is the catalog authority. One-time USD per-seat
 permanent licenses are Indie $59 (under $200K), Studio $249 ($200K–$5M inclusive)
