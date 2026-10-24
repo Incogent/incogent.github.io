@@ -2,6 +2,61 @@
 
 Last updated: 2026-10-24
 
+## Automatic region selection and header menu (2026-10-24)
+
+- [x] Moved country/region selection from pricing into a compact header menu on
+  every page. The header shows the selected currency with the full region name in
+  its accessible label and dropdown. Supports keyboard selection, Escape/outside
+  dismissal and mutually exclusive mobile navigation; narrow layouts retain the
+  brand, navigation, region menu and theme control without overflow.
+- [x] A saved manual region takes priority and suppresses detection. Otherwise the
+  website requests the existing first-party `/api/currency` hint, which now returns
+  an explicit region plus the backwards-compatible currency. US and DEFAULT USD
+  remain distinct. Only Cloudflare's trusted country metadata supplies this hint;
+  no external geolocation service, country/IP storage or browser location prompt.
+  Only manual overrides are persisted. Detect automatically removes the override.
+- [x] Missing/unsupported/malformed/legacy hints, network/HTTP errors, a 2.5-second
+  timeout and no JavaScript retain tax-inclusive DEFAULT USD. Manual selection
+  wins over a late response; detection/retry cancellation cannot overwrite it.
+  With storage blocked, detection and manual selection still work for that page.
+- [x] DEFAULT is an internal fallback, never an option in the manual region list.
+  Previously saved DEFAULT overrides are ignored and detection is retried. The
+  fallback's price/tax data is separate from the select options. Return to automatic
+  detection remains available, including for visitors outside the five named markets.
+- [x] Preserved all approved amounts, local currency symbols, six-region tax copy,
+  eligibility, permanent use and future updates. Purchasing remains paused, with
+  no exposed checkout URLs/buttons and no Stripe mutations. No website tax charge.
+  Both CSS/JS asset cache versions advanced; locale-aware header copy added.
+- Backend dependency: all 120 checks pass; deployed edge version
+  `5596e5a0-f542-44a1-870f-8ac571a234aa` with existing settings/secrets/bindings
+  retained. Live region GET/HEAD and write guards pass; contact/marketing GET stay
+  HTTP 405 and recommended installer HEAD stays HTTP 302. Companion record:
+  `incogent-cloudflare/Docs/RegionalPricingDeployment.md`.
+- Website validation: seven pricing checks and policy/localization/build/site/
+  documentation checks pass (69 pages, 64 sitemap URLs, 57 guides). EULA source
+  bytes match Blackbird. Browser checks cover six automatic regions, five manual
+  choices (no DEFAULT option), 320/390/900/1440px light/dark layouts, dropdown bounds,
+  keyboard/Escape/outside dismissal, mobile-nav exclusion, manual/no-request priority,
+  automatic reset, late-response races, invalid/blocked storage, legacy/malformed/
+  HTTP/timeout failures and no JavaScript. Screenshots reviewed. Publication is in
+  progress. This supersedes the earlier manual-only/no-region-hint decision below
+  without reopening completed evidence. Final licensing review remains outstanding.
+- [ ] Launch blocker from the user's tax review: removing DEFAULT from the menu
+  is a UX restriction, not billing-country enforcement. Tax-inclusive prices still
+  contain tax and can yield a lower total than an exclusive offer. Stripe uses
+  checkout location to calculate applicable tax, but does not change a fixed
+  Price's inclusive/exclusive behavior by customer location. Before enabling sales,
+  the licensing integration must verify or enforce billing-location/offer alignment,
+  including US buyers reaching a DEFAULT inclusive USD link directly. Resolve
+  redirect/rejection or equivalent checkout enforcement before claiming regional
+  selection prevents price/tax-treatment arbitrage. Do not rely on IP, localStorage,
+  hidden options or link metadata as proof of billing location. Products/links stay
+  inactive and purchasing paused until this review and the hosted-total checks pass.
+  Primary guidance reviewed 2026-10-24:
+  [Stripe tax behavior](https://docs.stripe.com/tax/products-prices-tax-codes-tax-behavior),
+  [checkout address collection](https://docs.stripe.com/tax/customer-locations), and
+  [Managed Payments](https://docs.stripe.com/payments/managed-payments/use-payment-links).
+
 ## Natural currency formatting (2026-10-24)
 
 - [x] Replaced code-prefixed price labels such as `USD 59` with regional currency

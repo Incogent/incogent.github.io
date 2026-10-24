@@ -30,10 +30,16 @@ node --test scripts/test-pricing.mjs
   prepared live URLs from Blackbird's `LicenseOperations.md` and commerce handoff.
   `BLACKBIRD_PURCHASING_ENABLED` remains `false`. Paused builds omit checkout URLs
   and purchase buttons entirely; catalog/build sources are excluded from Pages.
-- The country/region selector uses an explicit saved region, not a currency hint.
-  Unset, invalid, blocked-storage and JavaScript-disabled views use inclusive
-  DEFAULT USD. Existing `incogent_currency` preferences are ignored because USD
-  alone cannot distinguish US tax-added pricing from DEFAULT tax-included pricing.
+- The header region menu uses a saved manual override first, otherwise detects a
+  pricing region from the first-party `/api/currency` response. US and DEFAULT USD
+  stay distinct. Missing/invalid hints, request errors/timeouts and no JavaScript
+  use inclusive DEFAULT USD. Detect automatically clears the manual override;
+  old currency-only preferences are ignored. The menu is available throughout the
+  site. Only explicit overrides persist; detected region/country/IP are not stored.
+- DEFAULT is internal fallback data, not a manual option. Region selection is a
+  display preference, not proof of billing location. The final licensing review must
+  enforce billing-location/offer alignment before sales open; hiding a fallback link
+  cannot enforce this. Stripe calculates tax but keeps the selected Price's tax behavior.
 - `scripts/render-pricing.mjs` renders the shared product/shop controls. The enabled
   render path is tested locally without changing the committed gate. After separate
   launch authorization, switch that gate, regenerate, validate and publish alongside

@@ -1,33 +1,72 @@
 const THEME_KEY="incogent_theme";
-// Only explicit region choices are saved. Currency cannot distinguish US from
-// DEFAULT USD; a missing/invalid preference always uses tax-inclusive DEFAULT.
+// Detection is a private first-party region hint. Only manual overrides persist;
+// currency alone never selects an offer (US and DEFAULT both use USD).
 function initRegionalPricing(){
-  const pricing=document.querySelector('[data-regional-pricing]');
-  if(!pricing)return;
-  const select=pricing.querySelector('[data-purchase-region]');
-  const tax=pricing.querySelector('[data-pricing-tax]');
+  const menu=document.querySelector('[data-region-menu]');
+  if(!menu)return;
+  const select=menu.querySelector('[data-purchase-region]');
+  const summary=menu.querySelector('[data-region-summary]');
+  const status=menu.querySelector('[data-region-status]');
   const key='incogent_pricing_region';
-  const apply=(region)=>{
-    const option=Array.from(select.options).find(item=>item.value===region);
-    if(!option)return false;
-    select.value=region;
-    for(const amount of pricing.querySelectorAll('[data-tier-price]')){
+  let requestId=0,controller;
+  const apply=(region,source)=>{
+    if(source==='manual'&&region==='DEFAULT')return false;
+    const option=region==='DEFAULT'?menu.querySelector('[data-region-fallback]'):
+      Array.from(select.options).find(item=>item.value===region);
+    if(!option||!option.dataset.currency)return false;
+    select.value=region==='DEFAULT'?'':region;
+    menu.dataset.region=region;
+    menu.dataset.source=source;
+    menu.querySelector('[data-region-code]').textContent=option.dataset.currency;
+    summary.setAttribute('aria-label',`${summary.dataset.label}: ${option.textContent}`);
+    summary.title=option.textContent;
+    status.textContent=status.dataset[source];
+    for(const amount of document.querySelectorAll('[data-tier-price]')){
       amount.textContent=option.getAttribute(`data-price-${amount.dataset.tierPrice}`);
     }
-    tax.textContent=option.dataset.tax;
-    for(const buy of pricing.querySelectorAll('[data-tier-checkout]')){
+    for(const tax of document.querySelectorAll('[data-pricing-tax]'))tax.textContent=option.dataset.tax;
+    for(const buy of document.querySelectorAll('[data-tier-checkout]')){
       buy.href=option.getAttribute(`data-checkout-${buy.dataset.tierCheckout}`);
     }
     return true;
   };
-  // Explicitly reset browser-restored form state before applying our region key.
-  apply('DEFAULT');
-  try{apply(localStorage.getItem(key));}catch(_error){}
+  const detect=async()=>{
+    const id=++requestId;
+    controller?.abort();
+    const currentController=new AbortController();
+    controller=currentController;
+    apply('DEFAULT','detecting');
+    const timeout=setTimeout(()=>currentController.abort(),2500);
+    try{
+      const response=await fetch('/api/currency',{cache:'no-store',signal:currentController.signal});
+      if(!response.ok)throw new Error('Region unavailable');
+      const hint=await response.json();
+      if(id===requestId&&!apply(hint.region,'auto'))apply('DEFAULT','fallback');
+    }catch(_error){if(id===requestId)apply('DEFAULT','fallback');}
+    finally{clearTimeout(timeout);}
+  };
+  const close=(focus=false)=>{menu.open=false;if(focus)summary.focus();};
+  apply('DEFAULT','fallback');
+  let manual=false;
+  try{manual=apply(localStorage.getItem(key),'manual');}catch(_error){}
   select.addEventListener('change',()=>{
-    if(!apply(select.value))apply('DEFAULT');
+    ++requestId;
+    controller?.abort();
+    if(!apply(select.value,'manual'))apply('DEFAULT','fallback');
     try{localStorage.setItem(key,select.value);}catch(_error){}
+    close(true);
   });
-  pricing.querySelector('[data-region-control]').hidden=false;
+  menu.querySelector('[data-region-auto]').addEventListener('click',()=>{
+    try{localStorage.removeItem(key);}catch(_error){}
+    detect();
+  });
+  menu.addEventListener('keydown',event=>{if(event.key==='Escape'){event.preventDefault();close(true);}});
+  document.addEventListener('click',event=>{if(!menu.contains(event.target))close();});
+  const mobile=document.querySelector('.mobile-nav');
+  menu.addEventListener('toggle',()=>{if(menu.open&&mobile)mobile.open=false;});
+  mobile?.addEventListener('toggle',()=>{if(mobile.open)close();});
+  menu.hidden=false;
+  if(!manual)detect();
 }
 initRegionalPricing();
 

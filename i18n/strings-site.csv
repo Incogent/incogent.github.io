@@ -336,6 +336,12 @@ pricing.studio.threshold,Blackbird pricing tiers,$200K–$5M
 pricing.enterprise.threshold,Blackbird pricing tiers,Over $5M
 pricing.thresholds,Blackbird pricing tiers,Annual gross revenue + cumulative funding (USD)
 pricing.region.label,Regional pricing selector label,Country or region
+pricing.region.choose,Region selector placeholder for internal fallback,Choose your region
+pricing.region.auto,Return to automatic region selection,Detect automatically
+pricing.region.detected,Automatic region status,Selected automatically for your region.
+pricing.region.manual,Manual region override status,Your selected region overrides automatic selection.
+pricing.region.fallback,Region fallback status,Using other regions (USD) with applicable tax included.
+pricing.region.detecting,Region detection pending status,Detecting your region…
 pricing.region.us,Regional pricing selector option,United States
 pricing.region.ca,Regional pricing selector option,Canada
 pricing.region.eurozone,Regional pricing selector option,Euro area

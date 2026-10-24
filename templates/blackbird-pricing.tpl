@@ -1,9 +1,6 @@
 <div class="wrap pricing-options" data-regional-pricing>
   <h2>{{t:pricing.heading}}</h2>
   <p class="pricing-intro">{{t:pricing.common}}</p>
-  <label class="pricing-region" data-region-control hidden>{{t:pricing.region.label}}
-    <select data-purchase-region>{{REGION_OPTIONS}}</select>
-  </label>
   <p class="pricing-tax" data-pricing-tax aria-live="polite">{{DEFAULT_TAX}}</p>
   <noscript><p class="pricing-fallback">{{t:pricing.no_js}}</p></noscript>
   <div class="pricing-grid">

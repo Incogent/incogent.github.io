@@ -4,6 +4,21 @@ Last updated: 2026-10-24
 
 > Current functional status, download architecture, and prioritized next work are recorded in [SiteAuditAndCompletionPlan.md](SiteAuditAndCompletionPlan.md). That audit is authoritative where it adds newer implementation findings to this original development plan.
 
+2026-10-24 automatic region selection: a site-wide header dropdown replaces the
+pricing-adjacent selector. The existing edge `/api/currency` route now adds a
+pricing-region identifier from trusted Cloudflare country metadata, keeping the
+currency field for compatibility. Saved explicit overrides suppress automatic
+detection; Detect automatically clears them. No detected country/IP or automatic
+region is persisted. Missing/invalid hints, errors, timeout and no JavaScript
+use inclusive DEFAULT USD. Manual choices win asynchronous races. This supersedes
+the earlier manual-only/no-hint decision. Purchasing remains paused; exact prices,
+tax behavior, prepared mappings and permanent entitlements are unchanged.
+DEFAULT is not manually selectable; it is internal fallback data. Saved DEFAULT
+overrides are ignored. This menu is presentation, not billing-country enforcement:
+the licensing launch review must verify/secure regional Price selection against
+checkout billing location, because Stripe does not switch a fixed Price's tax
+behavior when the billing country changes. Sales stay paused pending that review.
+
 2026-10-24 regional checkout architecture (published; purchasing paused): one shared catalog
 in `scripts/blackbird-pricing.mjs` maps each of US/CA/EUROZONE/GB/AU/DEFAULT and
 Indie/Studio/Enterprise to its approved amount, explicit currency, tax wording and

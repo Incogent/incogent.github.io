@@ -125,9 +125,19 @@
 
 .pricing-options>h2,.pricing-intro,.pricing-note,.pricing-availability,.pricing-options>.purchase-terms{text-align:center}
 .pricing-intro{color:var(--muted);max-width:42rem;margin:0 auto 2.5rem}
-.pricing-region{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.6rem;font-size:1rem;text-align:center}
-.pricing-region[hidden]{display:none}
-.pricing-region select{max-width:100%;padding:.6rem;border:1px solid var(--accent);border-radius:.4rem;background:var(--surface);color:var(--text);font:inherit}
+.region-menu{position:relative;font-size:.875rem}
+.region-menu[hidden]{display:none}
+.region-menu summary{display:flex;align-items:center;gap:.3rem;padding:.45rem .5rem;border:1px solid var(--border);border-radius:999px;cursor:pointer;list-style:none;font-weight:650}
+.region-menu summary::-webkit-details-marker{display:none}
+.region-menu summary::after{content:'▾';font-size:.7rem}
+.region-menu summary:hover,.region-menu summary:focus-visible{border-color:var(--accent)}
+.region-panel{position:absolute;right:-3rem;top:calc(100% + .75rem);width:18rem;max-width:calc(100vw - 2rem);max-height:calc(100vh - 6rem);overflow:auto;padding:1rem;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);box-shadow:0 .75rem 2rem #0003}
+.region-panel label{display:grid;gap:.6rem;font-weight:650}
+.region-panel select{width:100%;min-width:0;padding:.6rem;border:1px solid var(--accent);border-radius:.4rem;background:var(--surface);color:var(--text);font:inherit}
+.region-panel p{color:var(--muted);margin:.8rem 0;font-size:.8rem;line-height:1.5}
+.region-panel button{padding:.5rem .7rem;border:1px solid var(--border);border-radius:.4rem;background:var(--surface);color:var(--text);font:inherit;cursor:pointer}
+@media(max-width:50rem){.header-controls{gap:.5rem}.header-row{gap:.5rem}.mobile-nav{flex-shrink:0}.mobile-nav summary{white-space:nowrap}}
+@media(max-width:24rem){.header-logo{max-width:6rem}.region-menu summary svg{display:none}}
 .pricing-tax,.pricing-fallback{text-align:center;color:var(--muted);margin:1rem 0 2rem}
 .pricing-tier .button{margin-top:1.5rem}
 .pricing-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem}

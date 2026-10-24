@@ -20,7 +20,7 @@
   <link rel="canonical" href="https://www.incogent.io/en/products/blackbird/docs/providers/steam/">
   <link rel="alternate" hreflang="en" href="https://www.incogent.io/en/products/blackbird/docs/providers/steam/">
   <link rel="alternate" hreflang="x-default" href="https://www.incogent.io/en/products/blackbird/docs/providers/steam/">
-  <link rel="stylesheet" href="/site.css?v=20261024-regional-pricing">
+  <link rel="stylesheet" href="/site.css?v=20261024-header-region">
 
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Incogent","url":"https://www.incogent.io","sameAs":["https://discord.gg/AxxpQ8h"]}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Upload to Steam | Incogent","description":"Set up Steam for the Upload Build Action.","url":"https://www.incogent.io/en/products/blackbird/docs/providers/steam/","inLanguage":"en"}</script>
@@ -40,6 +40,24 @@
         <details class="mobile-nav"><summary>Menu</summary><nav aria-label="Mobile navigation">
           <a href="/en/products/blackbird/">Blackbird</a><a href="/en/services/">Services</a><a href="/en/about/">About</a><a href="/en/index.html#contact">Contact</a>
         </nav></details>
+        <details class="region-menu" data-region-menu hidden>
+  <summary data-region-summary data-label="Country or region" aria-label="Country or region">
+    <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></svg>
+    <span data-region-code>USD</span>
+  </summary>
+  <div class="region-panel">
+    <label>Country or region<select data-purchase-region><option value="" disabled selected hidden>Choose your region</option><option value="US" data-currency="USD" data-tax="Applicable sales tax added at checkout." data-price-indie="$59" data-price-studio="$249" data-price-enterprise="$499">United States (USD)</option>
+<option value="CA" data-currency="CAD" data-tax="Applicable tax added at checkout." data-price-indie="$79" data-price-studio="$349" data-price-enterprise="$699">Canada (CAD)</option>
+<option value="EUROZONE" data-currency="EUR" data-tax="Includes applicable VAT." data-price-indie="€59" data-price-studio="€249" data-price-enterprise="€499">Euro area (EUR)</option>
+<option value="GB" data-currency="GBP" data-tax="Includes applicable VAT." data-price-indie="£49" data-price-studio="£199" data-price-enterprise="£399">United Kingdom (GBP)</option>
+<option value="AU" data-currency="AUD" data-tax="Includes applicable GST." data-price-indie="$99" data-price-studio="$399" data-price-enterprise="$799">Australia (AUD)</option>
+</select></label>
+    <span data-region-fallback hidden data-currency="USD" data-tax="Includes applicable tax." data-price-indie="$59" data-price-studio="$249" data-price-enterprise="$499">Other regions (USD)</span>
+    <p data-region-status aria-live="polite" data-auto="Selected automatically for your region." data-manual="Your selected region overrides automatic selection." data-fallback="Using other regions (USD) with applicable tax included." data-detecting="Detecting your region…">Using other regions (USD) with applicable tax included.</p>
+    <button type="button" data-region-auto>Detect automatically</button>
+  </div>
+</details>
+
         <button class="theme-toggle" type="button" data-theme-toggle data-light-label="Switch to light theme" data-dark-label="Switch to dark theme" aria-label="Switch to dark theme" aria-pressed="false" title="Switch to dark theme">&#9790;</button>
       </div>
     </div>
@@ -61,6 +79,6 @@
     </div>
     <div class="wrap copyright">&copy; <span data-current-year></span> Incogent. All rights reserved.</div>
   </footer>
-  <script src="/site.js?v=20261024-regional-pricing"></script>
+  <script src="/site.js?v=20261024-header-region"></script>
 </body>
 </html>

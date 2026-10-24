@@ -19,7 +19,7 @@
   <meta property="og:url" content="{{CANONICAL_URL}}">
   <link rel="canonical" href="{{CANONICAL_URL}}">
   {{HREFLANG_LINKS}}
-  <link rel="stylesheet" href="/site.css?v=20261024-regional-pricing">
+  <link rel="stylesheet" href="/site.css?v=20261024-header-region">
 {{HEAD_EXTRAS}}
   <script type="application/ld+json">{{ORG_JSON_LD}}</script>
   <script type="application/ld+json">{{WEBPAGE_JSON_LD}}</script>
@@ -39,6 +39,7 @@
         <details class="mobile-nav"><summary>{{NAV_MENU}}</summary><nav aria-label="Mobile navigation">
           <a href="{{BLACKBIRD_URL}}">{{NAV_BLACKBIRD}}</a><a href="{{SERVICES_URL}}">{{NAV_SERVICES}}</a><a href="{{ABOUT_URL}}">{{NAV_ABOUT}}</a><a href="{{CONTACT_URL}}">{{NAV_CONTACT}}</a>
         </nav></details>
+        {{REGION_MENU}}
         <button class="theme-toggle" type="button" data-theme-toggle data-light-label="{{THEME_TO_LIGHT}}" data-dark-label="{{THEME_TO_DARK}}" aria-label="{{THEME_TO_DARK}}" aria-pressed="false" title="{{THEME_TO_DARK}}">&#9790;</button>
       </div>
     </div>
@@ -52,6 +53,6 @@
     </div>
     <div class="wrap copyright">&copy; <span data-current-year></span> {{FOOTER_RIGHTS}}</div>
   </footer>
-  <script src="/site.js?v=20261024-regional-pricing"></script>
+  <script src="/site.js?v=20261024-header-region"></script>
 </body>
 </html>

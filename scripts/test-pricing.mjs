@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import test from 'node:test';
 import { BLACKBIRD_REGIONS, BLACKBIRD_TIERS, formatPrice, validatePricingCatalog } from './blackbird-pricing.mjs';
-import { renderPricing } from './render-pricing.mjs';
+import { renderPricing, renderRegionMenu } from './render-pricing.mjs';
 
 // Independent approved handoff fixture, Indie / Studio / Enterprise order.
 const approved = {
@@ -14,6 +14,8 @@ const approved = {
   DEFAULT: ['USD', [59,249,499], 'included', ['fZu6oI6V4fLH9VveRf6Ri0b','00w00k93cgPLaZzfVj6Ri0h','dRm5kE0wGdDzebLaAZ6Ri0n']],
 };
 const template = fs.readFileSync(new URL('../templates/blackbird-pricing.tpl', import.meta.url), 'utf8');
+const menuTemplate=fs.readFileSync(new URL('../templates/region-menu.tpl', import.meta.url),'utf8');
+const render=(t,options)=>renderRegionMenu(menuTemplate,t,options)+renderPricing(template,t,options);
 const displayed = {
   US: ['$59', '$249', '$499'],
   CA: ['$79', '$349', '$699'],
@@ -50,23 +52,24 @@ test('catalog guard rejects sandbox, duplicate, missing and non-Stripe checkout 
 });
 
 test('paused output exposes all regional prices with inclusive DEFAULT and no checkout URLs or controls', () => {
-  const html = renderPricing(template, key=>key, {purchasingEnabled:false});
+  const html = render(key=>key, {purchasingEnabled:false});
   assert.ok(!html.includes('https://buy.stripe.com/'));
   assert.ok(!/data-checkout-|data-tier-checkout|class="button/.test(html));
-  assert.match(html, /value="DEFAULT"[^>]* selected/);
+  assert.ok(!html.includes('<option value="DEFAULT"'));
+  assert.match(html, /data-region-fallback hidden/);
   assert.match(html, /data-pricing-tax[^>]*>pricing.tax.included</);
   assert.ok(html.includes('blackbird_shop.checkout.disabled'));
   for (const [region, [currency]] of Object.entries(approved)) {
-    const option = html.match(new RegExp(`<option value="${region}"[^>]*>`))[0];
+    const option = region==='DEFAULT' ? html.match(/<span data-region-fallback[^>]*>/)[0] : html.match(new RegExp(`<option value="${region}"[^>]*>`))[0];
     BLACKBIRD_TIERS.forEach((tier,index)=>assert.ok(option.includes(`data-price-${tier}="${displayed[region][index]}"`)));
-    assert.ok(html.includes(`(${currency})</option>`), 'Currency stays explicit in the region selector');
+    assert.ok(html.includes(`(${currency})</option>`) || html.includes(`(${currency})</span>`), 'Currency stays explicit in the region selector');
   }
 });
 
 test('authorized render path wires all 18 live URLs and starts with the three inclusive DEFAULT links', () => {
-  const html = renderPricing(template, key=>key, {purchasingEnabled:true});
+  const html = render(key=>key, {purchasingEnabled:true});
   for(const [region, [,,tax,ids]] of Object.entries(approved)) {
-    const option=html.match(new RegExp(`<option value="${region}"[^>]*>`))[0];
+    const option=region==='DEFAULT' ? html.match(/<span data-region-fallback[^>]*>/)[0] : html.match(new RegExp(`<option value="${region}"[^>]*>`))[0];
     assert.ok(option.includes(`data-tax="pricing.tax.${tax}"`));
     BLACKBIRD_TIERS.forEach((tier,index)=>assert.ok(option.includes(`data-checkout-${tier}="https://buy.stripe.com/${ids[index]}"`)));
   }
@@ -76,7 +79,7 @@ test('authorized render path wires all 18 live URLs and starts with the three in
 });
 
 test('localized price and region copy is escaped before entering attributes', () => {
-  const html=renderPricing(template, ()=>'"<&>', {purchasingEnabled:true});
+  const html=render(()=>'"<&>', {purchasingEnabled:true});
   assert.match(html,/data-tax="&quot;&lt;&amp;&gt;"/);
 });
 
