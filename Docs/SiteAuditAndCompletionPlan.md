@@ -2,7 +2,7 @@
 
 Last updated: 2026-10-24
 
-## Regional checkout integration — publication authorized, purchasing paused (2026-10-24)
+## Regional checkout integration — published, purchasing paused (2026-10-24)
 
 - [x] Implemented all six regional presentations and all 18 exact prepared LIVE
   purchase URLs from Blackbird's `Docs/LicenseOperations.md` (Paid license offers),
@@ -59,9 +59,17 @@ Last updated: 2026-10-24
 - User authorized merging and publishing the regional presentation on 2026-10-24,
   explicitly keeping purchasing paused and new Stripe products/links inactive.
   Merged `80c1b00` from `codex/blackbird-regional-checkout` into `main` by fast-forward
-  in an isolated checkout to preserve unrelated working edits. Release checks pass;
-  Pages publication and live verification are in progress. The false sales gate is
-  retained. No Stripe mutations, backend deployment or app publication are performed.
+  in an isolated checkout to preserve unrelated working edits. Published in `c887604`;
+  GitHub validation `40064572694` and Pages deployment `40064572468` succeeded.
+  Live product/shop/overview/support/confirmation pages and CSS/JS return HTTP 200
+  and match the release content after line-ending normalization. Catalog source
+  returns HTTP 404. Live Edge checks verify all six regions on both pricing pages
+  at 390/1440px in light/dark themes, correct tax/currency, inclusive no-JavaScript
+  DEFAULT, purchase-unavailable message, no checkout URLs and no horizontal overflow.
+  Representative live screenshots reviewed; browser writes/external requests blocked.
+  The false sales gate is retained. No Stripe mutations, backend deployment or app
+  publication are performed. New Stripe products/links remain inactive as handed off;
+  hosted-total checks remain blocked pending separately authorized licensing review.
 - [ ] Stripe activation and retiring old Alpha links still require separate launch
   authorization. Hosted-total and compatible-release review remain pending above.
 
