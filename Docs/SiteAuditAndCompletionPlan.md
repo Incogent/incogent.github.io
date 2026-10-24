@@ -1,7 +1,67 @@
 # Incogent Site Completion Plan
 
-Last updated: 2026-10-23
+Last updated: 2026-10-24
 
+## Regional checkout integration — prepared, unpublished (2026-10-24)
+
+- [x] Implemented all six regional presentations and all 18 exact prepared LIVE
+  purchase URLs from Blackbird's `Docs/LicenseOperations.md` (Paid license offers),
+  `LicenseServer/blackbird-license-api/COMMERCE.md` (Production preparation and website
+  handoff) and `Docs/CommerceFulfillmentPlan.md` Phase 5. Catalog and live link data
+  reside in `scripts/blackbird-pricing.mjs`; product/shop pages share one renderer.
+
+  | Region | Currency | Indie | Studio | Enterprise | Tax wording |
+  | --- | --- | ---: | ---: | ---: | --- |
+  | US | USD | 59 | 249 | 499 | Applicable sales tax added at checkout |
+  | CA | CAD | 79 | 349 | 699 | Applicable tax added at checkout |
+  | EUROZONE | EUR | 59 | 249 | 499 | Includes applicable VAT |
+  | GB | GBP | 49 | 199 | 399 | Includes applicable VAT |
+  | AU | AUD | 99 | 399 | 799 | Includes applicable GST |
+  | DEFAULT | USD | 59 | 249 | 499 | Includes applicable tax |
+
+- [x] Replaced currency-only selection with an explicit country/region selector.
+  Its saved region updates all three prices and tax wording together; the prepared
+  enabled path also updates all three matching live URLs. US and DEFAULT remain
+  separate USD offers. The existing currency-only hint cannot distinguish them,
+  so the site makes no geolocation request and ignores old currency preferences.
+  Unset/invalid preferences, unavailable storage and no JavaScript use DEFAULT USD
+  with tax included. The no-JavaScript page explicitly identifies this fallback.
+- [x] Preserved permanent use, identical features, all future updates, no annual
+  options/subscriptions and eligibility under $200K / $200K–$5M inclusive / over
+  $5M based on annual gross revenue plus cumulative funding in USD. Removed blanket
+  tax-added copy. No website tax charge or estimate is calculated.
+- [x] Confirmation/support and retained purchase wording explicitly describe emailed
+  redemption codes (one per seat) and activation in the app, without downloadable
+  license-file claims. Earlier user-confirmed delivery/activation evidence is
+  retained; this change does not repeat or replace those end-to-end observations.
+- [x] `BLACKBIRD_PURCHASING_ENABLED` remains false. Prepared normal output contains
+  no checkout URLs/buttons. Configuration/render sources remain excluded by the
+  existing Pages configuration. Validation rejects sandbox URLs anywhere in generated
+  HTML and any exposed Stripe checkout URL while paused. CSS/JS cache versions bumped.
+- Validation: seven pricing tests pass, including exact catalog/handoff comparisons,
+  USD tax separation, missing/duplicate/sandbox rejection and both paused/enabled
+  render paths. Policy, localization, generation, site and documentation checks pass
+  (69 pages, 64 sitemap URLs, 57 guides); EULA bytes match the authoritative source.
+  Edge/Playwright checks both pricing routes in all six regions at 320/390/900/1440px
+  in light/dark themes, with correct explicit currency, tax wording, thresholds and
+  no overflow. Representative screenshots reviewed. Local-only enabled preview
+  verifies all 18 link selections; keyboard, reload, old currency preferences,
+  invalid values, blocked storage, URL parameters and no-JavaScript fallback pass.
+  Confirmation/support code wording passes. External browser requests are blocked;
+  no payment, email, license issuance or Stripe activation is performed.
+- [ ] Final licensing review: hosted totals for **all 18 live offers** and
+  representative billing addresses remain blocked while the prepared links/products
+  are inactive, as documented in the authoritative handoff. Check US/CA tax-added
+  totals and EUROZONE/GB/AU/DEFAULT tax-inclusive totals, especially DEFAULT USD
+  with VAT/GST billing addresses; inclusive totals must not increase after tax is
+  calculated. Verify final URLs, quantity 1–10, terms/confirmation redirect and
+  redemption-code delivery/support against the compatible signed app releases.
+- [ ] Website publication and Stripe activation remain separately user-deferred.
+  This task is committed/pushed on `codex/blackbird-regional-checkout`, not `main`,
+  to preserve the current public site and purchase pause. Launch authorization is
+  required to publish the website, enable new products/links and retire old Alpha
+  links. No backend deployment, Stripe/catalog mutation or app publication is part
+  of this task. Publication evidence below remains historical completed evidence.
 
 ## Permanent pricing publication (2026-10-23)
 

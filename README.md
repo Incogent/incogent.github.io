@@ -21,7 +21,30 @@ Static marketing site for Incogent and Blackbird, built from HTML templates and 
 node scripts/validate-i18n.mjs
 node scripts/build-i18n.mjs
 node scripts/validate-site.mjs
+node --test scripts/test-pricing.mjs
 ```
+
+## Blackbird regional checkout preparation
+
+- `scripts/blackbird-pricing.mjs` holds the six regional catalogs and 18 exact
+  prepared live URLs from Blackbird's `LicenseOperations.md` and commerce handoff.
+  `BLACKBIRD_PURCHASING_ENABLED` remains `false`. Paused builds omit checkout URLs
+  and purchase buttons entirely; catalog/build sources are excluded from Pages.
+- The country/region selector uses an explicit saved region, not a currency hint.
+  Unset, invalid, blocked-storage and JavaScript-disabled views use inclusive
+  DEFAULT USD. Existing `incogent_currency` preferences are ignored because USD
+  alone cannot distinguish US tax-added pricing from DEFAULT tax-included pricing.
+- `scripts/render-pricing.mjs` renders the shared product/shop controls. The enabled
+  render path is tested locally without changing the committed gate. After separate
+  launch authorization, switch that gate, regenerate, validate and publish alongside
+  authorized Stripe activation. Do not enable links to perform prelaunch tests.
+- Optional browser verification: install Playwright, or set `PLAYWRIGHT_PACKAGE_ROOT`
+  to its containing package root, then run `node scripts/verify-pricing-ui.mjs`.
+  It uses local pages, blocks external requests and defaults to headless Edge.
+  Set `PRICING_SCREENSHOT_DIR` to save screenshots outside the repository.
+- Run `node --test scripts/test-pricing.mjs` for the approved mapping fixture,
+  catalog safety and paused/enabled rendering checks. It also compares against
+  authoritative Blackbird files when that sibling checkout is available.
 
 ## Deployment Notes
 

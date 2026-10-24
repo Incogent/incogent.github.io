@@ -1,43 +1,35 @@
 const THEME_KEY="incogent_theme";
-// Country is only a hint. An explicit currency choice always wins, even if the
-// location request completes later. Prices and checkout links come from the page.
-async function initPurchaseCurrency(){
-  const select=document.querySelector('[data-purchase-currency]');
-  if(!select)return;
-  const card=select.closest('.purchase-card');
-  const amount=card.querySelector('[data-purchase-amount]');
-  const caption=card.querySelector('.purchase-caption');
-  const buy=card.querySelector('a.button.primary');
-  if(!buy)return;
-  const key='incogent_currency';
-  let manuallySelected=false;
-  const apply=(currency)=>{
-    const option=Array.from(select.options).find(item=>item.value===currency);
+// Only explicit region choices are saved. Currency cannot distinguish US from
+// DEFAULT USD; a missing/invalid preference always uses tax-inclusive DEFAULT.
+function initRegionalPricing(){
+  const pricing=document.querySelector('[data-regional-pricing]');
+  if(!pricing)return;
+  const select=pricing.querySelector('[data-purchase-region]');
+  const tax=pricing.querySelector('[data-pricing-tax]');
+  const key='incogent_pricing_region';
+  const apply=(region)=>{
+    const option=Array.from(select.options).find(item=>item.value===region);
     if(!option)return false;
-    select.value=currency;
-    amount.textContent=option.dataset.price;
-    caption.textContent=option.dataset.inclusive?caption.dataset.inclusive:caption.dataset.exclusive;
-    buy.href=option.dataset.checkout;
+    select.value=region;
+    for(const amount of pricing.querySelectorAll('[data-tier-price]')){
+      amount.textContent=option.getAttribute(`data-price-${amount.dataset.tierPrice}`);
+    }
+    tax.textContent=option.dataset.tax;
+    for(const buy of pricing.querySelectorAll('[data-tier-checkout]')){
+      buy.href=option.getAttribute(`data-checkout-${buy.dataset.tierCheckout}`);
+    }
     return true;
   };
+  // Explicitly reset browser-restored form state before applying our region key.
+  apply('DEFAULT');
+  try{apply(localStorage.getItem(key));}catch(_error){}
   select.addEventListener('change',()=>{
-    manuallySelected=true;
-    apply(select.value);
+    if(!apply(select.value))apply('DEFAULT');
     try{localStorage.setItem(key,select.value);}catch(_error){}
   });
-  select.closest('label').hidden=false;
-  try{if(apply(localStorage.getItem(key)))return;}catch(_error){}
-  const controller=new AbortController();
-  const timeout=setTimeout(()=>controller.abort(),2500);
-  try{
-    const response=await fetch('/api/currency',{cache:'no-store',signal:controller.signal});
-    if(!response.ok)return;
-    const result=await response.json();
-    if(!manuallySelected)apply(result.currency);
-  }catch(_error){/* Keep the working USD price and checkout on any failure. */}
-  finally{clearTimeout(timeout);}
+  pricing.querySelector('[data-region-control]').hidden=false;
 }
-initPurchaseCurrency();
+initRegionalPricing();
 
 const themeButtons=Array.from(document.querySelectorAll("[data-theme-toggle]"));
 let turnstileLoadAttempts=0;

@@ -19,7 +19,7 @@
   <meta property="og:url" content="{{CANONICAL_URL}}">
   <link rel="canonical" href="{{CANONICAL_URL}}">
   {{HREFLANG_LINKS}}
-  <link rel="stylesheet" href="/site.css?v=20261010-pricing-thresholds">
+  <link rel="stylesheet" href="/site.css?v=20261024-regional-pricing">
 {{HEAD_EXTRAS}}
   <script type="application/ld+json">{{ORG_JSON_LD}}</script>
   <script type="application/ld+json">{{WEBPAGE_JSON_LD}}</script>
@@ -52,6 +52,6 @@
     </div>
     <div class="wrap copyright">&copy; <span data-current-year></span> {{FOOTER_RIGHTS}}</div>
   </footer>
-  <script src="/site.js?v=20261010-marketing-funnel"></script>
+  <script src="/site.js?v=20261024-regional-pricing"></script>
 </body>
 </html>

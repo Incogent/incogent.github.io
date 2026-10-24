@@ -2,9 +2,8 @@ import { DOCUMENTATION_PAGES } from "./documentation.mjs";
 export const SITE_URL = "https://www.incogent.io";
 export const SITE_NAME = "Incogent";
 export const DEFAULT_LOCALE = "en";
-// Purchasing stays paused until final live Stripe links for Indie / Studio / Enterprise
-// and production fulfillment are verified. Never use sandbox links on public pages.
-export const BLACKBIRD_CHECKOUT_URL = "";
+// Prepared regional live links and the sales gate live in blackbird-pricing.mjs.
+// Keep sales paused until the separately authorized website/Stripe launch.
 
 export const DISCORD_INVITE_URL = "https://discord.gg/AxxpQ8h";
 export const DISCORD_GUILD_ID = "367221582009204737";

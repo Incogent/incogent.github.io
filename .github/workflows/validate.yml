@@ -17,6 +17,7 @@ jobs:
         with:
           node-version: "22"
       - run: node scripts/validate-i18n.mjs
+      - run: node --test scripts/test-pricing.mjs
       - run: node scripts/build-i18n.mjs
       - run: git diff --exit-code
       - run: node scripts/validate-site.mjs

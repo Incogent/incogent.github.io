@@ -9,21 +9,21 @@
   <meta name="color-scheme" content="light dark">
   <script>try{const theme=localStorage.getItem("incogent_theme");if(theme==="dark"||theme==="light")document.documentElement.setAttribute("data-theme",theme);}catch(_error){}</script>
   <title>Buy Blackbird Alpha | Incogent</title>
-  <meta name="description" content="Permanent Blackbird licenses: Indie $59, Studio $249 and Enterprise $499. All future updates and identical features included. One-time USD prices per seat.">
+  <meta name="description" content="Permanent Blackbird licenses for Indie, Studio and Enterprise with regional pricing per seat. All future updates and identical features included. Pay once.">
   <meta name="robots" content="noindex,follow">
   <meta property="og:site_name" content="Incogent">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_US">
   <meta property="og:title" content="Buy Blackbird Alpha | Incogent">
-  <meta property="og:description" content="Permanent Blackbird licenses: Indie $59, Studio $249 and Enterprise $499. All future updates and identical features included. One-time USD prices per seat.">
+  <meta property="og:description" content="Permanent Blackbird licenses for Indie, Studio and Enterprise with regional pricing per seat. All future updates and identical features included. Pay once.">
   <meta property="og:url" content="https://www.incogent.io/en/shop/blackbird/">
   <link rel="canonical" href="https://www.incogent.io/en/shop/blackbird/">
   <link rel="alternate" hreflang="en" href="https://www.incogent.io/en/shop/blackbird/">
   <link rel="alternate" hreflang="x-default" href="https://www.incogent.io/en/shop/blackbird/">
-  <link rel="stylesheet" href="/site.css?v=20261010-pricing-thresholds">
+  <link rel="stylesheet" href="/site.css?v=20261024-regional-pricing">
 
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Incogent","url":"https://www.incogent.io","sameAs":["https://discord.gg/AxxpQ8h"]}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Buy Blackbird Alpha | Incogent","description":"Permanent Blackbird licenses: Indie $59, Studio $249 and Enterprise $499. All future updates and identical features included. One-time USD prices per seat.","url":"https://www.incogent.io/en/shop/blackbird/","inLanguage":"en"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Buy Blackbird Alpha | Incogent","description":"Permanent Blackbird licenses for Indie, Studio and Enterprise with regional pricing per seat. All future updates and identical features included. Pay once.","url":"https://www.incogent.io/en/shop/blackbird/","inLanguage":"en"}</script>
 </head>
 <body class="blackbird-shop-page">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -45,33 +45,46 @@
     </div>
   </header>
   <main id="main-content"><section class="page-hero section"><div class="wrap narrow"><p class="eyebrow">Blackbird shop</p><h1>Make Blackbird part of your toolkit.</h1><p class="lede">Build less tooling. Ship more games.</p></div></section>
-<section class="section highlight-band"><div class="wrap pricing-options">
+<section class="section highlight-band"><div class="wrap pricing-options" data-regional-pricing>
   <h2>Choose your license</h2>
-  <p class="pricing-intro">One-time USD prices per seat. Every tier includes permanent use with identical features and all future updates. No annual plans or subscriptions. Plus applicable tax.</p>
+  <p class="pricing-intro">One-time prices per seat. Every tier includes permanent use with identical features and all future updates. No annual plans or subscriptions.</p>
+  <label class="pricing-region" data-region-control hidden>Country or region
+    <select data-purchase-region><option value="US" data-tax="Applicable sales tax added at checkout." data-price-indie="USD 59" data-price-studio="USD 249" data-price-enterprise="USD 499">United States (USD)</option>
+<option value="CA" data-tax="Applicable tax added at checkout." data-price-indie="CAD 79" data-price-studio="CAD 349" data-price-enterprise="CAD 699">Canada (CAD)</option>
+<option value="EUROZONE" data-tax="Includes applicable VAT." data-price-indie="EUR 59" data-price-studio="EUR 249" data-price-enterprise="EUR 499">Euro area (EUR)</option>
+<option value="GB" data-tax="Includes applicable VAT." data-price-indie="GBP 49" data-price-studio="GBP 199" data-price-enterprise="GBP 399">United Kingdom (GBP)</option>
+<option value="AU" data-tax="Includes applicable GST." data-price-indie="AUD 99" data-price-studio="AUD 399" data-price-enterprise="AUD 799">Australia (AUD)</option>
+<option value="DEFAULT" data-tax="Includes applicable tax." data-price-indie="USD 59" data-price-studio="USD 249" data-price-enterprise="USD 499" selected>Other regions (USD)</option></select>
+  </label>
+  <p class="pricing-tax" data-pricing-tax aria-live="polite">Includes applicable tax.</p>
+  <noscript><p class="pricing-fallback">Prices shown are in USD for other regions and include applicable tax. Enable JavaScript to choose your country or region.</p></noscript>
   <div class="pricing-grid">
     <article class="card pricing-tier">
       <h3>Indie</h3>
       <dl class="pricing-terms">
-        <div><dt>Permanent license</dt><dd>$59</dd></div>
+        <div><dt>Permanent license</dt><dd data-tier-price="indie">USD 59</dd></div>
       </dl>
       <p class="pricing-threshold">Under $200K</p>
-      <p class="pricing-note">Annual gross revenue + cumulative funding</p>
+      <p class="pricing-note">Annual gross revenue + cumulative funding (USD)</p>
+
     </article>
     <article class="card pricing-tier">
       <h3>Studio</h3>
       <dl class="pricing-terms">
-        <div><dt>Permanent license</dt><dd>$249</dd></div>
+        <div><dt>Permanent license</dt><dd data-tier-price="studio">USD 249</dd></div>
       </dl>
       <p class="pricing-threshold">$200K–$5M</p>
-      <p class="pricing-note">Annual gross revenue + cumulative funding</p>
+      <p class="pricing-note">Annual gross revenue + cumulative funding (USD)</p>
+
     </article>
     <article class="card pricing-tier">
       <h3>Enterprise</h3>
       <dl class="pricing-terms">
-        <div><dt>Permanent license</dt><dd>$499</dd></div>
+        <div><dt>Permanent license</dt><dd data-tier-price="enterprise">USD 499</dd></div>
       </dl>
       <p class="pricing-threshold">Over $5M</p>
-      <p class="pricing-note">Annual gross revenue + cumulative funding</p>
+      <p class="pricing-note">Annual gross revenue + cumulative funding (USD)</p>
+
     </article>
   </div>
   <p class="pricing-availability">Purchasing temporarily unavailable</p>
@@ -87,6 +100,6 @@
     </div>
     <div class="wrap copyright">&copy; <span data-current-year></span> Incogent. All rights reserved.</div>
   </footer>
-  <script src="/site.js?v=20261010-marketing-funnel"></script>
+  <script src="/site.js?v=20261024-regional-pricing"></script>
 </body>
 </html>

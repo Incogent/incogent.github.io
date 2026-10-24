@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { BLACKBIRD_PURCHASING_ENABLED, validatePricingCatalog } from './blackbird-pricing.mjs';
 import {
   canonicalUrl,
   CONTACT_FORM_ENDPOINT,
@@ -15,6 +16,7 @@ const errors = [];
 const warnings = [];
 const generatedFiles = [];
 const expectedSitemapUrls = [];
+validatePricingCatalog();
 
 if (SITE_URL !== "https://www.incogent.io") {
   errors.push(`SITE_URL must use the preferred www host, received ${SITE_URL}`);
@@ -48,6 +50,12 @@ for (const locale of Object.keys(LOCALES)) {
 
     const html = fs.readFileSync(file, "utf8");
     if (/{{[^}]+}}/.test(html)) errors.push(`Unresolved token in ${relative(file)}`);
+    if (/https:\/\/(?:buy|checkout)\.stripe\.com\/(?:test_|[^"\s<]*cs_test_)/i.test(html)) {
+      errors.push(`Sandbox Stripe checkout URL in ${relative(file)}`);
+    }
+    if (!BLACKBIRD_PURCHASING_ENABLED && /https:\/\/(?:buy|checkout)\.stripe\.com\//i.test(html)) {
+      errors.push(`Stripe checkout URL exposed while purchasing is paused in ${relative(file)}`);
+    }
     if (!html.includes(`href="${canonicalUrl(locale, page.route)}"`)) {
       errors.push(`Missing canonical in ${relative(file)}`);
     }
@@ -145,7 +153,7 @@ function validateDocumentLinks(file, html) {
     }
   }
 
-  for (const match of html.matchAll(/\s(?:href|src|action)="([^"]+)"/g)) {
+  for (const match of html.matchAll(/\s(?:href|src|action|data-checkout-[a-z]+)="([^"]+)"/g)) {
     const raw = decodeHtml(match[1]);
     if (!raw || /^(mailto:|tel:|data:|about:)/i.test(raw)) continue;
     let url;

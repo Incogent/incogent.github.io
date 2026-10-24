@@ -6,15 +6,15 @@ support.kicker,Support page eyebrow,Incogent support
 support.heading,Support page heading,How can we help?
 support.intro,Support introduction,"Get help directly on Discord, or explore the Blackbird documentation."
 support.missing.title,License recovery link and heading,Didn't receive your license?
-support.missing.check,Missing license first steps,Check your spam or junk folder and the inbox for the email address you used at checkout. Allow a few minutes for delivery.
+support.missing.check,Missing license first steps,Your redemption codes are emailed to the address you used at checkout. Check that inbox and your spam or junk folder. Allow a few minutes for delivery.
 support.missing.contact,Missing license support instructions,Still missing? Contact us using your purchase email address. Include the purchase date and receipt or order reference if available so we can locate your purchase.
-support.missing.privacy,Private support reminder,Use the private contact form for order details. Please don't post your license code or receipt in public Discord channels.
-support.missing.reassurance,Missing license reassurance,"You don't need to buy again. Once we've verified your purchase, we can help you recover your existing license."
+support.missing.privacy,Private support reminder,Use the private contact form for order details. Please don't post your redemption code or receipt in public Discord channels.
+support.missing.reassurance,Missing license reassurance,"You don't need to buy again. Once we've verified your purchase, we can help you recover your existing redemption codes."
 page.confirmation.title,Confirmation browser title,Your Blackbird Purchase | Incogent
 page.confirmation.description,Confirmation page description,Next steps and license delivery help for your Blackbird purchase.
 confirmation.heading,Confirmation page heading,Thanks for choosing Blackbird!
-confirmation.body,Confirmation introduction,Once your payment is confirmed we'll email your license and activation instructions.
-confirmation.delivery,Confirmation delivery note,You can close this page. Your license email doesn't depend on keeping it open.
+confirmation.body,Confirmation introduction,Once your payment is confirmed we'll email one redemption code per seat with activation instructions. Enter your code in Blackbird's Activate License window.
+confirmation.delivery,Confirmation delivery note,You can close this page. Delivery of your redemption codes doesn't depend on keeping it open.
 blackbird.documentation,Blackbird product page documentation link,Documentation
 site.name,Global site name,Incogent
 site.tagline,Global company tagline,Products and engineering for ambitious interactive experiences
@@ -121,14 +121,14 @@ page.shop.description,Shop meta description,Purchase products and licenses from 
 shop.kicker,Shop eyebrow,Incogent shop
 shop.heading,Shop heading,Products and licenses
 shop.intro,Shop introduction,Get Blackbird for your development workflow.
-shop.blackbird.body,Shop card,Blackbird Alpha: permanent Indie $59 / Studio $249 / Enterprise $499 licenses. All prices USD per seat. Every tier includes identical features and all future updates.
+shop.blackbird.body,Shop card,Blackbird Alpha: permanent Indie / Studio / Enterprise licenses with regional pricing per seat. Every tier includes identical features and all future updates.
 page.blackbird_shop.title,Blackbird shop browser title,Buy Blackbird Alpha | Incogent
-page.blackbird_shop.description,Blackbird shop meta description,"Permanent Blackbird licenses: Indie $59, Studio $249 and Enterprise $499. All future updates and identical features included. One-time USD prices per seat."
+page.blackbird_shop.description,Blackbird shop meta description,"Permanent Blackbird licenses for Indie, Studio and Enterprise with regional pricing per seat. All future updates and identical features included. Pay once."
 blackbird_shop.kicker,Blackbird shop eyebrow,Blackbird shop
 blackbird_shop.heading,Blackbird shop heading,Make Blackbird part of your toolkit.
 blackbird_shop.intro,Blackbird shop introduction,Build less tooling. Ship more games.
 blackbird_shop.editions.title,Blackbird shop heading,"One-time pricing, per seat"
-blackbird_shop.editions.body,Blackbird shop placeholder,Every seat receives its own license code. No subscription or automatic renewal.
+blackbird_shop.editions.body,Blackbird shop placeholder,Every seat receives its own redemption code by email. No subscription or automatic renewal.
 blackbird_shop.checkout.title,Checkout heading,Purchase Blackbird
 blackbird_shop.checkout.body,Checkout placeholder,Choose the tier matching your annual gross revenue plus cumulative funding. Every seat includes permanent use and all future updates. Blackbird is currently alpha software.
 blackbird_shop.checkout.disabled,Disabled checkout action,Purchasing temporarily unavailable
@@ -290,12 +290,12 @@ page.docs.reference.manifest.description,Blackbird documentation summary,Underst
 page.docs.reference.runtime.title,Blackbird documentation title,PowerShell runtime reference | Incogent
 page.docs.reference.runtime.description,Blackbird documentation summary,"Use the host-provided helpers for context, progress, and results."
 blackbird_shop.checkout.buy,Blackbird production purchasing,Buy Blackbird Alpha
-blackbird_shop.checkout.delivery,Blackbird production purchasing,Your license codes arrive by email after payment. Each seat includes permanent use and all future updates.
+blackbird_shop.checkout.delivery,Blackbird production purchasing,Your redemption codes arrive by email after payment. Each seat includes permanent use and all future updates.
 blackbird_shop.checkout.terms,Blackbird production purchasing,"Review the license agreement, including refund terms, and our privacy policy before purchasing."
 blackbird_shop.checkout.recovery,Blackbird production purchasing,Didn't receive your license?
 blackbird_shop.offer,Purchase card heading,Blackbird Alpha
 blackbird_shop.per_seat,Price unit,per seat
-blackbird_shop.summary,Brief price qualifier,One-time purchase. Plus applicable tax.
+blackbird_shop.summary,Brief price qualifier,One-time purchase. See regional tax details.
 blackbird_shop.summary_inclusive,Brief tax inclusive price qualifier,One-time purchase. Includes applicable tax.
 blackbird_shop.currency,Currency selector label,Currency
 blackbird_shop.license_terms,Purchase terms link,License terms
@@ -326,7 +326,7 @@ blackbird.buying.tools.body,Blackbird product page practical information,"Instal
 blackbird.buying.help,Blackbird product page practical information,Have a question before purchasing?
 blackbird.buying.support,Blackbird product page practical information,Get help
 pricing.heading,Blackbird pricing tiers,Choose your license
-pricing.common,Blackbird pricing tiers,One-time USD prices per seat. Every tier includes permanent use with identical features and all future updates. No annual plans or subscriptions. Plus applicable tax.
+pricing.common,Blackbird pricing tiers,One-time prices per seat. Every tier includes permanent use with identical features and all future updates. No annual plans or subscriptions.
 pricing.permanent,Blackbird pricing tiers,Permanent license
 pricing.indie.name,Blackbird pricing tiers,Indie
 pricing.studio.name,Blackbird pricing tiers,Studio
@@ -334,4 +334,20 @@ pricing.enterprise.name,Blackbird pricing tiers,Enterprise
 pricing.indie.threshold,Blackbird pricing tiers,Under $200K
 pricing.studio.threshold,Blackbird pricing tiers,$200K–$5M
 pricing.enterprise.threshold,Blackbird pricing tiers,Over $5M
-pricing.thresholds,Blackbird pricing tiers,Annual gross revenue + cumulative funding
+pricing.thresholds,Blackbird pricing tiers,Annual gross revenue + cumulative funding (USD)
+pricing.region.label,Regional pricing selector label,Country or region
+pricing.region.us,Regional pricing selector option,United States
+pricing.region.ca,Regional pricing selector option,Canada
+pricing.region.eurozone,Regional pricing selector option,Euro area
+pricing.region.gb,Regional pricing selector option,United Kingdom
+pricing.region.au,Regional pricing selector option,Australia
+pricing.region.default,Regional pricing selector option,Other regions
+pricing.tax.sales_added,US regional price tax qualifier,Applicable sales tax added at checkout.
+pricing.tax.added,CA regional price tax qualifier,Applicable tax added at checkout.
+pricing.tax.vat_included,EUROZONE and GB regional price tax qualifier,Includes applicable VAT.
+pricing.tax.gst_included,AU regional price tax qualifier,Includes applicable GST.
+pricing.tax.included,DEFAULT regional price tax qualifier,Includes applicable tax.
+pricing.no_js,No JavaScript regional fallback,Prices shown are in USD for other regions and include applicable tax. Enable JavaScript to choose your country or region.
+pricing.buy.indie,Indie checkout action,Buy Indie
+pricing.buy.studio,Studio checkout action,Buy Studio
+pricing.buy.enterprise,Enterprise checkout action,Buy Enterprise
