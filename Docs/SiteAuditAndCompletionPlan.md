@@ -2,7 +2,7 @@
 
 Last updated: 2026-10-24
 
-## Regional checkout integration — prepared, unpublished (2026-10-24)
+## Regional checkout integration — publication authorized, purchasing paused (2026-10-24)
 
 - [x] Implemented all six regional presentations and all 18 exact prepared LIVE
   purchase URLs from Blackbird's `Docs/LicenseOperations.md` (Paid license offers),
@@ -56,12 +56,14 @@ Last updated: 2026-10-24
   with VAT/GST billing addresses; inclusive totals must not increase after tax is
   calculated. Verify final URLs, quantity 1–10, terms/confirmation redirect and
   redemption-code delivery/support against the compatible signed app releases.
-- [ ] Website publication and Stripe activation remain separately user-deferred.
-  This task is committed/pushed on `codex/blackbird-regional-checkout`, not `main`,
-  to preserve the current public site and purchase pause. Launch authorization is
-  required to publish the website, enable new products/links and retire old Alpha
-  links. No backend deployment, Stripe/catalog mutation or app publication is part
-  of this task. Publication evidence below remains historical completed evidence.
+- User authorized merging and publishing the regional presentation on 2026-10-24,
+  explicitly keeping purchasing paused and new Stripe products/links inactive.
+  Merged `80c1b00` from `codex/blackbird-regional-checkout` into `main` by fast-forward
+  in an isolated checkout to preserve unrelated working edits. Release checks pass;
+  Pages publication and live verification are in progress. The false sales gate is
+  retained. No Stripe mutations, backend deployment or app publication are performed.
+- [ ] Stripe activation and retiring old Alpha links still require separate launch
+  authorization. Hosted-total and compatible-release review remain pending above.
 
 ## Permanent pricing publication (2026-10-23)
 

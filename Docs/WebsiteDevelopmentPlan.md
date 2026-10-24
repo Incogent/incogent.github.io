@@ -4,7 +4,7 @@ Last updated: 2026-10-24
 
 > Current functional status, download architecture, and prioritized next work are recorded in [SiteAuditAndCompletionPlan.md](SiteAuditAndCompletionPlan.md). That audit is authoritative where it adds newer implementation findings to this original development plan.
 
-2026-10-24 regional checkout architecture (prepared, unpublished): one shared catalog
+2026-10-24 regional checkout architecture (publication authorized; purchasing paused): one shared catalog
 in `scripts/blackbird-pricing.mjs` maps each of US/CA/EUROZONE/GB/AU/DEFAULT and
 Indie/Studio/Enterprise to its approved amount, explicit currency, tax wording and
 exact prepared live URL from Blackbird's handoff. A shared build renderer feeds the
@@ -14,9 +14,9 @@ storage and no JavaScript use DEFAULT. No currency hint is requested, because th
 existing endpoint cannot distinguish those two USD offers. The website adds no tax
 calculation. Permanent use, identical features, all future updates and USD-based
 eligibility remain. Confirmation/support describe emailed redemption codes. The
-false build-time sales gate omits all checkout URLs/buttons; enabling sales and
-publishing require separate authorization. The task branch preserves the current
-Pages deployment from main. Final hosted-total checks are blocked by inactive live
+false build-time sales gate omits all checkout URLs/buttons. Website publication is
+now user-authorized, with purchasing paused; Stripe products/links remain inactive
+and sales activation still needs separate authorization. Final hosted-total checks are blocked by inactive live
 links and are tracked with validation evidence in the current completion plan.
 
 2026-10-23 pricing decision (published; checkout deferred): Blackbird's
