@@ -21,7 +21,12 @@ Last updated: 2026-10-24
   including saved/invalid/blocked storage, no JavaScript and the local enabled-link
   preview. Exact symbols, approved amounts and tax wording pass; no horizontal
   overflow or exposed checkout URLs. Screenshots reviewed. The preview now declares
-  UTF-8 explicitly to verify euro/pound characters correctly. Publication in progress.
+  UTF-8 explicitly to verify euro/pound characters correctly.
+- [x] Published in `dbc43f7`; GitHub validation `40108948409` and Pages deployment
+  `40108948029` succeeded. Live product/shop pages match the corrected output.
+  Production Edge checks all six regions at 390/1440px in light/dark themes and
+  no-JavaScript fallback, with correct symbols, tax wording, no overflow and no
+  public Stripe URLs. Purchasing remains unavailable; no Stripe changes made.
 
 ## Regional checkout integration — published, purchasing paused (2026-10-24)
 
