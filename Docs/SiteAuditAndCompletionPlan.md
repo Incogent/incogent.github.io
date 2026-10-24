@@ -2,6 +2,43 @@
 
 Last updated: 2026-10-24
 
+## Managed Payments and best-effort region policy (2026-10-24)
+
+- [x] User accepts customers choosing another regional offer. Keep automatic region
+  detection, saved manual overrides and internal tax-inclusive DEFAULT USD fallback.
+  Do not add billing-country/offer enforcement, server-created Checkout sessions or
+  extra backend services for this pricing policy. The earlier enforcement launch
+  blocker is withdrawn; no enforcement was implemented.
+- [x] Retain the prepared Stripe Managed Payments Payment Links, approved product
+  classification and explicit Price tax behavior. The website chooses an offer;
+  Stripe's hosted checkout uses customer billing information to calculate tax.
+  Inclusive offers contain applicable tax within the listed total; accepting a
+  different offer can reduce seller proceeds without making the sale tax-free.
+  Region hints and manual preferences are not evidence of tax compliance.
+- Stripe guidance reviewed: eligible products and Managed Payments-enabled links
+  are required. Let Managed Payments control tax calculation, withholding and
+  invoicing; do not add manual tax rates, website tax charges or separate tax/invoice
+  controls. Stripe handles indirect-tax compliance in its covered countries;
+  coverage is not worldwide. Before sales launch, confirm intended selling-country
+  coverage and resolve obligations for destinations Stripe does not cover. This
+  review does not authorize a paid service, registration or checkout redesign.
+  Sources: [Managed Payments links](https://docs.stripe.com/payments/managed-payments/use-payment-links)
+  and [tax coverage and remaining seller obligations](https://docs.stripe.com/payments/managed-payments/tax-compliance).
+- [x] Reconciled newer licensing evidence: Blackbird's authoritative
+  `Docs/CommerceFulfillmentPlan.md`, Phase 5, records all 18 hosted offers checked
+  at one/two seats with representative billing addresses. US/CA add tax once;
+  EUROZONE/GB/AU/DEFAULT retain the listed inclusive total. These checks are complete,
+  superseding the earlier inactive-link testing blocker. Licensing records confirm
+  the temporarily previewed new links/products are inactive again.
+- Validation: reviewed current Stripe guidance and authoritative handoff/Phase 5;
+  documentation diff/whitespace checks pass. Documentation-only decision update:
+  published presentation and existing Worker version are unchanged; no new runtime
+  tests or deployments are required. Preserve prior browser and fulfillment evidence.
+- [ ] Launch still requires compatible signed app releases, final licensing review,
+  selling-country tax-coverage review and separate sales authorization. Public
+  purchasing remains paused; new Stripe products/links stay inactive. No Stripe
+  settings, links or products were changed in this task.
+
 ## Automatic region selection and header menu (2026-10-24)
 
 - [x] Moved country/region selection from pricing into a compact header menu on
@@ -48,21 +85,10 @@ Last updated: 2026-10-24
   header-only controls, inclusive USD HTTP-error/no-JavaScript fallback and no
   overflow at 320/390/1440px in light/dark themes. Browser writes and external/Stripe
   requests were blocked. Purchasing stays paused; Stripe remains untouched.
-- [ ] Launch blocker from the user's tax review: removing DEFAULT from the menu
-  is a UX restriction, not billing-country enforcement. Tax-inclusive prices still
-  contain tax and can yield a lower total than an exclusive offer. Stripe uses
-  checkout location to calculate applicable tax, but does not change a fixed
-  Price's inclusive/exclusive behavior by customer location. Before enabling sales,
-  the licensing integration must verify or enforce billing-location/offer alignment,
-  including US buyers reaching a DEFAULT inclusive USD link directly. Resolve
-  redirect/rejection or equivalent checkout enforcement before claiming regional
-  selection prevents price/tax-treatment arbitrage. Do not rely on IP, localStorage,
-  hidden options or link metadata as proof of billing location. Products/links stay
-  inactive and purchasing paused until this review and the hosted-total checks pass.
-  Primary guidance reviewed 2026-10-24:
-  [Stripe tax behavior](https://docs.stripe.com/tax/products-prices-tax-codes-tax-behavior),
-  [checkout address collection](https://docs.stripe.com/tax/customer-locations), and
-  [Managed Payments](https://docs.stripe.com/payments/managed-payments/use-payment-links).
+- [x] Resolved tax-review decision: the user accepts cross-region purchases and
+  does not require billing-country/offer enforcement. The earlier enforcement launch
+  blocker is withdrawn by the best-effort policy above. Hidden options, IP hints and
+  local preferences remain presentation controls; Managed Payments owns checkout tax.
 
 ## Natural currency formatting (2026-10-24)
 
@@ -75,8 +101,8 @@ Last updated: 2026-10-24
   English formatting; both pricing pages and the no-JavaScript fallback share it.
 - Approved numeric amounts, 18 live URL mappings, tax behavior, eligibility and
   permanent license entitlements are preserved. Purchasing remains paused; no
-  Stripe products/links are changed or activated. Existing final licensing review
-  and hosted-total blockers below remain outstanding.
+  Stripe products/links are changed or activated. Final licensing review remains;
+  hosted-total checks are now complete as recorded in the decision above.
 - Validation: all seven pricing tests and policy/localization/build/site/documentation
   checks pass (69 pages, 64 sitemap URLs, 57 guides). Source EULA bytes match Blackbird.
   Edge checks all six regions on both pages at 320/390/900/1440px in light/dark themes,
@@ -137,13 +163,13 @@ Last updated: 2026-10-24
   invalid values, blocked storage, URL parameters and no-JavaScript fallback pass.
   Confirmation/support code wording passes. External browser requests are blocked;
   no payment, email, license issuance or Stripe activation is performed.
-- [ ] Final licensing review: hosted totals for **all 18 live offers** and
-  representative billing addresses remain blocked while the prepared links/products
-  are inactive, as documented in the authoritative handoff. Check US/CA tax-added
-  totals and EUROZONE/GB/AU/DEFAULT tax-inclusive totals, especially DEFAULT USD
-  with VAT/GST billing addresses; inclusive totals must not increase after tax is
-  calculated. Verify final URLs, quantity 1–10, terms/confirmation redirect and
-  redemption-code delivery/support against the compatible signed app releases.
+- [x] Hosted totals for all 18 live offers at one/two seats with representative
+  addresses are verified in Blackbird's authoritative Phase 5. US/CA add tax once;
+  EUROZONE/GB/AU/DEFAULT USD keep applicable VAT/GST within the listed total.
+  New products/links are inactive again after separately authorized previews.
+- [ ] Final licensing review: verify final URLs, quantity 1–10, terms/confirmation
+  redirect and redemption-code delivery/support against compatible signed app
+  releases, retaining completed delivery and hosted-total evidence above.
 - User authorized merging and publishing the regional presentation on 2026-10-24,
   explicitly keeping purchasing paused and new Stripe products/links inactive.
   Merged `80c1b00` from `codex/blackbird-regional-checkout` into `main` by fast-forward
@@ -157,9 +183,10 @@ Last updated: 2026-10-24
   Representative live screenshots reviewed; browser writes/external requests blocked.
   The false sales gate is retained. No Stripe mutations, backend deployment or app
   publication are performed. New Stripe products/links remain inactive as handed off;
-  hosted-total checks remain blocked pending separately authorized licensing review.
+  hosted-total checks were blocked at publication and subsequently completed by
+  the separately authorized licensing review, as recorded above.
 - [ ] Stripe activation and retiring old Alpha links still require separate launch
-  authorization. Hosted-total and compatible-release review remain pending above.
+  authorization. Compatible-release and tax-coverage review remain pending above.
 
 ## Permanent pricing publication (2026-10-23)
 

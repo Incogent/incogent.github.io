@@ -4,6 +4,18 @@ Last updated: 2026-10-24
 
 > Current functional status, download architecture, and prioritized next work are recorded in [SiteAuditAndCompletionPlan.md](SiteAuditAndCompletionPlan.md). That audit is authoritative where it adds newer implementation findings to this original development plan.
 
+2026-10-24 Managed Payments decision: the user accepts cross-region purchases.
+Keep best-effort detection, manual overrides and the internal inclusive USD fallback;
+do not add billing-country/offer enforcement, server-created Checkout sessions or
+extra backend services. This withdraws the earlier enforcement launch blocker.
+Retain eligible product classification, Managed Payments links and approved Price
+tax behavior; Stripe's hosted checkout owns tax calculation and invoicing. Its
+indirect-tax liability coverage is country-specific, so confirm intended market
+coverage and remaining seller obligations before sales launch. No blanket worldwide
+tax protection is claimed. Blackbird Phase 5 records all 18 hosted-total checks
+complete; products/links are inactive again. Purchasing remains paused pending
+compatible releases, final licensing/coverage review and separate launch authorization.
+
 2026-10-24 automatic region selection: a site-wide header dropdown replaces the
 pricing-adjacent selector. The existing edge `/api/currency` route now adds a
 pricing-region identifier from trusted Cloudflare country metadata, keeping the
@@ -14,10 +26,9 @@ use inclusive DEFAULT USD. Manual choices win asynchronous races. This supersede
 the earlier manual-only/no-hint decision. Purchasing remains paused; exact prices,
 tax behavior, prepared mappings and permanent entitlements are unchanged.
 DEFAULT is not manually selectable; it is internal fallback data. Saved DEFAULT
-overrides are ignored. This menu is presentation, not billing-country enforcement:
-the licensing launch review must verify/secure regional Price selection against
-checkout billing location, because Stripe does not switch a fixed Price's tax
-behavior when the billing country changes. Sales stay paused pending that review.
+overrides are ignored. This menu controls presentation; the accepted policy above
+does not restrict regional offers by billing country. Stripe retains the selected
+Price's tax behavior and calculates applicable tax at its hosted checkout.
 
 2026-10-24 regional checkout architecture (published; purchasing paused): one shared catalog
 in `scripts/blackbird-pricing.mjs` maps each of US/CA/EUROZONE/GB/AU/DEFAULT and
@@ -32,8 +43,9 @@ eligibility remain. Confirmation/support describe emailed redemption codes. The
 false build-time sales gate omits all checkout URLs/buttons. The user-authorized
 website publication is verified live with purchasing paused; new Stripe products/links
 remain inactive and sales activation still needs separate authorization.
-Final hosted-total checks are blocked by inactive live
-links and are tracked with validation evidence in the current completion plan.
+Hosted-total checks were initially blocked by inactive links; the authoritative
+Blackbird Phase 5 now records their completion following authorized temporary
+previews. The current completion plan preserves that evidence and remaining work.
 
 2026-10-24 currency presentation: format prices with each currency's familiar local
 symbol using `Intl.NumberFormat` and regional English locales. Show whole amounts

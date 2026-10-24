@@ -37,9 +37,13 @@ node --test scripts/test-pricing.mjs
   old currency-only preferences are ignored. The menu is available throughout the
   site. Only explicit overrides persist; detected region/country/IP are not stored.
 - DEFAULT is internal fallback data, not a manual option. Region selection is a
-  display preference, not proof of billing location. The final licensing review must
-  enforce billing-location/offer alignment before sales open; hiding a fallback link
-  cannot enforce this. Stripe calculates tax but keeps the selected Price's tax behavior.
+  display preference, not proof of billing location. The user accepts cross-region
+  purchases; no billing-country/offer enforcement or custom Checkout backend is
+  required. Stripe Managed Payments calculates tax using checkout billing information
+  and the selected Price's tax behavior. Its indirect-tax coverage is country-specific;
+  confirm intended market coverage and remaining seller obligations before launch.
+  See [Stripe tax coverage](https://docs.stripe.com/payments/managed-payments/tax-compliance)
+  and the current completion plan. The website never calculates an additional tax charge.
 - `scripts/render-pricing.mjs` renders the shared product/shop controls. The enabled
   render path is tested locally without changing the committed gate. After separate
   launch authorization, switch that gate, regenerate, validate and publish alongside
