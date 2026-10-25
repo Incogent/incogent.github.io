@@ -2,7 +2,7 @@
 
 Last updated: 2026-10-25
 
-## macOS download UX — publication in progress (2026-10-25)
+## macOS download UX — published for review (2026-10-25)
 
 - [x] Added a shared Windows/macOS download presentation to both product-page
   download sections and the informational purchase-confirmation page. Windows
@@ -42,7 +42,14 @@ Last updated: 2026-10-25
   region menu, automatic detection, natural currency formatting and completed
   licensing evidence. Purchasing remains paused; app-package publication, Mac
   download activation and Stripe activation remain separate follow-up.
-- [ ] Publish this release and record GitHub validation/Pages run IDs and live checks.
+- [x] Published in `4c8edf9` on 2026-10-25. GitHub validation
+  `40234682171` and Pages deployment `40234681822` succeeded. Live product,
+  confirmation and retained shop HTML plus cache-versioned CSS/JS return HTTP 200
+  and match release content after line-ending normalization. Mac status and
+  requirements are present with no Mac download link. The new download partial
+  and pricing catalog remain excluded from Pages (HTTP 404). Both Windows
+  installer HEAD checks return HTTP 302 without downloading installer bodies.
+  No payments, app/feed publication, backend deployment or tracking writes occurred.
 
 ## Managed Payments and best-effort region policy (2026-10-24)
 
