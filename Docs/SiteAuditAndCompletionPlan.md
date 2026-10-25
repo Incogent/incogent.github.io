@@ -1,6 +1,48 @@
 # Incogent Site Completion Plan
 
-Last updated: 2026-10-24
+Last updated: 2026-10-25
+
+## macOS download UX — publication in progress (2026-10-25)
+
+- [x] Added a shared Windows/macOS download presentation to both product-page
+  download sections and the informational purchase-confirmation page. Windows
+  retains the existing first-party EXE/MSI URLs and installer-choice guidance.
+- [x] Displayed macOS as **Not yet available**, with no link, disabled button,
+  placeholder URL or download handler. Planned delivery is a DMG for macOS 15+
+  on Apple silicon (M1 or newer), confirmed against Blackbird's current
+  `Docs/CrossPlatformPortabilityPlan.md`, `Docs/MacDevelopment.md` and
+  `Docs/MacPackaging.md`. These are planned requirements, not a published release
+  or a signing/notarization claim. No release date, version or file size is invented.
+- [x] Replaced the Windows-only practical-information heading with platform and
+  requirements copy distinguishing the available Windows build from the planned
+  Mac target. Intel Macs and Linux remain outside the current release target.
+- [x] Kept download copy in the English localization CSV and one shared build
+  partial (`templates/blackbird-downloads.tpl`); desktop panels stack on narrow
+  screens without JavaScript. Bumped the stylesheet cache version and regenerated
+  all pages. Site validation rejects interactive pending-Mac controls and Mac
+  download/DMG URLs, and requires the pending panel at each download location.
+- Validation: policy, localization, generation, site and documentation checks pass
+  (69 pages, 64 sitemap URLs, 57 guides), as do all seven pricing tests. Source and
+  website EULA Markdown remain byte-for-byte identical. Edge/Playwright passes
+  56 route/layout checks across product/confirmation pages at 320/390/640/641/768/
+  900/1440px, light/dark themes and JavaScript enabled/disabled. No page or panel
+  overflow; Windows URLs, keyboard order and the purchase pause remain correct.
+  Desktop/mobile screenshots reviewed. Negative probes reject an interactive Mac
+  placeholder, a Mac resolver URL, an external DMG link and a missing pending panel;
+  original generated HTML is restored and validation passes. External browser
+  requests were blocked; no downloads, payments or tracking events were sent.
+- [ ] Mac launch follow-up: verify the published distributable, final requirements,
+  compatible Actions, installation/update instructions, public release notes and
+  package metadata before enabling a download. The companion Cloudflare repository
+  owns any future download resolver and download reporting changes; no Mac endpoint
+  is configured by this UX draft.
+- [x] User authorized website publication on 2026-10-25 for live UX review.
+  Applied the Mac-only changes to current `origin/main` in the isolated
+  `codex/blackbird-macos-downloads` release checkout, preserving the newer header
+  region menu, automatic detection, natural currency formatting and completed
+  licensing evidence. Purchasing remains paused; app-package publication, Mac
+  download activation and Stripe activation remain separate follow-up.
+- [ ] Publish this release and record GitHub validation/Pages run IDs and live checks.
 
 ## Managed Payments and best-effort region policy (2026-10-24)
 

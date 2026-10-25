@@ -37,9 +37,19 @@ common.view_blackbird,Product action,Explore Blackbird
 common.view_services,Services action,Explore our services
 common.visit_shop,Shop action,Pricing
 common.contact,Contact action,Contact Incogent
-download.blackbird.windows,Primary Blackbird Windows installer action,Download Blackbird Alpha for Windows
+download.blackbird.windows,Primary Blackbird Windows installer action,Download for Windows
 download.blackbird.msi,Alternative Blackbird Windows installer action,MSI installer for administrators
-download.blackbird.choice,Installer clarification,Blackbird is currently prerelease software. Use either the recommended EXE or the MSI installer; you do not need both.
+download.blackbird.choice,Windows installer clarification,Use the recommended EXE or the MSI installer; you do not need both.
+download.blackbird.status,Shared download release status,Blackbird Alpha is prerelease software.
+download.blackbird.windows.group,Accessible Windows download group,Blackbird for Windows
+download.blackbird.windows.platform,Windows download platform,Windows
+download.blackbird.windows.requirements,Supported Windows download target,Windows 11 · x64
+download.blackbird.macos.group,Accessible planned macOS download group,Blackbird for macOS (not yet available)
+download.blackbird.macos.platform,Planned macOS download platform,macOS
+download.blackbird.macos.requirements,Approved planned Mac target,macOS 15+ · Apple silicon (M1 or newer)
+download.blackbird.macos.status,Unpublished Mac package status,Not yet available
+download.blackbird.macos.format,Planned Mac installer format,Planned installer: DMG
+download.blackbird.macos.note,No Mac package published or download link,The macOS package has not been published yet.
 page.home.title,Homepage browser title,Incogent | Blackbird and Interactive Development
 page.home.description,Homepage meta description,Incogent creates Blackbird and provides Unreal Engine XR console development porting and consulting services.
 home.hero.kicker,Homepage hero eyebrow,Incogent presents
@@ -319,8 +329,8 @@ blackbird.buying.seat.title,Blackbird product page practical information,"One se
 blackbird.buying.seat.body,Blackbird product page practical information,"Each person can use their seat on a reasonable number of personal machines, such as a desktop and laptop. Each additional person needs their own seat."
 blackbird.buying.alpha.title,Blackbird product page practical information,What to expect from the alpha
 blackbird.buying.alpha.body,Blackbird product page practical information,"You can run Actions, save Workflows, build projects, deploy to devices, and collect logs today. Blackbird is still in alpha: expect bugs and changes as features develop. Try your workflow on a test project before relying on it for production work."
-blackbird.buying.system.title,Blackbird product page practical information,Built for Windows
-blackbird.buying.system.body,Blackbird product page practical information,"We officially support Windows 11 (x64). Windows 10 should also work, but is not officially supported. macOS and Linux desktop versions are not currently available."
+blackbird.buying.system.title,Blackbird product page practical information,Platforms and requirements
+blackbird.buying.system.body,Blackbird product page practical information,"Available now for Windows 11 (x64). Windows 10 should also work, but is not officially supported. The planned macOS download is a DMG for macOS 15 or later on Apple silicon (M1 or newer); it has not been published yet. Intel Macs and Linux are outside the current release target."
 blackbird.buying.tools.title,Blackbird product page practical information,Bring your existing tools
 blackbird.buying.tools.body,Blackbird product page practical information,"Install the engine and platform tools your workflow needs, such as Unreal Engine or Android SDK tools. Blackbird runs those tools for you; it does not replace their installations, licenses, or account requirements."
 blackbird.buying.help,Blackbird product page practical information,Have a question before purchasing?

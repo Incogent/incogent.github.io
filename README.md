@@ -6,6 +6,10 @@ Static marketing site for Incogent and Blackbird, built from HTML templates and 
 
 - `templates/site.tpl` and `templates/pages/`
   Active Incogent shell and page-body templates.
+- `templates/blackbird-downloads.tpl`
+  Shared Windows downloads and unpublished macOS preview, rendered by the localized
+  build on the product and confirmation pages. Keep macOS informational until its
+  package is published; site validation rejects pending-panel controls and Mac URLs.
 - `i18n/strings-site.csv`
   Active Incogent UI and page copy.
 - `scripts/build-i18n.mjs`

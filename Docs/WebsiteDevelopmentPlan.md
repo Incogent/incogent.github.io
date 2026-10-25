@@ -1,8 +1,20 @@
 # Incogent Website Development Plan
 
-Last updated: 2026-10-24
+Last updated: 2026-10-25
 
 > Current functional status, download architecture, and prioritized next work are recorded in [SiteAuditAndCompletionPlan.md](SiteAuditAndCompletionPlan.md). That audit is authoritative where it adds newer implementation findings to this original development plan.
+
+2026-10-25 macOS download UX: the two product-page download locations and the
+confirmation page share `templates/blackbird-downloads.tpl`, expanded by the
+localized build. Windows retains its first-party EXE/MSI URLs; macOS is an
+informational panel without an interactive control or download link. Planned
+delivery is a DMG for macOS 15+ on Apple silicon (M1 or newer). Intel Macs and
+Linux are outside the current target. User authorized website publication for
+review, preserving the production header/region behavior and purchase pause.
+Verify the published distributable and final requirements, installation/update
+instructions, compatible Actions and release metadata before enabling a Mac
+download. Any future resolver/reporting changes belong to the companion
+Cloudflare repository. Validation/publication evidence lives in the current plan.
 
 2026-10-24 Managed Payments decision: the user accepts cross-region purchases.
 Keep best-effort detection, manual overrides and the internal inclusive USD fallback;
