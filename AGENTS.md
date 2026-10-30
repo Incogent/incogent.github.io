@@ -11,3 +11,16 @@
 ## Site maintenance
 
 - Follow the build and asset cache-version instructions in `README.md`.
+
+## Completion plan maintenance
+
+- `Docs/SiteAuditAndCompletionPlan.md` is the authoritative current website plan. Read it before substantive site work.
+- Every substantive change must update the plan in the same change: date, affected completion status, validation evidence, remaining work, and any new decisions. Mark drafts as drafts and user-deferred work as deferred.
+- Preserve user-confirmed verification as completed evidence; do not reopen it based only on older planning documents. Revalidate when a relevant change or failure warrants it.
+- Keep `Docs/WebsiteDevelopmentPlan.md` consistent where architectural decisions change; historical checklists do not override the current completion plan.
+
+## Standing authorization: backend deployments
+
+- The user authorizes routine production deployment of website analytics and developer-backend changes. After implementing and validating changes, deploy affected Workers in the same task without asking for confirmation; do not stop at local-only completion.
+- Use existing production configurations, deploy dependencies first, preserve environment settings, perform available live checks, and record version IDs and validation in the relevant plan/deployment record. State any authenticated checks that could not be performed.
+- This does not authorize unrelated destructive data operations or paid-service upgrades. Report actual deployment blockers.

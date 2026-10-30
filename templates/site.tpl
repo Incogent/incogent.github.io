@@ -19,7 +19,7 @@
   <meta property="og:url" content="{{CANONICAL_URL}}">
   <link rel="canonical" href="{{CANONICAL_URL}}">
   {{HREFLANG_LINKS}}
-  <link rel="stylesheet" href="/site.css?v=20261024-regional-pricing">
+  <link rel="stylesheet" href="/site.css?v=20261025-macos-downloads">
 {{HEAD_EXTRAS}}
   <script type="application/ld+json">{{ORG_JSON_LD}}</script>
   <script type="application/ld+json">{{WEBPAGE_JSON_LD}}</script>

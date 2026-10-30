@@ -62,6 +62,21 @@ for (const locale of Object.keys(LOCALES)) {
     if (/REPLACE_WITH|v0\.8\.0-alpha\.15|api\.github\.com\/repos\/Incogent\/Blackbird-Releases/i.test(html)) {
       errors.push(`Forbidden placeholder or obsolete download reference in ${relative(file)}`);
     }
+    // macOS is an informational preview until its package is published.
+    if (page.source === "blackbird" || page.source === "blackbird-confirmation") {
+      const pending = [...html.matchAll(/<div class="download-option download-option-pending"[^>]*>([\s\S]*?)<\/div>/g)];
+      if (pending.length !== (page.source === "blackbird" ? 2 : 1)) {
+        errors.push(`Missing planned macOS download presentation in ${relative(file)}`);
+      }
+      for (const [, content] of pending) {
+        if (/<(?:a|button|input|select)\b|\b(?:href|tabindex|data-blackbird-download)\s*=/i.test(content)) {
+          errors.push(`Unpublished macOS download must remain informational in ${relative(file)}`);
+        }
+      }
+    }
+    if (/\b(?:href|src)\s*=\s*["'][^"']*(?:\/download\/blackbird\/(?:macos|mac|osx)(?:[\/"'?#])|\.dmg(?:["'?#]))/i.test(html)) {
+      errors.push(`Unpublished macOS download URL in ${relative(file)}`);
+    }
     validateDocumentLinks(file, html);
   }
 }
